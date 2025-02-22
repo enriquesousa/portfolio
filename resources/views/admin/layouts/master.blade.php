@@ -31,9 +31,9 @@
 
         <div class="main-wrapper">
 
-            @include('layouts.header')
+            @include('admin.layouts.header')
             
-            @include('layouts.sidebar')
+            @include('admin.layouts.sidebar')
         
             <!-- Main Content -->
             <div class="main-content">
@@ -42,7 +42,7 @@
 
             </div>
 
-            @include('layouts.footer')
+            @include('admin.layouts.footer')
         
         </div>
 
