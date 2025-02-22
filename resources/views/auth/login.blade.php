@@ -27,9 +27,12 @@
                 <div class="row">
                     <div
                         class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+
+                        {{-- Logo --}}
                         <div class="login-brand">
-                            <img src="{{ asset('assets/img/stisla-fill.svg') }}" alt="logo" width="100"
-                                class="shadow-light rounded-circle">
+                            {{-- <img src="{{ asset('assets/img/stisla-fill.svg') }}" alt="logo" width="100"
+                                class="shadow-light rounded-circle"> --}}
+                            <img src="{{ asset('assets/img/Logo-TJweb-250x250.png') }}" alt="logo" width="130" class="">
                         </div>
 
                         <div class="card card-primary">
@@ -39,6 +42,13 @@
                             </div>
 
                             <div class="card-body">
+
+                                {{-- Aviso de status (por si restablecieron contraseña) --}}
+                                @if (session('status'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ session('status') }}
+                                    </div>
+                                @endif
 
                                 {{-- Formulario --}}
                                 <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
