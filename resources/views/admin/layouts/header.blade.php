@@ -10,16 +10,29 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">Logged in 5 min ago</div>
+
+                {{-- Perfil --}}
                 <a href="features-profile.html" class="dropdown-item has-icon">
-                    <i class="far fa-user"></i> Profile
+                    <i class="far fa-user"></i> Perfil
                 </a>
+
+                {{-- Configuraciones --}}
                 <a href="features-settings.html" class="dropdown-item has-icon">
-                    <i class="fas fa-cog"></i> Settings
+                    <i class="fas fa-cog"></i> Configuraciones
                 </a>
+
+                {{-- Linea divisoria --}}
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item has-icon text-danger">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </a>
+
+                {{-- Logout --}}
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="#" class="dropdown-item has-icon text-danger" onclick="event.preventDefault(); this.closest('form').submit();">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </form>
+
+
             </div>
         </li>
     </ul>
