@@ -12,7 +12,7 @@
                 <div class="dropdown-title">Logged in 5 min ago</div>
 
                 {{-- Perfil --}}
-                <a href="features-profile.html" class="dropdown-item has-icon">
+                <a href="{{ route('profile.edit') }}" class="dropdown-item has-icon">
                     <i class="far fa-user"></i> Perfil
                 </a>
 

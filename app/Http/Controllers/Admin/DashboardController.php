@@ -9,6 +9,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        // flash()->success('Panel de Control!');
         return view('admin.dashboard');
     }
 

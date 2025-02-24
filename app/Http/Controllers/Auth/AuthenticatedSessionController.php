@@ -28,6 +28,9 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
+        // notyf()->success('Haz iniciado sesión con éxito.');
+        flash()->success('Haz iniciado sesión con éxito.');
+
         return redirect()->intended(route('dashboard', absolute: false));
     }
 
@@ -36,11 +39,15 @@ class AuthenticatedSessionController extends Controller
      */
     public function destroy(Request $request): RedirectResponse
     {
+
         Auth::guard('web')->logout();
 
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
+
+        // notyf()->success('Haz cerrado sesión con éxito.');
+        flash()->warning('Haz cerrado sesión con éxito.');
 
         return redirect('/');
     }
