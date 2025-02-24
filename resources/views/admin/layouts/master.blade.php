@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/daterangepicker.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/select2.css') }}">
 
+    {{-- Plugin Toastr CSS para JavaScript Para mostrar mensajes de error en los formularios de las vistas --}}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
     {{-- Plugin Notyf CSS para JavaScript lo usamos en Ajax --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 
@@ -87,6 +90,22 @@
     <script src="{{ asset('assets/js/page/features-post-create.js') }}"></script>
     <!-- Page Specific JS File -->
     <script src="{{ asset('assets/js/page/forms-advanced-forms.js') }}"></script>
+
+    {{-- Para mostrar mensajes de error en los formularios de las vistas --}}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    {{-- Mostrar validation errors dynamically with toastr js --}}
+    <script>
+        @if (!empty($errors->all()))
+            @foreach ($errors->all() as $error)
+                toastr.error("{{$error}}",)
+            @endforeach
+        @endif
+    </script>
+
+    {{-- Para el código JS dinámico de las vistas, se puedan ejecutar cuando los llamamos con @push('child-scripts') --}}
+    @stack('child-scripts')
+
 </body>
 
 </html>

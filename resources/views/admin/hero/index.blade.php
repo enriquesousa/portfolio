@@ -27,13 +27,15 @@
 
                         <div class="card-body">
 
-                            <form action="">
+                            <form action="{{ route('admin.hero.update',1) }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                @method('PUT')
 
                                 {{-- Titulo --}}
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Titulo</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" class="form-control">
+                                        <input type="text" name="title" class="form-control">
                                     </div>
                                 </div>
     
@@ -41,7 +43,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Sub-Titulo</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <textarea name="" id="" class="form-control" style="height: 100px"></textarea>
+                                        <textarea name="sub_title" id="" class="form-control" style="height: 100px"></textarea>
                                     </div>
                                 </div>
     
@@ -49,7 +51,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Texto del Botón</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" class="form-control">
+                                        <input name="btn_text" type="text" class="form-control">
                                     </div>
                                 </div>
     
@@ -57,18 +59,21 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">URL del Botón</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" class="form-control">
+                                        <input name="btn_url" type="text" class="form-control">
                                     </div>
                                 </div>
     
                                 {{-- Imagen de Fondo --}}
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Seleccione una imagen de fondo, el tamaño debe ser de 1850x850 y el peso no debe superar 1MB">Imagen de Fondo</label>
-                                    <div class="col-sm-12 col-md-7">
+                                    <div class="col-sm-12 col-md-5">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="customFile">
+                                            <input name="image" type="file" class="custom-file-input image-upload" id="customFile">
                                             <label class="custom-file-label" for="customFile">Seleccionar una imagen</label>
                                         </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-3">
+                                        <x-image-preview src=""/>
                                     </div>
                                 </div>
     
@@ -91,3 +96,19 @@
     </section>
 
 @endsection
+
+@push('child-scripts')
+    <script>
+        // Mi JS para el manejo de la imagen en la forma
+        $(document).ready(function() {
+            $('.image-upload').change(function(e) {
+                // alert("funciona");
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#showImage').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
+        });
+    </script>
+@endpush

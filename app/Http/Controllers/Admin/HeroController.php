@@ -3,10 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Hero;
+use App\Traits\FileUpload;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class HeroController extends Controller
 {
+
+    use FileUpload;
+    
     /**
      * Display a listing of the resource.
      */
@@ -50,9 +56,31 @@ class HeroController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id): RedirectResponse
     {
-        //
+        // dd($request->all());
+
+        $request->validate([
+            'title' => ['required', 'string', 'max:200'],
+            'sub_title' => ['required', 'string', 'max:500'],
+            'image' => ['max:1024', 'image'],
+        ]);
+
+        if ($request->hasFile('image')) {
+            $imagePath = $this->uploadFile($request->file('image'), 'uploads', 'hero');
+            // dd($imagePath);
+        }
+
+        Hero::updateOrCreate(['id' => $id], [
+            'title' => $request->title,
+            'sub_title' => $request->sub_title,
+            'btn_text' => $request->btn_text,
+            'btn_url' => $request->btn_url,
+            'image' => isset($imagePath) ? $imagePath : '',
+        ]);
+
+        flash()->success('Sección actualizada correctamente.');
+        return redirect()->back();
     }
 
     /**
