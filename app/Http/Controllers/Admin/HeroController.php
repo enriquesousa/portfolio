@@ -18,7 +18,8 @@ class HeroController extends Controller
      */
     public function index()
     {
-        return view('admin.hero.index');
+        $hero = Hero::first();
+        return view('admin.hero.index', compact('hero'));
     }
 
     /**
@@ -67,15 +68,15 @@ class HeroController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
+            $this->deleteFile(Hero::find($id)->image);
             $imagePath = $this->uploadFile($request->file('image'), 'uploads', 'hero');
-            // dd($imagePath);
         }
 
         Hero::updateOrCreate(['id' => $id], [
             'title' => $request->title,
             'sub_title' => $request->sub_title,
             'btn_text' => $request->btn_text,
-            'btn_url' => $request->btn_url,
+            'btn_url' => $request->btn_url, 
             'image' => isset($imagePath) ? $imagePath : '',
         ]);
 

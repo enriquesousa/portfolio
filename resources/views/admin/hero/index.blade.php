@@ -35,7 +35,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Titulo</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="title" class="form-control">
+                                        <input type="text" name="title" class="form-control" value="{{ $hero->title }}">
                                     </div>
                                 </div>
     
@@ -43,7 +43,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Sub-Titulo</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <textarea name="sub_title" id="" class="form-control" style="height: 100px"></textarea>
+                                        <textarea name="sub_title" id="" class="form-control" style="height: 100px">{{ $hero->sub_title }}</textarea>
                                     </div>
                                 </div>
     
@@ -51,7 +51,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Texto del Botón</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input name="btn_text" type="text" class="form-control">
+                                        <input name="btn_text" type="text" class="form-control" value="{{ $hero->btn_text }}">
                                     </div>
                                 </div>
     
@@ -59,22 +59,28 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">URL del Botón</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input name="btn_url" type="text" class="form-control">
+                                        <input name="btn_url" type="text" class="form-control" value="{{ $hero->btn_url }}">
                                     </div>
                                 </div>
     
                                 {{-- Imagen de Fondo --}}
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Seleccione una imagen de fondo, el tamaño debe ser de 1850x850 y el peso no debe superar 1MB">Imagen de Fondo</label>
-                                    <div class="col-sm-12 col-md-5">
+                                    <div class="col-sm-12 col-md-3">
                                         <div class="custom-file">
                                             <input name="image" type="file" class="custom-file-input image-upload" id="customFile">
-                                            <label class="custom-file-label" for="customFile">Seleccionar una imagen</label>
+                                            <label class="custom-file-label" for="customFile">Seleccionar imagen</label>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-3">
-                                        <x-image-preview src=""/>
-                                    </div>
+                                    @if ($hero->image)
+                                        <div class="col-sm-12 col-md-3">
+                                            <x-image-preview-hero src="{{ asset($hero->image) }}"/>
+                                        </div>
+                                    @else
+                                        <div class="col-sm-12 col-md-3">
+                                            <x-image-preview-hero src=""/>
+                                        </div>
+                                    @endif
                                 </div>
     
                                 {{-- Botón Submit --}}
