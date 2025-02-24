@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +30,13 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+// ******************************************************************************************************************
+// Admin Routes: prefix admin para prefijo del nombre de la ruta url y as admin. para prefijo de nombre de las rutas.
+// ******************************************************************************************************************
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
+
+    Route::resource('hero', HeroController::class);
+
+});
