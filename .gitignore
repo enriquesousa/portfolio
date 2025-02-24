@@ -21,4 +21,5 @@ yarn-error.log
 /.nova
 /.zed
 # /.vscode
-/resources/views/templates/*
+resources/views/Templates/admin-template/*
+resources/views/Templates/frontend/*
