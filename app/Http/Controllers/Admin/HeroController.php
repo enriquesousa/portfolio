@@ -70,6 +70,8 @@ class HeroController extends Controller
         if ($request->hasFile('image')) {
             $this->deleteFile(Hero::find($id)->image);
             $imagePath = $this->uploadFile($request->file('image'), 'uploads', 'hero');
+        }else{
+            $imagePath = Hero::find($id)->image; // Si no se sube una nueva imagen, se mantiene la imagen anterior.
         }
 
         Hero::updateOrCreate(['id' => $id], [

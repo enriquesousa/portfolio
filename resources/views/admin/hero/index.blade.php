@@ -49,7 +49,7 @@
     
                                 {{-- Botón Texto --}}
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Texto del Botón</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Texto que se mostrara en el botón, dejar en blanco para no mostrar el botón">Texto del Botón</label>
                                     <div class="col-sm-12 col-md-7">
                                         <input name="btn_text" type="text" class="form-control" value="{{ $hero->btn_text }}">
                                     </div>
