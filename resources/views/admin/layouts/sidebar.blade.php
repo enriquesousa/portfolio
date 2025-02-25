@@ -32,6 +32,8 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Héroe</span></a>
                 <ul class="dropdown-menu" style="display: none;">
+
+                    <li><a class="nav-link" href="{{ route('admin.typer-title.index') }}">Titulo Maquina</a></li>
                     <li><a class="nav-link" href="{{ route('admin.hero.index') }}">Sección Hero</a></li>
 
                 </ul>
