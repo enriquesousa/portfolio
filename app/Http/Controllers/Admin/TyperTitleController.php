@@ -13,9 +13,13 @@ class TyperTitleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(TyperTitleDataTable $dataTable)
+    public function index(TyperTitleDataTable $dataTable, $previa_titulo, $previa_imagen, $pagina_regreso)
     {
-        return $dataTable->render('admin.typer-title.index');
+        // dd($previa_titulo, $previa_imagen, $pagina_regreso);
+        $previaTitulo = $previa_titulo;
+        $previaImagen = $previa_imagen;
+        $paginaRegreso = $pagina_regreso;
+        return $dataTable->render('admin.typer-title.index', compact('previaTitulo', 'previaImagen', 'paginaRegreso'));
     }
 
     /**
@@ -57,7 +61,8 @@ class TyperTitleController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $typerTitle = TyperTitle::findOrFail($id);
+        return view('admin.typer-title.edit', compact('typerTitle'));
     }
 
     /**

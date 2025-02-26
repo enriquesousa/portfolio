@@ -16,10 +16,14 @@ class HeroController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($previa_titulo, $previa_imagen, $pagina_regreso)
     {
+        // dd($previa_titulo, $previa_imagen, $pagina_regreso);
+        $previaTitulo = $previa_titulo;
+        $previaImagen = $previa_imagen;
+        $paginaRegreso = $pagina_regreso;
         $hero = Hero::first();
-        return view('admin.hero.index', compact('hero'));
+        return view('admin.hero.index', compact('hero', 'previaTitulo', 'previaImagen', 'paginaRegreso'));
     }
 
     /**

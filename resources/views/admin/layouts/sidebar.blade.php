@@ -33,8 +33,17 @@
                     <span>Héroe</span></a>
                 <ul class="dropdown-menu" style="display: none;">
 
-                    <li><a class="nav-link" href="{{ route('admin.typer-title.index') }}">Titulo Maquina</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.hero.index') }}">Sección Hero</a></li>
+                    <li>
+                        <a class="nav-link" href="{{ route('admin.typer-title.index', ['Sección Vista Previa - Titulo Maquina (Type Writer)', 'hero_section_800x400_conTitulos.png', 'admin.typer-title.index']) }}">
+                            Titulo Maquina
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="{{ route('admin.hero.index', ['Sección Héroe - Vista Previa', 'hero_section_800x400_conTitulos.png', 'admin.hero.index']) }}">
+                            Sección Héroe
+                        </a>
+                    </li>
 
                 </ul>
             </li>
