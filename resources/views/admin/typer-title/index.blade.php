@@ -5,7 +5,9 @@
 
         <div class="section-header">
             <div class="section-header-back">
-                <a href="{{ route($paginaRegreso, [$previaTitulo, $previaImagen, $paginaRegreso]) }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+                <a href="{{ route('dashboard') }}" class="btn btn-icon">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
             </div>
             <h1>Sección Héroe - Titulo Maquina (Type Writer) </h1>
         </div>
@@ -23,7 +25,7 @@
                             <div class="card-header-action">
 
                                 <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index',[$previaTitulo,$previaImagen,$paginaRegreso]) }}" class="btn btn-secondary" title="Ver donde queda este titulo en la sección">
+                                <a href="{{ route('admin.vista-previa.index',['Sección Vista Previa - Titulo Maquina (Type Writer)', 'hero_section_800x400_conTitulos.png', 'admin.typer-title.index']) }}" class="btn btn-secondary" title="Ver donde queda este titulo en la sección">
                                     <i class="fas fa-eye"></i> Vista Previa
                                 </a>
 

@@ -2,9 +2,17 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+
+    {{-- csrf token para ajax --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
     <title>Dashboard</title>
+
+    <!-- Icon Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/logo48x48.ico') }}">
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,13 +26,14 @@
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap-tagsinput.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap-timepicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/daterangepicker.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/select2.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/plugins/select2.css') }}"> --}}
 
     {{-- Plugin Toastr CSS para JavaScript Para mostrar mensajes de error en los formularios de las vistas --}}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     {{-- Plugin Notyf CSS para JavaScript lo usamos en Ajax --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
@@ -95,10 +104,14 @@
     <!-- Page Specific JS File -->
     <script src="{{ asset('assets/js/page/forms-advanced-forms.js') }}"></script>
 
-    {{-- Para mostrar mensajes de error en los formularios de las vistas --}}
+    <!-- Para mostrar mensajes de error en los formularios de las vistas -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-    {{-- Mostrar validation errors dynamically with toastr js --}}
+    <!-- Sweet Alert 2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <!-- Mostrar validation errors dynamically with toastr js -->
     <script>
         @if (!empty($errors->all()))
             @foreach ($errors->all() as $error)
@@ -107,7 +120,70 @@
         @endif
     </script>
 
-    {{-- Para el código JS dinámico de las vistas, se puedan ejecutar cuando los llamamos con @push('child-scripts') --}}
+    <!-- Para Botón Delete Sweet Alert 2 -->
+    <script>
+        
+        $(document).ready(function() {
+        
+            // Botón Delete Sweet Alert 2
+            $('body').on('click', '.delete-item', function(e) {
+                e.preventDefault();
+
+                let url = $(this).attr('href');
+                // console.log(url);
+
+                Swal.fire({
+                    title: "¿Estás seguro?",
+                    text: "¡No podrás recuperar este archivo!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: '¡Si, Eliminar!',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+
+                        $.ajax({
+                            method: 'DELETE',
+                            url: url,
+                            data: {
+                                _token: "{{ csrf_token() }}"
+                            },
+                            success: function(response) {
+                                if(response.status === 'success') {
+
+                                    toastr.success(response.message);
+                                    // console.log(response);
+
+                                    // $('#slider-table').DataTable().draw(); // refresca la tabla
+                                    // window.location.reload();
+                                    window.setTimeout(function(){location.reload()},2000)
+
+                                    // Swal.fire(
+                                    //     'Eliminado!',
+                                    //     'El archivo ha sido eliminado.',
+                                    //     'success'
+                                    // );
+
+                                }else if(response.status === 'error') {
+                                    toastr.error(response.message);
+                                }
+                            },
+                            error: function(error) {
+                                console.error(error);
+                            }
+                        });
+                        
+                    }
+                })
+
+            })
+
+        });
+
+    </script>
+
+    {{-- Para el código JS dinámico de las vistas, se puedan ejecutar cuando los llamamos con @push('child-scripts')  --}}
     @stack('child-scripts')
 
 </body>

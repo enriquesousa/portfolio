@@ -5,7 +5,7 @@
 
         <div class="section-header">
             <div class="section-header-back">
-                <a href="features-posts.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+                <a href="{{ route('admin.typer-title.index') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             <h1>Sección Héroe - Titulo Maquina (Type Writer)</h1>
         </div>
@@ -22,8 +22,9 @@
 
                         <div class="card-body">
 
-                            <form action="{{ route('admin.typer-title.store') }}" method="POST">
+                            <form action="{{ route('admin.typer-title.update', $typerTitle->id) }}" method="POST">
                                 @csrf
+                                @method('PUT')
 
                                 {{-- Titulo --}}
                                 <div class="form-group row mb-4">
@@ -37,7 +38,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                     <div class="col-sm-12 col-md-7">
-                                        <button class="btn btn-primary">Crear</button>
+                                        <button class="btn btn-primary">Actualizar</button>
                                     </div>
                                 </div>
 

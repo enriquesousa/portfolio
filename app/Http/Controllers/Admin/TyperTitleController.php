@@ -13,13 +13,9 @@ class TyperTitleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(TyperTitleDataTable $dataTable, $previa_titulo, $previa_imagen, $pagina_regreso)
+    public function index(TyperTitleDataTable $dataTable)
     {
-        // dd($previa_titulo, $previa_imagen, $pagina_regreso);
-        $previaTitulo = $previa_titulo;
-        $previaImagen = $previa_imagen;
-        $paginaRegreso = $pagina_regreso;
-        return $dataTable->render('admin.typer-title.index', compact('previaTitulo', 'previaImagen', 'paginaRegreso'));
+        return $dataTable->render('admin.typer-title.index');
     }
 
     /**
@@ -68,9 +64,20 @@ class TyperTitleController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id): RedirectResponse
     {
-        //
+        // dd($request->all());
+
+        $request->validate([
+            'title' => 'required|string|max:200',
+        ]);
+
+        $typerTitle = TyperTitle::findOrFail($id);
+        $typerTitle->title = $request->title;
+        $typerTitle->save();
+
+        flash()->success('Título actualizado correctamente.');
+        return redirect()->route('admin.typer-title.index');
     }
 
     /**
@@ -78,6 +85,16 @@ class TyperTitleController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // dd($id);
+        try{
+
+            $typerTitle = TyperTitle::findOrFail($id);
+            $typerTitle->delete();
+            return response(['status' => 'success', 'message' => __('Deleted successfully!')]);
+
+        }catch(\Exception $e){
+            // return response(['status' => 'error', 'message' => $e->getMessage()]);
+            return response(['status' => 'error', 'message' => __('Something went wrong!')]);
+        }
     }
 }

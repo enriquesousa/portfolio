@@ -27,7 +27,7 @@ class TyperTitleDataTable extends DataTable
         ->addColumn('id', function($query){
             return $query->id;
             // return '<p class="text-center">'.$query->id.'</p>';
-        })
+        })->orderColumn('id', 'id $1')
 
         // title
         ->addColumn('title', function($query){
@@ -36,6 +36,7 @@ class TyperTitleDataTable extends DataTable
         ->filterColumn('title', function ($query, $keyword) {
             $query->where('title', 'like', "%{$keyword}%");
         })
+        ->orderColumn('title', 'title $1')
 
         // action
         ->addColumn('action', function($query){
@@ -66,8 +67,9 @@ class TyperTitleDataTable extends DataTable
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
-                    ->orderBy(1)
+                    ->orderBy(0, 'desc')
                     ->selectStyleSingle()
+
                     ->buttons([
                         // Button::make('excel'),
                         // Button::make('csv'),
@@ -75,6 +77,32 @@ class TyperTitleDataTable extends DataTable
                         // Button::make('print'),
                         // Button::make('reset'),
                         // Button::make('reload')
+                    ])
+
+                    ->parameters([
+
+                        // 'dom'          => 'Bfrtip', // Comentar para que no se muestren los botones de exportación
+
+                        // 'buttons'      => ['export', 'pageLength', 'print', 'reset', 'reload'],
+                        'buttons'      => ['pageLength', 'excel', 'csv', 'pdf', 'print', 'reset', 'reload'],
+                        'select'       => false,
+                        'order'        => [[0, 'asc']],
+
+                        // 'pageLength'   => 10,
+
+                        // Configure the drop down options.
+                        'lengthMenu'   => [
+                                            [ 10, 25, 50, -1 ],
+                                            [ '10 filas', '25 filas', '50 filas', 'Todos' ]
+                                        ],
+
+                        // Para traducir al español
+                        'language' => (app()->getLocale() == 'es') ? \Illuminate\Support\Facades\Config::get('dtespanol') : '',
+                        // Tambien se puede hacer de esta manera
+                        // 'language' => ['url' => '//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json'],
+                        
+                        // order by first column
+                        'order' => [[0, 'desc']],
                     ]);
     }
 
