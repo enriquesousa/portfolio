@@ -41,6 +41,7 @@
 
                         <div class="card-body">
                             
+                            {{ $dataTable->table() }}
 
                         </div>
                     </div>
@@ -50,4 +51,8 @@
 
     </section>
 @endsection
+
+@push('child-scripts')
+    {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
+@endpush
 
