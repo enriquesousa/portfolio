@@ -44,8 +44,8 @@ class ServiceDataTable extends DataTable
 
         // action
         ->addColumn('action', function($query){
-            $edit = "<a href='".route('admin.typer-title.edit', $query->id)."' class='btn btn-primary' title='Editar'><i class='fas fa-edit'></i></a>";
-            $delete = "<a href='".route('admin.typer-title.destroy', $query->id)."' class='btn btn-danger delete-item ml-2' title='Eliminar'><i class='fas fa-trash'></i></a>";
+            $edit = "<a href='".route('admin.service.edit', $query->id)."' class='btn btn-primary' title='Editar'><i class='fas fa-edit'></i></a>";
+            $delete = "<a href='".route('admin.service.destroy', $query->id)."' class='btn btn-danger delete-item ml-2' title='Eliminar'><i class='fas fa-trash'></i></a>";
             return $edit . $delete;
         })
 
@@ -113,7 +113,7 @@ class ServiceDataTable extends DataTable
         return [
 
             Column::make('id')->title(__('ID'))->width(60)->addClass('text-center'),
-            Column::make('name')->title(__('Servicio')),
+            Column::make('name')->title(__('Servicio'))->width(300),
             Column::make('description')->title(__('Descripción')),
 
             Column::computed('action')

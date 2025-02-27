@@ -40,9 +40,9 @@ class TyperTitleDataTable extends DataTable
 
         // action
         ->addColumn('action', function($query){
-            $view = "<a href='".route('admin.typer-title.edit', $query->id)."' class='btn btn-primary' title='Editar'><i class='fas fa-edit'></i></a>";
+            $edit = "<a href='".route('admin.typer-title.edit', $query->id)."' class='btn btn-primary' title='Editar'><i class='fas fa-edit'></i></a>";
             $delete = "<a href='".route('admin.typer-title.destroy', $query->id)."' class='btn btn-danger delete-item ml-2' title='Eliminar'><i class='fas fa-trash'></i></a>";
-            return $view . $delete;
+            return $edit . $delete;
         })
 
         ->rawColumns(['id','title','action'])
