@@ -152,8 +152,19 @@
                             success: function(response) {
                                 if(response.status === 'success') {
 
-                                    toastr.success(response.message);
+                                    // toastr.success(response.message);
                                     // console.log(response);
+
+                                    // Create an instance of Notyf
+                                    const notyf = new Notyf({
+                                        duration: 3000,
+                                        position: {
+                                            x: 'center',
+                                            y: 'top'
+                                        }
+                                    });
+                                    // Display notification 
+                                    notyf.success(response.message);
 
                                     // $('#slider-table').DataTable().draw(); // refresca la tabla
                                     // window.location.reload();

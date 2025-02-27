@@ -89,7 +89,16 @@ class ServiceController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try{
+
+            $item = Service::findOrFail($id);
+            $item->delete();
+            return response(['status' => 'success', 'message' => 'Registro eliminado correctamente!']);
+
+        }catch(\Exception $e){
+            // return response(['status' => 'error', 'message' => $e->getMessage()]);
+            return response(['status' => 'error', 'message' => __('Something went wrong!')]);
+        }
     }
 
 }
