@@ -157,7 +157,7 @@
 
                                     // Create an instance of Notyf
                                     const notyf = new Notyf({
-                                        duration: 3000,
+                                        duration: 2000,
                                         position: {
                                             x: 'center',
                                             y: 'top'
