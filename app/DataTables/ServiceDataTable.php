@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\TyperTitle;
+use App\Models\Service;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -12,7 +12,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class TyperTitleDataTable extends DataTable
+class ServiceDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -26,33 +26,37 @@ class TyperTitleDataTable extends DataTable
         // ID
         ->addColumn('id', function($query){
             return $query->id;
-            // return '<p class="text-center">'.$query->id.'</p>';
         })->orderColumn('id', 'id $1')
 
-        // title
-        ->addColumn('title', function($query){
-            return $query->title;
+        // Nombre del servicio
+        ->addColumn('name', function($query){
+            return $query->name;
         })
-        ->filterColumn('title', function ($query, $keyword) {
-            $query->where('title', 'like', "%{$keyword}%");
+        ->filterColumn('name', function ($query, $keyword) {
+            $query->where('name', 'like', "%{$keyword}%");
         })
-        ->orderColumn('title', 'title $1')
+        ->orderColumn('name', 'name $1')
+
+        // Descripción del servicio
+        ->addColumn('description', function($query){
+            return $query->description;
+        })
 
         // action
         ->addColumn('action', function($query){
-            $view = "<a href='".route('admin.typer-title.edit', $query->id)."' class='btn btn-primary' title='Editar'><i class='fas fa-edit'></i></a>";
+            $edit = "<a href='".route('admin.typer-title.edit', $query->id)."' class='btn btn-primary' title='Editar'><i class='fas fa-edit'></i></a>";
             $delete = "<a href='".route('admin.typer-title.destroy', $query->id)."' class='btn btn-danger delete-item ml-2' title='Eliminar'><i class='fas fa-trash'></i></a>";
-            return $view . $delete;
+            return $edit . $delete;
         })
 
-        ->rawColumns(['id','title','action'])
+        ->rawColumns(['id','name','description','action'])
         ->setRowId('id');
     }
 
     /**
      * Get the query source of dataTable.
      */
-    public function query(TyperTitle $model): QueryBuilder
+    public function query(Service $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -63,13 +67,12 @@ class TyperTitleDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('typertitle-table')
+                    ->setTableId('service-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
-                    ->orderBy(0, 'desc')
+                    ->orderBy(1)
                     ->selectStyleSingle()
-
                     ->buttons([
                         // Button::make('excel'),
                         // Button::make('csv'),
@@ -78,9 +81,7 @@ class TyperTitleDataTable extends DataTable
                         // Button::make('reset'),
                         // Button::make('reload')
                     ])
-
                     ->parameters([
-
                         // 'dom'          => 'Bfrtip', // Comentar para que no se muestren los botones de exportación
 
                         // 'buttons'      => ['export', 'pageLength', 'print', 'reset', 'reload'],
@@ -98,8 +99,6 @@ class TyperTitleDataTable extends DataTable
 
                         // Para traducir al español
                         'language' => (app()->getLocale() == 'es') ? \Illuminate\Support\Facades\Config::get('dtespanol') : '',
-                        // Tambien se puede hacer de esta manera
-                        // 'language' => ['url' => '//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json'],
                         
                         // order by first column
                         'order' => [[0, 'desc']],
@@ -111,11 +110,11 @@ class TyperTitleDataTable extends DataTable
      */
     public function getColumns(): array
     {
-
         return [
 
             Column::make('id')->title(__('ID'))->width(60)->addClass('text-center'),
-            Column::make('title')->title(__('Titulo')),
+            Column::make('name')->title(__('Servicio')),
+            Column::make('description')->title(__('Descripción')),
 
             Column::computed('action')
                   ->exportable(false)
@@ -131,6 +130,6 @@ class TyperTitleDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'TyperTitle_' . date('YmdHis');
+        return 'Service_' . date('YmdHis');
     }
 }

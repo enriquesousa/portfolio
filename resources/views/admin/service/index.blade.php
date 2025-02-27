@@ -9,7 +9,7 @@
                     <i class="fas fa-arrow-left"></i>
                 </a>
             </div>
-            <h1>Sección Héroe - Titulo Maquina (Type Writer) </h1>
+            <h1>Servicios</h1>
         </div>
 
         <div class="section-body">
@@ -20,7 +20,7 @@
 
                         <div class="card-header">
 
-                            <h4>Todos los Títulos</h4>
+                            <h4>Todos los Servicios</h4>
 
                             <div class="card-header-action">
 
@@ -30,8 +30,8 @@
                                 </a>
 
                                 <!-- Botón Agregar -->
-                                <a href="{{ route('admin.typer-title.create') }}" class="btn btn-primary">
-                                    <i class="fas fa-plus"></i> Nuevo Titulo
+                                <a href="{{ route('admin.service.create') }}" class="btn btn-primary">
+                                    <i class="fas fa-plus"></i> Agregar
                                 </a>
 
                             </div>

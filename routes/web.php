@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TyperTitleController;
 use App\Http\Controllers\Admin\VistaPreviaController;
 use App\Http\Controllers\Frontend\HomeController;
@@ -42,9 +43,10 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     // Secciones
     // *********
 
+    // Hero
     Route::resource('hero', HeroController::class);
     
-    // Typer Title CRUD
+    // Typer Title
     /* 
         Route::get('typer-title', [TyperTitleController::class, 'index'])->name('typer-title.index');
         Route::get('typer-title/create', [TyperTitleController::class, 'create'])->name('typer-title.create');
@@ -55,7 +57,11 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     */
     Route::resource('typer-title', TyperTitleController::class);
 
+    // Servicios
+    Route::resource('service', ServiceController::class);
 
+
+    
 
     // Vistas Previas
     Route::get('vista-previa/{previa_titulo}/{previa_imagen}/{pagina_regreso}', [VistaPreviaController::class, 'index'])->name('vista-previa.index');
