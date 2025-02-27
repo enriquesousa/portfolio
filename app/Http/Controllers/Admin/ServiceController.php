@@ -60,7 +60,8 @@ class ServiceController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $service = Service::findOrFail($id);
+        return view('admin.service.edit', compact('service'));
     }
 
     /**
@@ -68,7 +69,19 @@ class ServiceController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // dd($request->all());
+
+        $request->validate([
+            'name' => ['required', 'string', 'max:200'],
+            'description' => ['required', 'string', 'max:500'],
+        ]);
+
+        $service = Service::findOrFail($id);
+        $service->name = $request->name;
+        $service->description = $request->description;
+        $service->save();
+
+        return redirect()->route('admin.service.index')->with('success', 'El servicio se actualizó con éxito');
     }
 
     /**
