@@ -35,12 +35,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 
 
+    <!-- Vite CSS and JS -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
-
-    <!-- Vite CSS and JS -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
