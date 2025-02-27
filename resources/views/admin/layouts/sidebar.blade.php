@@ -2,7 +2,7 @@
     <aside id="sidebar-wrapper">
 
         <div class="sidebar-brand">
-            <a href="index.html">TJWeb</a>
+            <a href="{{ route('home') }}" target="_blank">TJWeb</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">TW</a>

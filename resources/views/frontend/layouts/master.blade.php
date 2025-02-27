@@ -38,6 +38,10 @@
 	<script src="{{ asset('frontend/assets/js/jquery-plugin-collection.js') }}"></script>
 	<script src="{{ asset('frontend/assets/js/vendor/modernizr.js') }}"></script>
 	<script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+
+	{{-- Para el código JS dinámico de las vistas, se puedan ejecutar cuando los llamamos con @push('child-scripts')  --}}
+    @stack('child-scripts')
+	
 </body>
 
 </html>

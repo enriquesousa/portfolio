@@ -25,3 +25,19 @@
     </div>
 </header>
 <!-- Header-Area-End -->
+
+
+@push('child-scripts')
+    <script>
+        @php
+            $titles = [];
+            foreach($typerTitles as $typerTitle){
+                $titles[] = $typerTitle->title;
+            }
+            // Convertir el php array a JSON array
+            $titles = json_encode($titles);
+        @endphp
+        // usamos {!! $titles !!} para que lo tome como un string con todo y caracteres especiales, y no como un objeto
+        $('.header-area .typer-title').typer({!! $titles !!});
+    </script>
+@endpush
