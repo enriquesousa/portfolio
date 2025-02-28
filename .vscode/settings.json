@@ -33,7 +33,7 @@
     "editor.fontLigatures": true,
 
     // Editor Font Size
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
 
     // Editor Line Height
     "editor.lineHeight": 1.3,

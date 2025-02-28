@@ -56,6 +56,13 @@
                 </a>
             </li>
 
+            {{-- About Me - Acerca de mi --}}
+            <li>
+                <a class="nav-link" href="{{ route('admin.about.index') }}">
+                    <i class="far fa-square"></i> <span>Acerca de mi</span>
+                </a>
+            </li>
+
         </ul>
 
     </aside>
