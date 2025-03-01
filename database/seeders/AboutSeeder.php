@@ -17,8 +17,8 @@ class AboutSeeder extends Seeder
             [
                 'title' => 'Acerca de Mi',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repellendus sapiente, quae et eos dolorum.',
-                'image' => '/uploads/about-image.jpg',
-                'resume' => 'Consectetur adipisicing elit. Laborum, magni libero similique, laboriosam, delectus reiciendis minima minus dolorem sit fuga rerum atque vel quaerat ipsum perspiciatis neque maxime recusandae fugit Ipsum dolor sit amet, consectetur adipisicing elit. Laborum, magni libero similique, laboriosam, delectus reiciendis minima minus dolorem sit fuga rerum atque vel quaerat ipsum perspiciatis neque maxime recusandae fugit.',
+                'image' => '',
+                'resume' => '',
                 'created_at' => now(),
                 'updated_at' => now()
             ]

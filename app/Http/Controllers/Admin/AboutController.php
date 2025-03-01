@@ -4,10 +4,14 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\About;
+use App\Traits\FileUpload;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
+
+    use FileUpload;
+
     /**
      * Display a listing of the resource.
      */
@@ -54,7 +58,28 @@ class AboutController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        dd($request->all());
+        // dd($request->all());
+
+        $request->validate([
+            'title' => ['required', 'string', 'max:200'],
+            'description' => ['required', 'string', 'max:1000'],
+            'image' => ['required', 'image', 'max:1000'],
+            'resume' => ['mimes:pdf,csv,txt', 'max:5000'],
+        ]);
+
+        $about = About::first();
+        $imagePath = handleUpload('image', $about);
+        $resumePath = handleUpload('resume', $about);
+
+        About::updateOrCreate(['id' => $id], [
+            'title' => $request->title,
+            'description' => $request->description,
+            'image' => (!empty($imagePath) ? $imagePath : $about->image),
+            'resume' => (!empty($resumePath) ? $resumePath : $about->resume)
+        ]);
+
+        flash()->success('Sección actualizada correctamente.');
+        return redirect()->back();
     }
 
     /**

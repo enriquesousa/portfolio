@@ -41,7 +41,7 @@
 
                                 {{-- Imagen Foto --}}
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Imagen</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: 550x550, el tamaño de la imagen no debe superar los 1MB">Imagen</label>
                                     <div class="col-sm-12 col-md-7">
                                         <div id="image-preview" class="image-preview">
                                             <label for="image-upload" id="image-label">Seleccione imagen</label>
@@ -86,7 +86,7 @@
                                     <div class="col-sm-12 col-md-7">
                                         <div class="custom-file">
                                             <input type="file" name="resume" class="custom-file-input" id="customFile">
-                                            <label class="custom-file-label" for="customFile">Seleccione PDF</label>
+                                            <label class="custom-file-label" for="customFile" title="Seleccione un archivo, el formato debe ser PDF, csv o txt, el tamaño no debe superar los 5MB">Seleccione PDF</label>
                                         </div>
                                     </div>
                                 </div>

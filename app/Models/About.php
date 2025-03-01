@@ -9,4 +9,11 @@ class About extends Model
 {
     /** @use HasFactory<\Database\Factories\AboutFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'description',
+        'image',
+        'resume',
+    ];
 }
