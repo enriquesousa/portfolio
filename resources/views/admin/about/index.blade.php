@@ -22,7 +22,8 @@
                             <div class="card-header-action">
 
                                 <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección Héroe - Vista Previa', 'hero_section_800x400_conTitulos.png', 'admin.hero.index']) }}" class="btn btn-secondary" title="Ver donde quedan estos elementos en la sección">
+                                <a href="{{ route('admin.vista-previa.index', ['Sección Héroe - Vista Previa', 'hero_section_800x400_conTitulos.png', 'admin.hero.index']) }}"
+                                    class="btn btn-secondary" title="Ver donde quedan estos elementos en la sección">
                                     <i class="fas fa-eye"></i> Vista Previa
                                 </a>
 
@@ -32,9 +33,22 @@
 
                         <div class="card-body">
 
-                            <form action="{{ route('admin.about.update', 1) }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('admin.about.update', 1) }}" method="POST"
+                                enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
+
+
+                                {{-- Imagen Foto --}}
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Imagen</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <div id="image-preview" class="image-preview">
+                                            <label for="image-upload" id="image-label">Seleccione imagen</label>
+                                            <input type="file" name="image" id="image-upload" />
+                                        </div>
+                                    </div>
+                                </div>
 
                                 {{-- Titulo --}}
                                 <div class="form-group row mb-4">
@@ -49,45 +63,35 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Descripción</label>
                                     <div class="col-sm-12 col-md-7">
-                                      <textarea name="description" class="summernote" style="height: 100px; width: 100%">{!! $about->description !!}</textarea>
-                                    </div>
-                                </div>
-                                {{-- <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Descripción</label>
-                                    <div class="col-sm-12 col-md-7">
-                                        <textarea name="description" id="" class="form-control" style="height: 100px">{{ $about->description }}</textarea>
-                                    </div>
-                                </div> --}}
-
-                                {{-- Resumen --}}
-                                <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Resumen</label>
-                                    <div class="col-sm-12 col-md-7">
-                                        <textarea name="resume" id="" class="form-control" style="height: 100px">{{ $about->resume }}</textarea>
+                                        <textarea name="description" class="summernote" style="height: 100px; width: 100%">{!! $about->description !!}</textarea>
                                     </div>
                                 </div>
 
-                                {{-- Imagen Foto --}}
+
+                                {{-- PDF Icono --}}
+                                @if ($about->resume)
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                                        <div class="col-sm-12 col-md-7">
+                                            <div>
+                                                <i class="fas fa-file-pdf" style="font-size: 100px;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+
+                                {{-- Seleccionar PDF Currículo Vitae --}}
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"
-                                        title="Seleccione una imagen o fotografía, el tamaño debe ser de 550x550 y el peso no debe superar 1MB">Imagen</label>
-                                    <div class="col-sm-12 col-md-3">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Currículo Vitae</label>
+                                    <div class="col-sm-12 col-md-7">
                                         <div class="custom-file">
-                                            <input name="image" type="file" class="custom-file-input image-upload"
-                                                id="customFile">
-                                            <label class="custom-file-label" for="customFile">Seleccionar imagen</label>
+                                            <input type="file" name="resume" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label" for="customFile">Seleccione PDF</label>
                                         </div>
                                     </div>
-                                    @if ($about->image)
-                                        <div class="col-sm-12 col-md-3">
-                                            <x-image-preview-image src="{{ asset($about->image) }}" />
-                                        </div>
-                                    @else
-                                        <div class="col-sm-12 col-md-3">
-                                            <x-image-preview-image src="" />
-                                        </div>
-                                    @endif
                                 </div>
+
+
 
                                 {{-- Botón Submit --}}
                                 <div class="form-group row mb-4">
