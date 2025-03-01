@@ -62,20 +62,39 @@ class AboutController extends Controller
 
         $request->validate([
             'title' => ['required', 'string', 'max:200'],
-            'description' => ['required', 'string', 'max:1000'],
-            'image' => ['required', 'image', 'max:1000'],
-            'resume' => ['mimes:pdf,csv,txt', 'max:5000'],
+            'description' => ['required', 'string', 'max:5000'],
+            'image' => ['max:1024', 'image'],
+            'resume' => ['mimes:pdf,csv,doc,docx', 'max:2000'],
         ]);
 
         $about = About::first();
+        
+        // if ($request->hasFile('image')) {
+        //     $this->deleteFile(About::find($id)->image);
+        //     $imagePath = $this->uploadFile($request->file('image'), 'uploads', 'about');
+        // }else{
+        //     $imagePath = About::find($id)->image; // Si no se sube una nueva imagen, se mantiene la imagen anterior.
+        // }
+
         $imagePath = handleUpload('image', $about);
-        $resumePath = handleUpload('resume', $about);
+
+        if($request->submit == 'Eliminar') {
+            $this->deleteFile(About::find($id)->resume);
+            $resumePath = null;
+        }else{
+            if ($request->hasFile('resume')) {
+                $this->deleteFile(About::find($id)->resume);
+                $resumePath = $this->uploadFile($request->file('resume'), 'uploads', 'resume');
+            }else{
+                $resumePath = About::find($id)->resume; // Si no se sube una nueva imagen, se mantiene la imagen anterior.
+            }
+        }
 
         About::updateOrCreate(['id' => $id], [
             'title' => $request->title,
             'description' => $request->description,
             'image' => (!empty($imagePath) ? $imagePath : $about->image),
-            'resume' => (!empty($resumePath) ? $resumePath : $about->resume)
+            'resume' => $resumePath
         ]);
 
         flash()->success('Sección actualizada correctamente.');

@@ -66,38 +66,37 @@
                                         <textarea name="description" class="summernote" style="height: 100px; width: 100%">{!! $about->description !!}</textarea>
                                     </div>
                                 </div>
-
-
-                                {{-- PDF Icono --}}
-                                @if ($about->resume)
-                                    <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
-                                        <div class="col-sm-12 col-md-7">
-                                            <div>
-                                                <i class="fas fa-file-pdf" style="font-size: 100px;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-
-                                {{-- Seleccionar PDF Currículo Vitae --}}
+                                    
+    
+                                {{-- Subir Archivo PDF --}}
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Currículo Vitae</label>
-                                    <div class="col-sm-12 col-md-7">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Subir archivo, el formato debe ser PDF, csv, doc o docx, el tamaño no debe superar los 2MB">Subir PDF</label>
+
+                                    <div class="col-sm-12 col-md-4">
                                         <div class="custom-file">
                                             <input type="file" name="resume" class="custom-file-input" id="customFile">
                                             <label class="custom-file-label" for="customFile" title="Seleccione un archivo, el formato debe ser PDF, csv o txt, el tamaño no debe superar los 5MB">Seleccione PDF</label>
                                         </div>
                                     </div>
+
+                                    {{-- Si hay archivo subido, mostrar icono pdf y botón para eliminar --}}
+                                    @if ($about->resume)
+                                        <div class="col-sm-12 col-md-3">
+                                            <div>
+                                                <i class="fas fa-file-pdf" style="font-size: 40px;"></i>&nbsp;&nbsp;
+                                                <button type="submit" name="submit" class="btn btn-danger" style="margin-top: -20px" value="Eliminar">Eliminar Archivo</button>
+                                            </div>
+                                        </div>
+                                    @endif
+
                                 </div>
+                                    
 
-
-
-                                {{-- Botón Submit --}}
+                                {{-- Botón Actualizar --}}
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                     <div class="col-sm-12 col-md-7">
-                                        <button class="btn btn-primary">Actualizar</button>
+                                        <button type="submit" name="submit" class="btn btn-primary" value="Actualizar">Actualizar</button>
                                     </div>
                                 </div>
 
@@ -114,16 +113,15 @@
 
 @push('child-scripts')
     <script>
-        // Mi JS para el manejo de la imagen en la forma
-        $(document).ready(function() {
-            $('.image-upload').change(function(e) {
-                // alert("funciona");
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                    $('#showImage').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(e.target.files['0']);
-            });
+        $(document).ready(function(){
+
+            // Mi JS para el manejo de la imagen en la forma
+            $('#image-preview').css({
+                'background-image': 'url("{{asset($about->image)}}")',
+                'background-size': 'cover',
+                'background-position': 'center center'
+            })
+
         });
     </script>
 @endpush

@@ -33,6 +33,7 @@ use Illuminate\Support\Facades\File;
 function handleUpload($inputName, $model=null){
     try{
         if(request()->hasFile($inputName)){
+            
             if($model && File::exists(public_path($model->{$inputName}))) {
                 File::delete(public_path($model->{$inputName}));
             }
