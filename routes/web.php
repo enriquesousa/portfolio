@@ -62,6 +62,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::resource('service', ServiceController::class);
 
     // About - Acerca de mi
+    Route::get('/resume/download', [AboutController::class, 'downloadResume'])->name('resume.download');
     Route::resource('about', AboutController::class);
 
 

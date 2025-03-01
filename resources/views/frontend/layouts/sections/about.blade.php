@@ -9,18 +9,21 @@
             </div>
             <div class="col-lg-6">
                 <div class="about-text">
+
                     <h3 class="title wow fadeInUp" data-wow-delay="0.3s">{{ $about->title }}</h3>
-                    <div class="sub-title wow fadeInUp" data-wow-delay="0.4s">
-                        <p>{{ $about->description }}</p>
-                    </div>
+
                     <div class="desc wow fadeInUp" data-wow-delay="0.4s">
-                        <p>{{ $about->resume }}</p>
+                        <p>{!! $about->description !!}</p>
                     </div>
-                    <a href="#" class="button-primary-trans mouse-dir wow fadeInUp" data-wow-delay="0.5s">
-                        <span class="icon"><i class="fal fa-download"></i></span>
-                        <span class="text">Descargar CV</span>
-                        <span class="dir-part"></span>
-                    </a>
+
+                    @if( $about->resume)
+                        <a href="{{ route('admin.resume.download') }}" class="button-primary-trans mouse-dir wow fadeInUp" data-wow-delay="0.5s">
+                            <span class="icon"><i class="fal fa-download"></i></span>
+                            <span class="text">Descargar CV</span>
+                            <span class="dir-part"></span>
+                        </a>
+                    @endif
+
                 </div>
             </div>
         </div>

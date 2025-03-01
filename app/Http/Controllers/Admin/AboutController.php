@@ -62,7 +62,7 @@ class AboutController extends Controller
 
         $request->validate([
             'title' => ['required', 'string', 'max:200'],
-            'description' => ['required', 'string', 'max:5000'],
+            'description' => ['required', 'string', 'max:7000'],
             'image' => ['max:1024', 'image'],
             'resume' => ['mimes:pdf,csv,doc,docx', 'max:2000'],
         ]);
@@ -107,5 +107,11 @@ class AboutController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function downloadResume()
+    {
+        $about = About::first();
+        return response()->download(public_path($about->resume));
     }
 }
