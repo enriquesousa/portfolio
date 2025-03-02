@@ -19,6 +19,7 @@
                     <a class="nav-link" href="#portfolio-page">Portfolio <i class="fas fa-angle-down"></i></a>
                     <ul class="sub_menu">
                         <li><a href="portfolio.html">Portfolio Grid</a></li>
+                        <li><a href="{{ route('login') }}">Admin Login</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

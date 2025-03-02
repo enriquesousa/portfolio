@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\ProfileController;
@@ -65,6 +66,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::get('/resume/download', [AboutController::class, 'downloadResume'])->name('resume.download');
     Route::resource('about', AboutController::class);
 
+    // Category - Categorías Routes
+    Route::resource('category', CategoryController::class);
 
     
 
