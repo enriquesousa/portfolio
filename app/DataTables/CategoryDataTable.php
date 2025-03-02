@@ -30,7 +30,7 @@ class CategoryDataTable extends DataTable
 
         // Nombre Categoría
         ->addColumn('name', function($query){
-            return $query->title;
+            return $query->name;
         })
         ->filterColumn('name', function ($query, $keyword) {
             $query->where('name', 'like', "%{$keyword}%");

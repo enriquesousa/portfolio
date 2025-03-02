@@ -57,15 +57,27 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category = Category::findOrFail($id);
+        return view('admin.portfolio-category.edit', compact('category'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id): RedirectResponse
     {
-        //
+        // dd($request->all());
+        $request->validate([
+            'name' => 'required|string|max:200',
+        ]);
+
+        $category = Category::findOrFail($id);
+        $category->name = $request->name;
+        $category->slug = str()->slug($request->name);
+        $category->save();
+
+        flash()->success('Categoría actualizada correctamente.');
+        return redirect()->route('admin.category.index');
     }
 
     /**
@@ -73,6 +85,16 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try{
+
+            $category = Category::findOrFail($id);
+            $category->delete();
+            return response(['status' => 'success', 'message' => __('Deleted successfully!')]);
+
+        }catch(\Exception $e){
+            // return response(['status' => 'error', 'message' => $e->getMessage()]);
+            return response(['status' => 'error', 'message' => __('Something went wrong!')]);
+        }
     }
+
 }
