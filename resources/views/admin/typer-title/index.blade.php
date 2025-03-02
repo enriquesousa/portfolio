@@ -25,7 +25,7 @@
                             <div class="card-header-action">
 
                                 <!-- Botón Vista Previa -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección Vista Previa - Titulo Maquina (Type Writer)', 'Hero_Section_800x400_TituloMaquina.png', 'admin.typer-title.index']) }}" class="btn btn-secondary" title="Ver donde queda este titulo en la sección">
+                                <a href="{{ route('admin.vista-previa.index',['Sección Vista Previa - Titulo Maquina (Type Writer)', 'heroVistaPrevia-tituloPagina-800x400.png', 'admin.typer-title.index']) }}" class="btn btn-secondary" title="Ver donde queda este titulo en la sección">
                                     <i class="fas fa-eye"></i> Vista Previa
                                 </a>
 

@@ -24,7 +24,7 @@
                             <div class="text-center">
 
                                 <center> <!-- Center the image and content -->
-                                    <img src="{{ asset('frontend/assets/images/'.$previaImagen) }}" style="width: 800px; height: 400px;" alt="Hero Image">
+                                    <img src="{{ asset('frontend/assets/imagenes/'.$previaImagen) }}" style="width: 800px; height: 400px;" alt="Hero Image">
                                 </center>
 
                             </div>

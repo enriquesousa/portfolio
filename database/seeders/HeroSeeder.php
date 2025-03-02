@@ -16,11 +16,11 @@ class HeroSeeder extends Seeder
         
         Hero::insert([
             [
-                'title' => 'Hola, somos TJWeb',
+                'title' => 'TJWeb',
                 'sub_title' => 'Brindamos soluciones integrales de diseño y desarrollo de aplicaciones web para impulsar al máximo el potencial de nuestros clientes',
                 'btn_text' => 'Conócenos',
                 'btn_url' => '#about',
-                'image' => '/uploads/portafolio_hero_67bd116c6866c.jpg',
+                'image' => '/frontend/assets/imagenes/hero-800x368_blur_clara.png',
                 'created_at' => now(),
                 'updated_at' => now()
             ]
