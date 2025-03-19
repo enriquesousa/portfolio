@@ -9,9 +9,14 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TyperTitleController;
 use App\Http\Controllers\Admin\VistaPreviaController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\LocalizationController;
+use App\Http\Middleware\LocalizationMiddleware;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// Home Route
+Route::get('/', [HomeController::class, 'index'])->middleware('localization')->name('home');
+
 
 Route::get('/blog', function () {
     return view('frontend.blog');
@@ -24,6 +29,10 @@ Route::get('/blog-details', function () {
 Route::get('/portfolio-details', function () {
     return view('frontend.portfolio-details');
 });
+
+
+// Set Language
+Route::get('/locale/{locale}', [LocalizationController::class, 'setLanguage'])->name('locale');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 

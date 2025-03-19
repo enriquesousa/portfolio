@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Session;
+
 return [
 
     /*
@@ -77,6 +79,7 @@ return [
     | set to any locale for which you plan to have translation strings.
     |
     */
+
 
     'locale' => env('APP_LOCALE', 'en'),
 

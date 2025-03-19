@@ -22,7 +22,7 @@
                 {{-- Columna --}}
                 <div class="col-12 col-md-12 col-lg-12">
 
-                    {{-- Información de Perfil --}}
+                    {{-- Información de Perfil Nombre y Correo Electrónico --}}
                     <div class="card">
 
                         <div class="card-header">

@@ -51,7 +51,7 @@
                                 @endif
 
                                 {{-- Formulario --}}
-                                <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
+                                <form method="POST" action="{{ route('login',getSessionLocale()) }}" class="needs-validation" novalidate="">
                                     @csrf
 
                                     {{-- Correo Electrónico --}}
@@ -70,7 +70,7 @@
                                         <div class="d-block">
                                             <label for="password" class="control-label">Contraseña</label>
                                                 <div class="float-right">
-                                                <a href="{{ route('password.request') }}" class="text-small">
+                                                <a href="{{ route('password.request',getSessionLocale()) }}" class="text-small">
                                                     Olvidaste tu contraseña?
                                                 </a>
                                             </div>

@@ -9,7 +9,7 @@
     {{-- csrf token para ajax --}}
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <title>Dashboard</title>
+    <title>Portfolio Admin | TJWeb</title>
 
     <!-- Icon Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('assets/img/logo48x48.ico') }}">

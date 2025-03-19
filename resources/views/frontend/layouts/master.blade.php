@@ -13,6 +13,10 @@
 	<link rel="stylesheet" href="{{ asset('frontend/assets/css/style-plugin-collection.css') }}">
 	<link rel="stylesheet" href="{{ asset('frontend/assets/css/theme.css') }}">
 	<link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
+
+	<!-- Bootstrap Icons fonts para poder usar los bootstrap iconos -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 
 <body>  
@@ -38,6 +42,9 @@
 	<script src="{{ asset('frontend/assets/js/jquery-plugin-collection.js') }}"></script>
 	<script src="{{ asset('frontend/assets/js/vendor/modernizr.js') }}"></script>
 	<script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+
+	<!-- Iconify: https://icon-sets.iconify.design/?query=language&keyword=l -->
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 
 	{{-- Para el código JS dinámico de las vistas, se puedan ejecutar cuando los llamamos con @push('child-scripts')  --}}
     @stack('child-scripts')

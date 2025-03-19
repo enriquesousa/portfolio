@@ -11,17 +11,17 @@
             <div class="col-lg-8">
                 <div class="header-text">
 
-                    <h3 class="typer-title wow fadeInUp" data-wow-delay="0.2s">I'm ui/ux designer</h3>
+                    <h3 class="typer-title wow fadeInUp" data-wow-delay="0.2s" style="font-size: 20px; font-weight: 300">I'm ui/ux designer</h3>
 
-                    <h1 class="title wow fadeInUp" data-wow-delay="0.3s">{{ $hero->title }}</h1>
+                    <h1 class="title wow fadeInUp" data-wow-delay="0.3s">{{ __($hero->title) }}</h1>
 
                     <div class="desc wow fadeInUp" data-wow-delay="0.4s">
-                        <p>{{ $hero->sub_title }}</p>
+                        <p>{{ __($hero->sub_title) }}</p>
                     </div>
 
                     @if( $hero->btn_text)
                         <a href="{{ $hero->btn_url }}" class="button-dark mouse-dir wow fadeInUp" data-wow-delay="0.5s">
-                            {{ $hero->btn_text }} <span class="dir-part"></span>
+                            {{ __($hero->btn_text) }} <span class="dir-part"></span>
                         </a>
                     @endif
 
@@ -38,7 +38,7 @@
         @php
             $titles = [];
             foreach($typerTitles as $typerTitle){
-                $titles[] = $typerTitle->title;
+                $titles[] = __($typerTitle->title);
             }
             // Convertir el php array a JSON array
             $titles = json_encode($titles);

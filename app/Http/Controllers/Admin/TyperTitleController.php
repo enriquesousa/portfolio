@@ -16,6 +16,7 @@ class TyperTitleController extends Controller
     public function index(TyperTitleDataTable $dataTable)
     {
         return $dataTable->render('admin.typer-title.index');
+        // return view('admin.typer-title.index');
     }
 
     /**

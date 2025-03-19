@@ -51,3 +51,18 @@ function handleUpload($inputName, $model=null){
     }
 
 }
+
+
+
+// Regresa el lenguaje de la sesión
+if(!function_exists('getSessionLocale')){
+    function getSessionLocale()
+    {
+        if(session()->has('locale')) {
+            $locale = session('locale'); // Retrieve a piece of data from the session..
+            return $locale;
+        }
+
+        return config('app.locale');
+    }
+}

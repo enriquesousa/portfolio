@@ -265,5 +265,19 @@
     "Yes, delete it!": "Si, borrarlo!",
     "You cannot be able to revert this!": "No podrás revertir esto!",
     "Deleted successfully!": "Eliminado correctamente!",
-    "Something went wrong!": "Algo salió mal!"
+    "Something went wrong!": "Algo salió mal!",
+
+    "About": "Sobre",
+    "Portfolio": "Portafolio",
+    "Portfolio Grid": "Grilla de portafolio",
+    "Skills": "Habilidades",
+    "Blog": "Blog",
+    "Blog Grid": "Grilla de blog",
+    "Contact": "Contacto",
+    "Translate Page": "Traducir página",
+    "Translate to English": "Traducir a inglés",
+    "Translate to Spanish": "Traducir a español",
+    "Language": "Idioma",
+    "Admin Login": "Area admin"
+    
 }
