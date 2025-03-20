@@ -278,6 +278,19 @@
     "Translate to English": "Traducir a inglés",
     "Translate to Spanish": "Traducir a español",
     "Language": "Idioma",
-    "Admin Login": "Area admin"
+    "Admin Login": "Area admin",
+
+    "The avatar is a profile picture that represents you and will be used to identify your account.": "El avatar es una imagen que representa a usted y será utilizada para identificar su cuenta.",
+    "PNG or JPG maximum of 400px by 400px and maximum of 1MB.": "PNG o JPG máximo de 400px por 400px y máximo de 1MB.",
+    "Change avatar": "Cambiar avatar",
+    "Delete avatar": "Eliminar avatar",
+    "Update Avatar": "Actualizar avatar",
+
+    "The avatar is required.": "El avatar es requerido.",
+    "The avatar must be an image.": "El avatar debe ser una imagen.",
+    "The avatar must be a file of type: png, jpg.": "El avatar debe ser un archivo de tipo: png, jpg.",
+    "The avatar must not exceed 1MB.": "El avatar no debe exceder 1MB.",
+    "Avatar updated successfully": "Avatar actualizado correctamente."
+
     
 }

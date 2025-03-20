@@ -1,0 +1,279 @@
+{
+	"files": [
+		{
+			"path": "resources/views/auth/forgot-password.blade.php",
+			"bookmarks": [
+				{
+					"line": 51,
+					"column": 32,
+					"label": "p line-hight altura de linea en parrafo html blade"
+				}
+			]
+		},
+		{
+			"path": "config/filesystems.php",
+			"bookmarks": [
+				{
+					"line": 42,
+					"column": 12,
+					"label": "almacenar en public path image"
+				}
+			]
+		},
+		{
+			"path": "app/DataTables/TyperTitleDataTable.php",
+			"bookmarks": [
+				{
+					"line": 29,
+					"column": 38,
+					"label": "datatable para poder ordenar columna"
+				},
+				{
+					"line": 35,
+					"column": 8,
+					"label": "hacer campo de datatable searchable buscable"
+				},
+				{
+					"line": 38,
+					"column": 42,
+					"label": "datatable ordenar por title"
+				},
+				{
+					"line": 43,
+					"column": 12,
+					"label": "eliminar un registro clase delete-item"
+				},
+				{
+					"line": 69,
+					"column": 40,
+					"label": "datatable default column order orden por default esta en desc"
+				},
+				{
+					"line": 83,
+					"column": 24,
+					"label": "datatable botones de exportación"
+				},
+				{
+					"line": 99,
+					"column": 24,
+					"label": "datatable traducir a español"
+				},
+				{
+					"line": 104,
+					"column": 49,
+					"label": "datatable order orden by column tiene prioridad aqui en los parametros, si no lo colocamos aqui no funciona"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/vista-previa/typer-title.blade.php",
+			"bookmarks": [
+				{
+					"line": 25,
+					"column": 74,
+					"label": "Center the image and content"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/layouts/master.blade.php",
+			"bookmarks": [
+				{
+					"line": 9,
+					"column": 0,
+					"label": "csrf token en master con meta tag"
+				},
+				{
+					"line": 37,
+					"column": 4,
+					"label": "bootstrap icons"
+				},
+				{
+					"line": 94,
+					"column": 44,
+					"label": "summernote plugin para editar notas"
+				},
+				{
+					"line": 100,
+					"column": 29,
+					"label": "image upload preview plugin"
+				},
+				{
+					"line": 145,
+					"column": 42,
+					"label": "eliminar un registro clase delete-item"
+				},
+				{
+					"line": 166,
+					"column": 60,
+					"label": "csrf token mandar en ajax"
+				},
+				{
+					"line": 175,
+					"column": 36,
+					"label": "notificacion notyf en ajax con duracion y position"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/layouts/header.blade.php",
+			"bookmarks": [
+				{
+					"line": 31,
+					"column": 16,
+					"label": "Cerrar sesion logout"
+				}
+			]
+		},
+		{
+			"path": "app/Http/Controllers/Auth/AuthenticatedSessionController.php",
+			"bookmarks": [
+				{
+					"line": 49,
+					"column": 8,
+					"label": "cerrar sesion mensaje logout"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/layouts/sections/hero.blade.php",
+			"bookmarks": [
+				{
+					"line": 37,
+					"column": 11,
+					"label": "dd debug en blade usar @dd($typerTitles);"
+				},
+				{
+					"line": 40,
+					"column": 16,
+					"label": "traduccion en script"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/layouts/sections/services.blade.php",
+			"bookmarks": [
+				{
+					"line": 6,
+					"column": 54,
+					"label": "usar loop en blade bootstrap column para separa margin top"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/about/index.blade.php",
+			"bookmarks": [
+				{
+					"line": 47,
+					"column": 0,
+					"label": "image upload preview plugin"
+				},
+				{
+					"line": 65,
+					"column": 0,
+					"label": "summernote text"
+				},
+				{
+					"line": 118,
+					"column": 12,
+					"label": "image upload preview plugin push js"
+				}
+			]
+		},
+		{
+			"path": "app/Http/Controllers/Admin/AboutController.php",
+			"bookmarks": [
+				{
+					"line": 114,
+					"column": 42,
+					"label": "descargar archivo controller"
+				}
+			]
+		},
+		{
+			"path": "app/Helper/helpers.php",
+			"bookmarks": [
+				{
+					"line": 32,
+					"column": 0,
+					"label": "handle file upload con global function"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/layouts/sections/about.blade.php",
+			"bookmarks": [
+				{
+					"line": 19,
+					"column": 26,
+					"label": "descargar archivo blade"
+				}
+			]
+		},
+		{
+			"path": "routes/web.php",
+			"bookmarks": [
+				{
+					"line": 17,
+					"column": 0,
+					"label": "traduccion asignar localization middleware a home route"
+				},
+				{
+					"line": 34,
+					"column": 0,
+					"label": "traduccion route setLanguage"
+				},
+				{
+					"line": 75,
+					"column": 101,
+					"label": "descargar archivo route"
+				}
+			]
+		},
+		{
+			"path": "app/Http/Middleware/LocalizationMiddleware.php",
+			"bookmarks": [
+				{
+					"line": 9,
+					"column": 28,
+					"label": "traduccion LocalizationMiddleware"
+				}
+			]
+		},
+		{
+			"path": "bootstrap/app.php",
+			"bookmarks": [
+				{
+					"line": 16,
+					"column": 12,
+					"label": "traduccion registrar middleware localization"
+				}
+			]
+		},
+		{
+			"path": "app/Providers/AppServiceProvider.php",
+			"bookmarks": [
+				{
+					"line": 24,
+					"column": 11,
+					"label": "inicio aqui podemos correr servicios al arranque"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/layouts/navbar.blade.php",
+			"bookmarks": [
+				{
+					"line": 5,
+					"column": 8,
+					"label": "logo navbar"
+				},
+				{
+					"line": 33,
+					"column": 24,
+					"label": "traduccion dropdown menu"
+				}
+			]
+		}
+	]
+}
