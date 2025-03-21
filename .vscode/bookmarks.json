@@ -54,12 +54,7 @@
 					"label": "datatable botones de exportación"
 				},
 				{
-					"line": 99,
-					"column": 24,
-					"label": "datatable traducir a español"
-				},
-				{
-					"line": 104,
+					"line": 105,
 					"column": 49,
 					"label": "datatable order orden by column tiene prioridad aqui en los parametros, si no lo colocamos aqui no funciona"
 				}
@@ -119,7 +114,7 @@
 			"path": "resources/views/admin/layouts/header.blade.php",
 			"bookmarks": [
 				{
-					"line": 31,
+					"line": 35,
 					"column": 16,
 					"label": "Cerrar sesion logout"
 				}
@@ -129,7 +124,7 @@
 			"path": "app/Http/Controllers/Auth/AuthenticatedSessionController.php",
 			"bookmarks": [
 				{
-					"line": 49,
+					"line": 61,
 					"column": 8,
 					"label": "cerrar sesion mensaje logout"
 				}
@@ -194,9 +189,9 @@
 			"path": "app/Helper/helpers.php",
 			"bookmarks": [
 				{
-					"line": 32,
-					"column": 0,
-					"label": "handle file upload con global function"
+					"line": 43,
+					"column": 8,
+					"label": "encontrar al user que esta login"
 				}
 			]
 		},
@@ -224,7 +219,7 @@
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 75,
+					"line": 81,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -272,6 +267,16 @@
 					"line": 33,
 					"column": 24,
 					"label": "traduccion dropdown menu"
+				}
+			]
+		},
+		{
+			"path": "app/Http/Controllers/Admin/ProfileController.php",
+			"bookmarks": [
+				{
+					"line": 116,
+					"column": 39,
+					"label": "get user "
 				}
 			]
 		}

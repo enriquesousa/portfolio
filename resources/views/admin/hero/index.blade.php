@@ -41,7 +41,7 @@
                             <div class="card-header-action">
 
                                 <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección Héroe - Vista Previa', 'heroVistaPrevia-elementos-800x400.png', 'admin.hero.index']) }}" class="btn btn-secondary" title="Ver donde quedan estos elementos en la sección">
+                                <a href="{{ route('admin.vista-previa.index',['Sección Héroe - Vista Previa', 'heroVistaPrevia-elementos-800x400.png', 'admin.hero.index']) }}" class="btn btn-warning" title="Ver donde quedan estos elementos en la sección">
                                     <i class="fas fa-eye"></i> Vista Previa
                                 </a>
 

@@ -34,13 +34,19 @@ Route::get('/portfolio-details', function () {
 // Set Language
 Route::get('/locale/{locale}', [LocalizationController::class, 'setLanguage'])->name('locale');
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified', 'localization'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
+// Route::middleware('auth')->group(function () {
+Route::group(['middleware' => ['auth', 'localization'], ], function () {
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::patch('/profile/avatar/update', [ProfileController::class, 'updateAvatar'])->name('profile.avatar.update');
+    Route::patch('/profile/language/update', [ProfileController::class, 'updateLanguage'])->name('profile.language.update');
+    Route::get('/profile/actividades', [ProfileController::class, 'actividades'])->name('profile.actividades.index');
+    Route::get('/profile/logout/page', [ProfileController::class, 'logoutPage'])->name('profile.logoutPage.index');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
 });
 
 require __DIR__.'/auth.php';
@@ -49,7 +55,7 @@ require __DIR__.'/auth.php';
 // ******************************************************************************************************************
 // Admin Routes: prefix admin para prefijo del nombre de la ruta url y as admin. para prefijo de nombre de las rutas.
 // ******************************************************************************************************************
-Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::group(['middleware' => ['auth', 'localization'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
 
     // *********
     // Secciones

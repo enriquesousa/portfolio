@@ -95,9 +95,10 @@ class TyperTitleDataTable extends DataTable
                                             [ 10, 25, 50, -1 ],
                                             [ '10', '25 filas', '50 filas', 'Todos' ]
                                         ],
+                        
+                        // if locale is spanish
+                        'language' => (app()->getLocale() == 'es') ? \Illuminate\Support\Facades\Config::get('dtespanol') : \Illuminate\Support\Facades\Config::get('dtingles'),
 
-                        // Para traducir al español
-                        'language' => (app()->getLocale() == 'es') ? \Illuminate\Support\Facades\Config::get('dtespanol') : '',
                         // Tambien se puede hacer de esta manera
                         // 'language' => ['url' => '//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json'],
                         

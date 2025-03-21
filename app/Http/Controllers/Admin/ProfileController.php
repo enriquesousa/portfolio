@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\DataTables\AdminLogTimesDataTable;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\LogTime;
 use App\Models\User;
 use App\Traits\FileUpload;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\View\View;
+use Illuminate\Support\Facades\Session;
 
 class ProfileController extends Controller
 {
@@ -106,5 +109,35 @@ class ProfileController extends Controller
         return redirect()->route('profile.edit');
     }
 
+    public function updateLanguage(Request $request): RedirectResponse
+    {
+        // dd($request->all());
+        $locale = $request->language;
+
+        $user = User::find(Auth::id());
+        $user->language = $request->language;
+        $user->save();
+
+        Session::put('locale', $locale);
+        app()->setLocale($locale);
+        session(['lenguaje' => $locale]); // set session variable
+
+        $message = __('Language updated successfully');    
+        flash()->success($message);
+        return redirect()->route('profile.edit');
+    }
+
+    public function actividades(AdminLogTimesDataTable $dataTable)
+    {
+        return $dataTable->render('admin.actividades.index');
+
+        // $adminActividades = LogTime::all()->sortByDesc('id');
+        // return view('admin.actividades.index', compact('adminActividades'));
+    }
+
+    public function logoutPage(): View
+    {
+        return view('admin.logout.index');
+    }
 
 }

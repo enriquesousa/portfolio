@@ -14,11 +14,40 @@
     "Acerca de mi": "About me",
     "Secciones": "Sections",
     "Control": "Control",
-    "Panel": "Panel",
+    "Panel": "Dashboard",
     "Avatar": "Avatar",
     "Perfil actualizado correctamente.": "Profile updated successfully.",
     "Hola": "Hi",
-    "Cambia información de tu perfil.": "Change information of your profile."
+    "Cambia información de tu perfil.": "Change information of your profile.",
+    "Información de Perfil": "Profile Information",
+    "Nombre": "Name",
+    "Correo Electrónico": "Email",
+    "Guardar Cambios": "Save Changes",
+    "Actualizar Contraseña": "Update Password",
+    "Contraseña Actual": "Current Password",
+    "Nueva Contraseña": "New Password",
+    "Confirmar Contraseña": "Confirm Password",
+
+    "Seleccionar Idioma": "Select Language",
+    "Actualizar Idioma": "Update Language",
+    "Perfil": "Profile",
+    "Actividades": "Activities",
+    "Cerrar Sesión": "Logout",
+
+    "Sección Héroe - Titulo Maquina (Type Writer)": "Hero Section - Typer Title (Type Writer)",
+    "Todos los Títulos": "All Titles",
+    "Vista Previa": "Preview",
+    "Agregar Titulo": "Add Title",
+    "Titulo Maquina": "Typer Title",
+    "Sección Héroe": "Hero Section",
+
+    "Actividades Admin": "Admin Activities",
+    "Todas las Actividades": "All Activities",
+
+    "Haz iniciado sesión con éxito!": "You have logged in successfully!",
+    "Pagina de Salida": "Exit Page",
+    "Registrar tu actividad en esta sesión - (Opcional)": "Register your activity in this session - (Optional)",
+    "Describe tu actividad en esta sesión": "Describe your activity in this session"
 
 
 

@@ -3,10 +3,10 @@
     <section class="section">
 
         <div class="section-header">
-            <h1>Perfil</h1>
+            <h1>{{ __('Perfil') }}</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Panel</a></div>
-                <div class="breadcrumb-item">Perfil</div>
+                <div class="breadcrumb-item active"><a href="#">{{ __('Panel') }}</a></div>
+                <div class="breadcrumb-item">{{ __('Perfil') }}</div>
             </div>
         </div>
 
@@ -89,11 +89,10 @@
                     <div class="card">
 
                         <div class="card-header">
-                            <h4>Información de Perfil</h4>
+                            <h4>{{ __('Información de Perfil') }}</h4>
                         </div>
 
                         <div class="card-body">
-
                             {{-- Nombre y Correo Electrónico --}}
                             <form action="{{ route('profile.update') }}" method="POST">
                                 @csrf
@@ -103,7 +102,7 @@
 
                                     {{-- Nombre --}}
                                     <div class="form-group col-md-6 col-12">
-                                        <label>Nombre</label>
+                                        <label>{{ __('Nombre') }}</label>
                                         <input type="text" name="name" class="form-control"
                                             value="{{ old('name', $user->name) }}" required="">
                                         @if ($errors->has('name'))
@@ -113,7 +112,7 @@
 
                                     {{-- Correo Electrónico --}}
                                     <div class="form-group col-md-6 col-12">
-                                        <label>Correo Electrónico</label>
+                                        <label>{{ __('Correo Electrónico') }}</label>
                                         <input type="email" name="email" id="email" class="form-control"
                                             value="{{ old('email', $user->email) }}" required="">
                                         @if ($errors->has('email'))
@@ -125,11 +124,10 @@
 
                                 {{-- Botón Submit Guardar --}}
                                 <div class="card-footer text-right">
-                                    <button class="btn btn-primary">Guardar Cambios</button>
+                                    <button class="btn btn-primary">{{ __('Guardar Cambios') }}</button>
                                 </div>
 
                             </form>
-
                         </div>
 
                     </div>
@@ -138,7 +136,7 @@
                     <div class="card">
 
                         <div class="card-header">
-                            <h4>Actualizar Contraseña</h4>
+                            <h4>{{ __('Actualizar Contraseña') }}</h4>
                         </div>
 
                         <div class="card-body">
@@ -151,7 +149,7 @@
 
                                     {{-- Contraseña Actual --}}
                                     <div class="form-group col-md-12 col-12">
-                                        <label>Contraseña Actual</label>
+                                        <label>{{ __('Contraseña Actual') }}</label>
                                         <input type="password" name="current_password" class="form-control"
                                             autocomplete="current-password">
                                         @if ($errors->updatePassword->has('current_password'))
@@ -161,7 +159,7 @@
 
                                     {{-- Nueva Contraseña --}}
                                     <div class="form-group col-md-6 col-12">
-                                        <label>Nueva Contraseña</label>
+                                        <label>{{ __('Nueva Contraseña') }}</label>
                                         <input type="password" name="password" class="form-control"
                                             autocomplete="new-password">
                                         @if ($errors->updatePassword->has('password'))
@@ -171,7 +169,7 @@
 
                                     {{-- Confirmar Contraseña --}}
                                     <div class="form-group col-md-6 col-12">
-                                        <label>Confirmar Contraseña</label>
+                                        <label>{{ __('Confirmar Contraseña') }}</label>
                                         <input type="password" name="password_confirmation" class="form-control"
                                             autocomplete="new-password">
                                         @if ($errors->updatePassword->has('password_confirmation'))
@@ -183,11 +181,77 @@
 
                                 {{-- Botón Submit Guardar --}}
                                 <div class="card-footer text-right">
-                                    <button type="submit" class="btn btn-primary">Actualizar Contraseña</button>
+                                    <button type="submit" class="btn btn-primary">{{ __('Actualizar Contraseña') }}</button>
                                 </div>
 
                             </form>
 
+                        </div>
+
+                    </div>
+
+                    {{-- Seleccionar Idioma --}}
+                    <div class="card">
+
+                        <div class="card-header">
+                            <h4>{{ __('Seleccionar Idioma') }}</h4>
+                        </div>
+
+                        <div class="card-body">
+
+                            <p class="card-subtitle">{{ __('Here you can change the language in which the application will be displayed.') }}  {{ __('Currently your language is: ') }} <span class="fw-bold text-warning">{{ App::getLocale()== 'en' ? __('English') : __('Spanish')}}</span></p>
+
+                            <form action="{{ route('profile.language.update') }}" method="POST">
+                                @csrf
+                                @method('patch')
+
+                                <div class="row">
+
+                                    {{-- Radio Button, Select Language --}}
+                                    <div class="form-group col-md-6 col-12">
+
+                                        @php
+                                            $locale = App::getLocale();
+                                            if($locale == 'en'){
+                                                $status_ingles = 'checked';
+                                                $status_español = '';
+                                            }elseif ($locale == 'es') {
+                                                $status_ingles = '';
+                                                $status_español = 'checked';
+                                            }
+                                            else{
+                                                $status_ingles = '';
+                                                $status_español = '';
+                                            }
+                                        @endphp
+                                        {{-- Ingles --}}
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="language"
+                                                id="flexRadioDefault1" value="en" {{ $status_ingles }}>
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                {{ __('English') }}
+                                            </label>
+                                        </div>
+
+                                        {{-- Español --}}
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="language"
+                                                id="flexRadioDefault2" value="es" {{ $status_español }}>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                {{ __('Spanish') }}
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                {{-- Botón Update Language --}}
+                                <div class="card-footer text-right">
+                                    <button class="btn btn-primary">{{ __('Actualizar Idioma') }}</button>
+                                </div>
+
+                            </form>
                         </div>
 
                     </div>

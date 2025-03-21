@@ -9,7 +9,7 @@
                     <i class="fas fa-arrow-left"></i>
                 </a>
             </div>
-            <h1>Sección Héroe - Titulo Maquina (Type Writer) </h1>
+            <h1>{{ __('Sección Héroe - Titulo Maquina (Type Writer)') }}</h1>
         </div>
 
         <div class="section-body">
@@ -20,18 +20,18 @@
 
                         <div class="card-header">
 
-                            <h4>Todos los Títulos</h4>
+                            <h4>{{ __('Todos los Títulos') }}</h4>
 
                             <div class="card-header-action">
 
                                 <!-- Botón Vista Previa -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección Vista Previa - Titulo Maquina (Type Writer)', 'heroVistaPrevia-tituloPagina-800x400.png', 'admin.typer-title.index']) }}" class="btn btn-secondary" title="Ver donde queda este titulo en la sección">
-                                    <i class="fas fa-eye"></i> Vista Previa
+                                <a href="{{ route('admin.vista-previa.index',['Sección Vista Previa - Titulo Maquina (Type Writer)', 'heroVistaPrevia-tituloPagina-800x400.png', 'admin.typer-title.index']) }}" class="btn btn-warning" title="Ver donde queda este titulo en la sección">
+                                    <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
 
                                 <!-- Botón Agregar -->
                                 <a href="{{ route('admin.typer-title.create') }}" class="btn btn-primary">
-                                    <i class="fas fa-plus"></i> Nuevo Titulo
+                                    <i class="fas fa-plus"></i> {{ __('Agregar Titulo') }}
                                 </a>
 
                             </div>
