@@ -279,6 +279,16 @@
 					"label": "get user "
 				}
 			]
+		},
+		{
+			"path": "app/DataTables/AdminLogTimesDataTable.php",
+			"bookmarks": [
+				{
+					"line": 148,
+					"column": 88,
+					"label": "datatable cambiar color a columna addClass('text-primary')"
+				}
+			]
 		}
 	]
 }

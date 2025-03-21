@@ -32,6 +32,7 @@
     "Actualizar Idioma": "Update Language",
     "Perfil": "Profile",
     "Actividades": "Activities",
+    "Actividad": "Activity",
     "Cerrar Sesión": "Logout",
 
     "Sección Héroe - Titulo Maquina (Type Writer)": "Hero Section - Typer Title (Type Writer)",
@@ -47,7 +48,12 @@
     "Haz iniciado sesión con éxito!": "You have logged in successfully!",
     "Pagina de Salida": "Exit Page",
     "Registrar tu actividad en esta sesión - (Opcional)": "Register your activity in this session - (Optional)",
-    "Describe tu actividad en esta sesión": "Describe your activity in this session"
+    "Describe tu actividad en esta sesión": "Describe your activity in this session",
+
+    "T. Inicio": "Start Time",
+    "T. Final": "End Time",
+    "Actividad Registrada": "Activity Registered"
+
 
 
 

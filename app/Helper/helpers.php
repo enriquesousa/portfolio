@@ -151,15 +151,24 @@ if(!function_exists('intervaloTiempo')){
 if(!function_exists('formatFecha5')){
     function formatFecha5($fecha)
     {
-        $dia = Carbon::parse($fecha)->locale('es')->isoFormat('D');
-        $mes = ucfirst(Carbon::parse($fecha)->locale('es')->isoFormat('MMMM'));
-        $año = Carbon::parse($fecha)->locale('es')->isoFormat('YYYY');
+        // $dia = Carbon::parse($fecha)->locale('es')->isoFormat('D');
+
+        // $mes = ucfirst(Carbon::parse($fecha)->locale('es')->isoFormat('MMMM'));
+        // $año = Carbon::parse($fecha)->locale('es')->isoFormat('YYYY');
+
+        // $mes = ucfirst(Carbon::parse($fecha)->locale('es')->isoFormat('MM'));
+        // $año = Carbon::parse($fecha)->locale('es')->isoFormat('YY');
+
+        // $fecha2 = date( 'd M y', strtotime($fecha));
+        $fecha2 = date( 'd/M/y', strtotime($fecha));
+
         // $fecha = Carbon::parse($fecha)->locale('es')->isoFormat('D [de] MMMM[,] YYYY');
 
         // https://www.w3schools.com/php/func_date_date.asp
         $hora = date('g:i A', strtotime($fecha));
 
-        $fecha = $hora . ' | '. $dia.'-'. $mes .'-' . $año;
+        // $fecha = $hora . ' | '. $dia.'/'. $mes .'/' . $año;
+        $fecha = $hora . ' | '. $fecha2;
         return $fecha;
     }
 }
