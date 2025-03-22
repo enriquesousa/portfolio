@@ -30,13 +30,13 @@ class AdminLogTimesDataTable extends DataTable
             })->orderColumn('id', 'id $1')
 
             // User ID
-            ->addColumn('user_id', function($query){
-                return $query->user_id;
-            })
-            ->filterColumn('user_id', function ($query, $keyword) {
-                $query->where('user_id', 'like', "%{$keyword}%");
-            })
-            ->orderColumn('user_id', 'user_id $1')
+            // ->addColumn('user_id', function($query){
+            //     return $query->user_id;
+            // })
+            // ->filterColumn('user_id', function ($query, $keyword) {
+            //     $query->where('user_id', 'like', "%{$keyword}%");
+            // })
+            // ->orderColumn('user_id', 'user_id $1')
 
             // Name (user_id)
             ->addColumn('user_name', function($query){
@@ -72,9 +72,13 @@ class AdminLogTimesDataTable extends DataTable
             // action
             ->addColumn('action', function($query){
 
-                // $view = "<a href='javascript:void(0)' class='btn btn-primary logTime_details_btn' title='".__("Details")."' data-id='".$query->id."' data-toggle='modal' data-target='#logTime_modal'><i class='fas fa-eye'></i></a>";
+                // Con icono de fontawesome
+                $view = "<a href='javascript:void(0)' class='btn btn-primary logTime_details_btn' title='".__("Details")."' data-id='".$query->id."' data-toggle='modal' data-target='#logTime_modal'><i class='fas fa-eye'></i></a>";
 
-                // return $view;
+                // Con icono de bootstrap
+                // $view = "<a href='javascript:void(0)' class='btn btn-primary logTime_details_btn' title='".__("Details")."' data-id='".$query->id."' data-toggle='modal' data-target='#logTime_modal'><i class='bi bi-eye-fill'></i></a>";
+
+                return $view;
             })
 
             ->rawColumns(['time_interval','action'])
@@ -143,8 +147,8 @@ class AdminLogTimesDataTable extends DataTable
     {
         return [
 
-            Column::make('id')->title(__('ID'))->width(60)->addClass('text-center'),
-            Column::make('user_id')->title(__('ID Admin'))->addClass('text-primary')->width(100),
+            Column::make('id')->title(__('#'))->width(60)->addClass('text-center'),
+            // Column::make('user_id')->title(__('ID Admin'))->addClass('text-primary')->width(100),
             Column::make('user_name')->title(__('Name'))->width(100),
             Column::make('login_time')->title(__('T. Inicio'))->addClass('text-primary')->width(100),
             Column::make('logout_time')->title(__('T. Final'))->width(100),

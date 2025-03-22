@@ -172,3 +172,24 @@ if(!function_exists('formatFecha5')){
         return $fecha;
     }
 }
+
+// Para regresar una fecha en formato: "29/OCT/22".
+if(!function_exists('formatFecha6')){
+    function formatFecha6($fecha)
+    {
+        // $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+        $meses = array("ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC");
+        // $meses = array("EN","FE","MA","AB","MA","JU","JL","AG","SE","OC","NO","DI");
+        $fecha = Carbon::parse($fecha);
+        $mes = $meses[($fecha->format('n')) - 1];
+        // $inputs['Fecha'] = $fecha->format('d') . ' de ' . $mes . ' de ' . $fecha->format('Y');
+
+        $dia = Carbon::parse($fecha)->locale('es')->isoFormat('D');
+        // $mes = ucfirst(Carbon::parse($fecha)->locale('es')->isoFormat('MMM'));
+        $año = Carbon::parse($fecha)->locale('es')->isoFormat('YY');
+        // $fecha = Carbon::parse($fecha)->locale('es')->isoFormat('D [de] MMMM[,] YYYY');
+
+        $fecha = $dia.'/'.$mes.'/'.$año;
+        return $fecha;
+    }
+}

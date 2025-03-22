@@ -79,6 +79,11 @@
 					"label": "csrf token en master con meta tag"
 				},
 				{
+					"line": 20,
+					"column": 4,
+					"label": "fontawesime icons"
+				},
+				{
 					"line": 37,
 					"column": 4,
 					"label": "bootstrap icons"
@@ -219,7 +224,7 @@
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 81,
+					"line": 82,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -274,7 +279,7 @@
 			"path": "app/Http/Controllers/Admin/ProfileController.php",
 			"bookmarks": [
 				{
-					"line": 116,
+					"line": 117,
 					"column": 39,
 					"label": "get user "
 				}
@@ -284,7 +289,7 @@
 			"path": "app/DataTables/AdminLogTimesDataTable.php",
 			"bookmarks": [
 				{
-					"line": 148,
+					"line": 152,
 					"column": 88,
 					"label": "datatable cambiar color a columna addClass('text-primary')"
 				}

@@ -11,6 +11,7 @@ use App\Traits\FileUpload;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
@@ -140,4 +141,23 @@ class ProfileController extends Controller
         return view('admin.logout.index');
     }
 
+    public function getLogTimeDetails(string $id): Response 
+    {
+
+        $logTime = LogTime::with('user')->findOrFail($id);
+
+        $login_time = formatFecha5($logTime->login_time);
+        if(empty($logTime->logout_time)) {
+            $logout_time = '-';
+        }else {
+            $logout_time = formatFecha5($logTime->logout_time);
+        }
+        $time_interval = intervaloTiempo($logTime->login_time, $logTime->logout_time);
+        $created_at = formatFecha6($logTime->created_at);
+        $description = $logTime->description;
+
+        return response(['logTime' => $logTime, 'login_time' => $login_time, 'logout_time' => $logout_time ,'time_interval' => $time_interval, 'created_at' => $created_at, 'description' => $description], 200);
+    }
+
+    
 }

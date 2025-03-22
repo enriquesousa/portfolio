@@ -296,7 +296,16 @@
     "Currently your language is: ": "Actualmente su lenguaje es: ",
     "Spanish": "Español",
     "English": "Inglés",
-    "Language updated successfully": "Lenguaje actualizado correctamente."
+    "Language updated successfully": "Lenguaje actualizado correctamente.",
+
+    "Log Time Details": "Detalles de tiempo de inicio de sesión",
+    "User Name": "Nombre de usuario",
+    "Login Time": "Tiempo de inicio de sesión",
+    "Logout Time": "Tiempo de finalización de sesión",
+    "Total Time": "Tiempo total",
+    "Created At": "Fecha de creación",
+    "Description": "Descripción"
+
 
     
 }
