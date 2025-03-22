@@ -44,8 +44,8 @@ class CategoryDataTable extends DataTable
         
         // action
         ->addColumn('action', function($query){
-            $edit = "<a href='".route('admin.category.edit', $query->id)."' class='btn btn-primary' title='Editar'><i class='fas fa-edit'></i></a>";
-            $delete = "<a href='".route('admin.category.destroy', $query->id)."' class='btn btn-danger delete-item ml-2' title='Eliminar'><i class='fas fa-trash'></i></a>";
+            $edit = "<a href='".route('admin.category.edit', $query->id)."' class='btn btn-primary' title='".__("Editar")."'><i class='fas fa-edit'></i></a>";
+            $delete = "<a href='".route('admin.category.destroy', $query->id)."' class='btn btn-danger delete-item ml-2' title='".__('Eliminar')."'><i class='fas fa-trash'></i></a>";
             return $edit . $delete;
         })
 
@@ -87,6 +87,9 @@ class CategoryDataTable extends DataTable
 
                         // 'dom'          => 'Bfrtip', // Comentar para que no se muestren los botones de exportación
 
+                        // Para cambiar el placeholder de la búsqueda
+                        // 'searchPlaceholder' => "Categoría",
+
                         // 'buttons'      => ['export', 'pageLength', 'print', 'reset', 'reload'],
                         'buttons'      => ['pageLength', 'excel', 'csv', 'pdf', 'print', 'reset', 'reload'],
                         'select'       => false,
@@ -101,11 +104,16 @@ class CategoryDataTable extends DataTable
                                         ],
 
                         // Para traducir al español
-                        'language' => (app()->getLocale() == 'es') ? \Illuminate\Support\Facades\Config::get('dtespanol') : '',
+                        'language' => (app()->getLocale() == 'es') ? \Illuminate\Support\Facades\Config::get('dtespanol') : \Illuminate\Support\Facades\Config::get('dtingles'),
                         
+                        
+
                         // order by first column
                         'order' => [[0, 'desc']],
-                    ]);
+                    ])
+                    
+                    // Para cambiar el placeholder de la búsqueda
+                    ->language(['searchPlaceholder' => __('Buscar categoría...')]);
     }
 
     /**
@@ -114,8 +122,9 @@ class CategoryDataTable extends DataTable
     public function getColumns(): array
     {
         return [
+
             Column::make('id')->title(__('ID'))->width(60)->addClass('text-center'),
-            Column::make('name')->title(__('Categoría')),
+            Column::make('name')->title('<span class="text-primary">'.__("Categoría").'</span>'),
             Column::make('slug')->title(__('Slug')),
 
             Column::computed('action')

@@ -16,6 +16,7 @@ class CategoryController extends Controller
     public function index(CategoryDataTable $dataTable)
     {
         return $dataTable->render('admin.portfolio-category.index');
+        // return view('admin.portfolio-category.index');
     }
 
     /**
@@ -41,7 +42,7 @@ class CategoryController extends Controller
         $category->slug = str()->slug($request->name);
         $category->save();
 
-        return redirect()->route('admin.category.index')->with('success', 'Categoría creada con éxito');
+        return redirect()->route('admin.category.index')->with('success', __('Categoría creada con éxito'));
     }
 
     /**

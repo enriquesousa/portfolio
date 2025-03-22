@@ -150,7 +150,10 @@ class AdminLogTimesDataTable extends DataTable
             Column::make('id')->title(__('#'))->width(60)->addClass('text-center'),
             // Column::make('user_id')->title(__('ID Admin'))->addClass('text-primary')->width(100),
             Column::make('user_name')->title(__('Name'))->width(100),
-            Column::make('login_time')->title(__('T. Inicio'))->addClass('text-primary')->width(100),
+
+            Column::make('login_time')->title('<span class="text-primary">'.__("T. Inicio").'</span>')->width(100),
+            // Column::make('login_time')->title(__('T. Inicio'))->addClass('text-primary')->width(100),
+
             Column::make('logout_time')->title(__('T. Final'))->width(100),
             Column::make('time_interval')->title(__('Intervalo'))->width(100),
             Column::make('description')->title(__('Actividad Registrada')),

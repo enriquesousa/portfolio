@@ -63,19 +63,21 @@
 
             {{-- Sección Portafolio --}}
             <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
-                    <span>Portafolio</span></a>
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                    <i class="bi bi-briefcase"></i>
+                    <span>{{ __('Portafolio') }}</span>
+                </a>
                 <ul class="dropdown-menu" style="display: none;">
 
                     <li>
                         <a class="nav-link" href="{{ route('admin.category.index') }}">
-                            Categorías
+                            {{ __('Categorías') }}
                         </a>
                     </li>
 
                     <li>
                         <a class="nav-link" href="{{ route('admin.hero.index') }}">
-                            Sección Héroe
+                            {{ __('Sección Héroe') }}
                         </a>
                     </li>
 

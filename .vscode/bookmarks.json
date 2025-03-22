@@ -104,6 +104,11 @@
 					"label": "eliminar un registro clase delete-item"
 				},
 				{
+					"line": 152,
+					"column": 20,
+					"label": "traduccion en sweet alert 2"
+				},
+				{
 					"line": 166,
 					"column": 60,
 					"label": "csrf token mandar en ajax"
@@ -289,9 +294,54 @@
 			"path": "app/DataTables/AdminLogTimesDataTable.php",
 			"bookmarks": [
 				{
-					"line": 152,
+					"line": 135,
+					"column": 24,
+					"label": "datatable traduccion toda la tabla"
+				},
+				{
+					"line": 153,
+					"column": 12,
+					"label": "datatable cambiar color title header"
+				},
+				{
+					"line": 154,
 					"column": 88,
 					"label": "datatable cambiar color a columna addClass('text-primary')"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/portfolio-category/index.blade.php",
+			"bookmarks": [
+				{
+					"line": 12,
+					"column": 16,
+					"label": "tradccion en php code"
+				}
+			]
+		},
+		{
+			"path": "app/DataTables/CategoryDataTable.php",
+			"bookmarks": [
+				{
+					"line": 46,
+					"column": 107,
+					"label": "datatable traduccion editar y eliminar en columna de accion"
+				},
+				{
+					"line": 115,
+					"column": 20,
+					"label": "datatable search placeholder name"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/hero/index.blade.php",
+			"bookmarks": [
+				{
+					"line": 43,
+					"column": 200,
+					"label": "traduccion en title dentro de a tag"
 				}
 			]
 		}

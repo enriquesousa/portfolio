@@ -7,8 +7,8 @@
                 <a href="{{ route('admin.typer-title.index') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             @php
-                $tituloPagina = 'Agregar Categoría';
-                $subTitulo = 'Agregar Nueva Categoría';
+                $tituloPagina = __('Agregar Categoría');
+                $subTitulo = __('Agregar Nueva Categoría');
             @endphp
             <h1>{{ $tituloPagina }}</h1>
         </div>
@@ -27,7 +27,7 @@
 
                                 {{-- Nombre --}}
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nombre</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Nombre') }}</label>
                                     <div class="col-sm-12 col-md-7">
                                         <input type="text" name="name" class="form-control" autofocus>
                                     </div>
@@ -37,7 +37,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                     <div class="col-sm-12 col-md-7">
-                                        <button class="btn btn-primary">Crear</button>
+                                        <button class="btn btn-primary">{{ __('Crear') }}</button>
                                     </div>
                                 </div>
 

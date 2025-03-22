@@ -36,13 +36,13 @@
 
                         <div class="card-header">
 
-                            <h4>Actualizar Sección Héroe</h4>
+                            <h4>{{ __('Actualizar Sección Héroe') }}</h4>
 
                             <div class="card-header-action">
 
                                 <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección Héroe - Vista Previa', 'heroVistaPrevia-elementos-800x400.png', 'admin.hero.index']) }}" class="btn btn-warning" title="Ver donde quedan estos elementos en la sección">
-                                    <i class="fas fa-eye"></i> Vista Previa
+                                <a href="{{ route('admin.vista-previa.index',['Sección Héroe - Vista Previa', 'heroVistaPrevia-elementos-800x400.png', 'admin.hero.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
+                                    <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
 
                             </div>

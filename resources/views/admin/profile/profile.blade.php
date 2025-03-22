@@ -205,7 +205,7 @@
                                 @csrf
                                 @method('patch')
 
-                                <div class="row">
+                                <div class="row mt-3">
 
                                     {{-- Radio Button, Select Language --}}
                                     <div class="form-group col-md-6 col-12">
@@ -232,7 +232,7 @@
                                                 {{ __('English') }}
                                             </label>
                                         </div>
-
+                                        <br>
                                         {{-- Español --}}
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="language"

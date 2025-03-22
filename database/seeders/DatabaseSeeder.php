@@ -38,6 +38,8 @@ class DatabaseSeeder extends Seeder
         $this->call(ServiceSeeder::class);
 
         $this->call(AboutSeeder::class);
+
+        $this->call(CategorySeeder::class);
     }
 
 }

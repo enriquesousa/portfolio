@@ -150,13 +150,13 @@
                 // console.log(url);
 
                 Swal.fire({
-                    title: "¿Estás seguro?",
-                    text: "¡No podrás recuperar este archivo!",
+                    title: "{{ __('¿Estás seguro?') }}",
+                    text: "{{ __('¡No podrás recuperar este archivo!') }}",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: '¡Si, Eliminar!',
+                    confirmButtonText: "{{ __('¡Si, Eliminar!') }}",
                 }).then((result) => {
                     if (result.isConfirmed) {
 

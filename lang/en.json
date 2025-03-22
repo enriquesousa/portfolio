@@ -21,6 +21,7 @@
     "Cambia información de tu perfil.": "Change information of your profile.",
     "Información de Perfil": "Profile Information",
     "Nombre": "Name",
+    "Crear": "Create",
     "Correo Electrónico": "Email",
     "Guardar Cambios": "Save Changes",
     "Actualizar Contraseña": "Update Password",
@@ -52,7 +53,24 @@
 
     "T. Inicio": "Start Time",
     "T. Final": "End Time",
-    "Actividad Registrada": "Activity Registered"
+    "Actividad Registrada": "Activity Registered",
+    "Portafolio": "Portfolio",
+    "Categorías": "Categories",
+    "Todas las categorías": "All Categories",
+    "Ver donde quedan estos elementos en la sección": "See where these elements are in the section",
+    "Agregar": "Add",
+    "Actualizar Sección Héroe": "Update Hero Section",
+    "Agregar Categoría": "Add Category",
+    "Agregar Nueva Categoría": "Add New Category",
+    "Categoría creada con éxito": "Category created successfully",
+    "Editar Categoría": "Edit Category",
+    "Actualizar": "Update",
+    "Buscar categoría...": "Search category...",
+    "Editar": "Edit",
+    "Eliminar": "Delete",
+    "¿Estás seguro?": "Are you sure?",
+    "¡No podrás recuperar este archivo!": "You can not recover this file!",
+    "¡Si, Eliminar!": "Yes, Delete!"
 
 
 
