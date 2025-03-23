@@ -13,7 +13,14 @@
             </a>
 
             <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-title">Logged in 5 min ago</div>
+
+                @php
+                    // leer login_time de tabla log_times
+                    $loginTime = \App\Models\LogTime::where('user_id', auth()->user()->id)->latest()->first();
+                @endphp
+                <div class="dropdown-title">
+                    {{ __('Activo') }}, {{ \Carbon\Carbon::parse($loginTime->login_time)->diffForHumans() }}
+                </div>
 
                 {{-- Perfil --}}
                 <a href="{{ route('profile.edit') }}" class="dropdown-item has-icon">

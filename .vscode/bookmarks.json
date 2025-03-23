@@ -124,7 +124,12 @@
 			"path": "resources/views/admin/layouts/header.blade.php",
 			"bookmarks": [
 				{
-					"line": 35,
+					"line": 21,
+					"column": 75,
+					"label": "activo hace loginTime desplegar en dropdown menu"
+				},
+				{
+					"line": 42,
 					"column": 16,
 					"label": "Cerrar sesion logout"
 				}
@@ -342,6 +347,16 @@
 					"line": 43,
 					"column": 200,
 					"label": "traduccion en title dentro de a tag"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/layouts/footer.blade.php",
+			"bookmarks": [
+				{
+					"line": 8,
+					"column": 8,
+					"label": "fecha y hora actual en footer"
 				}
 			]
 		}
