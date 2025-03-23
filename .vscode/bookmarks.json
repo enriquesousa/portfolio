@@ -124,12 +124,22 @@
 			"path": "resources/views/admin/layouts/header.blade.php",
 			"bookmarks": [
 				{
-					"line": 21,
+					"line": 4,
+					"column": 30,
+					"label": "Navbar Toggle Sidebar"
+				},
+				{
+					"line": 40,
 					"column": 75,
 					"label": "activo hace loginTime desplegar en dropdown menu"
 				},
 				{
-					"line": 42,
+					"line": 44,
+					"column": 16,
+					"label": "perfil profile dropdown menu"
+				},
+				{
+					"line": 61,
 					"column": 16,
 					"label": "Cerrar sesion logout"
 				}

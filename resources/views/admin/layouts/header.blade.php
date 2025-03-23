@@ -1,15 +1,34 @@
 <div class="navbar-bg"></div>
 
 <nav class="navbar navbar-expand-lg main-navbar">
-    <div class="form-inline mr-auto"></div>
+
+    <!-- Navbar Toggle Sidebar -->
+    <div class="form-inline mr-auto">
+        <ul class="navbar-nav mr-3">
+            <li>
+                <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none">
+                    <i class="fas fa-search"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Navbar Right -->
     <ul class="navbar-nav navbar-right">
         <li class="dropdown">
 
-            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user" aria-expanded="false">
+
+                <img alt="image" src="{{ asset(auth()->user()->avatar) }}" class="avatar avatar-sm mr-1">
                 <div class="d-sm-none d-lg-inline-block">
-                    <img alt="image" src="{{ asset(auth()->user()->avatar) }}" class="rounded-circle mr-1">
                     {{ __('Hola') }}, {{ Auth::user()->name }}
                 </div>
+
             </a>
 
             <div class="dropdown-menu dropdown-menu-right">
@@ -49,6 +68,8 @@
 
 
             </div>
+
         </li>
     </ul>
+
 </nav>
