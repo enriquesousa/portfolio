@@ -93,7 +93,7 @@ class TyperTitleDataTable extends DataTable
                         // Configure the drop down options.
                         'lengthMenu'   => [
                                             [ 10, 25, 50, -1 ],
-                                            [ '10', '25 filas', '50 filas', 'Todos' ]
+                                            [ '10', __('25 filas'), __('50 filas'), __('Todos') ]
                                         ],
                         
                         // if locale is spanish

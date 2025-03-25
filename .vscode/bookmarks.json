@@ -347,6 +347,11 @@
 					"line": 115,
 					"column": 20,
 					"label": "datatable search placeholder name"
+				},
+				{
+					"line": 126,
+					"column": 12,
+					"label": "pintar header en datatable "
 				}
 			]
 		},
@@ -367,6 +372,16 @@
 					"line": 8,
 					"column": 8,
 					"label": "fecha y hora actual en footer"
+				}
+			]
+		},
+		{
+			"path": "app/DataTables/PortfolioItemDataTable.php",
+			"bookmarks": [
+				{
+					"line": 152,
+					"column": 12,
+					"label": "datatable campo buscable searchable"
 				}
 			]
 		}
