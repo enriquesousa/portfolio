@@ -18,10 +18,8 @@
                         </div>
 
                         <div class="card-body">
-                            <form action="#" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('admin.portfolio-item.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                @method('PUT')
-
 
                                 {{-- Imagen Foto --}}
                                 <div class="form-group row mb-4">
@@ -44,20 +42,22 @@
 
                                 {{-- Seleccionar Categoría --}}
                                 <div class="form-group row mb-4">
-                                    <label
-                                        class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Seleccionar Categoría') }}</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">
+                                        {{ __('Seleccionar Categoría') }}
+                                    </label>
                                     <div class="col-sm-12 col-md-7">
-                                        <select class="form-control selectric">
-                                            <option>Tech</option>
-                                            <option>News</option>
-                                            <option>Political</option>
+                                        <select class="form-control selectric" name="category_id">
+                                            <option>{{ __('Seleccionar') }}</option>
+                                            @foreach ($categories as $category)
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
 
                                 {{-- Descripción --}}
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Descripción</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Descripción') }}</label>
                                     <div class="col-sm-12 col-md-7">
                                         <textarea name="description" class="summernote" style="height: 100px; width: 100%"></textarea>
                                     </div>
@@ -83,7 +83,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                     <div class="col-sm-12 col-md-7">
-                                        <button type="submit" name="submit" class="btn btn-primary" value="Actualizar">Actualizar</button>
+                                        <button class="btn btn-primary">{{ __('Crear') }}</button>
                                     </div>
                                 </div>
 

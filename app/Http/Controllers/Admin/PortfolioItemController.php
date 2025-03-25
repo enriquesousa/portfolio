@@ -4,10 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use App\DataTables\PortfolioItemDataTable;
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\PortfolioItem;
+use App\Traits\FileUpload;
 use Illuminate\Http\Request;
+
 
 class PortfolioItemController extends Controller
 {
+    use FileUpload;
+
     /**
      * Display a listing of the resource.
      */
@@ -22,7 +28,8 @@ class PortfolioItemController extends Controller
      */
     public function create()
     {
-        return view('admin.portfolio-item.create');
+        $categories = Category::all();
+        return view('admin.portfolio-item.create', compact('categories'));
     }
 
     /**
@@ -30,7 +37,31 @@ class PortfolioItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+
+        $request->validate([
+            'image' => ['required', 'image', 'max:3000'],
+            'title' => ['required', 'string', 'max:200'],
+            'description' => ['required'],
+            'category_id' => ['required', 'numeric'],
+            'client' => ['nullable','max:200'],
+            'website' => ['url']
+        ]); 
+
+        $imagePath = handleUpload('image');
+
+        $portfolioItem = new PortfolioItem();
+        $portfolioItem->image = $imagePath;
+        $portfolioItem->title = $request->title;
+        $portfolioItem->description = $request->description;
+        // Convert category_id to integer
+        $portfolioItem->category_id = (int)$request->category_id;
+        $portfolioItem->client = $request->client;
+        $portfolioItem->website = $request->website;
+        $portfolioItem->save();
+
+        flash()->success( __('Sección actualizada correctamente.') );
+        return redirect()->back();
     }
 
     /**
