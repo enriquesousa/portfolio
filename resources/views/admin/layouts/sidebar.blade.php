@@ -78,7 +78,7 @@
 
                     {{-- Portafolio --}}
                     <li>
-                        <a class="nav-link" href="{{ route('admin.hero.index') }}">
+                        <a class="nav-link" href="{{ route('admin.portfolio-item.index') }}">
                             {{ __('Portafolio') }}
                         </a>
                     </li>

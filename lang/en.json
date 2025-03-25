@@ -56,6 +56,8 @@
     "Actividad Registrada": "Activity Registered",
     "Portafolio": "Portfolio",
     "Categorías": "Categories",
+    "Categoría": "Category",
+    "Seleccionar Categoría": "Select Category",
     "Todas las categorías": "All Categories",
     "Ver donde quedan estos elementos en la sección": "See where these elements are in the section",
     "Agregar": "Add",
@@ -79,9 +81,17 @@
     "Recuérdame": "Remember me",
     "Recuperar Contraseña": "Reset Password",
     "¿Olvidó su contraseña? No hay problema. Simplemente déjenos saber su dirección de correo electrónico y le enviaremos un enlace para restablecer la contraseña que le permitirá elegir una nueva.": "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.",
-    "Restablecer Contraseña": "Reset Password"
+    "Restablecer Contraseña": "Reset Password",
 
-
+    "Artículos": "Items",
+    "Todos las artículos": "All Items",
+    "Agregar Articulo de Portafolio": "Add Portfolio Item",
+    "Imagen": "Image",
+    "Seleccione imagen": "Select Image",
+    "Titulo": "Title",
+    "Cliente": "Client",
+    "Sitio Web": "Website"
+    
 
 
 }

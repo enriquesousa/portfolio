@@ -30,8 +30,9 @@
 
                                         {{-- Logo --}}
                                         <div class="text-center mb-1">
-                                            <a href="." class="navbar-brand navbar-brand-autodark">
-                                                <img src="{{ asset('images/logo-small-TJweb-normal.svg') }}" width="100" height="100" alt="Tabler">
+                                            <a href="#" class="navbar-brand navbar-brand-autodark">
+                                                {{-- <img src="{{ asset('images/logo-small-TJweb-normal.svg') }}" width="100" height="100" alt="Tabler"> --}}
+                                                <img src="{{ asset('images/logo-v.png') }}" alt="logo" width="" class="">
                                             </a>
                                         </div>
 
@@ -58,7 +59,7 @@
                                 </div>
 
                                 <div class="col-lg d-none d-lg-block">
-                                    <img src="{{ asset('images/computer-fix.png') }}" height="300"
+                                    <img src="{{ asset('images/computer-fix2.png') }}" height="300"
                                         class="d-block mx-auto" alt="">
                                 </div>
 
