@@ -17,6 +17,29 @@
 	<!-- Bootstrap Icons fonts para poder usar los bootstrap iconos -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+	<!-- Google fonts coiny font para titulo TJWeb y winky sans para subtitulo -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Coiny&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+	<!-- Google fonts CSS -->
+	<style type="text/css">
+
+		.coiny-regular {
+			font-family: "Coiny", system-ui;
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		.winky-sans-subtitulo {
+			font-family: "Winky Sans", sans-serif;
+			font-optical-sizing: auto;
+			font-weight: 400;
+			font-style: normal;
+		}
+
+	</style>
+
 </head>
 
 <body>  

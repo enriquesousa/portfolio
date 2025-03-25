@@ -2,8 +2,7 @@
     <div class="container">
 
         <a class="navbar-brand" href="{{ url('/'.getSessionLocale()) }}">
-            {{-- <img src="{{ asset('frontend/assets/images/logo.png') }}" alt="Rabins"> --}}
-            <img src="{{ asset('frontend/assets/imagenes/logo-563x123-b.png') }}" alt="TJWeb">
+            <img src="{{ asset('images/logo-h.png') }}" alt="TJWeb">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

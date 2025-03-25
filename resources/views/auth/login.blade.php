@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Login &mdash; Stisla</title>
+    <title>Login &mdash; TJWeb</title>
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -30,15 +30,15 @@
 
                         {{-- Logo --}}
                         <div class="login-brand">
-                            {{-- <img src="{{ asset('assets/img/stisla-fill.svg') }}" alt="logo" width="100"
-                                class="shadow-light rounded-circle"> --}}
-                            <img src="{{ asset('assets/img/Logo-TJweb-250x250.png') }}" alt="logo" width="130" class="">
+                            <a href="{{ route('home') }}">
+                                <img src="{{ asset('images/logo-v.png') }}" alt="logo" width="" class="">
+                            </a>
                         </div>
 
                         <div class="card card-primary">
 
                             <div class="card-header">
-                                <h4>Iniciar sesión</h4>
+                                <h4>{{ __('Iniciar sesión') }}</h4>
                             </div>
 
                             <div class="card-body">
@@ -56,7 +56,7 @@
 
                                     {{-- Correo Electrónico --}}
                                     <div class="form-group">
-                                        <label for="email">Correo Electrónico</label>
+                                        <label for="email">{{ __('Correo Electrónico') }}</label>
                                         <input id="email" type="email" class="form-control" name="email"
                                             tabindex="1" value="{{ old('email') }}" required autofocus>
                                         @if( $errors->has('email'))
@@ -68,10 +68,10 @@
                                     <div class="form-group">
 
                                         <div class="d-block">
-                                            <label for="password" class="control-label">Contraseña</label>
+                                            <label for="password" class="control-label">{{ __('Contraseña') }}</label>
                                                 <div class="float-right">
                                                 <a href="{{ route('password.request',getSessionLocale()) }}" class="text-small">
-                                                    Olvidaste tu contraseña?
+                                                    {{ __('¿Olvidaste tu contraseña?') }}
                                                 </a>
                                             </div>
                                         </div>
@@ -89,14 +89,14 @@
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" name="remember" class="custom-control-input"
                                                 tabindex="3" id="remember-me">
-                                            <label class="custom-control-label" for="remember-me">Recuérdame</label>
+                                            <label class="custom-control-label" for="remember-me">{{ __('Recuérdame') }}</label>
                                         </div>
                                     </div>
 
                                     {{-- Botón Submit Iniciar sesión --}}
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
-                                            Iniciar sesión
+                                            {{ __('Iniciar sesión') }}
                                         </button>
                                     </div>
 
@@ -130,8 +130,7 @@
 
                         {{-- Footer Copyright --}}
                         <div class="simple-footer">
-                            {{-- Copyright &copy; Stisla 2018 --}}
-                            Copyright &copy; TJWeb 2025
+                            {{ __('Copyright') }} &copy; TJWeb 2025
                         </div>
 
                     </div>

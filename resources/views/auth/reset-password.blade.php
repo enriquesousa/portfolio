@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Login &mdash; Stisla</title>
+    <title>Login &mdash; TJWeb</title>
+
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -27,16 +28,18 @@
                 <div class="row">
                     <div
                         class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-
+                        
                         {{-- Logo --}}
                         <div class="login-brand">
-                            <img src="{{ asset('assets/img/Logo-TJweb-250x250.png') }}" alt="logo" width="130" class="">
+                            <a href="{{ route('home') }}">
+                                <img src="{{ asset('images/logo-v.png') }}" alt="logo" width="" class="">
+                            </a>
                         </div>
 
                         <div class="card card-primary">
 
                             <div class="card-header">
-                                <h4>Restablecer Contraseña</h4>
+                                <h4>{{ __('Restablecer Contraseña') }}</h4>
                             </div>
                             
 
@@ -60,7 +63,7 @@
 
                                     {{-- Correo Electrónico --}}
                                     <div class="form-group">
-                                        <label for="email">Correo Electrónico</label>
+                                        <label for="email">{{ __('Correo Electrónico') }}</label>
                                         <input id="email" type="email" class="form-control" name="email"
                                             tabindex="1" value="{{ $request->email }}" required>
                                         @if( $errors->has('email'))
@@ -70,7 +73,7 @@
 
                                     {{-- Contraseña --}}
                                     <div class="form-group">
-                                        <label for="password">Contraseña</label>
+                                        <label for="password">{{ __('Contraseña') }}</label>
                                         <input id="password" type="password" class="form-control" name="password" tabindex="2" required autocomplete="new-password" autofocus>
                                         @if( $errors->has('password'))
                                             <code>{{ $errors->first('password') }}</code>
@@ -79,7 +82,7 @@
                                     
                                     {{-- Confirmar Contraseña --}}
                                     <div class="form-group">
-                                        <label for="password_confirmation">Confirmar Contraseña</label>
+                                        <label for="password_confirmation">{{ __('Confirmar Contraseña') }}</label>
                                         <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" tabindex="3" required autocomplete="new-password">
                                         @if( $errors->has('password_confirmation'))
                                             <code>{{ $errors->first('password_confirmation') }}</code>

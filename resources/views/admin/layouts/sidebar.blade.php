@@ -69,15 +69,17 @@
                 </a>
                 <ul class="dropdown-menu" style="display: none;">
 
+                    {{-- Categorías --}}
                     <li>
                         <a class="nav-link" href="{{ route('admin.category.index') }}">
                             {{ __('Categorías') }}
                         </a>
                     </li>
 
+                    {{-- Portafolio --}}
                     <li>
                         <a class="nav-link" href="{{ route('admin.hero.index') }}">
-                            {{ __('Sección Héroe') }}
+                            {{ __('Portafolio') }}
                         </a>
                     </li>
 

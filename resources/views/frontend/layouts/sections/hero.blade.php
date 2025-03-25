@@ -11,11 +11,11 @@
             <div class="col-lg-8">
                 <div class="header-text">
 
-                    <h3 class="typer-title wow fadeInUp" data-wow-delay="0.2s" style="font-size: 20px; font-weight: 300">I'm ui/ux designer</h3>
+                    <h3 class="typer-title wow fadeInUp winky-sans-subtitulo" data-wow-delay="0.2s" style="font-size: 20px; font-weight: 300">I'm ui/ux designer</h3>
 
-                    <h1 class="title wow fadeInUp" data-wow-delay="0.3s">{{ __($hero->title) }}</h1>
+                    <h1 class="title wow fadeInUp coiny-regular" data-wow-delay="0.3s">{{ __($hero->title) }}</h1>
 
-                    <div class="desc wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="desc wow fadeInUp winky-sans-subtitulo" data-wow-delay="0.4s">
                         <p>{{ __($hero->sub_title) }}</p>
                     </div>
 

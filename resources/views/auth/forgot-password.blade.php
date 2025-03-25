@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Login &mdash; Stisla</title>
+    <title>Login &mdash; TJWeb</title>
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -30,13 +30,15 @@
 
                         {{-- Logo --}}
                         <div class="login-brand">
-                            <img src="{{ asset('assets/img/Logo-TJweb-250x250.png') }}" alt="logo" width="130" class="">
+                            <a href="{{ route('home') }}">
+                                <img src="{{ asset('images/logo-v.png') }}" alt="logo" width="" class="">
+                            </a>
                         </div>
 
                         <div class="card card-primary">
 
                             <div class="card-header">
-                                <h4>Recuperar Contraseña</h4>
+                                <h4>{{ __('Recuperar Contraseña') }}</h4>
                             </div>
                             
 
@@ -49,7 +51,7 @@
                                     </div>
                                 @endif
 
-                                <p style="line-height: 1.2;">¿Olvidó su contraseña? No hay problema. Simplemente déjenos saber su dirección de correo electrónico y le enviaremos un enlace para restablecer la contraseña que le permitirá elegir una nueva.</p>
+                                <p style="line-height: 1.2;">{{ __('¿Olvidó su contraseña? No hay problema. Simplemente déjenos saber su dirección de correo electrónico y le enviaremos un enlace para restablecer la contraseña que le permitirá elegir una nueva.') }}</p>
 
                                 {{-- Formulario --}}
                                 <form method="POST" action="{{ route('password.email') }}" class="needs-validation" novalidate="">
@@ -57,7 +59,7 @@
 
                                     {{-- Correo Electrónico --}}
                                     <div class="form-group">
-                                        <label for="email">Correo Electrónico</label>
+                                        <label for="email">{{ __('Correo Electrónico') }}</label>
                                         <input id="email" type="email" class="form-control" name="email"
                                             tabindex="1" value="{{ old('email') }}" required autofocus>
                                         @if( $errors->has('email'))

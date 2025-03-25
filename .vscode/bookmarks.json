@@ -4,7 +4,7 @@
 			"path": "resources/views/auth/forgot-password.blade.php",
 			"bookmarks": [
 				{
-					"line": 51,
+					"line": 53,
 					"column": 32,
 					"label": "p line-hight altura de linea en parrafo html blade"
 				}
@@ -284,12 +284,12 @@
 			"path": "resources/views/frontend/layouts/navbar.blade.php",
 			"bookmarks": [
 				{
-					"line": 5,
+					"line": 4,
 					"column": 8,
 					"label": "logo navbar"
 				},
 				{
-					"line": 33,
+					"line": 32,
 					"column": 24,
 					"label": "traduccion dropdown menu"
 				}

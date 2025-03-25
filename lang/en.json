@@ -71,7 +71,15 @@
     "¿Estás seguro?": "Are you sure?",
     "¡No podrás recuperar este archivo!": "You can not recover this file!",
     "¡Si, Eliminar!": "Yes, Delete!",
-    "Activo": "Active"
+    "Activo": "Active",
+
+    "Iniciar sesión": "Login",
+    "Contraseña": "Password",
+    "¿Olvidaste tu contraseña?": "Forgot your password?",
+    "Recuérdame": "Remember me",
+    "Recuperar Contraseña": "Reset Password",
+    "¿Olvidó su contraseña? No hay problema. Simplemente déjenos saber su dirección de correo electrónico y le enviaremos un enlace para restablecer la contraseña que le permitirá elegir una nueva.": "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.",
+    "Restablecer Contraseña": "Reset Password"
 
 
 

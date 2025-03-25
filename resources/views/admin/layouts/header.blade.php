@@ -46,7 +46,7 @@
                     <i class="far fa-user"></i>&nbsp; {{ __('Perfil') }}
                 </a>
 
-                {{-- Configuraciones --}}
+                {{-- Actividades --}}
                 <a href="{{ route('profile.actividades.index') }}" class="dropdown-item has-icon">
                     <i class="bi bi-lightning"></i>&nbsp;{{ __('Actividades') }}
                 </a>

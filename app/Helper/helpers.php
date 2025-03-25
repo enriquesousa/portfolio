@@ -147,7 +147,7 @@ if(!function_exists('intervaloTiempo')){
     }
 }
 
-// Para regresar una fecha en formato: "3:45 p.m. | 13-MAR-2024".
+// Para regresar una fecha en formato: "3:45 p.m. | 13-MAR-24".
 if(!function_exists('formatFecha5')){
     function formatFecha5($fecha)
     {
