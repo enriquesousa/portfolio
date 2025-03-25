@@ -86,6 +86,8 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
+        // dd($id); // No podemos hacer DD aquí porque estamos haciendo una petición AJAX
+
         try{
 
             $category = Category::findOrFail($id);

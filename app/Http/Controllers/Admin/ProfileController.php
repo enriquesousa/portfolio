@@ -92,7 +92,7 @@ class ProfileController extends Controller
         if ($request->hasFile('avatar')) {
             $avatar = $request->file('avatar');
 
-            $avatarPath = $this->uploadFile($request->file('avatar'));
+            $avatarPath = $this->uploadFile($request->file('avatar'),'uploads','avatar');
             $this->deleteFile($user->avatar);
 
             $user->avatar = $avatarPath;

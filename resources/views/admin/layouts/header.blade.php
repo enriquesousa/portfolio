@@ -24,7 +24,8 @@
 
             <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user" aria-expanded="false">
 
-                <img alt="image" src="{{ asset(auth()->user()->avatar) }}" class="avatar avatar-sm mr-1">
+                <img alt="image" src="{{ asset( !empty(auth()->user()->avatar) ? auth()->user()->avatar : url('images/avatar.png') ) }}" class="avatar avatar-sm mr-1">
+
                 <div class="d-sm-none d-lg-inline-block">
                     {{ __('Hola') }}, {{ Auth::user()->name }}
                 </div>

@@ -129,17 +129,17 @@
 					"label": "Navbar Toggle Sidebar"
 				},
 				{
-					"line": 40,
+					"line": 41,
 					"column": 75,
 					"label": "activo hace loginTime desplegar en dropdown menu"
 				},
 				{
-					"line": 44,
+					"line": 45,
 					"column": 16,
 					"label": "perfil profile dropdown menu"
 				},
 				{
-					"line": 61,
+					"line": 62,
 					"column": 16,
 					"label": "Cerrar sesion logout"
 				}
@@ -379,9 +379,54 @@
 			"path": "app/DataTables/PortfolioItemDataTable.php",
 			"bookmarks": [
 				{
+					"line": 42,
+					"column": 12,
+					"label": "datatable buscar por categoria"
+				},
+				{
 					"line": 152,
 					"column": 12,
 					"label": "datatable campo buscable searchable"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/profile/profile.blade.php",
+			"bookmarks": [
+				{
+					"line": 44,
+					"column": 44,
+					"label": "image showImage si hay si no defalt"
+				}
+			]
+		},
+		{
+			"path": "app/Http/Controllers/Admin/CategoryController.php",
+			"bookmarks": [
+				{
+					"line": 88,
+					"column": 89,
+					"label": "petición AJAX para DELETE"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/portfolio-item/edit.blade.php",
+			"bookmarks": [
+				{
+					"line": 20,
+					"column": 28,
+					"label": "edit route update portfolio-item"
+				},
+				{
+					"line": 52,
+					"column": 48,
+					"label": "select seleceted en edit"
+				},
+				{
+					"line": 107,
+					"column": 16,
+					"label": "image preview en edit"
 				}
 			]
 		}

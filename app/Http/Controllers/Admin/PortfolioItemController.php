@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\PortfolioItem;
 use App\Traits\FileUpload;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 
@@ -48,7 +49,8 @@ class PortfolioItemController extends Controller
             'website' => ['url']
         ]); 
 
-        $imagePath = handleUpload('image');
+        // $imagePath = handleUpload('image'); // otra manera de hacerlo
+        $imagePath = $this->uploadFile($request->file('image'), 'uploads', 'portfolio');
 
         $portfolioItem = new PortfolioItem();
         $portfolioItem->image = $imagePath;
@@ -61,7 +63,7 @@ class PortfolioItemController extends Controller
         $portfolioItem->save();
 
         flash()->success( __('Sección actualizada correctamente.') );
-        return redirect()->back();
+        return redirect()->route('admin.portfolio-item.index');
     }
 
     /**
@@ -77,15 +79,48 @@ class PortfolioItemController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        // dd($id);
+        $portfolioItem = PortfolioItem::find($id);
+        $categories = Category::all();
+        return view('admin.portfolio-item.edit', compact('portfolioItem', 'categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id): RedirectResponse
     {
-        //
+        // dd($request->all());
+
+        $portfolioItem = PortfolioItem::find($id);
+
+        $request->validate([
+            'image' => ['nullable', 'max:3000'],
+            'title' => ['required', 'string', 'max:200'],
+            'description' => ['required'],
+            'category_id' => ['required', 'numeric'],
+            'client' => ['nullable','max:200'],
+            'website' => ['url']
+        ]);
+
+        if ($request->hasFile('image')) {
+            $this->deleteFile($portfolioItem->image);
+            $imagePath = $this->uploadFile($request->file('image'), 'uploads', 'portfolio');
+        }else{
+            $imagePath = $portfolioItem->image; // Si no se sube una nueva imagen, se mantiene la imagen anterior.
+        }
+
+        $portfolioItem->update([
+            'image' => isset($imagePath) ? $imagePath : $portfolioItem->image,
+            'title' => $request->title,
+            'description' => $request->description,
+            'category_id' => (int)$request->category_id,
+            'client' => $request->client,
+            'website' => $request->website
+        ]);
+
+        flash()->success( __('Actualizado correctamente!') );
+        return redirect()->route('admin.portfolio-item.index');
     }
 
     /**
@@ -93,6 +128,18 @@ class PortfolioItemController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // dd($id); // No podemos hacer DD aquí porque estamos haciendo una petición AJAX
+
+        try{
+
+            $portfolioItem = PortfolioItem::find($id);
+            deleteFileIfExists($portfolioItem->image);
+            $portfolioItem->delete();
+            return response(['status' => 'success', 'message' => __('Deleted successfully!')]);
+
+        }catch(\Exception $e){
+            // return response(['status' => 'error', 'message' => $e->getMessage()]);
+            return response(['status' => 'error', 'message' => __('Something went wrong!')]);
+        }
     }
 }

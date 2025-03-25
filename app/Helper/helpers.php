@@ -96,6 +96,18 @@ function handleUpload($inputName, $model=null){
 
 }
 
+// Delete File
+function deleteFileIfExists($path){
+    try{
+        if(File::exists(public_path($path))){
+            File::delete(public_path($path));
+        }
+    }catch(\Exception $e){
+        throw $e;
+    }
+    
+}
+
 // Regresa el lenguaje de la sesión
 if(!function_exists('getSessionLocale')){
     function getSessionLocale()

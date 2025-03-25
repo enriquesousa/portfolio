@@ -152,12 +152,12 @@ class PortfolioItemDataTable extends DataTable
 
             Column::make('id')->title('<span class="text-primary">'.__("ID").'</span>')->searchable(true)->width(40)->addClass('text-center'),
             Column::make('image')->title(__('Image'))->width(100)->addClass('text-center'),
-            Column::make('title')->searchable(true)->title('<span class="text-primary">'.__("Titulo").'</span>')->width(100),
+            Column::make('title')->searchable(true)->title('<span class="text-primary">'.__("Titulo").'</span>'),
             Column::make('category')->title('<span class="text-primary">'.__("Categoría").'</span>')->width(100)->addClass('text-center'),
-            Column::make('description')->title(__('Descripción')),
-            Column::make('client')->title(__('Cliente'))->width(50),
-            Column::make('website')->title(__('Sitio Web'))->width(50),
-            Column::make('created_at')->title(__('Creado en'))->width(50),
+            // Column::make('description')->title(__('Descripción')),
+            // Column::make('client')->title(__('Cliente')),
+            // Column::make('website')->title(__('Sitio Web')),
+            Column::make('created_at')->title(__('Creado en'))->width(150),
 
             Column::computed('action')
                 ->exportable(false)
