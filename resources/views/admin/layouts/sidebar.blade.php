@@ -76,10 +76,17 @@
                         </a>
                     </li>
 
-                    {{-- Portafolio --}}
+                    {{-- Portafolio Items --}}
                     <li>
                         <a class="nav-link" href="{{ route('admin.portfolio-item.index') }}">
                             {{ __('Portafolio') }}
+                        </a>
+                    </li>
+
+                    {{-- Configuración Sección --}}
+                    <li>
+                        <a class="nav-link" href="{{ route('admin.portfolio-section-setting.index') }}">
+                            {{ __('Configurar Sección') }}
                         </a>
                     </li>
 

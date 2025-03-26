@@ -100,7 +100,16 @@
     "Creado en": "Created at",
     "Editar Articulo de Portafolio": "Edit Portfolio Item",
     "Actualizado correctamente!": "Updated successfully!",
-    "Eliminado correctamente!": "Deleted successfully!"
+    "Eliminado correctamente!": "Deleted successfully!",
+    "Configurar Sección": "Section Settings",
+    "Sub-Titulo": "Sub-Title",
+    "Texto que se mostrara en el botón, dejar en blanco para no mostrar el botón": "Text that will be shown on the button, leave blank to not show the button",
+    "Texto del Botón": "Button Text",
+    "URL del Botón": "Button URL",
+    "Imagen de Fondo": "Background Image",
+    "Seleccione una imagen de fondo, el tamaño debe ser de 1850x850 y el peso no debe superar 1MB": "Select a background image, the size should be 1850x850 and the weight should not exceed 1MB",
+    "Seleccionar imagen": "Select Image",
+    "Sección Portafolio": "Portfolio Section"
     
 
 

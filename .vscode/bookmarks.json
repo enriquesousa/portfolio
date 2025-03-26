@@ -359,7 +359,7 @@
 			"path": "resources/views/admin/hero/index.blade.php",
 			"bookmarks": [
 				{
-					"line": 43,
+					"line": 24,
 					"column": 200,
 					"label": "traduccion en title dentro de a tag"
 				}

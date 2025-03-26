@@ -5,13 +5,13 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\PortfolioItemController;
+use App\Http\Controllers\Admin\PortfolioSectionSettingController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TyperTitleController;
 use App\Http\Controllers\Admin\VistaPreviaController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\LocalizationController;
-use App\Http\Middleware\LocalizationMiddleware;
 use Illuminate\Support\Facades\Route;
 
 
@@ -89,7 +89,10 @@ Route::group(['middleware' => ['auth', 'localization'], 'prefix' => 'admin', 'as
 
     // Portfolio Item Routes
     Route::resource('portfolio-item', PortfolioItemController::class);
-    
+
+    // Portfolio Section Setting Routes
+    Route::resource('portfolio-section-setting', PortfolioSectionSettingController::class);
+
 
     // Vistas Previas
     Route::get('vista-previa/{previa_titulo}/{previa_imagen}/{pagina_regreso}', [VistaPreviaController::class, 'index'])->name('vista-previa.index');
