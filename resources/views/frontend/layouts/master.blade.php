@@ -6,7 +6,8 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Portafolio | TJWeb</title>
-	<link rel="shortcut icon" type="image/ico" href="{{ asset('frontend/assets/images/favicon.png') }}" />
+	{{-- <link rel="shortcut icon" type="image/ico" href="{{ asset('frontend/assets/images/favicon.png') }}" /> --}}
+	<link rel="icon" type="image/png" href="{{ asset('images/icon48x48.png') }}">
 
 	<link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('frontend/assets/css/normalize.css') }}">

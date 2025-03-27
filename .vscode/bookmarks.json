@@ -379,12 +379,17 @@
 			"path": "app/DataTables/PortfolioItemDataTable.php",
 			"bookmarks": [
 				{
-					"line": 42,
+					"line": 43,
 					"column": 12,
 					"label": "datatable buscar por categoria"
 				},
 				{
-					"line": 152,
+					"line": 51,
+					"column": 16,
+					"label": "string limit"
+				},
+				{
+					"line": 158,
 					"column": 12,
 					"label": "datatable campo buscable searchable"
 				}
@@ -403,6 +408,11 @@
 		{
 			"path": "app/Http/Controllers/Admin/CategoryController.php",
 			"bookmarks": [
+				{
+					"line": 41,
+					"column": 54,
+					"label": "slug"
+				},
 				{
 					"line": 88,
 					"column": 89,
@@ -427,6 +437,56 @@
 					"line": 107,
 					"column": 16,
 					"label": "image preview en edit"
+				}
+			]
+		},
+		{
+			"path": "public/assets/css/style.css",
+			"bookmarks": [
+				{
+					"line": 66,
+					"column": 2,
+					"label": "color principal css style.css"
+				},
+				{
+					"line": 1631,
+					"column": 45,
+					"label": "color css on hover primary btn style.css"
+				}
+			]
+		},
+		{
+			"path": "public/frontend/assets/css/responsive.css",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 4,
+					"label": "css media queries categorías"
+				},
+				{
+					"line": 37,
+					"column": 18,
+					"label": "css media queries categorías"
+				},
+				{
+					"line": 59,
+					"column": 4,
+					"label": "css media queries categorías"
+				},
+				{
+					"line": 85,
+					"column": 4,
+					"label": "css media queries categorías"
+				},
+				{
+					"line": 222,
+					"column": 4,
+					"label": "css media queries categorías"
+				},
+				{
+					"line": 230,
+					"column": 27,
+					"label": "css ajustar margenes para que haya espacio vertical  al hacer wrap en las categorias"
 				}
 			]
 		}

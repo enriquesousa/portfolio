@@ -16,20 +16,61 @@ class CategorySeeder extends Seeder
         Category::insert(
 
             [
-                'name' => 'Desarrollo Web',
-                'slug' => 'desarrollo-web',
+                'name' => 'Gestor Inventarios',
+                'slug' => 'gestor-inventarios',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
 
             [
-                'name' => 'PHP',
-                'slug' => 'php',
+                'name' => 'Punto de Venta',
+                'slug' => 'punto-de-venta',
                 'created_at' => now(),
                 'updated_at' => now()
-            ]
+            ],
+
+            [
+                'name' => 'Gestor Bienes Raíces',
+                'slug' => 'gestor-bienes-raíces',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+
+            [
+                'name' => 'Gestor Escuelas',
+                'slug' => 'gestor-escuelas',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+
+            [
+                'name' => 'Blog',
+                'slug' => 'blog',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+
+            [
+                'name' => 'Gestor Veterinarias',
+                'slug' => 'gestor-veterinarias',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+
+            [
+                'name' => 'Gestor Restaurantes',
+                'slug' => 'gestor-restaurantes',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],  
 
         );
+
+        // "Gestor de Noticias": "Manage News",
+        // "Gestor de Eventos": "Manage Events",
+        // "Gestor de Productos": "Manage Products",
+        // "Gestor de Servicios": "Manage Services",
+        // "Gestor de Cursos": "Manage Courses",
 
     }
 

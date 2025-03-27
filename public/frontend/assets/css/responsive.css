@@ -1,5 +1,20 @@
 /* Mobile Layout: 320px. */
 
+/* Para pantallas grandes margenes de las categorías */
+@media only screen and (min-width: 1200px) {
+    .filter-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-menu li {
+        /* margin: 0px 11px; */
+        margin: 0px 11px 10px 11px;
+        padding: 10px 20px;
+    }
+}
+
 @media only screen and (max-width: 1500px) {
     .testimonial-slider {
         padding: 100px 100px;
@@ -19,6 +34,18 @@
     /* .portfolio-area {
         padding-top: 0;
     } */
+
+    .filter-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-menu li {
+        /* margin: 0px 11px; */
+        margin: 0px 11px 10px 11px;
+        padding: 10px 20px;
+    }
 }
 
 @media (min-width: 1300px) and (max-width: 1500px) {
@@ -28,6 +55,18 @@
 
     #blog-page {
         padding-top: 15px;
+    }
+
+    .filter-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-menu li {
+        /* margin: 0px 11px; */
+        margin: 0px 11px 10px 11px;
+        padding: 10px 20px;
     }
 }
 
@@ -42,6 +81,18 @@
 
     .site-header .title {
         font-size: 65px;
+    }
+
+    .filter-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-menu li {
+        /* margin: 0px 11px; */
+        margin: 0px 11px 10px 11px;
+        padding: 10px 20px;
     }
 }
 
@@ -112,7 +163,8 @@
     .filter-menu li {
         padding: 5px;
         display: block;
-        margin-bottom: 10px;
+        margin: 0px 11px 10px 11px;
+        /* margin-bottom: 10px; */
     }
 
     .testimonial-slider .single-testimonial {
@@ -170,12 +222,13 @@
 
     .filter-menu {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .filter-menu li {
-        margin: 0px 11px;
+        /* margin: 0px 11px; */
+        margin: 0px 11px 10px 11px;
         padding: 10px 20px;
     }
 

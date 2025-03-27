@@ -1629,13 +1629,16 @@ h6 .badge {
   border-color: #e4805c;
 }
 .btn-primary:focus, .btn-primary.disabled:focus {
-  background-color: #394eea !important;
+  /* background-color: #394eea !important; */
+  background-color: #D06978 !important;
 }
 .btn-primary:focus:active, .btn-primary.disabled:focus:active {
-  background-color: #394eea !important;
+  /* background-color: #394eea !important; */
+  background-color: #D06978 !important;
 }
 .btn-primary:active, .btn-primary:hover, .btn-primary.disabled:active, .btn-primary.disabled:hover {
-  background-color: #394eea !important;
+  /* background-color: #394eea !important; */
+  background-color: #D06978 !important;
 }
 
 .btn-outline-primary, .btn-outline-primary.disabled {

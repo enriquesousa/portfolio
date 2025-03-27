@@ -4,7 +4,7 @@
 
         <div class="section-header">
             <div class="section-header-back">
-                <a href="{{ route('admin.typer-title.index') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+                <a href="{{ route('admin.category.index') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             @php
                 $tituloPagina = __('Editar Categoría');

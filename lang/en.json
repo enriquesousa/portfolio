@@ -98,6 +98,7 @@
     "50 filas": "50 rows",
     "Todos": "All",
     "Creado en": "Created at",
+    "Actualizado en": "Updated at",
     "Editar Articulo de Portafolio": "Edit Portfolio Item",
     "Actualizado correctamente!": "Updated successfully!",
     "Eliminado correctamente!": "Deleted successfully!",
@@ -109,8 +110,32 @@
     "Imagen de Fondo": "Background Image",
     "Seleccione una imagen de fondo, el tamaño debe ser de 1850x850 y el peso no debe superar 1MB": "Select a background image, the size should be 1850x850 and the weight should not exceed 1MB",
     "Seleccionar imagen": "Select Image",
-    "Sección Portafolio": "Portfolio Section"
-    
+    "Sección Portafolio": "Portfolio Section",
+    "Últimos Proyectos": "Latest Projects",
+    "Aquí encontrarás algunos de los proyectos en los que he estado trabajando, son proyectos demo para que te des una idea de la flexibilidad que nos ofrece Laravel.": "Here you will find some of the projects in which I have been working, they are demo projects to give you an idea of the flexibility that Laravel offers.",
+    "Todos los Proyectos": "All Projects",
+    "Gestor Restaurantes": "Manage Restaurants",
+    "Gestor Veterinarias": "Manage Veterinary Clinics",
+    "Gestor Escuelas": "Manage Schools",
+    "Gestor Bienes Raíces": "Manage Real Estate",
+    "Punto de Venta": "Point of Sale",
+    "Gestor Inventarios": "Inventory Manager",
+    "Blog": "Blog",
+    "Gestor de Restaurantes": "Restaurants Manager",
+    "Gestor de Veterinarias": "Veterinary Clinics Manager",
+    "Gestor de Escuelas": "Schools Manager",
+    "Gestor de Bienes Raíces": "Real Estate Manager",
+    "Gestor de Punto de Venta": "Point of Sale Manager",
+    "Gestor de Inventarios": "Inventory Manager",
+    "Sistema para gestionar restaurantes de comida preparada, con este sistema podemos administrar todos los aspectos para la venta a domicilio de comida. Podemos agregar diferentes platillos de comida ya preparada y promocionarla en el sitio, así como agregar los productos al carrito de venta, podemos adicionalmente agregar cupones de descuento que el cliente puede aprovechar y aplicar a la hora de hacer su compra en linea. También contamos con un sistema de Blog para promocionar productos y/o recetas.": "A system for managing prepared food restaurants. With this system, we can manage all aspects of home delivery food. We can add different prepared food dishes and promote them on the site, as well as add products to the shopping cart. We can also add discount coupons that customers can use when making their online purchase. We also have a blog system to promote products and/or recipes.",
+    "Sistema para gestionar clínicas veterinarias": "A system for managing veterinary clinics",
+    "Sistema para gestionar escuelas": "A system for managing schools",
+    "Sistema para gestionar almacén e inventarios": "A system for managing warehouses and inventories",
+    "Sistema para gestionar un Blog": "A system for managing a Blog",
+    "Sistema para gestionar Venta de Bienes Raíces": "A system for managing real estate sales",
+    "Sistema para gestionar punto de venta": "A system for managing point of sale",
+    "Ver imagen completa": "View full image"
+
 
 
 }
