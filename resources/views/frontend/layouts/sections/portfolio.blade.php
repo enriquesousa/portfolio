@@ -41,7 +41,7 @@
                                     <a href="{{ route('show.portfolio', $item->id) }}">{{ __($item->title) }}</a>
                                 </h4>
                                 <div class="desc">
-                                    <p>{!! Str::limit(__($item->description), 50, '...') !!}</p>
+                                    <p>{!! Str::limit( strip_tags(__($item->description)), 100, '...'  ) !!}</p>
                                 </div>
                             </div>
                         </div>

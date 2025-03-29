@@ -114,7 +114,7 @@
 					"label": "csrf token mandar en ajax"
 				},
 				{
-					"line": 175,
+					"line": 178,
 					"column": 36,
 					"label": "notificacion notyf en ajax con duracion y position"
 				}
@@ -409,14 +409,19 @@
 			"path": "app/Http/Controllers/Admin/CategoryController.php",
 			"bookmarks": [
 				{
-					"line": 41,
+					"line": 42,
 					"column": 54,
 					"label": "slug"
 				},
 				{
-					"line": 88,
+					"line": 89,
 					"column": 89,
 					"label": "petición AJAX para DELETE"
+				},
+				{
+					"line": 98,
+					"column": 12,
+					"label": "eliminar delete categoria solo si no esta ya en uso en algun articulo"
 				}
 			]
 		},
@@ -492,6 +497,16 @@
 					"line": 230,
 					"column": 27,
 					"label": "css ajustar margenes para que haya espacio vertical  al hacer wrap en las categorias"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/layouts/sections/portfolio.blade.php",
+			"bookmarks": [
+				{
+					"line": 43,
+					"column": 36,
+					"label": "strp tags html de la description y string limit"
 				}
 			]
 		}

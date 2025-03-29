@@ -61,6 +61,7 @@
                     </ul>
 
                     {!! $portfolio->description !!}
+                    
                 </div>
 
             </div>

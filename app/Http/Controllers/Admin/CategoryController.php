@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\DataTables\CategoryDataTable;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\PortfolioItem;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
@@ -91,8 +92,16 @@ class CategoryController extends Controller
         try{
 
             $category = Category::findOrFail($id);
-            $category->delete();
-            return response(['status' => 'success', 'message' => __('Deleted successfully!')]);
+
+            $hasItems = PortfolioItem::where('category_id', $category->id)->count();
+            // return $hasItems;
+
+            if($hasItems == 0){
+                $category->delete();
+                return response(['status' => 'success', 'titulo' => __('Categoría Eliminada'), 'message' => __('Deleted successfully!')]);
+            }
+
+            return response(['status' => 'error', 'titulo' => __('No se puede eliminar!'), 'message' => __('Esta categoría esta asociada a un articulo del portafolio!')]);
 
         }catch(\Exception $e){
             // return response(['status' => 'error', 'message' => $e->getMessage()]);

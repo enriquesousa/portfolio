@@ -167,34 +167,47 @@
                                 _token: "{{ csrf_token() }}"
                             },
                             success: function(response) {
+
+                                // console.log(response.status);
+
                                 if(response.status === 'success') {
 
                                     // toastr.success(response.message);
                                     // console.log(response);
 
                                     // Create an instance of Notyf
-                                    const notyf = new Notyf({
-                                        duration: 2000,
-                                        position: {
-                                            x: 'center',
-                                            y: 'top'
-                                        }
-                                    });
+                                    // const notyf = new Notyf({
+                                    //     duration: 2000,
+                                    //     position: {
+                                    //         x: 'center',
+                                    //         y: 'top'
+                                    //     }
+                                    // });
+
                                     // Display notification 
-                                    notyf.success(response.message);
+                                    // notyf.success(response.message);
+
+                                    Swal.fire(
+                                        response.titulo,
+                                        response.message,
+                                        'success'
+                                    );
 
                                     // $('#slider-table').DataTable().draw(); // refresca la tabla
                                     // window.location.reload();
-                                    window.setTimeout(function(){location.reload()},2000)
+                                    window.setTimeout(function(){location.reload()},4000)
 
-                                    // Swal.fire(
-                                    //     'Eliminado!',
-                                    //     'El archivo ha sido eliminado.',
-                                    //     'success'
-                                    // );
 
                                 }else if(response.status === 'error') {
-                                    toastr.error(response.message);
+                                    // toastr.error(response.message);
+
+                                    Swal.fire(
+                                        response.titulo,
+                                        response.message,
+                                        'error'
+                                    );
+
+                                    window.setTimeout(function(){location.reload()},5000)
                                 }
                             },
                             error: function(error) {
