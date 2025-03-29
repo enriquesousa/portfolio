@@ -33,6 +33,32 @@
                                     </div>
                                 </div>
 
+                                {{-- Imágenes foto1 y foto2 se usan como encabezado para portfolio details --}}
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                                    <p class="col-sm-12 col-md-7">{{ __('ImágenesPara el encabezado de los detalles de portafolio') }}</p>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: 550x550, el tamaño de la imagen no debe superar los 1MB">{{ __('Fotos') }}</label>
+
+                                    <div class="col-sm-12 col-md-3">
+                                        <img id="showImage-foto1" src="{{ !empty($portfolioItem->foto1) ? url($portfolioItem->foto1) : url('images/no_image.jpg') }}" alt="foto1" class="image-preview">
+                                        <label for="image-upload-foto1" class="form-label btn btn-primary mt-2">
+                                            <i class="bi bi-cloud-upload"></i>&nbsp;
+                                            {{ __('Cambiar imagen') }}
+                                        </label>
+                                        <input type="file" id="image-upload-foto1" name="foto1" hidden=""> 
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-3">
+                                        <img id="showImage-foto2" src="{{ !empty($portfolioItem->foto2) ? url($portfolioItem->foto2) : url('images/no_image.jpg') }}" alt="foto2" class="image-preview">
+                                        <label for="image-upload-foto2" class="form-label btn btn-primary mt-2">
+                                            <i class="bi bi-cloud-upload"></i>&nbsp;
+                                            {{ __('Cambiar imagen') }}
+                                        </label>
+                                        <input type="file" id="image-upload-foto2" name="foto2" hidden=""> 
+                                    </div>
+
+                                </div>
+
                                 {{-- Titulo --}}
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Titulo') }}</label>
@@ -109,6 +135,25 @@
                 'background-size': 'cover',
                 'background-position': 'center center'
             })
+
+            // Mi JS para el manejo de la imagen en la forma (Modo Directo Kazy)
+            $('#image-upload-foto1').change(function(e) {
+                // alert("funciona");
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#showImage-foto1').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
+
+            $('#image-upload-foto2').change(function(e) {
+                // alert("funciona");
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#showImage-foto2').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
 
         });
     </script>

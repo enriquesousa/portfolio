@@ -38,7 +38,7 @@
                                     <i class="fas fa-plus"></i>
                                 </a>
                                 <h4 class="title">
-                                    <a href="portfolio-details.html">{{ __($item->title) }}</a>
+                                    <a href="{{ route('show.portfolio', $item->id) }}">{{ __($item->title) }}</a>
                                 </h4>
                                 <div class="desc">
                                     <p>{!! Str::limit(__($item->description), 50, '...') !!}</p>

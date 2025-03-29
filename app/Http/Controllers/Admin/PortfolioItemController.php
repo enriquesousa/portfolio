@@ -96,6 +96,8 @@ class PortfolioItemController extends Controller
 
         $request->validate([
             'image' => ['nullable', 'max:3000'],
+            'foto1' => ['nullable', 'max:3000'],
+            'foto2' => ['nullable', 'max:3000'],
             'title' => ['required', 'string', 'max:200'],
             'description' => ['required'],
             'category_id' => ['required', 'numeric'],
@@ -110,8 +112,28 @@ class PortfolioItemController extends Controller
             $imagePath = $portfolioItem->image; // Si no se sube una nueva imagen, se mantiene la imagen anterior.
         }
 
+        if ($request->hasFile('foto1')) {
+            $this->deleteFile($portfolioItem->foto1);
+            $imagePathFoto1 = $this->uploadFile($request->file('foto1'), 'uploads', 'portfolio');
+        }else{
+            $imagePathFoto1 = $portfolioItem->foto1; // Si no se sube una nueva imagen, se mantiene la imagen anterior.
+        }
+
+        if ($request->hasFile('foto2')) {
+            $this->deleteFile($portfolioItem->foto2);
+            $imagePathFoto2 = $this->uploadFile($request->file('foto2'), 'uploads', 'portfolio');
+        }else{
+            $imagePathFoto2 = $portfolioItem->foto2; // Si no se sube una nueva imagen, se mantiene la imagen anterior.
+        }
+
+        // dd($imagePath, $imagePathFoto1, $imagePathFoto2);
+
         $portfolioItem->update([
+
             'image' => isset($imagePath) ? $imagePath : $portfolioItem->image,
+            'foto1' => $imagePathFoto1,
+            'foto2' => $imagePathFoto2,
+
             'title' => $request->title,
             'description' => $request->description,
             'category_id' => (int)$request->category_id,

@@ -8,6 +8,8 @@ class PortfolioItem extends Model
 {
     protected $fillable = [
         'image',
+        'foto1',
+        'foto2',
         'title',
         'category_id',
         'description',

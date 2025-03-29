@@ -239,12 +239,12 @@
 					"label": "traduccion asignar localization middleware a home route"
 				},
 				{
-					"line": 35,
+					"line": 32,
 					"column": 0,
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 83,
+					"line": 87,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -429,14 +429,19 @@
 					"label": "edit route update portfolio-item"
 				},
 				{
-					"line": 52,
+					"line": 78,
 					"column": 48,
 					"label": "select seleceted en edit"
 				},
 				{
-					"line": 107,
+					"line": 133,
 					"column": 16,
 					"label": "image preview en edit"
+				},
+				{
+					"line": 138,
+					"column": 12,
+					"label": "image preview modo kazy"
 				}
 			]
 		},

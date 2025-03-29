@@ -27,9 +27,6 @@ Route::get('/blog-details', function () {
     return view('frontend.blog-details');
 });
 
-Route::get('/portfolio-details', function () {
-    return view('frontend.portfolio-details');
-});
 
 
 // Set Language
@@ -52,6 +49,13 @@ Route::group(['middleware' => ['auth', 'localization'], ], function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+// ******************************************************************************************************************
+// Users Web Routes
+// ******************************************************************************************************************
+Route::get('portfolio-details/{id}', [HomeController::class, 'showPortfolio'])->name('show.portfolio');
+
 
 
 // ******************************************************************************************************************

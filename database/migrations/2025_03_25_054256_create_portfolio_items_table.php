@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
 
             $table->text('image')->nullable();
+            $table->text('foto1')->nullable();
+            $table->text('foto2')->nullable();
+
             $table->string('title')->nullable();
             $table->integer('category_id')->nullable();
             $table->text('description')->nullable();
