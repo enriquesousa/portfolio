@@ -146,7 +146,14 @@
 
     "Esta categoría esta asociada a un articulo del portafolio!": "This category is associated with a portfolio item!",
     "No se puede eliminar!": "Can not be deleted!",
-    "Categoría Eliminada": "Category Deleted"
+    "Categoría Eliminada": "Category Deleted",
+    "Mas información": "More information",
+    "Si gusta mas información sobre este sistema, puedes visitar nuestra sección de documentación, donde encontraras mas detalles en los distintos aspectos de los sistemas desarrollados. Si tienes alguna pregunta, no dudes en contactarnos.": "If you'd like more information about this system, you can visit our documentation section, where you'll find more details on the various aspects of the systems we've developed. If you have any questions, please don't hesitate to contact us.",
+    "Documentación": "Documentation",
+
+    "Habilidades": "Skills",
+    "Sección Habilidades": "Skills Section",
+    "Actualizar Sección Habilidades": "Update Skills Section"
 
 
 

@@ -10,7 +10,7 @@
             <div class="col-sm-4">
                 <div class="breadcrumbs">
                     <ul>
-                        <li><a href="{{ route('home') }}">{{ __('Home') }}</a></li>
+                        <li><a href="{{ url('/') }}">{{ __('Home') }}</a></li>
                         <li>{{ __('Detalles Portafolio') }}</li>
                     </ul>
                 </div>
@@ -61,7 +61,7 @@
                     </ul>
 
                     {!! $portfolio->description !!}
-                    
+
                 </div>
 
             </div>
@@ -79,13 +79,14 @@
                     <div class="row ">
                         <div class="col-lg-6 offset-lg-3">
                             <div class="quote-content">
-                                <h3 class="title">Your Journey Today</h3>
+                                <h3 class="title">{{ __('Mas información') }}</h3>
                                 <div class="desc">
-                                    <p>Still top of and the drops. What don't issued character god, no ports,
-                                        credit question.</p>
+                                    <p>{{ __('Si gusta mas información sobre este sistema, puedes visitar nuestra sección de documentación, donde encontraras mas detalles en los distintos aspectos de los sistemas desarrollados. Si tienes alguna pregunta, no dudes en contactarnos.') }}</p>
                                 </div>
-                                <a href="#" class="button-orange mouse-dir">Get Started <span
-                                        class="dir-part"></span></a>
+                                <a href="#" class="button-orange mouse-dir">
+                                    {{ __('Documentación') }} 
+                                    <span class="dir-part"></span>
+                                </a>
                             </div>
                         </div>
                     </div>

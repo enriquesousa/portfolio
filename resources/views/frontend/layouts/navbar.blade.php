@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg main_menu" id="main_menu_area">
     <div class="container">
 
-        <a class="navbar-brand" href="{{ url('/'.getSessionLocale()) }}">
+        <a class="navbar-brand" href="{{ url('/') }}">
             <img src="{{ asset('images/logo-h.png') }}" alt="TJWeb">
         </a>
 

@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\PortfolioItemController;
 use App\Http\Controllers\Admin\PortfolioSectionSettingController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\SkillSectionSettingController;
 use App\Http\Controllers\Admin\TyperTitleController;
 use App\Http\Controllers\Admin\VistaPreviaController;
 use App\Http\Controllers\Frontend\HomeController;
@@ -96,6 +97,10 @@ Route::group(['middleware' => ['auth', 'localization'], 'prefix' => 'admin', 'as
 
     // Portfolio Section Setting Routes
     Route::resource('portfolio-section-setting', PortfolioSectionSettingController::class);
+
+    // Skill Section Setting Routes
+    Route::resource('skill-section-setting', SkillSectionSettingController::class);
+
 
 
     // Vistas Previas

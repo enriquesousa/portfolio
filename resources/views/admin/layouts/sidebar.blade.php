@@ -38,7 +38,7 @@
 
                     <li>
                         <a class="nav-link" href="{{ route('admin.hero.index') }}">
-                            {{ __('Sección Héroe') }}
+                            {{ __('Configurar Sección') }}
                         </a>
                     </li>
 
@@ -89,6 +89,25 @@
                             {{ __('Configurar Sección') }}
                         </a>
                     </li>
+
+                </ul>
+            </li>
+
+            {{-- Sección Habilidades --}}
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                    <i class="bi bi-person-lines-fill"></i>
+                    <span>{{ __('Habilidades') }}</span>
+                </a>
+                <ul class="dropdown-menu" style="display: none;">
+
+                    {{-- Categorías --}}
+                    <li>
+                        <a class="nav-link" href="{{ route('admin.skill-section-setting.index') }}">
+                            {{ __('Configurar Sección') }}
+                        </a>
+                    </li>
+                    
 
                 </ul>
             </li>
