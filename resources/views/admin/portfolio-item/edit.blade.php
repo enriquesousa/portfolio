@@ -40,20 +40,16 @@
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: 550x550, el tamaño de la imagen no debe superar los 1MB">{{ __('Fotos') }}</label>
 
                                     <div class="col-sm-12 col-md-3">
-                                        <img id="showImage-foto1" src="{{ !empty($portfolioItem->foto1) ? url($portfolioItem->foto1) : url('images/no_image.jpg') }}" alt="foto1" class="image-preview">
-                                        <label for="image-upload-foto1" class="form-label btn btn-primary mt-2">
-                                            <i class="bi bi-cloud-upload"></i>&nbsp;
-                                            {{ __('Cambiar imagen') }}
-                                        </label>
+                                        <label for="image-upload-foto1" class="form-label" title="Subir imagen, tamaño recomendado: 540x330px el tamaño de la imagen no debe superar 300KB" style="cursor: pointer">
+                                            <img for="image-upload-foto1" id="showImage-foto1" src="{{ !empty($portfolioItem->foto1) ? url($portfolioItem->foto1) : url('images/no_image.jpg') }}" alt="foto1" class="image-preview-kazy">
+                                        </label>                                        
                                         <input type="file" id="image-upload-foto1" name="foto1" hidden=""> 
                                     </div>
 
                                     <div class="col-sm-12 col-md-3">
-                                        <img id="showImage-foto2" src="{{ !empty($portfolioItem->foto2) ? url($portfolioItem->foto2) : url('images/no_image.jpg') }}" alt="foto2" class="image-preview">
-                                        <label for="image-upload-foto2" class="form-label btn btn-primary mt-2">
-                                            <i class="bi bi-cloud-upload"></i>&nbsp;
-                                            {{ __('Cambiar imagen') }}
-                                        </label>
+                                        <label for="image-upload-foto2" class="form-label" title="Subir imagen, tamaño recomendado: 540x330px el tamaño de la imagen no debe superar 300KB" style="cursor: pointer">
+                                            <img for="image-upload-foto2" id="showImage-foto2" src="{{ !empty($portfolioItem->foto2) ? url($portfolioItem->foto2) : url('images/no_image.jpg') }}" alt="foto2" class="image-preview-kazy">
+                                        </label>                                        
                                         <input type="file" id="image-upload-foto2" name="foto2" hidden=""> 
                                     </div>
 

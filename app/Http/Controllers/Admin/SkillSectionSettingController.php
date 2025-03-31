@@ -54,7 +54,7 @@ class SkillSectionSettingController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        // dd($request->all());
+        dd($request->all());
 
         $request->validate([
             'title' => ['required', 'string', 'max:200'],

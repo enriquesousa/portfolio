@@ -434,19 +434,34 @@
 					"label": "edit route update portfolio-item"
 				},
 				{
-					"line": 78,
+					"line": 41,
+					"column": 36,
+					"label": "image upload con metodo kazy"
+				},
+				{
+					"line": 50,
+					"column": 44,
+					"label": "image upload con metodo kazy"
+				},
+				{
+					"line": 74,
 					"column": 48,
 					"label": "select seleceted en edit"
 				},
 				{
-					"line": 133,
+					"line": 129,
 					"column": 16,
 					"label": "image preview en edit"
 				},
 				{
-					"line": 138,
+					"line": 134,
 					"column": 12,
 					"label": "image preview modo kazy"
+				},
+				{
+					"line": 144,
+					"column": 12,
+					"label": "image upload con metodo kazy"
 				}
 			]
 		},
@@ -507,6 +522,16 @@
 					"line": 43,
 					"column": 36,
 					"label": "strp tags html de la description y string limit"
+				}
+			]
+		},
+		{
+			"path": "public/assets/css/components.css",
+			"bookmarks": [
+				{
+					"line": 2075,
+					"column": 0,
+					"label": "image upload con metodo kazy css"
 				}
 			]
 		}

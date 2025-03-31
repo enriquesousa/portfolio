@@ -98,7 +98,7 @@
 
     <script src="{{ asset('assets/js/plugins/jquery.selectric.min.js') }}"></script>
 
-    <!-- image upload preview plugin -->
+    <!-- image upload jquery preview plugin -->
     <script src="{{ asset('assets/js/plugins/jquery.uploadPreview.min.js') }}"></script>
 
     <script src="{{ asset('assets/js/plugins/bootstrap-tagsinput.min.js') }}"></script>
