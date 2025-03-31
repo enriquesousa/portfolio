@@ -9,6 +9,7 @@ use App\Models\Hero;
 use App\Models\PortfolioItem;
 use App\Models\PortfolioSectionSetting;
 use App\Models\Service;
+use App\Models\SkillSectionSetting;
 use App\Models\TyperTitle;
 use Illuminate\Http\Request;
 
@@ -23,7 +24,8 @@ class HomeController extends Controller
         $portfolioTitle = PortfolioSectionSetting::first();
         $portfolioCategories = Category::all();
         $portfolioItems = PortfolioItem::all();
-        return view('frontend.home', compact('hero', 'typerTitles', 'services', 'about', 'portfolioTitle', 'portfolioCategories', 'portfolioItems'));
+        $skill = SkillSectionSetting::first();
+        return view('frontend.home', compact('hero', 'typerTitles', 'services', 'about', 'portfolioTitle', 'portfolioCategories', 'portfolioItems', 'skill'));
     }
 
     public function showPortfolio($id){

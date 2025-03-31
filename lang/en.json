@@ -154,7 +154,11 @@
     "Habilidades": "Skills",
     "Sección Habilidades": "Skills Section",
     "Actualizar Sección Habilidades": "Update Skills Section",
-    "Subir imagen, tamaño recomendado: 540x330px el tamaño de la imagen no debe superar 300KB": "Upload image, recommended size: 540x330px, the image size should not exceed 300KB"
+    "Subir imagen, tamaño recomendado: 540x330px el tamaño de la imagen no debe superar 300KB": "Upload image, recommended size: 540x330px, the image size should not exceed 300KB",
+    "Imágenes Para el encabezado de los detalles de portafolio": "Images for the header of the portfolio details",
+    "Tamaño recomendado: 540x330px, el tamaño de la imagen no debe superar los 300KB": "Recommended size: 540x330px, the image size should not exceed 300KB",
+    "Imagen principal, Tamaño recomendado: 700x500px, el tamaño de la imagen no debe superar los 500KB": "Main Image, Recommended size: 700x500px, the image size should not exceed 500KB",
+    "Subir imagen": "Upload image"
 
 
 

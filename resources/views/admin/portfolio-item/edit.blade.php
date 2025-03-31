@@ -24,8 +24,9 @@
 
                                 {{-- Imagen Foto --}}
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: 550x550, el tamaño de la imagen no debe superar los 1MB">{{ __('Imagen') }}</label>
-                                    <div class="col-sm-12 col-md-7">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Imagen principal, Tamaño recomendado: 700x500px, el tamaño de la imagen no debe superar los 500KB">{{ __('Imagen') }}</label>
+                                    <div class="col-sm-12 col-md-7 fotos">
+                                        <p>{{ __('Imagen principal, Tamaño recomendado: 700x500px, el tamaño de la imagen no debe superar los 500KB') }}</p>
                                         <div id="image-preview" class="image-preview">
                                             <label for="image-upload" id="image-label">{{ __('Seleccione imagen') }}</label>
                                             <input type="file" name="image" id="image-upload" />
@@ -33,22 +34,25 @@
                                     </div>
                                 </div>
 
-                                {{-- Imágenes foto1 y foto2 se usan como encabezado para portfolio details --}}
-                                <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
-                                    <p class="col-sm-12 col-md-7">{{ __('ImágenesPara el encabezado de los detalles de portafolio') }}</p>
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: 550x550, el tamaño de la imagen no debe superar los 1MB">{{ __('Fotos') }}</label>
+                                {{-- <p>Algunas de las habilidades que he adquirido a través de los años de experiencia son:</p> --}}
 
-                                    <div class="col-sm-12 col-md-3">
-                                        <label for="image-upload-foto1" class="form-label" title="Subir imagen, tamaño recomendado: 540x330px el tamaño de la imagen no debe superar 300KB" style="cursor: pointer">
-                                            <img for="image-upload-foto1" id="showImage-foto1" src="{{ !empty($portfolioItem->foto1) ? url($portfolioItem->foto1) : url('images/no_image.jpg') }}" alt="foto1" class="image-preview-kazy">
+                                {{-- Imágenes foto1 y foto2 se usan como encabezado para portfolio details --}}
+                                <div class="form-group row mb-4 fotos">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                                    <p class="col-sm-12 col-md-7">{{ __('Imágenes Para el encabezado de los detalles de portafolio') }}, {{ __('Tamaño recomendado: 540x330px, el tamaño de la imagen no debe superar los 300KB') }}</p>
+                                    
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: 540x330px, el tamaño de la imagen no debe superar los 300KB">{{ __('Fotos') }}</label>
+
+                                    <div class="col-sm-12 col-md-3 foto">
+                                        <label for="image-upload-foto1" class="form-label" title="Subir imagen" style="cursor: pointer">
+                                            <img for="image-upload-foto1" id="showImage-foto1" src="{{ !empty($portfolioItem->foto1) ? url($portfolioItem->foto1) : url('images/no_image.jpg') }}" alt="foto1">
                                         </label>                                        
                                         <input type="file" id="image-upload-foto1" name="foto1" hidden=""> 
                                     </div>
 
-                                    <div class="col-sm-12 col-md-3">
-                                        <label for="image-upload-foto2" class="form-label" title="Subir imagen, tamaño recomendado: 540x330px el tamaño de la imagen no debe superar 300KB" style="cursor: pointer">
-                                            <img for="image-upload-foto2" id="showImage-foto2" src="{{ !empty($portfolioItem->foto2) ? url($portfolioItem->foto2) : url('images/no_image.jpg') }}" alt="foto2" class="image-preview-kazy">
+                                    <div class="col-sm-12 col-md-3 foto">
+                                        <label for="image-upload-foto2" class="form-label" title="Subir imagen" style="cursor: pointer">
+                                            <img for="image-upload-foto2" id="showImage-foto2" src="{{ !empty($portfolioItem->foto2) ? url($portfolioItem->foto2) : url('images/no_image.jpg') }}" alt="foto2">
                                         </label>                                        
                                         <input type="file" id="image-upload-foto2" name="foto2" hidden=""> 
                                     </div>

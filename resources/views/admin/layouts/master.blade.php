@@ -44,6 +44,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
 
+    <!-- Mi Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+
 </head>
 
 <body>

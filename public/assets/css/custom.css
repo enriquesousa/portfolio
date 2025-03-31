@@ -7,3 +7,22 @@
 
 /*# sourceMappingURL=custom.css.map */
 
+
+/* Mi CSS */
+.foto img {
+    /* width: 270px;
+    height: 120px; */
+    border: 2px dashed #ddd;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #ecf0f1;
+}
+
+.fotos p {
+    display:flex;
+    flex-wrap: wrap;
+    line-height: 15px;
+    margin-bottom: 10px;
+}

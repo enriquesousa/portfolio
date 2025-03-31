@@ -89,32 +89,32 @@
 					"label": "bootstrap icons"
 				},
 				{
-					"line": 94,
+					"line": 97,
 					"column": 44,
 					"label": "summernote plugin para editar notas"
 				},
 				{
-					"line": 100,
+					"line": 103,
 					"column": 29,
 					"label": "image upload preview plugin"
 				},
 				{
-					"line": 145,
+					"line": 148,
 					"column": 42,
 					"label": "eliminar un registro clase delete-item"
 				},
 				{
-					"line": 152,
+					"line": 155,
 					"column": 20,
 					"label": "traduccion en sweet alert 2"
 				},
 				{
-					"line": 166,
+					"line": 169,
 					"column": 60,
 					"label": "csrf token mandar en ajax"
 				},
 				{
-					"line": 178,
+					"line": 181,
 					"column": 36,
 					"label": "notificacion notyf en ajax con duracion y position"
 				}
@@ -434,32 +434,32 @@
 					"label": "edit route update portfolio-item"
 				},
 				{
-					"line": 41,
+					"line": 45,
 					"column": 36,
 					"label": "image upload con metodo kazy"
 				},
 				{
-					"line": 50,
+					"line": 54,
 					"column": 44,
 					"label": "image upload con metodo kazy"
 				},
 				{
-					"line": 74,
+					"line": 78,
 					"column": 48,
 					"label": "select seleceted en edit"
 				},
 				{
-					"line": 129,
+					"line": 133,
 					"column": 16,
 					"label": "image preview en edit"
 				},
 				{
-					"line": 134,
+					"line": 138,
 					"column": 12,
 					"label": "image preview modo kazy"
 				},
 				{
-					"line": 144,
+					"line": 148,
 					"column": 12,
 					"label": "image upload con metodo kazy"
 				}
@@ -526,10 +526,10 @@
 			]
 		},
 		{
-			"path": "public/assets/css/components.css",
+			"path": "public/assets/css/custom.css",
 			"bookmarks": [
 				{
-					"line": 2075,
+					"line": 11,
 					"column": 0,
 					"label": "image upload con metodo kazy css"
 				}
