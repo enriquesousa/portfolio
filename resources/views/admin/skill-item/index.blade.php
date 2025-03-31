@@ -10,7 +10,7 @@
                 </a>
             </div>
             @php
-                $tituloPagina = __('Portafolio') . ' - ' . __('Categorías');
+                $tituloPagina = __('Lista Habilidades');
             @endphp
             <h1>{{ $tituloPagina }}</h1>
         </div>
@@ -23,17 +23,17 @@
 
                         <div class="card-header">
 
-                            <h4>{{ __('Todas las categorías') }}</h4>
+                            <h4>{{ $tituloPagina }}</h4>
 
                             <div class="card-header-action">
 
                                 <!-- Botón Vista Previa -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección - '.$tituloPagina, 'categorias-preview.png', 'admin.category.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
+                                <a href="{{ route('admin.vista-previa.index',['Sección - '.$tituloPagina, 'heroVistaPrevia-tituloPagina-800x400.png', 'admin.category.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
                                     <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
 
                                 <!-- Botón Agregar -->
-                                <a href="{{ route('admin.category.create') }}" class="btn btn-primary">
+                                <a href="{{ route('admin.skill-item.create') }}" class="btn btn-primary">
                                     <i class="fas fa-plus"></i> {{ __('Agregar') }}
                                 </a>
 

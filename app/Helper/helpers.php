@@ -122,6 +122,26 @@ if(!function_exists('getSessionLocale')){
 }
 
 
+// Set Sidebar Active Class
+if (!function_exists('setSidebarActive')) {
+    function setSidebarActive(array $routes)
+    {
+        // dd($routes);
+
+        /*
+        El nombre de las rutas esta dado por `->name('product-title.index')` o `->name('product-title.update')` y no por el nombre visible de `/ptitles-update` o `/products/title-update` esto es importante cuando estamos haciendo la comparación en la función global `setSidebarActive(array $routes)`
+        */
+
+        foreach($routes as $route){
+            if(request()->routeIs($route)){
+                return 'active';
+                // return $route;
+            }
+        }
+        return '';
+    }
+}
+
 // ******************************
 // *** GENERAL DATE FUNCTIONS ***
 // ******************************

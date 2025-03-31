@@ -6,7 +6,10 @@
             <div class="section-header-back">
                 <a href="{{ route('dashboard') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
-            <h1>{{ __('Sección Portafolio') }}</h1>
+            @php
+                $tituloPagina = __('Configurar Portafolio');
+            @endphp
+            <h1>{{ $tituloPagina }}</h1>
         </div>
 
         <div class="section-body">
@@ -22,7 +25,7 @@
                             <div class="card-header-action">
 
                                 <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección Héroe - Vista Previa', 'heroVistaPrevia-elementos-800x400.png', 'admin.hero.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
+                                <a href="{{ route('admin.vista-previa.index',['Sección - '.$tituloPagina, 'portafolio-settings-preview.png', 'admin.portfolio-section-setting.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
                                     <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
 

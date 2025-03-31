@@ -9,7 +9,10 @@
                     <i class="fas fa-arrow-left"></i>
                 </a>
             </div>
-            <h1>Servicios</h1>
+            @php
+                $tituloPagina = __('Servicios');
+            @endphp
+            <h1>{{ $tituloPagina }}</h1>
         </div>
 
         <div class="section-body">
@@ -20,18 +23,18 @@
 
                         <div class="card-header">
 
-                            <h4>Todos los Servicios</h4>
+                            <h4>{{ __('Todos los Servicios') }}</h4>
 
                             <div class="card-header-action">
 
                                 <!-- Botón Vista Previa -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección Servicios - Vista Previa', 'serviceSection-vistaPrevia.png', 'admin.service.index']) }}" class="btn btn-secondary" title="Ver elementos en la sección">
-                                    <i class="fas fa-eye"></i> Vista Previa
+                                <a href="{{ route('admin.vista-previa.index',['Sección - '.$tituloPagina, 'serviceSection-vistaPrevia.png', 'admin.service.index']) }}" class="btn btn-warning" title="Ver elementos en la sección">
+                                    <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
 
                                 <!-- Botón Agregar -->
                                 <a href="{{ route('admin.service.create') }}" class="btn btn-primary">
-                                    <i class="fas fa-plus"></i> Agregar
+                                    <i class="fas fa-plus"></i> {{ __('Agregar') }}
                                 </a>
 
                             </div>
