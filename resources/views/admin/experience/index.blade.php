@@ -35,7 +35,7 @@
 
                         <div class="card-body">
 
-                            <form action="{{ route('admin.about.update', 1) }}" method="POST"
+                            <form action="{{ route('admin.experience.update', 1) }}" method="POST"
                                 enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
@@ -56,7 +56,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Titulo') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="title" class="form-control" value="">
+                                        <input type="text" name="title" class="form-control" value="{{ $experience->title }}">
                                     </div>
                                 </div>
 
@@ -64,7 +64,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Descripción') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <textarea name="description" class="summernote" style="height: 100px; width: 100%"></textarea>
+                                        <textarea name="description" class="summernote" style="height: 100px; width: 100%">{!! $experience->description !!}</textarea>
                                     </div>
                                 </div>
 
@@ -78,7 +78,7 @@
                                                     <i class="fas fa-phone"></i>
                                                 </div>
                                             </div>
-                                            <input type="text" name="phone" class="form-control phone-number">
+                                            <input type="text" name="phone" class="form-control phone-number" value="{{ $experience->phone }}">
                                         </div>
                                     </div>
                                 </div>                                
@@ -93,7 +93,7 @@
                                                     <i class="fas fa-envelope"></i>
                                                 </div>
                                             </div>
-                                            <input type="email" name="email" class="form-control">
+                                            <input type="email" name="email" class="form-control" value="{{ $experience->email }}">
                                         </div>
                                     </div>
                                 </div>                                
@@ -124,7 +124,7 @@
 
             // Mi JS para el manejo de la imagen en la forma
             $('#image-preview').css({
-                'background-image': 'url("")',
+                'background-image': 'url("{{ asset($experience->image) }}")',
                 'background-size': 'cover',
                 'background-position': 'center center'
             })

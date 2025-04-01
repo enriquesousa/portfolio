@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Experience;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class ExperienceController extends Controller
@@ -12,7 +14,8 @@ class ExperienceController extends Controller
      */
     public function index()
     {
-        return view('admin.experience.index');
+        $experience = Experience::first();
+        return view('admin.experience.index', compact('experience'));
     }
 
     /**
@@ -50,9 +53,32 @@ class ExperienceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id): RedirectResponse
     {
-        //
+        // dd($request->all());
+
+        $request->validate([
+            'title' => 'required|string|max:200',
+            'description' => 'required|string|max:1000',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'phone' => 'nullable|string|max:20',
+            'email' => 'nullable|string|email|max:255',
+        ]);
+
+        $experience = Experience::find($id);
+        $imagePath = handleUpload('image', $experience);
+
+        Experience::updateOrCreate(['id' => $id], [
+            'title' => $request->title,
+            'description' => $request->description,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'image' => (!empty($imagePath) ? $imagePath : $experience->image),
+        ]);
+
+
+        flash()->success(__('Sección actualizada correctamente.'));
+        return redirect()->back();
     }
 
     /**
