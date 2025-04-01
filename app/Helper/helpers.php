@@ -121,6 +121,15 @@ if(!function_exists('getSessionLocale')){
     }
 }
 
+// Get colores en forma dinámica de un array de colors, para la sección de skills
+if(!function_exists('getColor')){
+    function getColor($index)
+    {
+        $colors =['#558bff','#fecc90','#ff885e','#282828','#190844','#9dd3ff'];
+        return $colors[$index % count($colors)];
+    }
+}
+
 
 // Set Sidebar Active Class
 if (!function_exists('setSidebarActive')) {

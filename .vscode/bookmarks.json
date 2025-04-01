@@ -217,6 +217,11 @@
 					"line": 43,
 					"column": 8,
 					"label": "encontrar al user que esta login"
+				},
+				{
+					"line": 127,
+					"column": 64,
+					"label": "array de colores"
 				}
 			]
 		},
@@ -532,6 +537,16 @@
 					"line": 11,
 					"column": 0,
 					"label": "image upload con metodo kazy css"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/layouts/sections/skills.blade.php",
+			"bookmarks": [
+				{
+					"line": 27,
+					"column": 150,
+					"label": "color acceder al loop index value de un foreach"
 				}
 			]
 		}
