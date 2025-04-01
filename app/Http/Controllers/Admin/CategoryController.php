@@ -78,7 +78,7 @@ class CategoryController extends Controller
         $category->slug = str()->slug($request->name);
         $category->save();
 
-        flash()->success('Categoría actualizada correctamente.');
+        flash()->success(__('Categoría actualizada correctamente.'));
         return redirect()->route('admin.category.index');
     }
 

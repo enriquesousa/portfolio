@@ -66,7 +66,7 @@ class PortfolioSectionSettingController extends Controller
             'sub_title' => $request->sub_title,
         ]);
 
-        flash()->success('Sección actualizada correctamente.');
+        flash()->success(__('Sección actualizada correctamente.'));
         return redirect()->back();
     }
 

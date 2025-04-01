@@ -7,7 +7,7 @@
                 <a href="{{ route('admin.skill-item.index') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             @php
-                $tituloPagina = __('Agregar Nueva Habilidad');
+                $tituloPagina = __('Editar Habilidad');
             @endphp
             <h1>{{ $tituloPagina }}</h1>
         </div>
@@ -21,14 +21,15 @@
                         </div>
 
                         <div class="card-body">
-                            <form action="{{ route('admin.skill-item.store') }}" method="POST">
+                            <form action="{{ route('admin.skill-item.update', $skillItem->id ) }}" method="POST">
                                 @csrf
+                                @method('PUT')
 
                                 {{-- Habilidad --}}
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Habilidad') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="name" class="form-control" autofocus>
+                                        <input type="text" name="name" class="form-control" value="{{ $skillItem->name }}" autofocus>
                                     </div>
                                 </div>
 
@@ -36,7 +37,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Porcentaje (%)') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="percent" class="form-control">
+                                        <input type="text" name="percent" class="form-control" value="{{ $skillItem->percent }}">
                                     </div>
                                 </div>
 
@@ -44,7 +45,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                     <div class="col-sm-12 col-md-7">
-                                        <button class="btn btn-primary">{{ __('Crear') }}</button>
+                                        <button class="btn btn-primary">{{ __('Actualizar') }}</button>
                                     </div>
                                 </div>
 

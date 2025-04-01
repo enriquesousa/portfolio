@@ -97,7 +97,7 @@ class AboutController extends Controller
             'resume' => $resumePath
         ]);
 
-        flash()->success('Sección actualizada correctamente.');
+        flash()->success(__('Sección actualizada correctamente.'));
         return redirect()->back();
     }
 

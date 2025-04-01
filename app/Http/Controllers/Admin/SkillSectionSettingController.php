@@ -74,7 +74,7 @@ class SkillSectionSettingController extends Controller
             ]
         );
 
-        flash()->success('Sección actualizada correctamente.');
+        flash()->success(__('Sección actualizada correctamente.'));
         return redirect()->back();
     }
 

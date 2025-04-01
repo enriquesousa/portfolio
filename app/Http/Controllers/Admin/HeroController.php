@@ -82,7 +82,7 @@ class HeroController extends Controller
             'image' => isset($imagePath) ? $imagePath : '',
         ]);
 
-        flash()->success('Sección actualizada correctamente.');
+        flash()->success(__('Sección actualizada correctamente.'));
         return redirect()->back();
     }
 

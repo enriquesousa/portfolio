@@ -76,8 +76,8 @@ class PortfolioItemDataTable extends DataTable
             // Acciones
             ->addColumn('action', function ($query) {
 
-                $edit = "<a href='" . route('admin.portfolio-item.edit', $query->id) . "' class='btn btn-primary'><i class='fas fa-edit'></i></a>";
-                $delete = "<a href='" . route('admin.portfolio-item.destroy', $query->id) . "' class='btn btn-danger delete-item mx-2'><i class='fas fa-trash'></i></a>";
+                $edit = "<a href='" . route('admin.portfolio-item.edit', $query->id) . "' class='btn btn-primary' title='".__("Editar")."'><i class='fas fa-edit'></i></a>";
+                $delete = "<a href='" . route('admin.portfolio-item.destroy', $query->id) . "' class='btn btn-danger delete-item mx-2' title='".__("Eliminar")."'><i class='fas fa-trash'></i></a>";
 
                 return $edit . $delete;
             })

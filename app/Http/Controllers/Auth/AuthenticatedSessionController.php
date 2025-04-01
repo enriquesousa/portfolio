@@ -59,7 +59,7 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerateToken();
 
         // notyf()->success('Haz cerrado sesión con éxito.');
-        flash()->success('Haz cerrado sesión con éxito.');
+        flash()->success(__('Haz cerrado sesión con éxito.'));
 
         return redirect('/');
     }

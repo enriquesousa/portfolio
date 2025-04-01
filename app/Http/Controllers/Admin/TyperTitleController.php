@@ -41,7 +41,7 @@ class TyperTitleController extends Controller
         $typerTitle->title = $request->title;
         $typerTitle->save();
 
-        flash()->success('Título creado correctamente.');
+        flash()->success(__('Título creado correctamente.'));
         return redirect()->route('admin.typer-title.index');
     }
 
@@ -77,7 +77,7 @@ class TyperTitleController extends Controller
         $typerTitle->title = $request->title;
         $typerTitle->save();
 
-        flash()->success('Título actualizado correctamente.');
+        flash()->success(__('Título actualizado correctamente.'));
         return redirect()->route('admin.typer-title.index');
     }
 

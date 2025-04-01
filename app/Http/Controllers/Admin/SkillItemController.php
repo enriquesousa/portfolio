@@ -40,10 +40,10 @@ class SkillItemController extends Controller
 
         $skill = new SkillItem();
         $skill->name = $request->name;
-        $skill->percentage = $request->percent;
+        $skill->percent = (int)$request->percent;
         $skill->save();
 
-        flash('Habilidad creada correctamente!');
+        flash(__('Habilidad creada correctamente!'));
         return redirect()->route('admin.skill-item.index');
     }
 
@@ -52,7 +52,7 @@ class SkillItemController extends Controller
      */
     public function show(string $id)
     {
-        //
+        
     }
 
     /**
@@ -60,7 +60,8 @@ class SkillItemController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $skillItem = SkillItem::findOrFail($id);
+        return view('admin.skill-item.edit', compact('skillItem'));
     }
 
     /**
@@ -68,7 +69,20 @@ class SkillItemController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // dd($request->all());
+
+        $request->validate([
+            'name' => ['required', 'string', 'max:100'],
+            'percent' => ['required', 'numeric', 'min:0', 'max:100'],
+        ]);
+
+        $skill = SkillItem::findOrFail($id);
+        $skill->name = $request->name;
+        $skill->percent = (int)$request->percent;
+        $skill->save();
+
+        flash(__('Habilidad actualizada correctamente!'));
+        return redirect()->route('admin.skill-item.index');
     }
 
     /**
@@ -76,6 +90,16 @@ class SkillItemController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // dd($id); // No podemos hacer DD aquí porque estamos haciendo una petición AJAX
+        try{
+
+            $portfolioItem = SkillItem::find($id);
+            $portfolioItem->delete();
+            return response(['status' => 'success', 'message' => __('Deleted successfully!')]);
+
+        }catch(\Exception $e){
+            // return response(['status' => 'error', 'message' => $e->getMessage()]);
+            return response(['status' => 'error', 'message' => __('Something went wrong!')]);
+        }
     }
 }
