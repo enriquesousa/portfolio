@@ -7,7 +7,7 @@
                 <a href="{{ route('dashboard') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             @php
-                $tituloPagina = __('Sección Acerca de Mi');
+                $tituloPagina = __('Sección Experiencia');
             @endphp
             <h1>{{ $tituloPagina }}</h1>
         </div>
@@ -56,8 +56,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Titulo') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="title" class="form-control"
-                                            value="{{ $about->title }}">
+                                        <input type="text" name="title" class="form-control" value="">
                                     </div>
                                 </div>
 
@@ -65,33 +64,39 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Descripción') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <textarea name="description" class="summernote" style="height: 100px; width: 100%">{!! $about->description !!}</textarea>
+                                        <textarea name="description" class="summernote" style="height: 100px; width: 100%"></textarea>
                                     </div>
                                 </div>
-                                
-                             
-                                {{-- Subir Archivo PDF --}}
+
+                                {{-- Teléfono --}}
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Subir archivo, el formato debe ser PDF, csv, doc o docx, el tamaño no debe superar los 2MB">{{ __('Subir Archivo PDF') }}</label>
-
-                                    <div class="col-sm-12 col-md-4">
-                                        <div class="custom-file">
-                                            <input type="file" name="resume" class="custom-file-input" id="customFile">
-                                            <label class="custom-file-label" for="customFile" title="Seleccione un archivo, el formato debe ser PDF, csv o txt, el tamaño no debe superar los 5MB">{{ __('Seleccione PDF') }}</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Teléfono') }}</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i class="fas fa-phone"></i>
+                                                </div>
+                                            </div>
+                                            <input type="text" name="phone" class="form-control phone-number">
                                         </div>
                                     </div>
+                                </div>                                
 
-                                    {{-- Si hay archivo subido, mostrar icono pdf y botón para eliminar --}}
-                                    @if ($about->resume)
-                                        <div class="col-sm-12 col-md-3">
-                                            <div>
-                                                <i class="fas fa-file-pdf" style="font-size: 40px;"></i>&nbsp;&nbsp;
-                                                <button type="submit" name="submit" class="btn btn-danger" style="margin-top: -20px" value="Eliminar">{{ __('Eliminar Archivo') }}</button>
+                                {{-- Correo Electrónico --}}
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Correo Electrónico') }}</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i class="fas fa-envelope"></i>
+                                                </div>
                                             </div>
+                                            <input type="email" name="email" class="form-control">
                                         </div>
-                                    @endif
-
-                                </div>
+                                    </div>
+                                </div>                                
                                     
 
                                 {{-- Botón Actualizar --}}
@@ -119,7 +124,7 @@
 
             // Mi JS para el manejo de la imagen en la forma
             $('#image-preview').css({
-                'background-image': 'url("{{asset($about->image)}}")',
+                'background-image': 'url("")',
                 'background-size': 'cover',
                 'background-position': 'center center'
             })

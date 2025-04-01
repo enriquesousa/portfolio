@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ExperienceController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\PortfolioItemController;
 use App\Http\Controllers\Admin\PortfolioSectionSettingController;
@@ -65,6 +66,14 @@ Route::get('portfolio-details/{id}', [HomeController::class, 'showPortfolio'])->
 // ******************************************************************************************************************
 Route::group(['middleware' => ['auth', 'localization'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
 
+
+    // **********
+    // Mis Vistas
+    // **********
+
+    // Vistas Previas
+    Route::get('vista-previa/{previa_titulo}/{previa_imagen}/{pagina_regreso}', [VistaPreviaController::class, 'index'])->name('vista-previa.index');
+
     // *********
     // Secciones
     // *********
@@ -105,10 +114,13 @@ Route::group(['middleware' => ['auth', 'localization'], 'prefix' => 'admin', 'as
     // Skill Item Routes
     Route::resource('skill-item', SkillItemController::class);
 
+    // Skill Item Routes
+    Route::resource('skill-item', SkillItemController::class);
+ 
+    // Experience Routes
+    Route::resource('experience', ExperienceController::class);
 
-
-    // Vistas Previas
-    Route::get('vista-previa/{previa_titulo}/{previa_imagen}/{pagina_regreso}', [VistaPreviaController::class, 'index'])->name('vista-previa.index');
+    
 
 
 });

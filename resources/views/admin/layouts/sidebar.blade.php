@@ -118,6 +118,15 @@
                 </ul>
             </li>
 
+            {{-- Sección - Experiencia --}}
+            <li class="nav-item {{ setSidebarActive(['admin.experience.*']) }}">
+                <a class="nav-link" href="{{ route('admin.experience.index') }}">
+                    <i class="bi bi-braces"></i>
+                    <span>{{ __('Experiencia') }}</span>
+                </a>
+            </li>
+
+
         </ul>
 
     </aside>
