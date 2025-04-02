@@ -126,6 +126,30 @@
                 </a>
             </li>
 
+            {{-- Sección Comentarios de nuestros clientes - Comentarios Feedback --}}
+            <li class="nav-item dropdown {{ setSidebarActive(['admin.feedback.*']) }}">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                    <i class="bi bi-people-fill"></i>
+                    <span>{{ __('Comentarios') }}</span>
+                </a>
+                <ul class="dropdown-menu" style="display: none;">
+
+                    {{-- Lista comentarios --}}
+                    <li class="{{ setSidebarActive(['admin.feedback.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.feedback.index') }}">
+                            {{ __('Lista Comentarios') }}
+                        </a>
+                    </li>
+
+                    {{-- Configurar Sección: Comentarios titulo, sub-titulo --}}
+                    <li class="{{ setSidebarActive(['admin.skill-section-setting.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.skill-section-setting.index') }}" title="{{ __('Configurar Sección titulo, sub-titulo y foto') }}">
+                            {{ __('Configurar Sección') }}
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
 
         </ul>
 
