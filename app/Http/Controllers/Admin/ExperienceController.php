@@ -59,7 +59,7 @@ class ExperienceController extends Controller
 
         $request->validate([
             'title' => 'required|string|max:200',
-            'description' => 'required|string|max:1000',
+            'description' => 'required|string|max:5000',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'phone' => 'nullable|string|max:20',
             'email' => 'nullable|string|email|max:255',

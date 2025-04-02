@@ -89,32 +89,37 @@
 					"label": "bootstrap icons"
 				},
 				{
-					"line": 97,
+					"line": 91,
+					"column": 4,
+					"label": "inputmaskt format phone number telefono"
+				},
+				{
+					"line": 100,
 					"column": 44,
 					"label": "summernote plugin para editar notas"
 				},
 				{
-					"line": 103,
+					"line": 106,
 					"column": 29,
 					"label": "image upload preview plugin"
 				},
 				{
-					"line": 148,
+					"line": 150,
 					"column": 42,
 					"label": "eliminar un registro clase delete-item"
 				},
 				{
-					"line": 155,
+					"line": 157,
 					"column": 20,
 					"label": "traduccion en sweet alert 2"
 				},
 				{
-					"line": 169,
+					"line": 171,
 					"column": 60,
 					"label": "csrf token mandar en ajax"
 				},
 				{
-					"line": 181,
+					"line": 183,
 					"column": 36,
 					"label": "notificacion notyf en ajax con duracion y position"
 				}
@@ -547,6 +552,21 @@
 					"line": 27,
 					"column": 150,
 					"label": "color acceder al loop index value de un foreach"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/experience/index.blade.php",
+			"bookmarks": [
+				{
+					"line": 80,
+					"column": 44,
+					"label": "inputmaskt format phone number telefono"
+				},
+				{
+					"line": 132,
+					"column": 12,
+					"label": "inputmaskt format phone number telefono"
 				}
 			]
 		}

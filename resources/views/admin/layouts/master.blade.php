@@ -88,6 +88,9 @@
     <!-- JS Libraies -->
     <!-- *********** -->
 
+    <!--jquery inputmask para poder usar input mask en teléfonos phone -->
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
     <!--jquery library code js para poder usar jquery en los child-scripts -->
     {{-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> --}}
 
@@ -108,7 +111,6 @@
     <script src="{{ asset('assets/js/plugins/bootstrap-timepicker.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/daterangepicker.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/select2.full.min.js') }}"></script>
-
 
     <!-- Template JS File -->
     <script src="{{ asset('assets/js/scripts.js') }}"></script>

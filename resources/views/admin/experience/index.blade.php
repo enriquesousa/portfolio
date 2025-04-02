@@ -78,7 +78,7 @@
                                                     <i class="fas fa-phone"></i>
                                                 </div>
                                             </div>
-                                            <input type="text" name="phone" class="form-control phone-number" value="{{ $experience->phone }}">
+                                            <input type="text" name="phone" class="form-control" id="phoneNumber" value="{{ $experience->phone }}">
                                         </div>
                                     </div>
                                 </div>                                
@@ -128,6 +128,10 @@
                 'background-size': 'cover',
                 'background-position': 'center center'
             })
+
+            // Usar input mask de Robin Herbots Jquery
+            $('#phoneNumber').inputmask("(999) 999-9999");
+            
 
         });
     </script>
