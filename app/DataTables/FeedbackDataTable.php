@@ -22,7 +22,38 @@ class FeedbackDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'feedback.action')
+            // ID
+            ->addColumn('id', function($query){
+                return $query->id;
+            })->orderColumn('id', 'id $1')
+
+            // Nombre Cliente
+            ->addColumn('name', function($query){
+                return $query->name;
+            })
+            ->filterColumn('name', function ($query, $keyword) {
+                $query->where('name', 'like', "%{$keyword}%");
+            })
+            ->orderColumn('name', 'name $1')
+
+            // Cargo
+            ->addColumn('position', function($query){
+                return $query->position;
+            })
+
+            // Descripción
+            ->addColumn('description', function($query){
+                return $query->description;
+            })
+            
+            // action
+            ->addColumn('action', function($query){
+                $edit = "<a href='".route('admin.feedback.edit', $query->id)."' class='btn btn-primary' title='".__("Editar")."'><i class='fas fa-edit'></i></a>";
+                $delete = "<a href='".route('admin.feedback.destroy', $query->id)."' class='btn btn-danger delete-item ml-2' title='".__('Eliminar')."'><i class='fas fa-trash'></i></a>";
+                return $edit . $delete;
+            })
+
+            ->rawColumns(['id','name','action'])
             ->setRowId('id');
     }
 
@@ -53,6 +84,32 @@ class FeedbackDataTable extends DataTable
                         Button::make('print'),
                         Button::make('reset'),
                         Button::make('reload')
+                    ])
+                    ->parameters([
+
+                        // 'dom'          => 'Bfrtip', // Comentar para que no se muestren los botones de exportación
+
+                        // Para cambiar el placeholder de la búsqueda
+                        // 'searchPlaceholder' => "Categoría",
+
+                        // 'buttons'      => ['export', 'pageLength', 'print', 'reset', 'reload'],
+                        'buttons'      => ['pageLength', 'excel', 'csv', 'pdf', 'print', 'reset', 'reload'],
+                        'select'       => false,
+                        'order'        => [[0, 'asc']],
+
+                        // 'pageLength'   => 10,
+
+                        // Configure the drop down options.
+                        'lengthMenu'   => [
+                                            [ 10, 25, 50, -1 ],
+                                            [ '10', __('25 filas'), __('50 filas'), __('Todos') ]
+                                        ],
+
+                        // Para traducir al español
+                        'language' => (app()->getLocale() == 'es') ? \Illuminate\Support\Facades\Config::get('dtespanol') : \Illuminate\Support\Facades\Config::get('dtingles'),
+
+                        // order by first column
+                        'order' => [[0, 'desc']],
                     ]);
     }
 
@@ -62,16 +119,20 @@ class FeedbackDataTable extends DataTable
     public function getColumns(): array
     {
         return [
+
+            Column::make('id')->title(__('ID'))->width(60)->addClass('text-center'),
+            Column::make('name')->title(__('Nombre')),
+            Column::make('position')->title(__('Cargo')),
+            Column::make('description')->title(__('Descripción')),
+
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
-                  ->width(60)
+                  ->width(150)
+                  ->title(__('Acción'))
                   ->addClass('text-center'),
-            Column::make('id'),
-            Column::make('add your columns'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
         ];
+
     }
 
     /**

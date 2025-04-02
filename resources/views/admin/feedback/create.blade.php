@@ -35,15 +35,14 @@
 
                         <div class="card-body">
 
-                            <form action="{{ route('admin.portfolio-section-setting.update', 1) }}" method="POST">
+                            <form action="{{ route('admin.feedback.store') }}" method="POST">
                                 @csrf
-                                @method('PUT')
 
-                                {{-- Titulo --}}
+                                {{-- Nombre del Cliente --}}
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Titulo') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="title" class="form-control" value="">
+                                        <input type="text" name="name" class="form-control" value="">
                                     </div>
                                 </div>
 

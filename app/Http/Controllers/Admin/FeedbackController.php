@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\DataTables\FeedbackDataTable;
 use App\Http\Controllers\Controller;
+use App\Models\Feedback;
 use Illuminate\Http\Request;
 
 class FeedbackController extends Controller
@@ -30,7 +31,22 @@ class FeedbackController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all()); 
+
+        $request->validate([
+            'name' => ['required', 'string', 'max:100'],
+            'position' => ['required', 'string', 'max:100'],
+            'description' => ['required', 'string', 'max:1000'],
+        ]);
+
+        $feedback = new Feedback();
+        $feedback->name = $request->name;
+        $feedback->position = $request->position;
+        $feedback->description = $request->description;
+        $feedback->save();
+
+        flash()->success(__('Sección actualizada correctamente.'));
+        return redirect()->route('admin.feedback.index');
     }
 
     /**
