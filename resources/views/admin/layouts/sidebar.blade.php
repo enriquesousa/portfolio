@@ -151,6 +151,24 @@
                 </ul>
             </li>
 
+            {{-- Sección - Blog --}}
+            <li class="nav-item dropdown {{ setSidebarActive(['admin.blog.*','admin.blog-category.*']) }}">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                    <i class="bi bi-newspaper"></i>
+                    <span>{{ __('Blog') }}</span>
+                </a>
+                <ul class="dropdown-menu" style="display: none;">
+
+                    {{-- Lista comentarios --}}
+                    <li class="{{ setSidebarActive(['admin.blog-category.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.blog-category.index') }}">
+                            {{ __('Categorías') }}
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
         </ul>
 
     </aside>

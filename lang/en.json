@@ -197,7 +197,11 @@
     "Cargo": "Position",
     "Editar Comentario": "Edit Feedback",
     "Registro eliminado correctamente!": "Record deleted successfully!",
-    "Configurar Comentarios": "Configure Feedback"
+    "Configurar Comentarios": "Configure Feedback",
+    "Categorías del Blog": "Blog Categories",
+    "Agregar Categoría del Blog": "Add Blog Category",
+    "Agregar Nueva Categoría del Blog": "Add New Blog Category",
+    "Editar Categoría del Blog": "Edit Blog Category"
 
 
 
