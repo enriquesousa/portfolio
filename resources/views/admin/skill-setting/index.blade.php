@@ -6,7 +6,10 @@
             <div class="section-header-back">
                 <a href="{{ route('dashboard') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
-            <h1>{{ __('Sección Habilidades') }}</h1>
+            @php
+                $tituloPagina = __('Sección Habilidades');
+            @endphp
+            <h1>{{ $tituloPagina }}</h1>
         </div>
 
         <div class="section-body">
@@ -15,11 +18,11 @@
                     <div class="card">
                         <div class="card-header">
 
-                            <h4>{{ __('Actualizar Sección Habilidades') }}</h4>
+                            <h4>{{ $tituloPagina }}</h4>
 
                             <div class="card-header-action">
                                 <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección Héroe - Vista Previa', 'heroVistaPrevia-elementos-800x400.png', 'admin.hero.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
+                                <a href="{{ route('admin.vista-previa.index',['Sección Héroe - Vista Previa', 'habilidadesTitle_preview.png', 'admin.skill-section-setting.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
                                     <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
                             </div>

@@ -4,9 +4,12 @@
 
         <div class="section-header">
             <div class="section-header-back">
-                <a href="{{ route('dashboard') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+                <a href="{{ route('admin.portfolio-item.index') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
-            <h1>{{ __('Agregar Articulo de Portafolio') }}</h1>
+            @php
+                $tituloPagina = __('Agregar Articulo de Portafolio');
+            @endphp
+            <h1>{{ $tituloPagina }}</h1>
         </div>
 
         <div class="section-body">
@@ -14,7 +17,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>{{ __('Agregar Articulo de Portafolio') }}</h4>
+                            <h4>{{ $tituloPagina }}</h4>
                         </div>
 
                         <div class="card-body">

@@ -22,15 +22,6 @@
 
                             <h4>{{ $tituloPagina }}</h4>
 
-                            <div class="card-header-action">
-
-                                <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección - '.$tituloPagina, 'portafolio-settings-preview.png', 'admin.portfolio-section-setting.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
-                                    <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
-                                </a>
-
-                            </div>
-
                         </div>
 
                         <div class="card-body">

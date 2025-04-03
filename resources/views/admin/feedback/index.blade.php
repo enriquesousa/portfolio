@@ -28,7 +28,7 @@
                             <div class="card-header-action">
 
                                 <!-- Botón Vista Previa -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección - '.$tituloPagina, 'categorias-preview.png', 'admin.category.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
+                                <a href="{{ route('admin.vista-previa.index',['Sección - '.$tituloPagina, 'comentarios_preview.png', 'admin.feedback.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
                                     <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
 

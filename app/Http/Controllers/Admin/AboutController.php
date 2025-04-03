@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Traits\FileUpload;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -56,7 +57,7 @@ class AboutController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id): RedirectResponse
     {
         // dd($request->all());
 
@@ -64,7 +65,7 @@ class AboutController extends Controller
             'title' => ['required', 'string', 'max:200'],
             'description' => ['required', 'string', 'max:7000'],
             'image' => ['max:1024', 'image'],
-            'resume' => ['mimes:pdf,csv,doc,docx', 'max:2000'],
+            // 'resume' => ['mimes:pdf,csv,doc,docx', 'max:2000'],
         ]);
 
         $about = About::first();
@@ -94,7 +95,7 @@ class AboutController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'image' => (!empty($imagePath) ? $imagePath : $about->image),
-            'resume' => $resumePath
+            // 'resume' => $resumePath
         ]);
 
         flash()->success(__('Sección actualizada correctamente.'));

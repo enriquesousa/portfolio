@@ -71,7 +71,7 @@
                                 
                              
                                 {{-- Subir Archivo PDF --}}
-                                <div class="form-group row mb-4">
+                                {{-- <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Subir archivo, el formato debe ser PDF, csv, doc o docx, el tamaño no debe superar los 2MB">{{ __('Subir Archivo PDF') }}</label>
 
                                     <div class="col-sm-12 col-md-4">
@@ -81,7 +81,7 @@
                                         </div>
                                     </div>
 
-                                    {{-- Si hay archivo subido, mostrar icono pdf y botón para eliminar --}}
+                                    <!-- Si hay archivo subido, mostrar icono pdf y botón para eliminar -->
                                     @if ($about->resume)
                                         <div class="col-sm-12 col-md-3">
                                             <div>
@@ -91,7 +91,7 @@
                                         </div>
                                     @endif
 
-                                </div>
+                                </div> --}}
                                     
 
                                 {{-- Botón Actualizar --}}

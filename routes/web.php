@@ -115,9 +115,6 @@ Route::group(['middleware' => ['auth', 'localization'], 'prefix' => 'admin', 'as
 
     // Skill Item Routes
     Route::resource('skill-item', SkillItemController::class);
-
-    // Skill Item Routes
-    Route::resource('skill-item', SkillItemController::class);
  
     // Experience Routes
     Route::resource('experience', ExperienceController::class);

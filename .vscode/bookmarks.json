@@ -209,7 +209,7 @@
 			"path": "app/Http/Controllers/Admin/AboutController.php",
 			"bookmarks": [
 				{
-					"line": 114,
+					"line": 115,
 					"column": 42,
 					"label": "descargar archivo controller"
 				}

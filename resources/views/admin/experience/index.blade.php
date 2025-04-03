@@ -20,12 +20,12 @@
 
                         <div class="card-header">
 
-                            <h4>{{ __('Actualizar Sección Acerca de Mi') }}</h4>
+                            <h4>{{ $tituloPagina }}</h4>
 
                             <div class="card-header-action">
 
                                 <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index', ['Sección - '.$tituloPagina, 'serviceAcercaDeMi-vistaPrevia.png', 'admin.about.index']) }}" class="btn btn-warning" title="Ver donde quedan estos elementos en la sección">
+                                <a href="{{ route('admin.vista-previa.index', ['Sección - '.$tituloPagina, 'experiencia_preview.png', 'admin.experience.index']) }}" class="btn btn-warning" title="Ver donde quedan estos elementos en la sección">
                                     <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
 
