@@ -16,6 +16,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="testimonial-slider">
+
                     <div class="single-testimonial">
                         <div class="testimonial-header">
                             <div class="quote">
@@ -25,11 +26,10 @@
                             <h6 class="position">Managing Director, DevignEdge</h6>
                         </div>
                         <div class="content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consequuntur
-                                provident iusto cumque nulla laboriosam quos ipsam enim eum! Itaque ipsum nam
-                                ratione eius porro excepturi.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consequuntur provident iusto cumque nulla laboriosam quos ipsam enim eum! Itaque ipsum nam ratione eius porro excepturi.</p>
                         </div>
                     </div>
+
                     <div class="single-testimonial">
                         <div class="testimonial-header">
                             <div class="quote">
@@ -39,11 +39,10 @@
                             <h6 class="position">Managing Director, DevignEdge</h6>
                         </div>
                         <div class="content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consequuntur
-                                provident iusto cumque nulla laboriosam quos ipsam enim eum! Itaque ipsum nam
-                                ratione eius porro excepturi. </p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consequuntur provident iusto cumque nulla laboriosam quos ipsam enim eum! Itaque ipsum nam ratione eius porro excepturi.</p>
                         </div>
                     </div>
+
                     <div class="single-testimonial">
                         <div class="testimonial-header">
                             <div class="quote">
@@ -53,11 +52,10 @@
                             <h6 class="position">Managing Director, DevignEdge</h6>
                         </div>
                         <div class="content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consequuntur
-                                provident iusto cumque nulla laboriosam quos ipsam enim eum! Itaque ipsum nam
-                                ratione eius porro excepturi. </p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consequuntur provident iusto cumque nulla laboriosam quos ipsam enim eum! Itaque ipsum nam ratione eius porro excepturi.</p>
                         </div>
                     </div>
+
                     <div class="single-testimonial">
                         <div class="testimonial-header">
                             <div class="quote">
@@ -67,11 +65,10 @@
                             <h6 class="position">Managing Director, DevignEdge</h6>
                         </div>
                         <div class="content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consequuntur
-                                provident iusto cumque nulla laboriosam quos ipsam enim eum! Itaque ipsum nam
-                                ratione eius porro excepturi. </p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consequuntur provident iusto cumque nulla laboriosam quos ipsam enim eum! Itaque ipsum nam ratione eius porro excepturi.</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

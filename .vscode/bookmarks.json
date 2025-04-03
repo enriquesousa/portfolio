@@ -319,17 +319,17 @@
 			"path": "app/DataTables/AdminLogTimesDataTable.php",
 			"bookmarks": [
 				{
-					"line": 135,
+					"line": 140,
 					"column": 24,
 					"label": "datatable traduccion toda la tabla"
 				},
 				{
-					"line": 153,
+					"line": 158,
 					"column": 12,
 					"label": "datatable cambiar color title header"
 				},
 				{
-					"line": 154,
+					"line": 159,
 					"column": 88,
 					"label": "datatable cambiar color a columna addClass('text-primary')"
 				}

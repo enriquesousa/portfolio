@@ -69,6 +69,11 @@ class AdminLogTimesDataTable extends DataTable
                 return $time_interval;
             })
 
+            // description
+            ->addColumn('description', function($query){
+                return $query->description;
+            })
+
             // action
             ->addColumn('action', function($query){
 

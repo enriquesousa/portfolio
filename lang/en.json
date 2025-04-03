@@ -101,7 +101,10 @@
     "Actualizado en": "Updated at",
     "Editar Articulo de Portafolio": "Edit Portfolio Item",
     "Actualizado correctamente!": "Updated successfully!",
+    "Actualizado correctamente": "Updated successfully",
     "Eliminado correctamente!": "Deleted successfully!",
+    "Creado correctamente!": "Created successfully!",
+    "Creado correctamente": "Created successfully",
     "Configurar Sección": "Section Settings",
     "Sub-Titulo": "Sub-Title",
     "Texto que se mostrara en el botón, dejar en blanco para no mostrar el botón": "Text that will be shown on the button, leave blank to not show the button",
@@ -191,7 +194,9 @@
     "Todas los Comentarios": "All Feedback",
     "Agregar Comentario": "Add Feedback",
     "Posición": "Position",
-    "Cargo": "Position"
+    "Cargo": "Position",
+    "Editar Comentario": "Edit Feedback",
+    "Registro eliminado correctamente!": "Record deleted successfully!"
 
 
 

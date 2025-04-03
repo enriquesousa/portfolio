@@ -200,7 +200,7 @@
 
                                     // $('#slider-table').DataTable().draw(); // refresca la tabla
                                     // window.location.reload();
-                                    window.setTimeout(function(){location.reload()},4000)
+                                    window.setTimeout(function(){location.reload()},3000)
 
 
                                 }else if(response.status === 'error') {
