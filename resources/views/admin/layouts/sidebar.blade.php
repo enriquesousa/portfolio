@@ -142,8 +142,8 @@
                     </li>
 
                     {{-- Configurar Sección: Comentarios titulo, sub-titulo --}}
-                    <li class="{{ setSidebarActive(['admin.skill-section-setting.*']) }}">
-                        <a class="nav-link" href="{{ route('admin.skill-section-setting.index') }}" title="{{ __('Configurar Sección titulo, sub-titulo y foto') }}">
+                    <li class="{{ setSidebarActive(['admin.feedback-section-setting.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.feedback-section-setting.index') }}" title="{{ __('Configurar Sección titulo, sub-titulo') }}">
                             {{ __('Configurar Sección') }}
                         </a>
                     </li>

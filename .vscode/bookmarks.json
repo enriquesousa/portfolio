@@ -244,17 +244,17 @@
 			"path": "routes/web.php",
 			"bookmarks": [
 				{
-					"line": 22,
+					"line": 23,
 					"column": 0,
 					"label": "traduccion asignar localization middleware a home route"
 				},
 				{
-					"line": 36,
+					"line": 37,
 					"column": 0,
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 99,
+					"line": 100,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -567,6 +567,16 @@
 					"line": 132,
 					"column": 12,
 					"label": "inputmaskt format phone number telefono"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/feedback-setting/index.blade.php",
+			"bookmarks": [
+				{
+					"line": 45,
+					"column": 40,
+					"label": "Agregamos el @ antes de la variable para evitar conflictos de null"
 				}
 			]
 		}
