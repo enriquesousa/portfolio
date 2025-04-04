@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap-tagsinput.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap-timepicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/daterangepicker.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('assets/css/plugins/select2.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/select2.css') }}">
 
     {{-- Plugin Toastr CSS para JavaScript Para mostrar mensajes de error en los formularios de las vistas --}}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">

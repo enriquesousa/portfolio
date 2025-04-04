@@ -159,10 +159,17 @@
                 </a>
                 <ul class="dropdown-menu" style="display: none;">
 
-                    {{-- Lista comentarios --}}
+                    <!-- Lista comentarios -->
                     <li class="{{ setSidebarActive(['admin.blog-category.*']) }}">
                         <a class="nav-link" href="{{ route('admin.blog-category.index') }}">
                             {{ __('Categorías') }}
+                        </a>
+                    </li>
+
+                    <!-- Lista de Blogs -->
+                    <li class="{{ setSidebarActive(['admin.blog.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.blog.index') }}">
+                            {{ __('Lista de Blogs') }}
                         </a>
                     </li>
 
