@@ -65,9 +65,20 @@ if (!function_exists('grabarLogoutTime')) {
         // dd($logTime);
         // dd($description);
 
-        $logTime->logout_time = now();
-        $logTime->description = $description;
-        $logTime->save();
+        // Si logout_time no esta vació significa que user ya registro actividad, en ese caso crear nuevo registro
+        $lastLogTime = $logTime->logout_time;
+        if(!empty($lastLogTime)) {
+            LogTime::create([
+                'user_id' => $user->id,
+                'login_time' => $lastLogTime,
+                'logout_time' => now(),
+                'description' => $description
+            ]);
+        }else {
+            $logTime->logout_time = now();
+            $logTime->description = $description;
+            $logTime->save();    
+        }
 
         return true;
     }

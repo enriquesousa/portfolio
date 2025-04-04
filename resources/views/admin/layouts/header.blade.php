@@ -49,7 +49,12 @@
 
                 {{-- Actividades --}}
                 <a href="{{ route('profile.actividades.index') }}" class="dropdown-item has-icon">
-                    <i class="bi bi-lightning"></i>&nbsp;{{ __('Actividades') }}
+                    <i class="bi bi-lightning"></i>&nbsp;{{ __('Lista Actividades') }}
+                </a>
+
+                {{-- Registro de Actividad --}}
+                <a href="{{ route('profile.register-activity.view') }}" class="dropdown-item has-icon">
+                    <i class="bi bi-pencil-square"></i>&nbsp;{{ __('Registra Actividad') }}
                 </a>
 
                 {{-- Linea divisoria --}}

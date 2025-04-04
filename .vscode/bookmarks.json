@@ -144,7 +144,7 @@
 					"label": "perfil profile dropdown menu"
 				},
 				{
-					"line": 62,
+					"line": 67,
 					"column": 16,
 					"label": "Cerrar sesion logout"
 				}
@@ -224,7 +224,7 @@
 					"label": "encontrar al user que esta login"
 				},
 				{
-					"line": 127,
+					"line": 138,
 					"column": 64,
 					"label": "array de colores"
 				}
@@ -254,7 +254,7 @@
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 102,
+					"line": 106,
 					"column": 101,
 					"label": "descargar archivo route"
 				}

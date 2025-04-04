@@ -9,7 +9,11 @@
                     <i class="fas fa-arrow-left"></i>
                 </a>
             </div>
-            <h1>{{ __('Pagina de Salida') }}</h1>
+            @php
+                $tituloPagina = __('Registrar Actividad');
+                $subTitulo = __('Agregar Actividad para esta sesión');
+            @endphp
+            <h1>{{ $tituloPagina }}</h1>
         </div>
 
         <div class="section-body">
@@ -19,7 +23,7 @@
                     <div class="card">
 
                         <div class="card-header">
-                            <h4>{{ __('Registrar tu actividad en esta sesión - (Opcional)') }}</h4>
+                            <h4>{{ $subTitulo }}</h4>
                         </div>
 
                         <div class="card-body">
@@ -39,7 +43,7 @@
                                         <div class="card card-md">
                                             <div class="card-body">
             
-                                                <form action="{{ route('logout') }}" method="POST">
+                                                <form action="{{ route('profile.register-activity.store') }}" method="POST">
                                                     @csrf
             
                                                     <div class="form-group mb-3">
@@ -47,7 +51,7 @@
                                                     </div>
             
                                                     <div class="form-footer">
-                                                        <button type="submit" class="btn btn-primary w-100">{{ __('Logout') }}</button>
+                                                        <button type="submit" class="btn btn-primary w-100">{{ __('Crear') }}</button>
                                                     </div>
             
                                                 </form>
@@ -75,6 +79,3 @@
 
     </section>
 @endsection
-
-
-

@@ -159,5 +159,43 @@ class ProfileController extends Controller
         return response(['logTime' => $logTime, 'login_time' => $login_time, 'logout_time' => $logout_time ,'time_interval' => $time_interval, 'created_at' => $created_at, 'description' => $description], 200);
     }
 
+    public function registerActivityView(Request $request)
+    {
+        return view('admin.actividades.create');
+    }
+
+    public function registerActivityStore(Request $request)
+    {
+        // dd($request->all());
+
+        $request->validate([
+            'description' => ['nullable'],
+        ]);
+
+        $user = User::find(Auth::id());
+        // dd($user->id);
+
+        // Encontrar la ultima sesión del usuario en tabla log_times
+        $logTime = LogTime::where('user_id', $user->id)->orderBy('id', 'desc')->first();
+        $lastLogTime = $logTime->logout_time;
+        // dd($lastLogTime);
+
+        if(!empty($lastLogTime)) {
+            // Crear una nueva actividad
+            LogTime::create([
+                'user_id' => $user->id,
+                'login_time' => $lastLogTime,
+                'logout_time' => now(),
+                'description' => $request->description
+            ]);
+        }else {
+            $logTime->logout_time = now();
+            $logTime->description = $request->description;
+            $logTime->save();    
+        }
+
+        flash()->success(__('Actividad registrada correctamente!'));
+        return redirect()->route('profile.actividades.index');
+    }
     
 }

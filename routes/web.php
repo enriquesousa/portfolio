@@ -51,6 +51,10 @@ Route::group(['middleware' => ['auth', 'localization'], ], function () {
     Route::get('/profile/actividades', [ProfileController::class, 'actividades'])->name('profile.actividades.index');
     Route::get('/profile/logout/page', [ProfileController::class, 'logoutPage'])->name('profile.logoutPage.index');
     Route::get('/profile/actividades/modal-details/{id}', [ProfileController::class, 'getLogTimeDetails'])->name('actividades.modal-details');
+
+    Route::get('/profile/register/activity', [ProfileController::class, 'registerActivityView'])->name('profile.register-activity.view');
+    Route::post('/profile/register/activity/store', [ProfileController::class, 'registerActivityStore'])->name('profile.register-activity.store');
+
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 });
