@@ -86,6 +86,30 @@ class BlogCategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // dd($id); // No podemos hacer DD aquí porque estamos haciendo una petición AJAX
+
+        try{
+
+            $blogCategory = BlogCategory::findOrFail($id);
+            $blogCategory->delete();
+
+
+            // $hasItems = PortfolioItem::where('category_id', $category->id)->count();
+            // return $hasItems;
+
+            // if($hasItems == 0){
+            //     $category->delete();
+            //     return response(['status' => 'success', 'titulo' => __('Categoría Eliminada'), 'message' => __('Deleted successfully!')]);
+            // }
+
+            // return response(['status' => 'error', 'titulo' => __('No se puede eliminar!'), 'message' => __('Esta categoría esta asociada a un articulo del portafolio!')]);
+
+            return response(['status' => 'success', 'titulo' => __('Categoría Eliminada'), 'message' => __('Deleted successfully!')]);
+            
+        }catch(\Exception $e){
+            // return response(['status' => 'error', 'message' => $e->getMessage()]);
+            return response(['status' => 'error', 'message' => __('Something went wrong!')]);
+        }
+
     }
 }
