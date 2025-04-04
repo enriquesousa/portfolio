@@ -579,6 +579,26 @@
 					"label": "Agregamos el @ antes de la variable para evitar conflictos de null"
 				}
 			]
+		},
+		{
+			"path": "app/DataTables/BlogDataTable.php",
+			"bookmarks": [
+				{
+					"line": 44,
+					"column": 45,
+					"label": "buscar por categoria con la relacion getCategory en datatable"
+				}
+			]
+		},
+		{
+			"path": "app/Models/Blog.php",
+			"bookmarks": [
+				{
+					"line": 10,
+					"column": 103,
+					"label": "Relación BelogsTo category, no le podemos llamar category porque ya es una propiedad de la clase"
+				}
+			]
 		}
 	]
 }
