@@ -72,7 +72,9 @@ class BlogController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $blog = Blog::findOrFail($id);
+        $categories = BlogCategory::all();
+        return view('admin.blog.edit', compact('blog', 'categories'));
     }
 
     /**
@@ -80,7 +82,26 @@ class BlogController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // dd($request->all());
+
+        $request->validate([
+            'image' => ['image', 'max:2000'],
+            'title' => ['required', 'string', 'max:200'],
+            'description' => ['required'],
+            'category' => ['required', 'numeric'],
+        ]); 
+
+        $blog = Blog::findOrFail($id);
+        $imagePath = handleUpload('image', $blog); 
+
+        $blog->image = (!empty($imagePath)) ? $imagePath : $blog->image;
+        $blog->title = $request->title;
+        $blog->description = $request->description;
+        $blog->category = (int)$request->category;
+        $blog->save();
+
+        flash()->success( __('Blog actualizado correctamente!') );
+        return redirect()->route('admin.blog.index');
     }
 
     /**
@@ -88,6 +109,17 @@ class BlogController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // dd($id); // No podemos hacer DD aquí porque estamos haciendo una petición AJAX
+        try{
+
+            $item = Blog::find($id);
+            deleteFileIfExists($item->image);
+            $item->delete();
+            return response(['status' => 'success', 'message' => __('Deleted successfully!')]);
+
+        }catch(\Exception $e){
+            // return response(['status' => 'error', 'message' => $e->getMessage()]);
+            return response(['status' => 'error', 'message' => __('Something went wrong!')]);
+        }
     }
 }

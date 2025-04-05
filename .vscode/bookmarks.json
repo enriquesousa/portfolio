@@ -591,6 +591,16 @@
 			]
 		},
 		{
+			"path": "app/Http/Controllers/Admin/BlogController.php",
+			"bookmarks": [
+				{
+					"line": 96,
+					"column": 8,
+					"label": "image check si la imagen es null"
+				}
+			]
+		},
+		{
 			"path": "app/Models/Blog.php",
 			"bookmarks": [
 				{
