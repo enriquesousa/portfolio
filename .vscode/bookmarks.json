@@ -609,6 +609,16 @@
 					"label": "Relación BelogsTo category, no le podemos llamar category porque ya es una propiedad de la clase"
 				}
 			]
+		},
+		{
+			"path": "app/Http/Controllers/Frontend/HomeController.php",
+			"bookmarks": [
+				{
+					"line": 36,
+					"column": 8,
+					"label": "tomar los ultimos 5 blogs"
+				}
+			]
 		}
 	]
 }

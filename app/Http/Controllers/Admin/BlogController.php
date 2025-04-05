@@ -39,7 +39,7 @@ class BlogController extends Controller
         // dd($request->all());
 
         $request->validate([
-            'image' => ['required', 'image', 'max:2000'],
+            'image' => ['required', 'image', 'max:500'],
             'title' => ['required', 'string', 'max:200'],
             'description' => ['required'],
             'category' => ['required', 'numeric'],
@@ -85,7 +85,7 @@ class BlogController extends Controller
         // dd($request->all());
 
         $request->validate([
-            'image' => ['image', 'max:2000'],
+            'image' => ['image', 'max:500'],
             'title' => ['required', 'string', 'max:200'],
             'description' => ['required'],
             'category' => ['required', 'numeric'],

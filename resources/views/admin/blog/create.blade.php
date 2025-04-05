@@ -26,7 +26,7 @@
 
                                 {{-- Imagen Foto --}}
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: 1300x600, el tamaño de la imagen no debe superar los 2MB">{{ __('Imagen') }}</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: 540x330px, el tamaño de la imagen no debe superar los 300KB">{{ __('Imagen') }}</label>
                                     <div class="col-sm-12 col-md-7">
                                         <div id="image-preview" class="image-preview">
                                             <label for="image-upload" id="image-label">{{ __('Seleccione imagen') }}</label>
