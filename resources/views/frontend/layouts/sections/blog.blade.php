@@ -23,12 +23,12 @@
                             </figure>
                             <div class="blog-content">
                                 <h3 class="title">
-                                    <a href="blog-details.html">{{ Str::limit( strip_tags(__($blog->title)), 20, '..'  ) }}</a>
+                                    <a href="{{ route('show.blog', $blog->id) }}">{{ Str::limit( strip_tags(__($blog->title)), 20, '..'  ) }}</a>
                                 </h3>
                                 <div class="desc">
                                     <p>{!! Str::limit( strip_tags(__($blog->description)), 50, '..'  ) !!} </p>
                                 </div>
-                                <a href="#" class="button-primary-trans mouse-dir">
+                                <a href="{{ route('show.blog', $blog->id) }}" class="button-primary-trans mouse-dir">
                                     {{ __('Leer Mas')  }}
                                     <span class="dir-part"></span> 
                                     <i class="fal fa-arrow-right"></i>

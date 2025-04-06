@@ -63,9 +63,10 @@ require __DIR__.'/auth.php';
 
 
 // ******************************************************************************************************************
-// Users Web Routes
+// Users Frontend Web Routes
 // ******************************************************************************************************************
 Route::get('portfolio-details/{id}', [HomeController::class, 'showPortfolio'])->name('show.portfolio');
+Route::get('blog-details/{id}', [HomeController::class, 'showBlog'])->name('show.blog');
 
 
 

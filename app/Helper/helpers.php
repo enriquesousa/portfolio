@@ -30,7 +30,7 @@ use App\Models\User;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
-
+use Illuminate\Support\Str;
 
 
 // *************************
@@ -161,6 +161,19 @@ if (!function_exists('setSidebarActive')) {
         return '';
     }
 }
+
+// Convertir markdown en html
+if (!function_exists('markdownToHtml')) {
+    function markdownToHtml($text)
+    {
+        $html = Str::markdown($text);
+        // dd($html);
+        return $html;
+    }
+}
+
+
+
 
 // ******************************
 // *** GENERAL DATE FUNCTIONS ***

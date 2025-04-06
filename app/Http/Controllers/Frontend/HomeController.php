@@ -43,5 +43,10 @@ class HomeController extends Controller
         return view('frontend.portfolio-details', compact('portfolio'));
     }
 
+    public function showBlog($id){
+        $blog = Blog::findOrFail($id);
+        return view('frontend.blog-details', compact('blog'));
+    }
+
 
 }

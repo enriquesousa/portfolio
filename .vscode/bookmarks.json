@@ -227,6 +227,11 @@
 					"line": 138,
 					"column": 64,
 					"label": "array de colores"
+				},
+				{
+					"line": 164,
+					"column": 29,
+					"label": "Convertir markdown en html"
 				}
 			]
 		},
@@ -254,7 +259,7 @@
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 106,
+					"line": 107,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -611,12 +616,32 @@
 			]
 		},
 		{
+			"path": "resources/views/frontend/layouts/sections/blog.blade.php",
+			"bookmarks": [
+				{
+					"line": 28,
+					"column": 58,
+					"label": "string limit en blade"
+				}
+			]
+		},
+		{
 			"path": "app/Http/Controllers/Frontend/HomeController.php",
 			"bookmarks": [
 				{
 					"line": 36,
 					"column": 8,
 					"label": "tomar los ultimos 5 blogs"
+				}
+			]
+		},
+		{
+			"path": "public/frontend/assets/css/theme.css",
+			"bookmarks": [
+				{
+					"line": 44,
+					"column": 13,
+					"label": "image fix"
 				}
 			]
 		}
