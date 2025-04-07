@@ -1,6 +1,13 @@
 @extends('frontend.layouts.master')
 @section('content')
 
+{{-- css script --}}
+@push('child-styles')
+    <!-- Mi Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/blog-details.css') }}">
+@endpush
+
+
 <header class="site-header parallax-bg">
     <div class="container">
         <div class="row d-flex align-items-center">
@@ -58,6 +65,7 @@
                 <!-- Contenido del blog -->
                 <div class="description">
                     {!! markdownToHtml($blog->description) !!}
+                    {{-- {!! Blade::render(markdownToHtml($blog->description));  !!} --}}
                 </div>
 
                 <!-- Navegación del blog -->

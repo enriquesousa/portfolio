@@ -1,0 +1,39 @@
+/* Custom CSS para blog-details for frontend */
+
+code.language-php {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+h2 {
+    color: #190844;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 1px;
+    padding-bottom: 2px;
+    
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.4;
+    margin-top: 5px;
+    margin-bottom: 1.6em;
+    padding-top: 1px;
+}
+

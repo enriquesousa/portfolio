@@ -1,0 +1,145 @@
+<p>Agregar CSS para display frontend listado de código (code block), basado en:<br>
+    <a href="https://stackoverflow.com/questions/4000792/how-can-i-style-code-listings-using-css">How can I style code
+        listings using CSS?</a><br>
+    Ver también del creador:
+    Code Styler <a href="https://github.com/maythamfahmi/codestyler">github</a><br></p>
+
+<h2>Global Helper</h2>
+<p>
+    <code>app/Helper/helpers.php</code>
+    <em>Código:</em>
+</p>
+
+<pre>
+    <code class="language-php">
+        // Convertir markdown en html
+        if (!function_exists('markdownToHtml')) {
+            function markdownToHtml($text)
+            {
+                $html = Str::markdown($text);
+                // dd($html);
+                return $html;
+            }
+        }
+    </code>
+</pre>
+<h3>Agregar CSS</h3>
+<p><code>En public/frontend/assets/css/custom.css</code>
+    <br><em>Código:</em></p>
+<pre><code class="language-php">pre {
+        background: #f4f4f4;
+        border: 1px solid #ddd;
+        border-left: 3px solid #f36d33;
+        color: #666;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+    }
+    </code></pre>
+<h2>Master Front end</h2>
+<p><code>En resources/views/frontend/layouts/master.blade.php</code>
+    <br><em>Código:</em></p>
+<pre><code class="language-php">&lt;head&gt;
+    \t...
+    \t&lt;!-- Mi Custom CSS --&gt;
+    \t&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ asset('frontend/assets/css/custom.css') }}&quot;&gt;
+    \t...
+        &lt;script type=&quot;text/javascript&quot; class=&quot;flasher-js&quot; nonce='b176d108688efb509916584169c6d37e'&gt;
+            (function(window, document) {
+                const merge = (first, second) =&gt; {
+                    if (Array.isArray(first) &amp;&amp; Array.isArray(second)) {
+                        return [...first, ...second.filter(item =&gt; !first.includes(item))];
+                    }
+    
+                    if (typeof first === 'object' &amp;&amp; typeof second === 'object') {
+                        for (const [key, value] of Object.entries(second)) {
+                            first[key] = key in first ? { ...first[key], ...value } : value;
+                        }
+                        return first;
+                    }
+    
+                    return undefined;
+                };
+    
+                const mergeOptions = (...options) =&gt; {
+                    const result = {};
+    
+                    options.forEach(option =&gt; {
+                        Object.entries(option).forEach(([key, value]) =&gt; {
+                            result[key] = key in result ? merge(result[key], value) : value;
+                        });
+                    });
+    
+                    return result;
+                };
+    
+                const renderCallback = (options) =&gt; {
+                    if(!window.flasher) {
+                        throw new Error('Flasher is not loaded');
+                    }
+    
+                    window.flasher.render(options);
+                };
+    
+                const render = (options) =&gt; {
+                    if (options instanceof Event) {
+                        options = options.detail;
+                    }
+    
+                    if (['interactive', 'complete'].includes(document.readyState)) {
+                        renderCallback(options);
+                    } else {
+                        document.addEventListener('DOMContentLoaded', () =&gt; renderCallback(options));
+                    }
+                };
+    
+                const addScriptAndRender = (options) =&gt; {
+                    const mainScript = '/vendor/flasher/flasher.min.js?id=9a255a6680873c0d5fc3d394a2ba3195';
+    
+                    if (window.flasher || !mainScript || document.querySelector('script[src=&quot;' + mainScript + '&quot;]')) {
+                        render(options);
+                    } else {
+                        const tag = document.createElement('script');
+                        tag.src = mainScript;
+                        tag.type = 'text/javascript';
+                        tag.setAttribute('nonce', 'b176d108688efb509916584169c6d37e');
+                        tag.onload = () =&gt; render(options);
+    
+                        document.head.appendChild(tag);
+                    }
+                };
+    
+                const addRenderListener = () =&gt; {
+                    if (1 === document.querySelectorAll('script.flasher-js').length) {
+                        document.addEventListener('flasher:render', render);
+                    }
+    
+                        document.addEventListener('livewire:navigating', () =&gt; {
+          document.querySelectorAll('.fl-no-cache').forEach(el =&gt; el.remove());
+        });
+                };
+    
+                const options = [];
+                options.push({&quot;envelopes&quot;:[],&quot;scripts&quot;:[],&quot;styles&quot;:[],&quot;options&quot;:[],&quot;context&quot;:{&quot;envelopes_only ▶
+                /** {--FLASHER_REPLACE_ME--} **/
+                addScriptAndRender(mergeOptions(...options));
+                addRenderListener();
+            })(window, document);
+        &lt;/script&gt;
+    &lt;/head&gt;
+    </code></pre>
+<h2>Vista</h2>
+<p><code>En resources/views/frontend/blog-details.blade.php</code>
+    <br><em>Código:</em></p>
+<pre><code class="language-php">&lt;!-- Contenido del blog --&gt;
+    &lt;div class=&quot;description&quot;&gt;
+    \t{!! markdownToHtml($blog-&gt;description) !!}
+    &lt;/div&gt;
+    </code></pre>

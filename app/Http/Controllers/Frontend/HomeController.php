@@ -48,5 +48,10 @@ class HomeController extends Controller
         return view('frontend.blog-details', compact('blog'));
     }
 
+    public function showBlogImage($image){
+        $blogImage = $image;
+        return view('frontend.blog-show-image', compact('blogImage'));
+        // return response()->file(public_path('storage/blog/'.$image));
+    }
 
 }

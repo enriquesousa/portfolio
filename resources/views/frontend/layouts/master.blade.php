@@ -23,9 +23,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Coiny&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-	<!-- Mi Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/custom.css') }}">
-
 	<!-- Google fonts CSS -->
 	<style type="text/css">
 
@@ -43,6 +40,8 @@
 		}
 
 	</style>
+
+	@stack('child-styles')
 
 </head>
 

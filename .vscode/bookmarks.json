@@ -259,7 +259,7 @@
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 107,
+					"line": 109,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -642,6 +642,16 @@
 					"line": 44,
 					"column": 13,
 					"label": "image fix"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/blog-details.blade.php",
+			"bookmarks": [
+				{
+					"line": 67,
+					"column": 24,
+					"label": "usar blade render para poder desplegar imagenes"
 				}
 			]
 		}
