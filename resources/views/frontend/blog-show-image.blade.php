@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
 
-{{-- css script --}}
+<!-- css script -->
 @push('child-styles')
     <!-- Mi Custom CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/blog-details.css') }}">
@@ -34,7 +34,7 @@
 
                 <!-- Contenido del blog -->
                 <div class="description">
-                    {{-- Show image --}}
+                    <!-- Show image -->
                     <img class="imagen-fix" src="{{ asset('storage/blog/'.$blogImage) }}" alt="blogImage">
                 </div>
 
@@ -43,7 +43,5 @@
     </div>
 </section>
 <!-- Portfolio-Area-End -->
-
-
 
 @endsection

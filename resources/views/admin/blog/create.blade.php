@@ -62,7 +62,8 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Descripción') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <textarea name="description" class="summernote" style="height: 100px; width: 100%"></textarea>
+                                        {{-- <textarea name="description" class="summernote" style="height: 100px; width: 100%"></textarea> --}}
+                                        <textarea name="description" class="" style="height: 300px; width: 100%"></textarea>
                                     </div>
                                 </div>
 

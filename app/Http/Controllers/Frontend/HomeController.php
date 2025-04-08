@@ -45,7 +45,20 @@ class HomeController extends Controller
 
     public function showBlog($id){
         $blog = Blog::findOrFail($id);
-        return view('frontend.blog-details', compact('blog'));
+
+        $previousPost = Blog::where('id', '<', $blog->id)->orderBy('id', 'desc')->first();
+        // if previousPost is the first post, previousPost will be last post
+        // if (empty($previousPost)) {
+        //     $previousPost = Blog::latest()->first();
+        // }
+
+        $nextPost = Blog::where('id', '>', $blog->id)->orderBy('id', 'asc')->first();
+        // if nextPost is the last post, nextPost will be first post
+        // if (empty($nextPost)) {
+        //     $nextPost = Blog::first();
+        // }
+
+        return view('frontend.blog-details', compact('blog', 'previousPost', 'nextPost'));
     }
 
     public function showBlogImage($image){

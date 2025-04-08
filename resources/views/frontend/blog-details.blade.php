@@ -48,7 +48,7 @@
                     <div class="single-meta">
                         <div class="meta-title">{{ __('Categoría') }}</div>
                         <h4 class="meta-value">
-                            <a href="#">{{ $blog->getCategory->name }}</a>
+                            <a href="javascript:void(0);">{{ $blog->getCategory->name }}</a>
                         </h4>
                     </div>
                     {{-- <div class="single-meta">
@@ -70,11 +70,21 @@
 
                 <!-- Navegación del blog -->
                 <div class="single-navigation">
-                    <a href="#" class="nav-link"><span class="icon"><i
-                                class="fal fa-angle-left"></i></span><span class="text">America National Parks
-                            With Denver.</span></a>
-                    <a href="#" class="nav-link"><span class="text">A Seaside Reset In Laguna Beach.</span><span
-                            class="icon"><i class="fal fa-angle-right"></i></span></a>
+
+                    @if($previousPost)
+                        <a href="{{ route('show.blog', $previousPost->id) }}" class="nav-link">
+                            <span class="icon"><i class="fal fa-angle-left"></i></span>
+                            <span class="text">{{ Str::limit($previousPost->title, 20, '..') }}</span>
+                        </a>
+                    @endif
+
+                    @if($nextPost)
+                        <a href="{{ route('show.blog', $nextPost->id) }}" class="nav-link">
+                            <span class="text">{{ Str::limit($nextPost->title, 20, '..') }}</span>
+                            <span class="icon"><i class="fal fa-angle-right"></i></span>
+                        </a>
+                    @endif
+
                 </div>
 
             </div>
@@ -84,7 +94,7 @@
 <!-- Portfolio-Area-End -->
 
 <!-- Quote-Area-Start -->
-<section class="quote-area section-padding-bottom">
+{{-- <section class="quote-area section-padding-bottom">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -97,8 +107,10 @@
                                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate rem
                                         maiores, neque at officiis laudantium.</p>
                                 </div>
-                                <a href="#" class="button-orange mouse-dir">Get Started <span
-                                        class="dir-part"></span></a>
+                                <a href="#" class="button-orange mouse-dir">
+                                    Get Started 
+                                    <span class="dir-part"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -106,7 +118,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- Quote-Area-End -->
 
 @endsection

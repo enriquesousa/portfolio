@@ -652,6 +652,11 @@
 					"line": 67,
 					"column": 24,
 					"label": "usar blade render para poder desplegar imagenes"
+				},
+				{
+					"line": 76,
+					"column": 77,
+					"label": "string limit"
 				}
 			]
 		}
