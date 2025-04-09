@@ -41,6 +41,9 @@
 
 	</style>
 
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="{{ asset('frontend/assets/css/custom.css') }}">
+
 	@stack('child-styles')
 
 </head>

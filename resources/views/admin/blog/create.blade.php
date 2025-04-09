@@ -58,6 +58,17 @@
                                     </div>
                                 </div>
 
+                                {{-- Status --}}
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Estado') }}</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <select name="status" class="form-control selectric">
+                                            <option value="1">{{ __('Activo') }}</option>
+                                            <option value="0">{{ __('Inactivo') }}</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 {{-- Descripción --}}
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Descripción') }}</label>

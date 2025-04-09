@@ -41,6 +41,15 @@ class BlogCategoryDataTable extends DataTable
             ->addColumn('slug', function($query){
                 return $query->slug;
             })
+
+            // Status
+            ->addColumn('status', function($query){
+                if($query->status == 1){
+                    return '<span class="badge badge-success">'.__("Activo").'</span>';
+                }else{
+                    return '<span class="badge badge-danger">'.__("Inactivo").'</span>';
+                }
+            })
             
             // action
             ->addColumn('action', function($query){
@@ -49,7 +58,7 @@ class BlogCategoryDataTable extends DataTable
                 return $edit . $delete;
             })
 
-            ->rawColumns(['id','name','action'])
+            ->rawColumns(['id','name','slug','status','action'])
             ->setRowId('id');
     }
 
@@ -124,6 +133,7 @@ class BlogCategoryDataTable extends DataTable
             Column::make('id')->title(__('ID'))->width(60)->addClass('text-center'),
             Column::make('name')->title('<span class="text-primary">'.__("Categoría").'</span>'),
             Column::make('slug')->title(__('Slug')),
+            Column::make('status')->title(__('Estado'))->addClass('text-center'),
 
             Column::computed('action')
                   ->exportable(false)

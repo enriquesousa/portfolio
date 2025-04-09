@@ -47,6 +47,15 @@ class BlogDataTable extends DataTable
                 });
             })
 
+            // Status
+            ->addColumn('status', function ($query) {
+                if($query->status == 1){
+                    return '<span class="badge badge-success">'.__("Activo").'</span>';
+                }else{
+                    return '<span class="badge badge-danger">'.__("Inactivo").'</span>';
+                }
+            })
+
             // Descripción
             ->addColumn('description', function ($query) {
                 return Str::limit($query->description, 50, '...');
@@ -67,7 +76,7 @@ class BlogDataTable extends DataTable
                 return $edit . $delete;
             })
 
-            ->rawColumns(['action', 'image', 'description'])
+            ->rawColumns(['action', 'image', 'status',  'description'])
 
             ->setRowId('id');
     }
@@ -142,6 +151,7 @@ class BlogDataTable extends DataTable
             Column::make('image')->title(__('Image'))->width(100)->addClass('text-center'),
             Column::make('title')->searchable(true)->title('<span class="text-primary">'.__("Titulo").'</span>')->width(150),
             Column::make('category')->title('<span class="text-primary">'.__("Categoría").'</span>')->width(100)->addClass('text-center'),
+            Column::make('status')->title(__('Estado'))->addClass('text-center'),
             Column::make('description')->title(__('Descripción')),
             Column::make('updated_at')->title(__('Actualizado en'))->width(150),
 

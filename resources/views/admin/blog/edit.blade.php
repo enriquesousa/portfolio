@@ -4,7 +4,7 @@
 
         <div class="section-header">
             <div class="section-header-back">
-                <a href="{{ route('admin.portfolio-item.index') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+                <a href="{{ route('admin.blog.index') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             @php
                 $tituloPagina = __('Editar Blog');
@@ -55,6 +55,17 @@
                                             @foreach ($categories as $category)
                                                 <option {{ $category->id == $blog->category ? 'selected' : '' }} value="{{ $category->id }}">{{ $category->name }}</option>
                                             @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+
+                                {{-- Status --}}
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Estado') }}</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <select name="status" class="form-control selectric">
+                                            <option {{ $blog->status == 1 ? 'selected' : '' }} value="1">{{ __('Activo') }}</option>
+                                            <option {{ $blog->status == 0 ? 'selected' : '' }} value="0">{{ __('Inactivo') }}</option>
                                         </select>
                                     </div>
                                 </div>

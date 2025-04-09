@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\DataTables\BlogCategoryDataTable;
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use App\Models\BlogCategory;
 use Illuminate\Http\Request;
 
@@ -35,11 +36,13 @@ class BlogCategoryController extends Controller
 
         $request->validate([
             'name' => ['required', 'string', 'max:200'],
+            'status' => ['required', 'boolean'],
         ]);
 
         $category = new BlogCategory();
         $category->name = $request->name;
         $category->slug = str()->slug($request->name);
+        $category->status = $request->status;
         $category->save();
 
         return redirect()->route('admin.blog-category.index')->with('success', __('Categoría creada con éxito'));
@@ -70,11 +73,13 @@ class BlogCategoryController extends Controller
         // dd($request->all());
         $request->validate([
             'name' => 'required|string|max:200',
+            'status' => 'required|boolean',
         ]);
 
         $category = BlogCategory::findOrFail($id);
         $category->name = $request->name;
         $category->slug = str()->slug($request->name);
+        $category->status = $request->status;
         $category->save();
 
         flash()->success(__('Categoría actualizada correctamente.'));
@@ -91,20 +96,18 @@ class BlogCategoryController extends Controller
         try{
 
             $blogCategory = BlogCategory::findOrFail($id);
-            $blogCategory->delete();
+            // $blogCategory->delete();
 
 
-            // $hasItems = PortfolioItem::where('category_id', $category->id)->count();
+            $hasItems = Blog::where('category', $blogCategory->id)->count();
             // return $hasItems;
 
-            // if($hasItems == 0){
-            //     $category->delete();
-            //     return response(['status' => 'success', 'titulo' => __('Categoría Eliminada'), 'message' => __('Deleted successfully!')]);
-            // }
+            if($hasItems == 0){
+                $blogCategory->delete();
+                return response(['status' => 'success', 'titulo' => __('Categoría Eliminada'), 'message' => __('Deleted successfully!')]);
+            }
 
-            // return response(['status' => 'error', 'titulo' => __('No se puede eliminar!'), 'message' => __('Esta categoría esta asociada a un articulo del portafolio!')]);
-
-            return response(['status' => 'success', 'titulo' => __('Categoría Eliminada'), 'message' => __('Deleted successfully!')]);
+            return response(['status' => 'error', 'titulo' => __('No se puede eliminar!'), 'message' => __('Esta categoría esta asociada a un articulo del blog!')]);
             
         }catch(\Exception $e){
             // return response(['status' => 'error', 'message' => $e->getMessage()]);

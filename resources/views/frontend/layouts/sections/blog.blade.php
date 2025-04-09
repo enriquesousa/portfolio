@@ -26,7 +26,9 @@
                                     <a href="{{ route('show.blog', $blog->id) }}">{{ Str::limit( strip_tags(__($blog->title)), 20, '..'  ) }}</a>
                                 </h3>
                                 <div class="desc">
-                                    <p>{!! Str::limit( strip_tags(__($blog->description)), 50, '..'  ) !!} </p>
+                                    {{-- por default str limit es 100 --}}
+                                    {!! Str::limit( strip_tags(markdownToHtml($blog->description)) ) !!}
+                                    {{-- <p>{!! Str::limit( strip_tags(__($blog->description)), 50, '..'  ) !!} </p> --}}
                                 </div>
                                 <a href="{{ route('show.blog', $blog->id) }}" class="button-primary-trans mouse-dir">
                                     {{ __('Leer Mas')  }}

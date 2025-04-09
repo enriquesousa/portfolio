@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\Blog;
+use App\Models\BlogCategory;
 use App\Models\Category;
 use App\Models\Experience;
 use App\Models\Feedback;
@@ -34,7 +35,7 @@ class HomeController extends Controller
         $experience = Experience::first();
         $feedbackTestimonials = Feedback::all();
         $feedbackTitleTestimonial = FeedbackSectionSetting::first();
-        $blogs = Blog::latest()->take(5)->get();
+        $blogs = Blog::latest()->where('status', 1)->take(5)->get();
         return view('frontend.home', compact('hero', 'typerTitles', 'services', 'about', 'portfolioTitle', 'portfolioCategories', 'portfolioItems', 'skill', 'skillItems', 'experience', 'feedbackTestimonials', 'feedbackTitleTestimonial', 'blogs'));
     }
 
@@ -65,6 +66,39 @@ class HomeController extends Controller
         $blogImage = $image;
         return view('frontend.blog-show-image', compact('blogImage'));
         // return response()->file(public_path('storage/blog/'.$image));
+    }
+
+    public function blogs(Request $request){
+
+        $tieneBúsqueda = false;
+
+        $blogs = Blog::with(['getCategory'])->where(['status' => 1]);
+
+        // dd($request->has('category'));
+        // if($request->has('category') && $request->filled('category')) {
+        //     dd($request->category);
+        // }
+
+        if ($request->has('search') && $request->filled('search')) {
+            $blogs->where(function ($query) use ($request) {
+                $query->where('title', 'like', '%' . $request->search . '%')
+                    ->orWhere('description', 'like', '%' . $request->search . '%');
+            });
+            $tieneBúsqueda = true;
+        }
+
+        if ($request->has('category') && $request->filled('category')) {
+            $blogs->whereHas('getCategory', function ($query) use ($request) {
+                $query->where('slug', $request->category);
+            });
+            // dd($blogs->get());
+            $tieneBúsqueda = true;
+        }
+
+        $blogs = $blogs->latest()->paginate(9);
+        $categories = BlogCategory::where(['status' => 1])->get();
+        
+        return view('frontend.blog', compact('blogs', 'categories', 'tieneBúsqueda'));
     }
 
 }

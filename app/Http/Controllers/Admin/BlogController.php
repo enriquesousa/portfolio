@@ -27,7 +27,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        $categories = BlogCategory::all();
+        $categories = BlogCategory::where('status', 1)->get();
         return view('admin.blog.create', compact('categories'));
     }
 
@@ -43,6 +43,7 @@ class BlogController extends Controller
             'title' => ['required', 'string', 'max:200'],
             'description' => ['required'],
             'category' => ['required', 'numeric'],
+            'status' => ['required', 'boolean'],
         ]); 
 
         // $imagePath = handleUpload('image'); // otra manera de hacerlo
@@ -53,6 +54,7 @@ class BlogController extends Controller
         $portfolioItem->title = $request->title;
         $portfolioItem->description = $request->description;
         $portfolioItem->category = (int)$request->category;
+        $portfolioItem->status = $request->status;
         $portfolioItem->save();
 
         flash()->success( __('Blog creado correctamente!') );
@@ -73,7 +75,7 @@ class BlogController extends Controller
     public function edit(string $id)
     {
         $blog = Blog::findOrFail($id);
-        $categories = BlogCategory::all();
+        $categories = BlogCategory::where('status', 1)->get();
         return view('admin.blog.edit', compact('blog', 'categories'));
     }
 
@@ -89,6 +91,7 @@ class BlogController extends Controller
             'title' => ['required', 'string', 'max:200'],
             'description' => ['required'],
             'category' => ['required', 'numeric'],
+            'status' => ['required', 'boolean'],
         ]); 
 
         $blog = Blog::findOrFail($id);
@@ -98,6 +101,7 @@ class BlogController extends Controller
         $blog->title = $request->title;
         $blog->description = $request->description;
         $blog->category = (int)$request->category;
+        $blog->status = $request->status;
         $blog->save();
 
         flash()->success( __('Blog actualizado correctamente!') );

@@ -259,7 +259,7 @@
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 109,
+					"line": 110,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -290,6 +290,11 @@
 			"bookmarks": [
 				{
 					"line": 24,
+					"column": 34,
+					"label": "Usar bootstrap para pagination laravel pagination"
+				},
+				{
+					"line": 28,
 					"column": 11,
 					"label": "inicio aqui podemos correr servicios al arranque"
 				}
@@ -599,7 +604,7 @@
 			"path": "app/Http/Controllers/Admin/BlogController.php",
 			"bookmarks": [
 				{
-					"line": 96,
+					"line": 99,
 					"column": 8,
 					"label": "image check si la imagen es null"
 				}
@@ -619,7 +624,7 @@
 			"path": "resources/views/frontend/layouts/sections/blog.blade.php",
 			"bookmarks": [
 				{
-					"line": 28,
+					"line": 30,
 					"column": 58,
 					"label": "string limit en blade"
 				}
@@ -629,7 +634,7 @@
 			"path": "app/Http/Controllers/Frontend/HomeController.php",
 			"bookmarks": [
 				{
-					"line": 36,
+					"line": 37,
 					"column": 8,
 					"label": "tomar los ultimos 5 blogs"
 				}
@@ -657,6 +662,41 @@
 					"line": 76,
 					"column": 77,
 					"label": "string limit"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/blog.blade.php",
+			"bookmarks": [
+				{
+					"line": 64,
+					"column": 44,
+					"label": "string limit and strip tags"
+				},
+				{
+					"line": 93,
+					"column": 16,
+					"label": "laravel pagination"
+				}
+			]
+		},
+		{
+			"path": "public/frontend/assets/css/custom.css",
+			"bookmarks": [
+				{
+					"line": 1,
+					"column": 97,
+					"label": "Parea el style de los botones de laravel pagination en resources/views/frontend/blog.blade.php"
+				}
+			]
+		},
+		{
+			"path": "app/DataTables/BlogCategoryDataTable.php",
+			"bookmarks": [
+				{
+					"line": 47,
+					"column": 87,
+					"label": "traducir en data table"
 				}
 			]
 		}
