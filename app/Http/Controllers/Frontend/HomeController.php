@@ -104,7 +104,17 @@ class HomeController extends Controller
     }
 
     public function contact(Request $request){
-        dd($request->all());
+        // dd($request->all()); // Ver los resultados en la consola
+
+        $request->validate([
+            'name' => ['required', 'string', 'max:200'],
+            'email' => ['required', 'email', 'max:200'],
+            'subject' => ['required', 'string', 'max:200'],
+            'message' => ['required', 'string', 'max:2000'],
+        ]);
+        
+        
+
     }
 
 }

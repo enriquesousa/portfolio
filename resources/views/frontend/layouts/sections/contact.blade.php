@@ -54,7 +54,7 @@
 
                         <div class="col-sm-12">
                             <div class="form-box">
-                                <button class="button-primary mouse-dir" type="submit">Send Now <span class="dir-part"></span></button>
+                                <button class="button-primary mouse-dir" type="submit" id="submit_button">{{ __('Enviar') }} <span class="dir-part"></span></button>
                             </div>
                         </div>
 
@@ -86,11 +86,30 @@
                     url: "{{ route('contact.store') }}",
                     type: "POST",
                     data: $(this).serialize(),
+                    beforeSend: function() {
+                        $('#submit_button').prop('disabled', true);
+                        $('#submit_button').html(`{{ __('Enviando ...') }} &nbsp; <span class="spinner-border text-light spinner-border-sm"> <span>`);
+                    },
                     success: function(response) {
                         console.log(response);
                     },
-                    error: function(error) {
-                        console.log(error);
+                    error: function(response) { 
+                        // console.log(response);
+                        if(response.status == 422) {
+                            let errorMessages = $.parseJSON(response.responseText);
+                            // console.log(errorMessages);
+                            $.each(errorMessages.errors, function(key, value) {
+                                // console.log(key, value);
+                                // console.log(value[0]);
+                                toastr.error(value[0]);
+                            });
+
+                            // sleep 1 second to show all the errors
+                            setTimeout(function() {
+                                $('#submit_button').prop('disabled', false);
+                                $('#submit_button').html(`{{ __('Enviar') }}`);
+                            }, 1000);
+                        }
                     }
                 })
                 

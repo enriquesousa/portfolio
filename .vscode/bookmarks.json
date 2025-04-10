@@ -707,6 +707,21 @@
 					"line": 74,
 					"column": 35,
 					"label": "csrf token para ajax"
+				},
+				{
+					"line": 90,
+					"column": 24,
+					"label": "traduccion en ajax"
+				},
+				{
+					"line": 91,
+					"column": 22,
+					"label": "spinner en ajax"
+				},
+				{
+					"line": 107,
+					"column": 28,
+					"label": "delay sleep en ajax"
 				}
 			]
 		},
@@ -717,6 +732,16 @@
 					"line": 9,
 					"column": 1,
 					"label": "csrf token para ajax"
+				},
+				{
+					"line": 22,
+					"column": 4,
+					"label": "toastr para desplegar mensajes ajax en frontend"
+				},
+				{
+					"line": 82,
+					"column": 4,
+					"label": "toastr para desplegar mensajes ajax en frontend"
 				}
 			]
 		}
