@@ -259,7 +259,7 @@
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 111,
+					"line": 112,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -697,6 +697,26 @@
 					"line": 47,
 					"column": 87,
 					"label": "traducir en data table"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/layouts/sections/contact.blade.php",
+			"bookmarks": [
+				{
+					"line": 74,
+					"column": 35,
+					"label": "csrf token para ajax"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/layouts/master.blade.php",
+			"bookmarks": [
+				{
+					"line": 9,
+					"column": 1,
+					"label": "csrf token para ajax"
 				}
 			]
 		}

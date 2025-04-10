@@ -59,7 +59,15 @@
     "bladeFormatter.format.wrapLineLength": 500,
     "bladeFormatter.format.wrapAttributes": "auto",
     "bladeFormatter.format.useTabs": false,
-    "bladeFormatter.format.wrapAttributesMinAttrs": 10
+    "bladeFormatter.format.wrapAttributesMinAttrs": 10,
+    "squarl.bookmarks": [
+        {
+            "name": "welcome.blade.php",
+            "path": "resources/views/welcome.blade.php",
+            "description": "welcome.blade.php",
+            "type": "file"
+        }
+    ]
 
 
 }

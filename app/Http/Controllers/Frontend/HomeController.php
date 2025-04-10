@@ -103,4 +103,8 @@ class HomeController extends Controller
         return view('frontend.blog', compact('blogs', 'categories', 'tieneBúsqueda'));
     }
 
+    public function contact(Request $request){
+        dd($request->all());
+    }
+
 }

@@ -221,7 +221,9 @@
     "Reset Búsqueda": "Reset Search",
     "Configurar Blog": "Configure Blog",
     "Configurar Titulo y Subtítulos de la sección Blog": "Configure Title and Sub-Titles of the Blog Section",
-    "Configurar Titulo y Subtítulos de la sección Comentarios": "Configure Title and Sub-Titles of the Feedback Section"
+    "Configurar Titulo y Subtítulos de la sección Comentarios": "Configure Title and Sub-Titles of the Feedback Section",
+    "Entradas del blog": "Blog entries",
+    "Aquí encontrarás mis blogs donde te comparto un concepto, tema  y/o un snippet de código relacionado con  Laravel, php o cualquier tema relacionado con la programación y desarrollo web.": "Here you will find my blogs where I share a concept, theme and/or a code snippet related to Laravel, php or any topic related to programming and web development."
 
 
 

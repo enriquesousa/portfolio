@@ -21,5 +21,12 @@
     "body": [
       "{{ __('${1:key}') }}"
     ]
+  },
+  "s_comment": {
+    "scope": "blade",
+    "prefix": "s_comment",
+    "body": [
+      "<!-- $1 -->"
+    ]
   }
 }
