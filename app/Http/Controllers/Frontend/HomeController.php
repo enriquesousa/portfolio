@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\Blog;
 use App\Models\BlogCategory;
+use App\Models\BlogSectionSetting;
 use App\Models\Category;
 use App\Models\Experience;
 use App\Models\Feedback;
@@ -36,7 +37,8 @@ class HomeController extends Controller
         $feedbackTestimonials = Feedback::all();
         $feedbackTitleTestimonial = FeedbackSectionSetting::first();
         $blogs = Blog::latest()->where('status', 1)->take(5)->get();
-        return view('frontend.home', compact('hero', 'typerTitles', 'services', 'about', 'portfolioTitle', 'portfolioCategories', 'portfolioItems', 'skill', 'skillItems', 'experience', 'feedbackTestimonials', 'feedbackTitleTestimonial', 'blogs'));
+        $blogsTitle = BlogSectionSetting::first();
+        return view('frontend.home', compact('hero', 'typerTitles', 'services', 'about', 'portfolioTitle', 'portfolioCategories', 'portfolioItems', 'skill', 'skillItems', 'experience', 'feedbackTestimonials', 'feedbackTitleTestimonial', 'blogs', 'blogsTitle'));
     }
 
     public function showPortfolio($id){

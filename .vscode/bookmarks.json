@@ -249,17 +249,17 @@
 			"path": "routes/web.php",
 			"bookmarks": [
 				{
-					"line": 25,
+					"line": 26,
 					"column": 0,
 					"label": "traduccion asignar localization middleware a home route"
 				},
 				{
-					"line": 39,
+					"line": 40,
 					"column": 0,
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 110,
+					"line": 111,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -584,7 +584,7 @@
 			"path": "resources/views/admin/feedback-setting/index.blade.php",
 			"bookmarks": [
 				{
-					"line": 45,
+					"line": 46,
 					"column": 40,
 					"label": "Agregamos el @ antes de la variable para evitar conflictos de null"
 				}
@@ -624,7 +624,7 @@
 			"path": "resources/views/frontend/layouts/sections/blog.blade.php",
 			"bookmarks": [
 				{
-					"line": 30,
+					"line": 28,
 					"column": 58,
 					"label": "string limit en blade"
 				}
@@ -634,7 +634,7 @@
 			"path": "app/Http/Controllers/Frontend/HomeController.php",
 			"bookmarks": [
 				{
-					"line": 37,
+					"line": 38,
 					"column": 8,
 					"label": "tomar los ultimos 5 blogs"
 				}

@@ -152,7 +152,7 @@
             </li>
 
             {{-- Sección - Blog --}}
-            <li class="nav-item dropdown {{ setSidebarActive(['admin.blog.*','admin.blog-category.*']) }}">
+            <li class="nav-item dropdown {{ setSidebarActive(['admin.blog.*','admin.blog-category.*', 'admin.blog-section-setting.*']) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
                     <i class="bi bi-newspaper"></i>
                     <span>{{ __('Blog') }}</span>
@@ -170,6 +170,13 @@
                     <li class="{{ setSidebarActive(['admin.blog.*']) }}">
                         <a class="nav-link" href="{{ route('admin.blog.index') }}">
                             {{ __('Lista de Blogs') }}
+                        </a>
+                    </li>
+
+                    <!-- Configurar Sección -->
+                    <li class="{{ setSidebarActive(['admin.blog-section-setting.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.blog-section-setting.index') }}">
+                            {{ __('Configurar Sección') }}
                         </a>
                     </li>
 

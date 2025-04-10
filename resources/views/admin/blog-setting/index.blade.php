@@ -7,8 +7,8 @@
                 <a href="{{ route('dashboard') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             @php
-                $tituloPagina = __('Configurar Comentarios');
-                $subTituloPagina = __('Configurar Titulo y Subtítulos de la sección Comentarios');
+                $tituloPagina = __('Configurar Blog');
+                $subTituloPagina = __('Configurar Titulo y Subtítulos de la sección Blog');
             @endphp
             <h1>{{ $tituloPagina }}</h1>
         </div>
@@ -36,7 +36,7 @@
 
                         <div class="card-body">
 
-                            <form action="{{ route('admin.feedback-section-setting.update', 1) }}" method="POST">
+                            <form action="{{ route('admin.blog-section-setting.update', 1) }}" method="POST">
                                 @csrf
                                 @method('PUT')
 
@@ -44,7 +44,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Titulo') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="title" class="form-control" value="{{ @$feedbackSetting->title }}">
+                                        <input type="text" name="title" class="form-control" value="{{ @$blogSetting->title }}">
                                     </div>
                                 </div>
 
@@ -52,7 +52,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Sub-Titulo') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <textarea name="sub_title" id="" class="form-control" style="height: 100px">{!! @$feedbackSetting->sub_title !!}</textarea>
+                                        <textarea name="sub_title" id="" class="form-control" style="height: 100px">{!! @$blogSetting->sub_title !!}</textarea>
                                     </div>
                                 </div>
                                 

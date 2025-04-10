@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('feedback_section_settings', function (Blueprint $table) {
+        Schema::create('blog_section_settings', function (Blueprint $table) {
             $table->id();
-            
+
             $table->string('title');
             $table->text('sub_title');
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('feedback_section_settings');
+        Schema::dropIfExists('blog_section_settings');
     }
 };
