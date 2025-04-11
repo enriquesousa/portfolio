@@ -29,11 +29,18 @@
 
                     <a class="nav-link" href="#" style="font-size: 15px; font-weight: 300;" title="{{ __('Language') }}"><iconify-icon icon="clarity:language-line"></iconify-icon>&nbsp;&nbsp;{{ app()->getLocale() == 'en' ? 'English' : 'Español' }} &nbsp;&nbsp;<i class="fas fa-angle-down"></i></a>
 
-                    <ul class="sub_menu">
-                        <li><a href="{{ url('locale/en') }}"><iconify-icon icon="twemoji:flag-us-outlying-islands"></iconify-icon>&nbsp;&nbsp;{{ __('Translate to English') }}</a></li>
-                        <li><a href="{{ url('locale/es') }}"><iconify-icon icon="flag:mx-1x1"></iconify-icon>&nbsp;&nbsp;{{ __('Translate to Spanish') }}</a></li>
-                        
-                    </ul>
+                    {{-- if user is login --}}
+                    @auth
+                        <ul class="sub_menu">
+                            <li title="{{ __('Para cambiar el idioma, vaya a Panel de Control') }}"><a href="{{ route('profile.edit') }}">{{ __('Ir a Panel de Control') }}</a></li>
+                        </ul>
+                    @else
+                        <ul class="sub_menu">
+                            <li><a href="{{ url('locale/en') }}"><iconify-icon icon="twemoji:flag-us-outlying-islands"></iconify-icon>&nbsp;&nbsp;{{ __('Translate to English') }}</a></li>
+                            <li><a href="{{ url('locale/es') }}"><iconify-icon icon="flag:mx-1x1"></iconify-icon>&nbsp;&nbsp;{{ __('Translate to Spanish') }}</a></li>
+                        </ul>
+                    @endauth
+
                 </li>
 
                 {{-- Portfolio --}}
