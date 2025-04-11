@@ -629,7 +629,7 @@
 			"path": "app/Http/Controllers/Frontend/HomeController.php",
 			"bookmarks": [
 				{
-					"line": 38,
+					"line": 40,
 					"column": 8,
 					"label": "tomar los ultimos 5 blogs"
 				}
@@ -714,7 +714,7 @@
 					"label": "spinner en ajax"
 				},
 				{
-					"line": 107,
+					"line": 114,
 					"column": 28,
 					"label": "delay sleep en ajax"
 				}

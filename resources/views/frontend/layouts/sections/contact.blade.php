@@ -23,7 +23,7 @@
                         <!-- Name -->
                         <div class="col-md-4">
                             <div class="form-box">
-                                <input type="text" name="name" id="form-name" class="input-box" placeholder="Name">
+                                <input type="text" name="name" id="form-name" class="input-box" placeholder="{{ __('Nombre') }}">
                                 <label for="form-name" class="icon lb-name"><i class="fal fa-user"></i></label>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                         <!-- Email -->
                         <div class="col-md-4">
                             <div class="form-box">
-                                <input type="text" name="email" id="form-email" class="input-box" placeholder="Email">
+                                <input type="text" name="email" id="form-email" class="input-box" placeholder="{{ __('Correo Electrónico') }}">
                                 <label for="form-email" class="icon lb-email"><i class="fal fa-envelope"></i></label>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                         <!-- Subject -->
                         <div class="col-md-4">
                             <div class="form-box">
-                                <input type="text" name="subject" id="form-subject" class="input-box" placeholder="Subject">
+                                <input type="text" name="subject" id="form-subject" class="input-box" placeholder="{{ __('Asunto') }}">
                                 <label for="form-subject" class="icon lb-subject"><i class="fal fa-check-square"></i></label>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                         <!-- Message -->
                         <div class="col-sm-12">
                             <div class="form-box">
-                                <textarea class="input-box" id="form-message" placeholder="Message" cols="30" rows="4" name="message"></textarea>
+                                <textarea class="input-box" id="form-message" placeholder="{{ __('Mensaje') }}" cols="30" rows="4" name="message"></textarea>
                                 <label for="form-message" class="icon lb-message"><i class="fal fa-edit"></i></label>
                             </div>
                         </div>
@@ -91,7 +91,14 @@
                         $('#submit_button').html(`{{ __('Enviando ...') }} &nbsp; <span class="spinner-border text-light spinner-border-sm"> <span>`);
                     },
                     success: function(response) {
-                        console.log(response);
+                        // console.log(response);
+                        if(response.status == 'success') {
+                            $('#submit_button').prop('disabled', false);
+                            $('#submit_button').html(`{{ __('Enviar') }}`);
+                            // $('#contact-form')[0].reset();
+                            $('#contact-form').trigger('reset');
+                            toastr.success(response.message);
+                        }
                     },
                     error: function(response) { 
                         // console.log(response);
