@@ -1,9 +1,12 @@
+
 @php
     // if hero image is not set, use default image
     if($hero->image == null){
         $hero->image = 'frontend/assets/imagenes/hero-800x400.png';
     }
 @endphp
+
+
 <!-- Header-Area-Start -->
 <header class="header-area parallax-bg" id="home-page" style="background-image: url({{ asset($hero->image) }}); no-repeat scroll top center/cover;" >
     <div class="container">

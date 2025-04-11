@@ -164,12 +164,12 @@
 			"path": "resources/views/frontend/layouts/sections/hero.blade.php",
 			"bookmarks": [
 				{
-					"line": 37,
+					"line": 40,
 					"column": 11,
 					"label": "dd debug en blade usar @dd($typerTitles);"
 				},
 				{
-					"line": 40,
+					"line": 43,
 					"column": 16,
 					"label": "traduccion en script"
 				}

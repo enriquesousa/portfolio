@@ -1,5 +1,5 @@
 <!-- Testimonial-Area-Start -->
-<section class="testimonial-area">
+<section class="testimonial-area" id="testimonials-page">
     <div class="container">
         <div class="row">
 

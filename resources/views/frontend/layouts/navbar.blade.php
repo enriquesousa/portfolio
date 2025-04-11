@@ -18,16 +18,16 @@
                 </li>
 
                 {{-- Sobre --}}
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="#about-page" title="{{ __('About') }}" style="font-size: 25px;"><iconify-icon icon="mdi:about-variant"></iconify-icon></a>
-                </li>
+                </li> --}}
 
                 {{-- Idioma --}}
                 <li class="nav-item">
 
                     {{-- <a class="nav-link" href="#" style="font-size: 25px;" title="{{ __('Language') }}"><iconify-icon icon="clarity:language-line"></iconify-icon>&nbsp;&nbsp;{{ app()->getLocale() == 'en' ? 'English' : 'Español' }} &nbsp;&nbsp;<i class="fas fa-angle-down"></i></a> --}}
 
-                    <a class="nav-link" href="#" style="font-size: 15px; font-weight: 300;" title="{{ __('Language') }}"><iconify-icon icon="clarity:language-line"></iconify-icon>&nbsp;&nbsp;{{ app()->getLocale() == 'en' ? 'English' : 'Español' }} &nbsp;&nbsp;<i class="fas fa-angle-down"></i></a>
+                    <a class="nav-link" href="#" style="font-size: 15px; font-weight: 300;" title="{{ __('Language') }}"><iconify-icon icon="clarity:language-line"></iconify-icon>&nbsp;{{ app()->getLocale() == 'en' ? 'English' : 'Español' }} &nbsp;&nbsp;<i class="fas fa-angle-down"></i></a>
 
                     {{-- if user is login --}}
                     @auth
@@ -45,21 +45,48 @@
 
                 {{-- Portfolio --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="#portfolio-page">{{ __('Portfolio') }} <i class="fas fa-angle-down"></i></a>
+                    <a class="nav-link" href="#portfolio-page">{{ __('Portfolio') }}&nbsp; <i class="fas fa-angle-down"></i></a>
                     <ul class="sub_menu">
-                        <li><a href="portfolio.html">{{ __('Portfolio Grid') }}</a></li>
-                        <li><a href="{{ route('login') }}"><i class="bi bi-person-gear"></i>&nbsp;&nbsp;{{ __('Admin Login') }}</a></li>
+
+                        <li><a href="#home-page">{{ __('Sección Inicio') }}</a></li><br>
+
+                        <li><a href="#services-page">{{ __('Servicios') }}</a></li><br>
+
+                        <li><a href="#about-page">{{ __('Nosotros') }}</a></li><br>
+
+                        <li><a href="#portfolio-page">{{ __('Portafolio') }}</a></li><br>
+
+                        <li><a href="#skills-page">{{ __('Skills') }}</a></li><br>
+
+                        <li><a href="#experience-page">{{ __('Experiencia') }}</a></li><br>
+
+                        <li><a href="#testimonials-page">{{ __('Testimonios') }}</a></li><br>
+
+                        <li><a href="#blog-page">{{ __('Blog') }}</a></li><br>
+
+                        <li><a href="#contact-page">{{ __('Contacto') }}</a></li><br>
+
+                        <li>
+                            <a href="portfolio.html">{{ __('Portfolio Grid') }}</a>
+                        </li><br>
+
+                        <li>
+                            <a href="{{ route('login') }}">
+                                <i class="bi bi-person-gear"></i>&nbsp;&nbsp;{{ __('Admin Login') }}
+                            </a>
+                        </li><br>
+
                     </ul>
                 </li>
 
                 {{-- Habilidades --}}
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="#skills-page">{{ __('Skills') }}</a>
-                </li>
+                </li> --}}
 
                 {{-- Blog --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="#blog-page">{{ __('Blog') }} <i class="fas fa-angle-down"></i></a>
+                    <a class="nav-link" href="#blog-page">{{ __('Blog') }}&nbsp; <i class="fas fa-angle-down"></i></a>
                     <ul class="sub_menu">
                         <li><a href="{{ route('show.blogs') }}">{{ __('Blog Grid') }}</a></li>
                     </ul>
