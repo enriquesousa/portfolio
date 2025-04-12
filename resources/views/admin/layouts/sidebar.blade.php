@@ -183,6 +183,24 @@
                 </ul>
             </li>
 
+            {{-- Sección - Contacto --}}
+            <li class="nav-item dropdown {{ setSidebarActive(['admin.contact-section-setting.*']) }}">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                    <i class="bi bi-envelope"></i>
+                    <span>{{ __('Contacto') }}</span>
+                </a>
+                <ul class="dropdown-menu" style="display: none;">
+
+                    <!-- Configurar Sección -->
+                    <li class="{{ setSidebarActive(['admin.contact-section-setting.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.contact-section-setting.index') }}">
+                            {{ __('Configurar Sección') }}
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
         </ul>
 
     </aside>

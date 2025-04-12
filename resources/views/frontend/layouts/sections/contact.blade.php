@@ -6,9 +6,9 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3 text-center">
                 <div class="section-title">
-                    <h3 class="title">Lets Work Together</h3>
+                    <h3 class="title">{{ __($contactTitle->title) }}</h3>
                     <div class="desc">
-                        <p>Earum quos ...</p>
+                        <p>{!! __($contactTitle->sub_title) !!}</p>
                     </div>
                 </div>
             </div>

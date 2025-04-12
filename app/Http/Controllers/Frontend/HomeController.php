@@ -9,6 +9,7 @@ use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\BlogSectionSetting;
 use App\Models\Category;
+use App\Models\ContactSectionSetting;
 use App\Models\Experience;
 use App\Models\Feedback;
 use App\Models\FeedbackSectionSetting;
@@ -40,7 +41,8 @@ class HomeController extends Controller
         $feedbackTitleTestimonial = FeedbackSectionSetting::first();
         $blogs = Blog::latest()->where('status', 1)->take(5)->get();
         $blogsTitle = BlogSectionSetting::first();
-        return view('frontend.home', compact('hero', 'typerTitles', 'services', 'about', 'portfolioTitle', 'portfolioCategories', 'portfolioItems', 'skill', 'skillItems', 'experience', 'feedbackTestimonials', 'feedbackTitleTestimonial', 'blogs', 'blogsTitle'));
+        $contactTitle = ContactSectionSetting::first();
+        return view('frontend.home', compact('hero', 'typerTitles', 'services', 'about', 'portfolioTitle', 'portfolioCategories', 'portfolioItems', 'skill', 'skillItems', 'experience', 'feedbackTestimonials', 'feedbackTitleTestimonial', 'blogs', 'blogsTitle', 'contactTitle'));
     }
 
     public function showPortfolio($id){

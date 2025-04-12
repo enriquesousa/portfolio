@@ -249,17 +249,17 @@
 			"path": "routes/web.php",
 			"bookmarks": [
 				{
-					"line": 26,
+					"line": 27,
 					"column": 0,
 					"label": "traduccion asignar localization middleware a home route"
 				},
 				{
-					"line": 40,
+					"line": 41,
 					"column": 0,
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 112,
+					"line": 113,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -629,7 +629,7 @@
 			"path": "app/Http/Controllers/Frontend/HomeController.php",
 			"bookmarks": [
 				{
-					"line": 40,
+					"line": 41,
 					"column": 8,
 					"label": "tomar los ultimos 5 blogs"
 				}
@@ -642,6 +642,11 @@
 					"line": 44,
 					"column": 13,
 					"label": "image fix"
+				},
+				{
+					"line": 354,
+					"column": 16,
+					"label": "hero background image opacity opacidad"
 				}
 			]
 		},
