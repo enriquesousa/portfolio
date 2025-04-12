@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\Feedback;
+use App\Models\FooterSocialLink;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -12,7 +12,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class FeedbackDataTable extends DataTable
+class FooterSocialLinkDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -22,45 +22,46 @@ class FeedbackDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
+        
             // ID
             ->addColumn('id', function($query){
                 return $query->id;
             })->orderColumn('id', 'id $1')
 
-            // Nombre Cliente
+            // Icon
+            ->addColumn('icon', function($query){
+                return '<i style="font-size: 40px" class="'.$query->icon.'"></i>';
+            })
+
+            // Name
             ->addColumn('name', function($query){
                 return $query->name;
             })
-            ->filterColumn('name', function ($query, $keyword) {
-                $query->where('name', 'like', "%{$keyword}%");
-            })
-            ->orderColumn('name', 'name $1')
 
-            // Cargo
-            ->addColumn('position', function($query){
-                return $query->position;
-            })
-
-            // Descripción
-            ->addColumn('description', function($query){
-                return $query->description;
+            // Status
+            ->addColumn('status', function($query){
+                if($query->status == 1){
+                    return '<span class="badge badge-success">'.__("Activo").'</span>';
+                }else{
+                    return '<span class="badge badge-danger">'.__("Inactivo").'</span>';
+                }
             })
             
             // action
             ->addColumn('action', function($query){
-                $edit = "<a href='".route('admin.feedback.edit', $query->id)."' class='btn btn-primary' title='".__("Editar")."'><i class='fas fa-edit'></i></a>";
-                $delete = "<a href='".route('admin.feedback.destroy', $query->id)."' class='btn btn-danger delete-item ml-2' title='".__('Eliminar')."'><i class='fas fa-trash'></i></a>";
+                $edit = "<a href='".route('admin.footer-social.edit', $query->id)."' class='btn btn-primary' title='".__("Editar")."'><i class='fas fa-edit'></i></a>";
+                $delete = "<a href='".route('admin.footer-social.destroy', $query->id)."' class='btn btn-danger delete-item ml-2' title='".__('Eliminar')."'><i class='fas fa-trash'></i></a>";
                 return $edit . $delete;
             })
 
-            ->rawColumns(['id','name','action'])
+            ->rawColumns(['id', 'icon', 'status', 'name', 'action'])
             ->setRowId('id');
     }
 
     /**
      * Get the query source of dataTable.
      */
-    public function query(Feedback $model): QueryBuilder
+    public function query(FooterSocialLink $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -71,7 +72,7 @@ class FeedbackDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('feedback-table')
+                    ->setTableId('footersociallink-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
@@ -84,8 +85,7 @@ class FeedbackDataTable extends DataTable
                         Button::make('print'),
                         Button::make('reset'),
                         Button::make('reload')
-                    ])
-                    ->parameters([
+                    ])->parameters([
 
                         // 'dom'          => 'Bfrtip', // Comentar para que no se muestren los botones de exportación
 
@@ -121,9 +121,10 @@ class FeedbackDataTable extends DataTable
         return [
 
             Column::make('id')->title(__('ID'))->width(60)->addClass('text-center'),
+            Column::make('icon')->title(__('Icon'))->addClass('text-center'),
             Column::make('name')->title(__('Nombre')),
-            Column::make('position')->title(__('Cargo')),
-            Column::make('description')->title(__('Descripción')),
+            Column::make('url')->title(__('Url')),
+            Column::make('status')->title(__('Estado'))->addClass('text-center'),
 
             Column::computed('action')
                   ->exportable(false)
@@ -131,7 +132,6 @@ class FeedbackDataTable extends DataTable
                   ->width(150)
                   ->addClass('text-center'),
         ];
-
     }
 
     /**
@@ -139,6 +139,6 @@ class FeedbackDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Feedback_' . date('YmdHis');
+        return 'FooterSocialLink_' . date('YmdHis');
     }
 }
