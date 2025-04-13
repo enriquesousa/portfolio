@@ -207,19 +207,27 @@
             </li>
 
             {{-- Sección - Pie de pagina --}}
-            <li class="nav-item dropdown {{ setSidebarActive(['admin.footer-social.*']) }}">
+            <li class="nav-item dropdown {{ setSidebarActive(['admin.footer-social.*', 'admin.footer-info.*']) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
                     <i class="bi bi-info-circle"></i>
                     <span>{{ __('Pie de pagina') }}</span>
                 </a>
                 <ul class="dropdown-menu" style="display: none;">
 
-                    <!-- Configurar Sección -->
+                    <!-- Social Links -->
                     <li class="{{ setSidebarActive(['admin.footer-social.*']) }}">
                         <a class="nav-link" href="{{ route('admin.footer-social.index') }}">
                             {{ __('Redes Sociales') }}
                         </a>
                     </li>
+
+                    <!-- Información -->
+                    <li class="{{ setSidebarActive(['admin.footer-info.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.footer-info.index') }}">
+                            {{ __('Información') }}
+                        </a>
+                    </li>
+
 
                 </ul>
             </li>

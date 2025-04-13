@@ -1,5 +1,5 @@
 <!-- Footer-Area-Start -->
-<footer class="footer-area">
+<footer class="footer-area" id="footer-area">
     <div class="container">
         <div class="row footer-widgets">
             <div class="col-md-12 col-lg-3 widget">

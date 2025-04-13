@@ -71,6 +71,10 @@
                         </li><br>
 
                         <li>
+                            <a href="#footer-area">{{ __('Pie de pagina') }}</a>
+                        </li><br>
+
+                        <li>
                             <a href="{{ route('login') }}">
                                 <i class="bi bi-person-gear"></i>&nbsp;&nbsp;{{ __('Admin Login') }}
                             </a>
