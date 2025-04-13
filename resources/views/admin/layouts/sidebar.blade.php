@@ -207,7 +207,7 @@
             </li>
 
             {{-- Sección - Pie de pagina --}}
-            <li class="nav-item dropdown {{ setSidebarActive(['admin.footer-social.*', 'admin.footer-info.*']) }}">
+            <li class="nav-item dropdown {{ setSidebarActive(['admin.footer-social.*', 'admin.footer-info.*', 'admin.footer-contact-info.*']) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
                     <i class="bi bi-info-circle"></i>
                     <span>{{ __('Pie de pagina') }}</span>
@@ -221,10 +221,17 @@
                         </a>
                     </li>
 
-                    <!-- Información -->
+                    <!-- Información Descripción Info, copyright y hecho por -->
                     <li class="{{ setSidebarActive(['admin.footer-info.*']) }}">
                         <a class="nav-link" href="{{ route('admin.footer-info.index') }}">
                             {{ __('Información') }}
+                        </a>
+                    </li>
+
+                    <!-- Información de Contacto -->
+                    <li class="{{ setSidebarActive(['admin.footer-contact-info.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.footer-contact-info.index') }}">
+                            {{ __('Contacto') }}
                         </a>
                     </li>
 
