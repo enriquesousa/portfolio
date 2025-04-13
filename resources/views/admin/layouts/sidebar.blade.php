@@ -2,10 +2,14 @@
     <aside id="sidebar-wrapper">
 
         <div class="sidebar-brand">
-            <a href="{{ route('home') }}" target="_blank">TJWeb</a>
+            <a href="{{ route('home') }}" target="_blank">
+                <img src="{{ asset('images/logo-h.png') }}" alt="TJWeb" style="width: 150px;" class="img-center">
+            </a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">TW</a>
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('images/icon48x48.png') }}" alt="TJWeb" class="img-center">
+            </a>
         </div>
 
         <ul class="sidebar-menu">
@@ -25,7 +29,7 @@
             {{-- Sección Héroe --}}
             <li class="nav-item dropdown {{ setSidebarActive(['admin.typer-title.*', 'admin.hero.*']) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
-                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star-fill"></i>
                     <span>{{ __('Héroe') }}</span>
                 </a>
                 <ul class="dropdown-menu" style="display: none;">
@@ -48,7 +52,8 @@
             {{-- Sección Servicios --}}
             <li class="nav-item {{ setSidebarActive(['admin.service.*']) }}">
                 <a class="nav-link" href="{{ route('admin.service.index') }}">
-                    <i class="bi bi-boxes"></i>
+                    {{-- <i class="bi bi-boxes"></i> --}}
+                    <i class="fas fa-boxes"></i>
                     <span>{{ __('Servicios') }}</span>
                 </a>
             </li>

@@ -64,7 +64,8 @@ class FooterSocialLinkController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $social = FooterSocialLink::findOrFail($id);
+        return view('admin.footer-social-link.edit', compact('social'));
     }
 
     /**
@@ -72,7 +73,24 @@ class FooterSocialLinkController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // dd($request->all());
+
+        $request->validate([
+            'icon' => 'required',
+            'url' => ['required', 'url'],
+            'name' => ['required', 'string', 'max:100'],
+            'status' => ['required', 'boolean'],
+        ]);
+
+        $footerSocialLink = FooterSocialLink::findOrFail($id);
+        $footerSocialLink->icon = $request->icon;
+        $footerSocialLink->url = $request->url;
+        $footerSocialLink->name = $request->name;
+        $footerSocialLink->status = $request->status;
+        $footerSocialLink->save();
+
+        flash()->success(__('Actualizado correctamente!'));
+        return redirect()->route('admin.footer-social.index');
     }
 
     /**
@@ -80,6 +98,12 @@ class FooterSocialLinkController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try{
+            $item = FooterSocialLink::findOrFail($id);
+            $item->delete();
+            return response(['status' => 'success', 'message' => __('Registro eliminado correctamente!')]);
+        }catch(\Exception $e){
+            return response(['status' => 'error', 'message' => __('Something went wrong!')]);
+        }
     }
 }

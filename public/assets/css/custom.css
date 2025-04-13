@@ -27,3 +27,11 @@
     margin-bottom: 10px;
 }
 
+/* Centrar imágenes */
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+

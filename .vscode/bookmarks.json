@@ -492,6 +492,11 @@
 					"line": 1631,
 					"column": 45,
 					"label": "color css on hover primary btn style.css"
+				},
+				{
+					"line": 3403,
+					"column": 20,
+					"label": "custom css para que el icono dee sidebar quede centrado"
 				}
 			]
 		},
