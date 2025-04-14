@@ -165,6 +165,7 @@
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
                     confirmButtonText: "{{ __('¡Si, Eliminar!') }}",
+                    // timer: 2000,
                 }).then((result) => {
                     if (result.isConfirmed) {
 
@@ -175,9 +176,7 @@
                                 _token: "{{ csrf_token() }}"
                             },
                             success: function(response) {
-
                                 // console.log(response.status);
-
                                 if(response.status === 'success') {
 
                                     // toastr.success(response.message);
@@ -202,9 +201,8 @@
                                     );
 
                                     // $('#slider-table').DataTable().draw(); // refresca la tabla
+                                    window.setTimeout(function(){location.reload()},1500)
                                     // window.location.reload();
-                                    window.setTimeout(function(){location.reload()},3000)
-
 
                                 }else if(response.status === 'error') {
                                     // toastr.error(response.message);

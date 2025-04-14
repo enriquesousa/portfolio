@@ -7,7 +7,7 @@
                 <a href="{{ route('admin.footer-useful-links.index') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             @php
-                $tituloPagina = __('Agregar Link Util');
+                $tituloPagina = __('Editar Link Util');
             @endphp
             <h1>{{ $tituloPagina }}</h1>
         </div>
@@ -26,14 +26,15 @@
 
                         <div class="card-body">
 
-                            <form action="{{ route('admin.footer-useful-links.store') }}" method="POST">
+                            <form action="{{ route('admin.footer-useful-links.update', $footerUsefulLink->id) }}') }}" method="POST">
                                 @csrf
+                                @method('PUT')
 
                                 {{-- Nombre --}}
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Nombre') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="name" class="form-control" value="">
+                                        <input type="text" name="name" class="form-control" value="{{ $footerUsefulLink->name }}">
                                     </div>
                                 </div>
 
@@ -41,7 +42,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('URL') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="url" class="form-control" value="">
+                                        <input type="text" name="url" class="form-control" value="{{ $footerUsefulLink->url }}">
                                     </div>
                                 </div>
 
@@ -50,8 +51,8 @@
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Estado') }}</label>
                                     <div class="col-sm-12 col-md-7">
                                         <select name="status" class="form-control selectric">
-                                            <option value="1">{{ __('Activo') }}</option>
-                                            <option value="0">{{ __('Inactivo') }}</option>
+                                            <option @selected($footerUsefulLink->status == 1) value="1">{{ __('Activo') }}</option>
+                                            <option  @selected($footerUsefulLink->status == 0) value="0">{{ __('Inactivo') }}</option>
                                         </select>
                                     </div>
                                 </div>                                
@@ -60,7 +61,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                     <div class="col-sm-12 col-md-7">
-                                        <button class="btn btn-primary">{{ __('Agregar') }}</button>
+                                        <button class="btn btn-primary">{{ __('Actualizar') }}</button>
                                     </div>
                                 </div>
 
