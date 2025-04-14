@@ -84,7 +84,12 @@
     font-weight: 300;
 }
 
-
+/* Centrar imágenes */
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 

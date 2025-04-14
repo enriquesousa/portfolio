@@ -749,6 +749,16 @@
 					"label": "toastr para desplegar mensajes ajax en frontend"
 				}
 			]
+		},
+		{
+			"path": "resources/views/admin/layouts/sidebar.blade.php",
+			"bookmarks": [
+				{
+					"line": 5,
+					"column": 16,
+					"label": "logo en dashboard"
+				}
+			]
 		}
 	]
 }

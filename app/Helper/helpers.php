@@ -212,7 +212,7 @@ if(!function_exists('intervaloTiempo')){
     }
 }
 
-// Para regresar una fecha en formato: "3:45 p.m. | 13-MAR-24".
+// Para regresar una fecha en formato: "14/Apr/25 | 9:40 AM".
 if(!function_exists('formatFecha5')){
     function formatFecha5($fecha)
     {
@@ -233,7 +233,7 @@ if(!function_exists('formatFecha5')){
         $hora = date('g:i A', strtotime($fecha));
 
         // $fecha = $hora . ' | '. $dia.'/'. $mes .'/' . $año;
-        $fecha = $hora . ' | '. $fecha2;
+        $fecha = $fecha2 . ' | '. $hora;
         return $fecha;
     }
 }
