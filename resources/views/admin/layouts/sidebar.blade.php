@@ -207,7 +207,7 @@
             </li>
 
             {{-- Sección - Pie de pagina --}}
-            <li class="nav-item dropdown {{ setSidebarActive(['admin.footer-social.*', 'admin.footer-info.*', 'admin.footer-contact-info.*', 'admin.footer-useful-links.*']) }}">
+            <li class="nav-item dropdown {{ setSidebarActive(['admin.footer-social.*', 'admin.footer-info.*', 'admin.footer-contact-info.*', 'admin.footer-useful-links.*', 'admin.footer-help-links.*']) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
                     <i class="bi bi-info-circle"></i>
                     <span>{{ __('Pie de pagina') }}</span>
@@ -239,6 +239,13 @@
                     <li class="{{ setSidebarActive(['admin.footer-useful-links.*']) }}">
                         <a class="nav-link" href="{{ route('admin.footer-useful-links.index') }}">
                             {{ __('Links Útiles') }}
+                        </a>
+                    </li>
+
+                    <!-- Help Links - Links de Ayuda -->
+                    <li class="{{ setSidebarActive(['admin.footer-help-links.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.footer-help-links.index') }}">
+                            {{ __('Links Ayuda') }}
                         </a>
                     </li>
 

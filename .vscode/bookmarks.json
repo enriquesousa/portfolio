@@ -249,17 +249,17 @@
 			"path": "routes/web.php",
 			"bookmarks": [
 				{
-					"line": 31,
+					"line": 32,
 					"column": 0,
 					"label": "traduccion asignar localization middleware a home route"
 				},
 				{
-					"line": 45,
+					"line": 46,
 					"column": 0,
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 117,
+					"line": 118,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
