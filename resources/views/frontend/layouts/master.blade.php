@@ -1,5 +1,6 @@
 @php
     $generalSetting = \App\Models\GeneralSetting::first();
+	$seoSetting = \App\Models\SeoSetting::first();
 @endphp
 <!doctype html>
 <html class="no-js" lang="en">
@@ -12,7 +13,9 @@
 	<!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<title>Portafolio | TJWeb</title>
+	<meta name="description" content="{{ @$seoSetting->description }}">
+	<meta name="keywords" content="{{ @$seoSetting->keywords }}">
+	<title>{{ @$seoSetting->title }}</title>
 
 	{{-- <link rel="shortcut icon" type="image/ico" href="{{ asset('frontend/assets/images/favicon.png') }}" /> --}}
 	{{-- <link rel="icon" type="image/png" href="{{ asset('images/icon48x48.png') }}"> --}}

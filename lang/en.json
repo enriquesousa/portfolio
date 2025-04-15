@@ -266,10 +266,18 @@
     "Configuración General": "General Configuration",
     "Actualizar Configuración General": "Update General Configuration",
     "Configuraciones generales como, titulo del sitio, descripción del sitio, dirección y otros.": "General configurations such as, site title, site description, address and others.",
-    "Configuraciones generales como, titulo del sitio, logos, etc...": "General configurations such as, site title, logos, etc...",
+    "Configuraciones generales como, logo, favicon, titulo del sitio, Descripción, etc...": "General configurations such as, logo, favicon, site title, description, etc...",
     "Cambiar Configuración": "Change Settings",
     "Logo Pie de Pagina": "Footer Logo",
-    "Configuración actualizada correctamente.": "Settings updated successfully."
+    "Configuración actualizada correctamente.": "Settings updated successfully.",
+    "Configuraciones de optimización de motores de búsqueda, como meta-etiquetas y redes sociales.": "Search engine optimization settings, such as meta tags and social networks.",
+    "Configurar SEO": "Configure SEO",
+    "Configurar SEO (Search Engine Optimization)": "Configure SEO (Search Engine Optimization)",
+    "Palabras Claves": "Keywords",
+    "Titulo SEO": "SEO Title",
+    "Descripción SEO": "SEO Description",
+    "Palabras Claves SEO": "SEO Keywords",
+    "Palabras Claves Separadas por Comas": "Keywords Separated by Commas"
 
 
 

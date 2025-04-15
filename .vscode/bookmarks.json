@@ -249,17 +249,17 @@
 			"path": "routes/web.php",
 			"bookmarks": [
 				{
-					"line": 34,
+					"line": 35,
 					"column": 0,
 					"label": "traduccion asignar localization middleware a home route"
 				},
 				{
-					"line": 48,
+					"line": 49,
 					"column": 0,
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 120,
+					"line": 121,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -734,22 +734,22 @@
 			"path": "resources/views/frontend/layouts/master.blade.php",
 			"bookmarks": [
 				{
-					"line": 12,
+					"line": 13,
 					"column": 1,
 					"label": "csrf token para ajax"
 				},
 				{
-					"line": 18,
+					"line": 21,
 					"column": 1,
 					"label": "favicon frontend"
 				},
 				{
-					"line": 27,
+					"line": 30,
 					"column": 4,
 					"label": "toastr para desplegar mensajes ajax en frontend"
 				},
 				{
-					"line": 87,
+					"line": 90,
 					"column": 4,
 					"label": "toastr para desplegar mensajes ajax en frontend"
 				}
@@ -782,6 +782,16 @@
 					"line": 73,
 					"column": 8,
 					"label": "update con first or new method"
+				}
+			]
+		},
+		{
+			"path": "app/Http/Controllers/Admin/SeoSettingController.php",
+			"bookmarks": [
+				{
+					"line": 63,
+					"column": 8,
+					"label": "actualizar un solo registro con firstOrNew"
 				}
 			]
 		}

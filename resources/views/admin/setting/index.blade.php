@@ -27,7 +27,7 @@
                         </div>
                         <div class="card-body">
                             <h4>{{ __('General') }}</h4>
-                            <p>{{ __('Configuraciones generales como, titulo del sitio, logos, etc...') }}</p>
+                            <p>{{ __('Configuraciones generales como, logo, favicon, titulo del sitio, Descripción, etc...') }}</p>
                             <a href="{{ route('admin.general-setting.index') }}" class="card-cta">{{ __('Cambiar Configuración') }} <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
@@ -41,8 +41,8 @@
                         </div>
                         <div class="card-body">
                             <h4>SEO</h4>
-                            <p>Search engine optimization settings, such as meta tags and social media.</p>
-                            <a href="features-setting-detail.html" class="card-cta">Change Setting <i class="fas fa-chevron-right"></i></a>
+                            <p>{{ __('Configuraciones de optimización de motores de búsqueda, como meta-etiquetas y redes sociales.') }}</p>
+                            <a href="{{ route('admin.seo-setting.index') }}" class="card-cta">{{ __('Cambiar Configuración') }} <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>
