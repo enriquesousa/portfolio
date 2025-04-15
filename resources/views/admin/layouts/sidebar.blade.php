@@ -253,6 +253,17 @@
                 </ul>
             </li>
 
+
+            <!-- Configuración General -->
+            <li class="nav-item {{ setSidebarActive(['admin.settings.index.*']) }}">
+                <a class="nav-link" href="{{ route('admin.settings.index') }}">
+                    <i class="bi bi-gear"></i>
+                    <span>{{ __('Configuración') }}</span>
+                </a>
+            </li>
+
+
+
         </ul>
 
     </aside>

@@ -15,7 +15,8 @@
             <div class="col-md-12 col-lg-3 widget">
                 <div class="text-box">
                     <figure class="footer-logo">
-                        <img src="{{ asset('images/logo-v_400x400_white.png') }}" alt="TJWeb" style="width: 100px;" class="img-center">
+                        {{-- <img src="{{ asset('images/logo-v_400x400_white.png') }}" alt="TJWeb" style="width: 100px;" class="img-center"> --}}
+                        <img src="{{ asset($generalSetting->footer_logo) }}" alt="TJWeb" style="width: 100px;" class="img-center">
                     </figure>
                     <p>{!! __($footerInfo->info) !!}</p>
                     <ul class="d-flex flex-wrap">

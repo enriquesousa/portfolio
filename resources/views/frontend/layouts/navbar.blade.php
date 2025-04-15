@@ -1,8 +1,12 @@
+@php
+    $generalSetting = \App\Models\GeneralSetting::first();
+@endphp
 <nav class="navbar navbar-expand-lg main_menu" id="main_menu_area">
     <div class="container">
 
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{ asset('images/logo-h.png') }}" alt="TJWeb">
+            {{-- <img src="{{ asset('images/logo-h.png') }}" alt="TJWeb"> --}}
+            <img src="{{ asset($generalSetting->logo) }}" alt="TJWeb">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
