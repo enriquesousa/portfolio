@@ -13,8 +13,15 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
+
                         <div class="card-header">
-                            <h4>Agregar Nuevo Titulo</h4>
+                            <h4>{{ __('Agregar Nuevo Titulo Maquina') }}</h4>
+                            <div class="card-header-action">
+                                <!-- Botón Vista Modal -->
+                                <a href="javascript:void(0)" class="btn btn-info" data-toggle="modal" data-target="#image-preview-modal" data-bs-title="{{ __('Vista Previa') }}" data-image="ImagePreview-Hero-TyperTitle-800x400.png" data-bs-width="480" data-bs-height="428" title="Ver donde queda este titulo en la sección">
+                                    <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
+                                </a>
+                            </div>
                         </div>
 
                         <div class="card-body">
@@ -46,3 +53,6 @@
 
     </section>
 @endsection
+
+<!-- Modal Image Preview -->
+@include('admin.vista-previa.image-preview-modal')

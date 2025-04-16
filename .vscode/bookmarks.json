@@ -371,16 +371,6 @@
 			]
 		},
 		{
-			"path": "resources/views/admin/hero/index.blade.php",
-			"bookmarks": [
-				{
-					"line": 24,
-					"column": 200,
-					"label": "traduccion en title dentro de a tag"
-				}
-			]
-		},
-		{
 			"path": "resources/views/admin/layouts/footer.blade.php",
 			"bookmarks": [
 				{
