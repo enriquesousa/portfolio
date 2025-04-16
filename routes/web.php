@@ -62,6 +62,9 @@ Route::group(['middleware' => ['auth', 'localization'], ], function () {
     Route::get('/profile/logout/page', [ProfileController::class, 'logoutPage'])->name('profile.logoutPage.index');
     Route::get('/profile/actividades/modal-details/{id}', [ProfileController::class, 'getLogTimeDetails'])->name('actividades.modal-details');
 
+    // para pasar al imagen de preview a la ventana modal
+    Route::get('/profile/modal/{image}/{width}/{height}', [ProfileController::class, 'getModalImagePreview'])->name('modal-image.preview');
+
     Route::get('/profile/register/activity', [ProfileController::class, 'registerActivityView'])->name('profile.register-activity.view');
     Route::post('/profile/register/activity/store', [ProfileController::class, 'registerActivityStore'])->name('profile.register-activity.store');
 

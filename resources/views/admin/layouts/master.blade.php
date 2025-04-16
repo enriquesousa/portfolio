@@ -230,6 +230,34 @@
 
     </script>
 
+    <!-- Image Preview Modal -->
+    <script>
+        $(document).ready(function() {
+            
+            $('#image-preview-modal').on('show.bs.modal', function (event) {
+
+                var button = $(event.relatedTarget); // Button that triggered the modal
+                var image = button.data('image'); // Extract info from data-* attributes
+                var width = button.data('bs-width');
+                var height = button.data('bs-height');
+                var title = button.data('bs-title');
+
+                // Modal Title
+                $('#ModalTitle').html(title);
+
+                // console.log(image);
+                image = '../../../frontend/assets/imagenes/' + image;
+                // console.log(image);
+
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                var modal = $(this);
+                modal.find('.modal-body img').attr('src', image);
+            })
+
+        })
+    </script>
+
     {{-- Para el código JS dinámico de las vistas, se puedan ejecutar cuando los llamamos con @push('child-scripts')  --}}
     @stack('child-scripts')
 

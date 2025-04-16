@@ -159,6 +159,12 @@ class ProfileController extends Controller
         return response(['logTime' => $logTime, 'login_time' => $login_time, 'logout_time' => $logout_time ,'time_interval' => $time_interval, 'created_at' => $created_at, 'description' => $description], 200);
     }
 
+    public function getModalImagePreview(string $image, string $width, string $height)
+    {
+        // dd($image, $width, $height);
+        return response(['image' => $image, 'width' => $width, 'height' => $height], 200);
+    }
+
     public function registerActivityView(Request $request)
     {
         return view('admin.actividades.create');
