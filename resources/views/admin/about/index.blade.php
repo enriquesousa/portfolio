@@ -8,6 +8,7 @@
             </div>
             @php
                 $tituloPagina = __('Sección Acerca de Mi');
+                $subTituloPagina = __('Actualizar Sección Acerca de Mi');
             @endphp
             <h1>{{ $tituloPagina }}</h1>
         </div>
@@ -19,18 +20,13 @@
                     <div class="card">
 
                         <div class="card-header">
-
-                            <h4>{{ __('Actualizar Sección Acerca de Mi') }}</h4>
-
+                            <h4>{{ $subTituloPagina }}</h4>
                             <div class="card-header-action">
-
-                                <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index', ['Sección - '.$tituloPagina, 'serviceAcercaDeMi-vistaPrevia.png', 'admin.about.index']) }}" class="btn btn-warning" title="Ver donde quedan estos elementos en la sección">
+                                <!-- Botón Vista Modal -->
+                                <a href="javascript:void(0)" class="btn btn-warning" data-toggle="modal" data-target="#image-preview-modal" data-bs-title="{{ __('Vista Previa') }}" data-image="ImagePreview-About-800x480.png" data-bs-width="480" data-bs-height="428" title="Ver donde queda este titulo en la sección">
                                     <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
-
                             </div>
-
                         </div>
 
                         <div class="card-body">
@@ -112,6 +108,9 @@
 
     </section>
 @endsection
+
+<!-- Modal Image Preview -->
+@include('admin.vista-previa.image-preview-modal')
 
 @push('child-scripts')
     <script>

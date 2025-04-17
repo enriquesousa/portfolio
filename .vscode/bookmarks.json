@@ -189,17 +189,17 @@
 			"path": "resources/views/admin/about/index.blade.php",
 			"bookmarks": [
 				{
-					"line": 49,
+					"line": 45,
 					"column": 0,
 					"label": "image upload preview plugin"
 				},
 				{
-					"line": 67,
+					"line": 63,
 					"column": 0,
 					"label": "summernote text"
 				},
 				{
-					"line": 120,
+					"line": 119,
 					"column": 12,
 					"label": "image upload preview plugin push js"
 				}
