@@ -152,13 +152,22 @@ if (!function_exists('setSidebarActive')) {
         El nombre de las rutas esta dado por `->name('product-title.index')` o `->name('product-title.update')` y no por el nombre visible de `/ptitles-update` o `/products/title-update` esto es importante cuando estamos haciendo la comparación en la función global `setSidebarActive(array $routes)`
         */
 
-        foreach($routes as $route){
-            if(request()->routeIs($route)){
-                return 'active';
-                // return $route;
+        
+        // foreach($routes as $route){
+        //     if(request()->routeIs($route)){
+        //         return 'active';
+        //         // return $route;
+        //     }
+        // }
+        // return '';
+
+        if(is_array($routes)){
+            foreach($routes as $r){
+                if(request()->routeIs($r)){
+                    return 'active';
+                }
             }
         }
-        return '';
     }
 }
 

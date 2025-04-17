@@ -4,17 +4,17 @@
     <section class="section">
 
         <div class="section-header">
-            <h1>Settings</h1>
+            <h1>{{ __('Configuraciones') }}</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                <div class="breadcrumb-item">Settings</div>
+                <div class="breadcrumb-item active"><a href="{{ route('dashboard') }}">{{ __('Panel') }}</a></div>
+                <div class="breadcrumb-item">{{ __('Configuraciones') }}</div>
             </div>
         </div>
 
         <div class="section-body">
-            <h2 class="section-title">Overview</h2>
+            <h2 class="section-title">{{ __('Configuraciones') }}</h2>
             <p class="section-lead">
-                Organize and adjust all settings about this site.
+                {{ __('Organizar y ajustar todas las configuraciones de este sitio.') }}
             </p>
 
             <div class="row">
