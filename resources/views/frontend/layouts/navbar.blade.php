@@ -18,7 +18,7 @@
 
                 {{-- Inicio --}}
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}" title="{{ __('Home') }}" style="font-size: 25px;"><iconify-icon icon="fluent-color:home-16"></iconify-icon></a>
+                    <a class="nav-link active" aria-current="page" href="{{ Route::currentRouteName() == 'home' ? '#home-page' : url('/') }}" title="{{ __('Home') }}" style="font-size: 25px;"><iconify-icon icon="fluent-color:home-16"></iconify-icon></a>
                 </li>
 
                 {{-- Sobre --}}
@@ -26,83 +26,80 @@
                     <a class="nav-link" href="#about-page" title="{{ __('About') }}" style="font-size: 25px;"><iconify-icon icon="mdi:about-variant"></iconify-icon></a>
                 </li> --}}
 
-                {{-- Idioma --}}
-                <li class="nav-item">
+                @if(Route::currentRouteName() == 'home')
 
-                    {{-- <a class="nav-link" href="#" style="font-size: 25px;" title="{{ __('Language') }}"><iconify-icon icon="clarity:language-line"></iconify-icon>&nbsp;&nbsp;{{ app()->getLocale() == 'en' ? 'English' : 'Español' }} &nbsp;&nbsp;<i class="fas fa-angle-down"></i></a> --}}
+                    {{-- Idioma --}}
+                    <li class="nav-item">
 
-                    <a class="nav-link" href="#" style="font-size: 15px; font-weight: 300;" title="{{ __('Language') }}"><iconify-icon icon="clarity:language-line"></iconify-icon>&nbsp;{{ app()->getLocale() == 'en' ? 'English' : 'Español' }} &nbsp;&nbsp;<i class="fas fa-angle-down"></i></a>
+                        {{-- <a class="nav-link" href="#" style="font-size: 25px;" title="{{ __('Language') }}"><iconify-icon icon="clarity:language-line"></iconify-icon>&nbsp;&nbsp;{{ app()->getLocale() == 'en' ? 'English' : 'Español' }} &nbsp;&nbsp;<i class="fas fa-angle-down"></i></a> --}}
 
-                    {{-- if user is login --}}
-                    @auth
+                        {{-- if user is login --}}
+                        @auth
+                            {{-- <ul class="sub_menu">
+                                <li title="{{ __('Para cambiar el idioma, vaya a Panel de Control') }}"><a href="{{ route('profile.edit') }}">{{ __('Ir a Panel de Control') }}</a></li>
+                            </ul> --}}
+                        @else
+                            <a class="nav-link" href="#" style="font-size: 15px; font-weight: 300;" title="{{ __('Language') }}"><iconify-icon icon="clarity:language-line"></iconify-icon>&nbsp;{{ app()->getLocale() == 'en' ? 'English' : 'Español' }} &nbsp;&nbsp;<i class="fas fa-angle-down"></i></a>
+
+                            <ul class="sub_menu">
+                                <li><a href="{{ url('locale/en') }}"><iconify-icon icon="twemoji:flag-us-outlying-islands"></iconify-icon>&nbsp;&nbsp;{{ __('Translate to English') }}</a></li>
+                                <li><a href="{{ url('locale/es') }}"><iconify-icon icon="flag:mx-1x1"></iconify-icon>&nbsp;&nbsp;{{ __('Translate to Spanish') }}</a></li>
+                            </ul>
+                        @endauth
+
+                    </li>
+
+                    {{-- Portfolio --}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio-page">{{ __('Portfolio') }}&nbsp; <i class="fas fa-angle-down"></i></a>
                         <ul class="sub_menu">
-                            <li title="{{ __('Para cambiar el idioma, vaya a Panel de Control') }}"><a href="{{ route('profile.edit') }}">{{ __('Ir a Panel de Control') }}</a></li>
+
+                            <li><a href="#home-page">{{ __('Sección Inicio') }}</a></li><br>
+
+                            <li><a href="#services-page">{{ __('Servicios') }}</a></li><br>
+
+                            <li><a href="#about-page">{{ __('Nosotros') }}</a></li><br>
+
+                            <li><a href="#portfolio-page">{{ __('Portafolio') }}</a></li><br>
+
+                            <li><a href="#skills-page">{{ __('Skills') }}</a></li><br>
+
+                            <li><a href="#experience-page">{{ __('Experiencia') }}</a></li><br>
+
+                            <li><a href="#testimonials-page">{{ __('Testimonios') }}</a></li><br>
+
+                            <li><a href="#contact-page">{{ __('Contacto') }}</a></li><br>
+
+                            <li><a href="#blog-page">{{ __('Blog') }}</a></li><br>
+
+                            <li><a href="#footer-area">{{ __('Pie de pagina') }}</a></li><br>
+
+                            @if(!Auth::check())
+                            <li>
+                                <a href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i>&nbsp;{{ __('Admin') }}</a>
+                            </li>
+                            @endif
+
                         </ul>
-                    @else
-                        <ul class="sub_menu">
-                            <li><a href="{{ url('locale/en') }}"><iconify-icon icon="twemoji:flag-us-outlying-islands"></iconify-icon>&nbsp;&nbsp;{{ __('Translate to English') }}</a></li>
-                            <li><a href="{{ url('locale/es') }}"><iconify-icon icon="flag:mx-1x1"></iconify-icon>&nbsp;&nbsp;{{ __('Translate to Spanish') }}</a></li>
-                        </ul>
-                    @endauth
+                    </li>
 
-                </li>
+                    {{-- Contacto --}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-page">{{ __('Contact') }}</a>
+                    </li>
 
-                {{-- Portfolio --}}
+                    {{-- Admin Login --}}
+                    {{-- @if(!Auth::check())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i>&nbsp;{{ __('Admin') }}</a>
+                    </li>
+                    @endif --}}
+
+                @endif
+
+                {{-- Blogs --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="#portfolio-page">{{ __('Portfolio') }}&nbsp; <i class="fas fa-angle-down"></i></a>
-                    <ul class="sub_menu">
-
-                        <li><a href="#home-page">{{ __('Sección Inicio') }}</a></li><br>
-
-                        <li><a href="#services-page">{{ __('Servicios') }}</a></li><br>
-
-                        <li><a href="#about-page">{{ __('Nosotros') }}</a></li><br>
-
-                        <li><a href="#portfolio-page">{{ __('Portafolio') }}</a></li><br>
-
-                        <li><a href="#skills-page">{{ __('Skills') }}</a></li><br>
-
-                        <li><a href="#experience-page">{{ __('Experiencia') }}</a></li><br>
-
-                        <li><a href="#testimonials-page">{{ __('Testimonios') }}</a></li><br>
-
-                        <li><a href="#blog-page">{{ __('Blog') }}</a></li><br>
-
-                        <li><a href="#contact-page">{{ __('Contacto') }}</a></li><br>
-
-                        <li>
-                            <a href="portfolio.html">{{ __('Portfolio Grid') }}</a>
-                        </li><br>
-
-                        <li>
-                            <a href="#footer-area">{{ __('Pie de pagina') }}</a>
-                        </li><br>
-
-                        <li>
-                            <a href="{{ route('login') }}">
-                                <i class="bi bi-person-gear"></i>&nbsp;&nbsp;{{ __('Admin Login') }}
-                            </a>
-                        </li><br>
-
-                    </ul>
-                </li>
-
-                {{-- Habilidades --}}
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="#skills-page">{{ __('Skills') }}</a>
-                </li> --}}
-
-                {{-- Blog --}}
-                <li class="nav-item">
-                    <a class="nav-link" href="#blog-page">{{ __('Blog') }}&nbsp; <i class="fas fa-angle-down"></i></a>
-                    <ul class="sub_menu">
-                        <li><a href="{{ route('show.blogs') }}">{{ __('Blog Grid') }}</a></li>
-                    </ul>
-                </li>
-
-                {{-- Contacto --}}
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact-page">{{ __('Contact') }}</a>
+                    <a class="nav-link" href="{{ route('show.blogs') }}">{{ __('Blogs') }}</a>
                 </li>
 
             </ul>
