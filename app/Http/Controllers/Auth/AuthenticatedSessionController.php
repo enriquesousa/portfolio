@@ -34,7 +34,8 @@ class AuthenticatedSessionController extends Controller
         // notyf()->success('Haz iniciado sesión con éxito.');
         flash()->success(__('Haz iniciado sesión con éxito!'));
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        // return redirect()->intended(route('dashboard', absolute: false));
+        return redirect()->intended(route('profile.actividades.index'));
     }
 
     /**

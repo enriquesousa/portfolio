@@ -11,6 +11,7 @@
             </div>
             @php
                 $tituloPagina = __('Comentarios');
+                $subHeader = __('Todas los Comentarios');
             @endphp
             <h1>{{ $tituloPagina }}</h1>
         </div>
@@ -22,7 +23,7 @@
                     <div class="card">
 
                         <div class="card-header">
-                            <h4>{{ __('Todas los Comentarios') }}</h4>
+                            <h4>{{ $subHeader }}</h4>
                             <div class="card-header-action">
                                 <!-- Botón Vista Modal -->
                                 <a href="javascript:void(0)" class="btn btn-warning" data-toggle="modal" data-target="#image-preview-modal" data-bs-title="{{ __('Vista Previa') }}" data-image="ImagePreview-Testimonios-800x453.png" data-bs-width="480" data-bs-height="428" title="Ver donde queda este titulo en la sección">

@@ -154,7 +154,12 @@
 			"path": "app/Http/Controllers/Auth/AuthenticatedSessionController.php",
 			"bookmarks": [
 				{
-					"line": 61,
+					"line": 34,
+					"column": 60,
+					"label": "Haz iniciado sesión con éxito login"
+				},
+				{
+					"line": 62,
 					"column": 8,
 					"label": "cerrar sesion mensaje logout"
 				}
