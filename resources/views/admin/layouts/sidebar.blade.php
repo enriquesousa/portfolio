@@ -132,10 +132,10 @@
             </li>
 
             {{-- Sección Comentarios de nuestros clientes - Comentarios Feedback --}}
-            <li class="nav-item dropdown {{ setSidebarActive(['admin.feedback.*']) }}">
+            <li class="nav-item dropdown {{ setSidebarActive(['admin.feedback.*', 'admin.feedback-section-setting.*']) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
                     <i class="bi bi-people-fill"></i>
-                    <span>{{ __('Comentarios') }}</span>
+                    <span>{{ __('Testimonios') }}</span>
                 </a>
                 <ul class="dropdown-menu" style="display: none;">
 

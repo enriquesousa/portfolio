@@ -16,17 +16,15 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
+
                         <div class="card-header">
-
                             <h4>{{ $tituloPagina }}</h4>
-
                             <div class="card-header-action">
-                                <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección Héroe - Vista Previa', 'habilidadesTitle_preview.png', 'admin.skill-section-setting.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
+                                <!-- Botón Vista Modal -->
+                                <a href="javascript:void(0)" class="btn btn-warning" data-toggle="modal" data-target="#image-preview-modal" data-bs-title="{{ __('Vista Previa') }}" data-image="ImagePreview-Skills-Titulo-700x350.png" data-bs-width="480" data-bs-height="428" title="Ver donde queda este titulo en la sección">
                                     <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
                             </div>
-
                         </div>
 
                         <div class="card-body">
@@ -71,6 +69,7 @@
 
                             </form>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -95,3 +94,6 @@
 
     </script>
 @endpush
+
+<!-- Modal Image Preview -->
+@include('admin.vista-previa.image-preview-modal')

@@ -434,37 +434,37 @@
 			"path": "resources/views/admin/portfolio-item/edit.blade.php",
 			"bookmarks": [
 				{
-					"line": 20,
+					"line": 26,
 					"column": 28,
 					"label": "edit route update portfolio-item"
 				},
 				{
-					"line": 45,
+					"line": 51,
 					"column": 36,
 					"label": "image upload con metodo kazy"
 				},
 				{
-					"line": 54,
+					"line": 60,
 					"column": 44,
 					"label": "image upload con metodo kazy"
 				},
 				{
-					"line": 78,
+					"line": 84,
 					"column": 48,
 					"label": "select seleceted en edit"
 				},
 				{
-					"line": 133,
+					"line": 142,
 					"column": 16,
 					"label": "image preview en edit"
 				},
 				{
-					"line": 138,
+					"line": 147,
 					"column": 12,
 					"label": "image preview modo kazy"
 				},
 				{
-					"line": 148,
+					"line": 157,
 					"column": 12,
 					"label": "image upload con metodo kazy"
 				}
@@ -559,12 +559,12 @@
 			"path": "resources/views/admin/experience/index.blade.php",
 			"bookmarks": [
 				{
-					"line": 80,
+					"line": 75,
 					"column": 44,
 					"label": "inputmaskt format phone number telefono"
 				},
 				{
-					"line": 132,
+					"line": 130,
 					"column": 12,
 					"label": "inputmaskt format phone number telefono"
 				}
@@ -574,7 +574,7 @@
 			"path": "resources/views/admin/feedback-setting/index.blade.php",
 			"bookmarks": [
 				{
-					"line": 46,
+					"line": 41,
 					"column": 40,
 					"label": "Agregamos el @ antes de la variable para evitar conflictos de null"
 				}

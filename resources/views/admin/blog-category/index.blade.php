@@ -22,21 +22,14 @@
                     <div class="card">
 
                         <div class="card-header">
-
                             <h4>{{ $tituloPagina }}</h4>
-
                             <div class="card-header-action">
-
-                                <!-- Botón Vista Previa -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección - '.$tituloPagina, 'categorias-preview.png', 'admin.category.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
-                                    <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
-                                </a>
+                                
 
                                 <!-- Botón Agregar -->
                                 <a href="{{ route('admin.blog-category.create') }}" class="btn btn-primary">
                                     <i class="fas fa-plus"></i> {{ __('Agregar') }}
                                 </a>
-
                             </div>
 
                         </div>

@@ -19,9 +19,13 @@
                     <div class="card">
 
                         <div class="card-header">
-
                             <h4>{{ $tituloPagina }}</h4>
-
+                            <div class="card-header-action">
+                                <!-- Botón Vista Modal -->
+                                <a href="javascript:void(0)" class="btn btn-warning" data-toggle="modal" data-target="#image-preview-modal" data-bs-title="{{ __('Vista Previa') }}" data-image="ImagePreview-Testimonios-800x453.png" data-bs-width="480" data-bs-height="428" title="Ver donde queda este titulo en la sección">
+                                    <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
+                                </a>
+                            </div>
                         </div>
 
                         <div class="card-body">
@@ -31,7 +35,7 @@
 
                                 {{-- Nombre del Cliente --}}
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Titulo') }}</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Nombre') }}</label>
                                     <div class="col-sm-12 col-md-7">
                                         <input type="text" name="name" class="form-control" value="">
                                     </div>
@@ -39,7 +43,7 @@
 
                                 {{-- Posición --}}
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Posición') }}</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Posición o Cargo') }}</label>
                                     <div class="col-sm-12 col-md-7">
                                         <input type="text" name="position" class="form-control" value="">
                                     </div>
@@ -73,3 +77,5 @@
     </section>
 @endsection
 
+<!-- Modal Image Preview -->
+@include('admin.vista-previa.image-preview-modal')

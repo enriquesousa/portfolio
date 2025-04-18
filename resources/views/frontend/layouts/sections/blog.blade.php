@@ -11,7 +11,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row margentop">
             <div class="col-sm-12">
                 <div class="blog-slider">
                     @foreach ($blogs as $blog)
@@ -28,6 +28,7 @@
                                     {!! Str::limit( strip_tags(markdownToHtml($blog->description)) ) !!}
                                     {{-- <p>{!! Str::limit( strip_tags(__($blog->description)), 50, '..'  ) !!} </p> --}}
                                 </div>
+                                <p>{{ __('Categoría') }}:&nbsp<span>{{ $blog->getCategory->name }}</span></p>
                                 <a href="{{ route('show.blog', $blog->id) }}" class="button-primary-trans mouse-dir">
                                     {{ __('Leer Mas')  }}
                                     <span class="dir-part"></span> 
