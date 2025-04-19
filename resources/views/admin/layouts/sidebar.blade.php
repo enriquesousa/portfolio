@@ -257,7 +257,7 @@
             <li class="menu-header">{{ __('Configuración') }}</li>
 
             <!-- Configuración General -->
-            <li class="nav-item {{ setSidebarActive(['admin.settings.*']) }}">
+            <li class="nav-item {{ setSidebarActive(['admin.settings.*','admin.general-setting.*', 'admin.seo-setting.*']) }}">
                 <a class="nav-link" href="{{ route('admin.settings.index') }}">
                     <i class="bi bi-gear"></i>
                     <span>{{ __('Configuración') }}</span>

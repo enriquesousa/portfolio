@@ -20,18 +20,13 @@
                     <div class="card">
 
                         <div class="card-header">
-
                             <h4>{{ $subTituloPagina }}</h4>
-
                             <div class="card-header-action">
-
-                                <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección - '.$tituloPagina, 'comentariosTitle_preview.png', 'admin.feedback-section-setting.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
+                                <!-- Botón Vista Modal -->
+                                <a href="javascript:void(0)" class="btn btn-warning" data-toggle="modal" data-target="#image-preview-modal" data-bs-title="{{ __('Vista Previa') }}" data-image="ImagePreview-Footer-Contacto-800x289.png" data-bs-width="480" data-bs-height="428" title="Ver donde queda este titulo en la sección">
                                     <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
-
                             </div>
-
                         </div>
 
                         <div class="card-body">
@@ -93,3 +88,5 @@
     </section>
 @endsection
 
+<!-- Modal Image Preview -->
+@include('admin.vista-previa.image-preview-modal')

@@ -9,6 +9,7 @@
             @php
                 $tituloPagina = __('Configurar SEO');
                 $subtituloPagina = __('Configurar SEO (Search Engine Optimization)');
+                $cardHeader = __('Configurar SEO');
             @endphp
             <h1>{{ $tituloPagina }}</h1>
         </div>
@@ -17,21 +18,19 @@
 
             <div class="row">
                 <div class="col-12">
+
+                    <h2 class="section-title">{{ $subtituloPagina }}</h2>
+                    <p class="section-lead">
+                        {{ __('SEO es la sigla en inglés de Search Engine Optimization (optimización para motores de búsqueda) y es una práctica que consiste en optimizar tus páginas web para que se posicionen mejor en las páginas de resultados de los motores de búsqueda (SERP).El SEO es una estrategia de marketing eficaz y económica que ayuda a atraer tráfico a un sitio web y a aumentar las tasas de conversión.') }}
+                    </p>
+
                     <div class="card">
 
                         <div class="card-header">
-
-                            <h4>{{ $subtituloPagina }}</h4>
-
+                            <h4>{{ $cardHeader }}</h4>
                             <div class="card-header-action">
-
-                                <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección - '.$tituloPagina, 'portafolioTitulo_preview.png', 'admin.portfolio-section-setting.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
-                                    <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
-                                </a>
-
+                                
                             </div>
-
                         </div>
 
                         <div class="card-body">
@@ -77,7 +76,9 @@
                             </form>
 
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </div>

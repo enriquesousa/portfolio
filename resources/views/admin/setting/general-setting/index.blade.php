@@ -20,18 +20,13 @@
                     <div class="card">
 
                         <div class="card-header">
-
                             <h4>{{ $subtituloPagina }}</h4>
-
                             <div class="card-header-action">
-
-                                <!-- Button trigger modal -->
-                                <a href="{{ route('admin.vista-previa.index',['Sección - '.$tituloPagina, 'portafolioTitulo_preview.png', 'admin.portfolio-section-setting.index']) }}" class="btn btn-warning" title="{{  __('Ver donde quedan estos elementos en la sección') }}">
+                                <!-- Botón Vista Modal -->
+                                <a href="javascript:void(0)" class="btn btn-warning" data-toggle="modal" data-target="#image-preview-modal" data-bs-title="{{ __('Vista Previa') }}" data-image="ImagePreview-Settings-Logo-PiedePag-800x634.png" data-bs-width="480" data-bs-height="428" title="Ver donde queda este titulo en la sección">
                                     <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
-
                             </div>
-
                         </div>
 
                         <div class="card-body">
@@ -44,7 +39,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"
                                         title="{{ __('Logo 277x68px, el peso no debe superar 300KB') }}">
-                                        {{ __('Imagen de Fondo') }}
+                                        {{ __('Logo') }}
                                     </label>
                                     <div class="col-sm-12 col-md-5">
                                         <div class="custom-file">
@@ -80,7 +75,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"
                                         title="{{ __('Favicon 32x32px, el peso no debe superar 300KB') }}">
-                                        {{ __('Imagen de Fondo') }}
+                                        {{ __('Favicon') }}
                                     </label>
                                     <div class="col-sm-12 col-md-5">
                                         <div class="custom-file">
@@ -151,3 +146,6 @@
         });
     </script>
 @endpush
+
+<!-- Modal Image Preview -->
+@include('admin.vista-previa.image-preview-modal')
