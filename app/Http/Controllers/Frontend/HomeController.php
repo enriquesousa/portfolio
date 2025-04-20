@@ -16,6 +16,7 @@ use App\Models\FeedbackSectionSetting;
 use App\Models\Hero;
 use App\Models\PortfolioItem;
 use App\Models\PortfolioSectionSetting;
+use App\Models\PrivacyPolicy;
 use App\Models\Service;
 use App\Models\SkillItem;
 use App\Models\SkillSectionSetting;
@@ -121,5 +122,11 @@ class HomeController extends Controller
      
         return response(['status' => 'success', 'message' => __('Mensaje enviado correctamente!')]);
     }
+
+    public function privacyPolicy(){
+        $privacyPolicy = PrivacyPolicy::first();
+        return view('frontend.pages.privacy-policy', compact('privacyPolicy'));
+    }
+
 
 }

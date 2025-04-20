@@ -253,6 +253,31 @@
                 </ul>
             </li>
 
+            {{-- Paginas --}}
+            <li class="nav-item dropdown {{ setSidebarActive(['admin.privacy-policy.*']) }}">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                    <i class="fas fa-file-alt"></i>
+                    <span>{{ __('Páginas') }}</span>
+                </a>
+                <ul class="dropdown-menu" style="display: none;">
+
+                    <!-- Política de Privacidad -->
+                    <li class="{{ setSidebarActive(['admin.privacy-policy.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.privacy-policy.index') }}">
+                            {{ __('Política de Privacidad') }}
+                        </a>
+                    </li>
+
+                    <!-- Términos y Condiciones -->
+                    <li class="{{ setSidebarActive(['admin.footer-info.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.footer-info.index') }}">
+                            {{ __('Términos y Condiciones') }}
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
 
             <li class="menu-header">{{ __('Configuración') }}</li>
 

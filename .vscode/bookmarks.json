@@ -254,17 +254,17 @@
 			"path": "routes/web.php",
 			"bookmarks": [
 				{
-					"line": 35,
+					"line": 36,
 					"column": 0,
 					"label": "traduccion asignar localization middleware a home route"
 				},
 				{
-					"line": 49,
+					"line": 50,
 					"column": 0,
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 124,
+					"line": 127,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -629,7 +629,7 @@
 			"path": "app/Http/Controllers/Frontend/HomeController.php",
 			"bookmarks": [
 				{
-					"line": 41,
+					"line": 42,
 					"column": 8,
 					"label": "tomar los ultimos 5 blogs"
 				}

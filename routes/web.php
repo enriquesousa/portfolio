@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\GeneralSettingController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\PortfolioItemController;
 use App\Http\Controllers\Admin\PortfolioSectionSettingController;
+use App\Http\Controllers\Admin\PrivacyPolicyController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\SeoSettingController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -84,6 +85,8 @@ Route::get('blog-details-show-image/{image}', [HomeController::class, 'showBlogI
 Route::get('blogs', [HomeController::class, 'blogs'])->name('show.blogs');
 Route::post('contact', [HomeController::class, 'contact'])->name('contact.store');
 
+Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy-policy.show');
+Route::get('terms-and-conditions', [HomeController::class, 'termsAndConditions'])->name('terms-and-conditions.show');
 
 
 
@@ -184,5 +187,8 @@ Route::group(['middleware' => ['auth', 'localization'], 'prefix' => 'admin', 'as
 
     // SEO Settings Routes
     Route::resource('seo-setting', SeoSettingController::class);
+
+    // Privacy Policy Routes
+    Route::resource('privacy-policy', PrivacyPolicyController::class);
 
 });
