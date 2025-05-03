@@ -103,7 +103,7 @@
 
                 {{-- Blogs --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('show.blogs') }}">{{ __('Blogs') }}</a>
+                    <a class="nav-link" href="{{ route('show.blogs') }}">{{ __('Blog') }}</a>
                 </li>
 
             </ul>

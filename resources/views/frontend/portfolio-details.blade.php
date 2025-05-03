@@ -42,7 +42,7 @@
                     </div>
                     <div class="single-info">
                         <h4 class="title">{{ __('Sitio Web') }}</h4>
-                        <p><a href="{{ $portfolio->website }}" target="_blank">{{ $portfolio->website }}</a></p>
+                        <p><a href="{{ $portfolio->website }}" target="_blank" title="{{ __('Liga a la documentación del sistema') }}">{{ __('Liga') }}</a></p>
                     </div>
                     <div class="single-info">
                         <h4 class="title">{{ __('Categoría') }}</h4>
@@ -83,7 +83,7 @@
                                 <div class="desc">
                                     <p>{{ __('Si gusta mas información sobre este sistema, puedes visitar nuestra sección de documentación, donde encontraras mas detalles en los distintos aspectos de los sistemas desarrollados. Si tienes alguna pregunta, no dudes en contactarnos.') }}</p>
                                 </div>
-                                <a href="#" class="button-orange mouse-dir">
+                                <a href="{{ $portfolio->website }}" target="_blank" title="{{ __('Liga a la documentación del sistema') }}" class="button-orange mouse-dir">
                                     {{ __('Documentación') }} 
                                     <span class="dir-part"></span>
                                 </a>
