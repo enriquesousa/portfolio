@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\DataTables\AdminLogTimesDataTable;
+use App\DataTables\AdminLogTimesDataTableAll;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\LogTime;
@@ -129,6 +130,14 @@ class ProfileController extends Controller
     }
 
     public function actividades(AdminLogTimesDataTable $dataTable)
+    {
+        return $dataTable->render('admin.actividades.index');
+
+        // $adminActividades = LogTime::all()->sortByDesc('id');
+        // return view('admin.actividades.index', compact('adminActividades'));
+    }
+
+    public function actividadesAll(AdminLogTimesDataTableAll $dataTable)
     {
         return $dataTable->render('admin.actividades.index');
 

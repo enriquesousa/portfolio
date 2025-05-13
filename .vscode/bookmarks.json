@@ -144,7 +144,7 @@
 					"label": "perfil profile dropdown menu"
 				},
 				{
-					"line": 67,
+					"line": 72,
 					"column": 16,
 					"label": "Cerrar sesion logout"
 				}
@@ -264,7 +264,7 @@
 					"label": "traduccion route setLanguage"
 				},
 				{
-					"line": 127,
+					"line": 130,
 					"column": 101,
 					"label": "descargar archivo route"
 				}
@@ -319,7 +319,7 @@
 			"path": "app/Http/Controllers/Admin/ProfileController.php",
 			"bookmarks": [
 				{
-					"line": 117,
+					"line": 118,
 					"column": 39,
 					"label": "get user "
 				}

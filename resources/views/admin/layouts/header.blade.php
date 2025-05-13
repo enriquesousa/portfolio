@@ -52,6 +52,11 @@
                     <i class="bi bi-lightning"></i>&nbsp;{{ __('Lista Actividades') }}
                 </a>
 
+                {{-- Actividades All (Incluye Actividades con description null)--}}
+                <a href="{{ route('profile.actividadesAll.index') }}" class="dropdown-item has-icon" title="{{ __('Incluye todas las actividades con description null') }}">
+                    <i class="bi bi-lightning"></i>&nbsp;{{ __('Lista Actividades Todas') }}
+                </a>
+
                 {{-- Registro de Actividad --}}
                 <a href="{{ route('profile.register-activity.view') }}" class="dropdown-item has-icon">
                     <i class="bi bi-pencil-square"></i>&nbsp;{{ __('Registra Actividad') }}

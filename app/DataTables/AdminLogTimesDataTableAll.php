@@ -12,7 +12,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class AdminLogTimesDataTable extends DataTable
+class AdminLogTimesDataTableAll extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -95,7 +95,7 @@ class AdminLogTimesDataTable extends DataTable
      */
     public function query(LogTime $model): QueryBuilder
     {
-        return $model->newQuery()->where('description', '!=', '')->with('user')->orderBy('id', 'desc');
+        return $model->newQuery();
     }
 
     /**

@@ -59,7 +59,10 @@ Route::group(['middleware' => ['auth', 'localization'], ], function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::patch('/profile/avatar/update', [ProfileController::class, 'updateAvatar'])->name('profile.avatar.update');
     Route::patch('/profile/language/update', [ProfileController::class, 'updateLanguage'])->name('profile.language.update');
+
     Route::get('/profile/actividades', [ProfileController::class, 'actividades'])->name('profile.actividades.index');
+    Route::get('/profile/actividadesAll', [ProfileController::class, 'actividadesAll'])->name('profile.actividadesAll.index');
+
     Route::get('/profile/logout/page', [ProfileController::class, 'logoutPage'])->name('profile.logoutPage.index');
     Route::get('/profile/actividades/modal-details/{id}', [ProfileController::class, 'getLogTimeDetails'])->name('actividades.modal-details');
 

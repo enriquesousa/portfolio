@@ -210,6 +210,8 @@
     "Agregar Actividad para esta sesión": "Add Activity for this session",
     "Actividad registrada correctamente!": "Activity registered successfully!",
     "Lista Actividades": "Activity List",
+    "Lista Actividades Todas": "All Activity List",
+    "Incluye todas las actividades con description null": "Includes all activities with description null",
     "Registra Actividad": "Register Activity",
     "Blog actualizado correctamente!": "Blog updated successfully!",
     "Leer Mas": "Read More",
