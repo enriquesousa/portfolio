@@ -794,9 +794,19 @@
 			"path": "resources/views/admin/actividades/index.blade.php",
 			"bookmarks": [
 				{
-					"line": 40,
+					"line": 60,
 					"column": 0,
 					"label": "ventana modal"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/dashboard.blade.php",
+			"bookmarks": [
+				{
+					"line": 139,
+					"column": 24,
+					"label": "icon link bootstrap"
 				}
 			]
 		}

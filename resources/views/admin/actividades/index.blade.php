@@ -20,6 +20,26 @@
 
                         <div class="card-header">
                             <h4>{{ __('Todas las Actividades') }}</h4>
+
+                            <div class="card-header-action">
+                                
+                                <!-- Botón Filtrar Actividades Null -->
+                                <a href="{{ route('profile.actividades.index') }}" class="btn btn-warning" title="{{ __('Filtrar todas las actividades con description null') }}">
+                                    <i class="fas fa-filter"></i> {{ __('Filtrar') }}
+                                </a>
+
+                                <!-- Botón Mostrar Todo -->
+                                <a href="{{ route('profile.actividadesAll.index') }}" class="btn btn-primary" title="{{ __('Mostrar todas las actividades') }}">
+                                    <i class="fas fa-list"></i> {{ __('Todo') }}
+                                </a>
+
+                                <!-- Botón Agregar Actividad -->
+                                <a href="{{ route('profile.register-activity.view') }}" class="btn btn-success" title="{{ __('Agregar Actividad') }}">
+                                    <i class="fas fa-plus"></i> {{ __('Agregar') }}
+                                </a>
+
+                            </div>
+
                         </div>
 
                         <div class="card-body">

@@ -96,6 +96,78 @@
 
         </div>
 
+        <hr>
+        <br><br>
+
+        <div class="row">
+
+            {{-- Settings --}}
+            <div class="col-lg-6">
+                <div class="card card-large-icons">
+                    <div class="card-icon bg-primary text-white">
+                        <a class="icon-link text-white" href="{{ route('admin.general-setting.index') }}">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4>{{ __('General') }}</h4>
+                        <p style="line-height: 1.2;">{{ __('Configuraciones generales como, logo, favicon, titulo del sitio, Descripción, etc...') }}</p>
+                        <a href="{{ route('admin.general-setting.index') }}" class="card-cta">{{ __('Cambiar Configuración') }} <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            {{-- SEO Settings --}}
+            <div class="col-lg-6">
+                <div class="card card-large-icons">
+                    <div class="card-icon bg-primary text-white">
+                        <a class="icon-link text-white" href="{{ route('admin.seo-setting.index') }}">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4>SEO</h4>
+                        <p style="line-height: 1.2;">{{ __('Configuraciones de optimización de motores de búsqueda, como meta-etiquetas etc.') }}</p>
+                        <a href="{{ route('admin.seo-setting.index') }}" class="card-cta">{{ __('Cambiar Configuración') }} <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Activities --}}
+            <div class="col-lg-6">
+                <div class="card card-large-icons">
+                    <div class="card-icon bg-primary text-white">
+                        <a class="icon-link text-white" href="{{ route('profile.actividades.index') }}">
+                            <i class="fas fa-filter"></i>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4>{{ __('Actividades') }}</h4>
+                        <p style="line-height: 1.2;">{{ __('Lista de actividades en el sistema, filtra descripción = null.') }}</p>
+                        <a href="{{ route('profile.actividades.index') }}" class="card-cta">{{ __('Lista de Actividades') }} <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+
+            {{-- All Activities --}}
+            <div class="col-lg-6">
+                <div class="card card-large-icons">
+                    <div class="card-icon bg-primary text-white">
+                        <a class="icon-link text-white" href="{{ route('profile.actividadesAll.index') }}">
+                            <i class="fas fa-bolt"></i>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4>{{ __('Todas las Actividades') }}</h4>
+                        <p style="line-height: 1.2;">{{ __('Lista de actividades en el sistema, lista todas las actividades.') }}</p>
+                        <a href="{{ route('profile.actividadesAll.index') }}" class="card-cta" title="{{ __('Incluye todas las actividades con description null') }}">{{ __('Lista todas las Actividades') }} <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </section>
 
 @endsection
