@@ -57,7 +57,9 @@
                 <div class="col-xl-4 col-md-6">
                     <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="{{ asset($blog->image) }}" alt="">
+                            <a class="icon-link text-white" href="{{ route('show.blog', $blog->id) }}">
+                                <img src="{{ asset($blog->image) }}" alt="">
+                            </a>
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="{{ route('show.blog', $blog->id) }}">{{ $blog->title }}</a></h3>

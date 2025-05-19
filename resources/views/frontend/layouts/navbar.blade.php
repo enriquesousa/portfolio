@@ -68,9 +68,9 @@
 
                             <li><a href="#testimonials-page">{{ __('Testimonios') }}</a></li><br>
 
-                            <li><a href="#contact-page">{{ __('Contacto') }}</a></li><br>
-
                             <li><a href="#blog-page">{{ __('Blog') }}</a></li><br>
+
+                            <li><a href="#contact-page">{{ __('Contacto') }}</a></li><br>
 
                             <li><a href="#footer-area">{{ __('Pie de pagina') }}</a></li><br>
 

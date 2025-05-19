@@ -86,8 +86,12 @@ class BlogController extends Controller
     {
         // dd($request->all());
 
+        $blogItem = Blog::find($id);
+
         $request->validate([
-            'image' => ['image', 'max:500'],
+            'image' => ['image', 'max:100'],
+            'foto1' => ['nullable', 'max:100'],
+            'foto2' => ['nullable', 'max:100'],
             'title' => ['required', 'string', 'max:200'],
             'description' => ['required'],
             'category' => ['required', 'numeric'],
@@ -97,7 +101,23 @@ class BlogController extends Controller
         $blog = Blog::findOrFail($id);
         $imagePath = handleUpload('image', $blog); 
 
+        if ($request->hasFile('foto1')) {
+            $this->deleteFile($blogItem->foto1);
+            $imagePathFoto1 = $this->uploadFile($request->file('foto1'), 'uploads', 'blog');
+        }else{
+            $imagePathFoto1 = $blogItem->foto1; // Si no se sube una nueva imagen, se mantiene la imagen anterior.
+        }
+
+        if ($request->hasFile('foto2')) {
+            $this->deleteFile($blogItem->foto2);
+            $imagePathFoto2 = $this->uploadFile($request->file('foto2'), 'uploads', 'blog');
+        }else{
+            $imagePathFoto2 = $blogItem->foto2; // Si no se sube una nueva imagen, se mantiene la imagen anterior.
+        }
+
         $blog->image = (!empty($imagePath)) ? $imagePath : $blog->image;
+        $blog->foto1 = $imagePathFoto1;
+        $blog->foto2 = $imagePathFoto2;
         $blog->title = $request->title;
         $blog->description = $request->description;
         $blog->category = (int)$request->category;

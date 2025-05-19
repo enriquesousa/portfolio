@@ -66,6 +66,15 @@
                 <div class="description">
                     {!! markdownToHtml($blog->description) !!}
                     {{-- {!! Blade::render(markdownToHtml($blog->description));  !!} --}}
+
+                    <ul class="gallery">
+                        @if ($blog->foto1 != null)
+                            <li><img src="{{ asset($blog->foto1) }}" alt="" class="img-fluid w-100"></li>
+                        @endif
+                        @if ($blog->foto2 != null)
+                            <li><img src="{{ asset($blog->foto2) }}" alt="" class="img-fluid w-100"></li>
+                        @endif
+                    </ul>
                 </div>
 
                 <!-- Navegación del blog -->

@@ -36,7 +36,7 @@
                                     <div class="col-sm-12 col-md-7">
                                         <div id="image-preview" class="image-preview">
                                             <label for="image-upload" id="image-label">{{ __('Seleccione imagen') }}</label>
-                                            <input type="file" name="image" id="image-upload" />
+                                            <input type="file" name="image" id="image-upload" value="{{ old('image') }}"/>
                                         </div>
                                     </div>
                                 </div>
@@ -45,7 +45,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Titulo') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="title" class="form-control">
+                                        <input type="text" name="title" class="form-control" value="{{ old('title') }}">
                                     </div>
                                 </div>
 
@@ -68,15 +68,15 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Descripción') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <textarea name="description" class="summernote" style="height: 100px; width: 100%"></textarea>
+                                        <textarea name="description" class="summernote" style="height: 100px; width: 100%">{{ old('description') }}</textarea>
                                     </div>
                                 </div>
-                                    
+
                                 {{-- Cliente --}}
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Cliente') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="client" class="form-control">
+                                        <input type="text" name="client" class="form-control" value="{{ old('client') }}">
                                     </div>
                                 </div>
 
@@ -84,7 +84,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Sitio Web') }}</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="website" class="form-control">
+                                        <input type="text" name="website" class="form-control" value="{{ old('website') }}">
                                     </div>
                                 </div>
 
@@ -111,7 +111,7 @@
 
 @push('child-scripts')
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
 
             // Mi JS para el manejo de la imagen en la forma
             $('#image-preview').css({

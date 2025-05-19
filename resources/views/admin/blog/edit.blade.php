@@ -35,7 +35,7 @@
 
                                 {{-- Imagen Foto --}}
                                 <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: 540x330px, el tamaño de la imagen no debe superar los 300KB">{{ __('Imagen') }}</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: 540x330px, el tamaño de la imagen no debe superar los 100KB">{{ __('Imagen') }}</label>
                                     <div class="col-sm-12 col-md-7">
                                         <div id="image-preview" class="image-preview">
                                             <label for="image-upload" id="image-label">{{ __('Seleccione imagen') }}</label>
@@ -89,6 +89,29 @@
                                     </div>
                                 </div>
 
+                                {{-- Imágenes foto1 y foto2 para desplegar al final del blog --}}
+                                <div class="form-group row mb-4 fotos">
+
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                                    <p class="col-sm-12 col-md-7">{{ __('Imágenes colocar al final del blog') }}, {{ __('Tamaño recomendado: ancho de 800px, el tamaño de la imagen no debe superar los 100KB') }}</p>
+                                    
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: ancho de 800px, el tamaño de la imagen no debe superar los 100KB">{{ __('Fotos') }}</label>
+
+                                    <div class="col-sm-12 col-md-3 foto">
+                                        <label for="image-upload-foto1" class="form-label" title="Subir imagen" style="cursor: pointer">
+                                            <img for="image-upload-foto1" id="showImage-foto1" src="{{ !empty($blog->foto1) ? url($blog->foto1) : url('images/no_image.jpg') }}" alt="foto1">
+                                        </label>                                        
+                                        <input type="file" id="image-upload-foto1" name="foto1" hidden=""> 
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-3 foto">
+                                        <label for="image-upload-foto2" class="form-label" title="Subir imagen" style="cursor: pointer">
+                                            <img for="image-upload-foto2" id="showImage-foto2" src="{{ !empty($blog->foto2) ? url($blog->foto2) : url('images/no_image.jpg') }}" alt="foto2">
+                                        </label>                                        
+                                        <input type="file" id="image-upload-foto2" name="foto2" hidden=""> 
+                                    </div>
+
+                                </div>
 
                                 {{-- Botón Actualizar --}}
                                 <div class="form-group row mb-4">
@@ -121,6 +144,25 @@
                 'background-size': 'cover',
                 'background-position': 'center center'
             })
+
+            // Mi JS para el manejo de la imagen en la forma (Modo Directo Kazy)
+            $('#image-upload-foto1').change(function(e) {
+                // alert("funciona");
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#showImage-foto1').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
+
+            $('#image-upload-foto2').change(function(e) {
+                // alert("funciona");
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#showImage-foto2').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
 
         });
     </script>

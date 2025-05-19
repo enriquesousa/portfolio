@@ -40,8 +40,6 @@
                                     </div>
                                 </div>
 
-                                {{-- <p>Algunas de las habilidades que he adquirido a través de los años de experiencia son:</p> --}}
-
                                 {{-- Imágenes foto1 y foto2 se usan como encabezado para portfolio details --}}
                                 <div class="form-group row mb-4 fotos">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>

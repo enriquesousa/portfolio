@@ -444,32 +444,32 @@
 					"label": "edit route update portfolio-item"
 				},
 				{
-					"line": 51,
+					"line": 49,
 					"column": 36,
 					"label": "image upload con metodo kazy"
 				},
 				{
-					"line": 60,
+					"line": 58,
 					"column": 44,
 					"label": "image upload con metodo kazy"
 				},
 				{
-					"line": 84,
+					"line": 82,
 					"column": 48,
 					"label": "select seleceted en edit"
 				},
 				{
-					"line": 142,
+					"line": 140,
 					"column": 16,
 					"label": "image preview en edit"
 				},
 				{
-					"line": 147,
+					"line": 145,
 					"column": 12,
 					"label": "image preview modo kazy"
 				},
 				{
-					"line": 157,
+					"line": 155,
 					"column": 12,
 					"label": "image upload con metodo kazy"
 				}
@@ -599,9 +599,9 @@
 			"path": "app/Http/Controllers/Admin/BlogController.php",
 			"bookmarks": [
 				{
-					"line": 99,
-					"column": 8,
-					"label": "image check si la imagen es null"
+					"line": 118,
+					"column": 1,
+					"label": ""
 				}
 			]
 		},
@@ -654,14 +654,14 @@
 			"path": "resources/views/frontend/blog-details.blade.php",
 			"bookmarks": [
 				{
-					"line": 67,
-					"column": 24,
-					"label": "usar blade render para poder desplegar imagenes"
-				},
-				{
-					"line": 76,
+					"line": 84,
 					"column": 77,
 					"label": "string limit"
+				},
+				{
+					"line": 68,
+					"column": 1,
+					"label": ""
 				}
 			]
 		},
@@ -669,12 +669,17 @@
 			"path": "resources/views/frontend/blog.blade.php",
 			"bookmarks": [
 				{
-					"line": 64,
+					"line": 59,
+					"column": 28,
+					"label": "asignar link a image"
+				},
+				{
+					"line": 66,
 					"column": 44,
 					"label": "string limit and strip tags"
 				},
 				{
-					"line": 93,
+					"line": 95,
 					"column": 16,
 					"label": "laravel pagination"
 				}
@@ -807,6 +812,16 @@
 					"line": 139,
 					"column": 24,
 					"label": "icon link bootstrap"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/portfolio-item/create.blade.php",
+			"bookmarks": [
+				{
+					"line": 70,
+					"column": 144,
+					"label": "usar old('name of field') para recordar el ultimo valor entrado en caso de error"
 				}
 			]
 		}
