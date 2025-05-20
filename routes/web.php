@@ -91,6 +91,7 @@ Route::post('contact', [HomeController::class, 'contact'])->name('contact.store'
 Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy-policy.show');
 Route::get('terms-and-conditions', [HomeController::class, 'termsAndConditions'])->name('terms-and-conditions.show');
 
+Route::get('/resume/download', [AboutController::class, 'downloadResume'])->name('resume.download');
 
 
 // ******************************************************************************************************************
@@ -128,7 +129,6 @@ Route::group(['middleware' => ['auth', 'localization'], 'prefix' => 'admin', 'as
     Route::resource('service', ServiceController::class);
 
     // About - Acerca de mi
-    Route::get('/resume/download', [AboutController::class, 'downloadResume'])->name('resume.download');
     Route::resource('about', AboutController::class);
 
     // Portfolio Category - Categorías Routes
