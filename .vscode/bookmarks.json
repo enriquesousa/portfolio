@@ -824,6 +824,16 @@
 					"label": "usar old('name of field') para recordar el ultimo valor entrado en caso de error"
 				}
 			]
+		},
+		{
+			"path": "resources/views/admin/typer-title/index.blade.php",
+			"bookmarks": [
+				{
+					"line": 26,
+					"column": 32,
+					"label": "en admin master manejo data de ventana modal con el id #image-preview-modal"
+				}
+			]
 		}
 	]
 }

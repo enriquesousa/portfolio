@@ -20,6 +20,9 @@ yarn-error.log
 /.idea
 /.nova
 /.zed
+
 # /.vscode
-resources/views/Templates/admin-template/*
-resources/views/Templates/frontend/*
+resources/views/Templates/*
+resources/views/profile/*
+resources/views/layouts/*
+

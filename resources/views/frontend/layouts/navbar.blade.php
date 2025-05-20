@@ -7,6 +7,7 @@
         <a class="navbar-brand" href="{{ url('/') }}">
             {{-- <img src="{{ asset('images/logo-h.png') }}" alt="TJWeb"> --}}
             <img src="{{ asset($generalSetting->logo) }}" alt="TJWeb">
+            {{-- <p>{{ Route::currentRouteName() }}</p> --}}
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -20,11 +21,6 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ Route::currentRouteName() == 'home' ? '#home-page' : url('/') }}" title="{{ __('Home') }}" style="font-size: 25px;"><iconify-icon icon="fluent-color:home-16"></iconify-icon></a>
                 </li>
-
-                {{-- Sobre --}}
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="#about-page" title="{{ __('About') }}" style="font-size: 25px;"><iconify-icon icon="mdi:about-variant"></iconify-icon></a>
-                </li> --}}
 
                 @if(Route::currentRouteName() == 'home')
 
