@@ -40,8 +40,13 @@
     <!-- Bootstrap Icons picker -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-iconpicker/1.10.0/css/bootstrap-iconpicker.min.css">
 
+
+    <!-- CSS local para datatable -->
+    <link rel="stylesheet" href="{{ asset('assets/css/datatable.css') }}">
+
     <!-- Vite CSS and JS -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+    
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
@@ -86,6 +91,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="{{ asset('assets/js/stisla.js') }}"></script>
+
+    <!-- CSS local para datatable -->
+    <script src="{{ asset('assets/js/datatable.js') }}"></script>
 
     <!-- *********** -->
     <!-- JS Libraies -->

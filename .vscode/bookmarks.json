@@ -89,37 +89,37 @@
 					"label": "bootstrap icons"
 				},
 				{
-					"line": 94,
+					"line": 102,
 					"column": 4,
 					"label": "inputmaskt format phone number telefono"
 				},
 				{
-					"line": 103,
+					"line": 111,
 					"column": 44,
 					"label": "summernote plugin para editar notas"
 				},
 				{
-					"line": 109,
+					"line": 117,
 					"column": 29,
 					"label": "image upload preview plugin"
 				},
 				{
-					"line": 153,
+					"line": 161,
 					"column": 42,
 					"label": "eliminar un registro clase delete-item"
 				},
 				{
-					"line": 160,
+					"line": 168,
 					"column": 20,
 					"label": "traduccion en sweet alert 2"
 				},
 				{
-					"line": 175,
+					"line": 183,
 					"column": 60,
 					"label": "csrf token mandar en ajax"
 				},
 				{
-					"line": 203,
+					"line": 211,
 					"column": 1,
 					"label": ""
 				}
