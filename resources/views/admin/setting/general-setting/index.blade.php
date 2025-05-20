@@ -42,10 +42,11 @@
                                         {{ __('Logo') }}
                                     </label>
                                     <div class="col-sm-12 col-md-5">
+                                        <label for=""></label>
                                         <div class="custom-file">
-                                            <input name="logo" type="file" class="custom-file-input image-upload"
-                                                id="customFile">
-                                            <label class="custom-file-label" for="customFile">{{ __('Logo') }}</label>
+                                            <input name="logo" type="file" class="custom-file-input image-upload" id="customFile">
+                                            <label class="custom-file-label text-muted" for="customFile">{{ __('Logo') }}</label>
+                                            <small class="form-text text-muted">{{ __('Logo 277x68px, el peso no debe superar 300KB') }}</small>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-3">
@@ -63,7 +64,8 @@
                                         <div class="custom-file">
                                             <input name="footer_logo" type="file" class="custom-file-input image-upload-footer"
                                                 id="customFile">
-                                            <label class="custom-file-label" for="customFile">{{ __('Logo Pie de Pagina') }}</label>
+                                            <label class="custom-file-label text-muted" for="customFile">{{ __('Logo Pie de Pagina') }}</label>
+                                            <small class="form-text text-muted">{{ __('Logo de pie 400x400px, Blanco, el peso no debe superar 300KB') }}</small>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-3">
@@ -81,7 +83,8 @@
                                         <div class="custom-file">
                                             <input name="favicon" type="file" class="custom-file-input image-upload-favicon"
                                                 id="customFile">
-                                            <label class="custom-file-label" for="customFile">{{ __('Favicon') }}</label>
+                                            <label class="custom-file-label text-muted" for="customFile">{{ __('Favicon') }}</label>
+                                            <small class="form-text text-muted">{{ __('Favicon 32x32px, el peso no debe superar 300KB') }}</small>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-3">
