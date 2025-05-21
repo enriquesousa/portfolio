@@ -49,7 +49,7 @@ class PortfolioItemDataTable extends DataTable
 
             // Descripción
             ->addColumn('description', function ($query) {
-                return Str::limit($query->description, 50, '...');
+                return Str::limit(strip_tags($query->description), 50, '...');
             })
 
             // Cliente

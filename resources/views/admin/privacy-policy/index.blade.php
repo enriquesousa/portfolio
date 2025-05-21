@@ -23,7 +23,7 @@
                             <h4>{{ $subTituloPagina }}</h4>
                             <div class="card-header-action">
                                 <!-- Botón Vista Modal -->
-                                <a href="javascript:void(0)" class="btn btn-warning" data-toggle="modal" data-target="#image-preview-modal" data-bs-title="{{ __('Vista Previa') }}" data-image="ImagePreview-About-800x480.png" data-bs-width="480" data-bs-height="428" title="Ver donde queda este titulo en la sección">
+                                <a href="javascript:void(0)" class="btn btn-warning" data-toggle="modal" data-target="#image-preview-modal" data-bs-title="{{ __('Vista Previa') }}" data-image="Portfolio_politicasDePrivacidad_opt_700.png" data-bs-width="480" data-bs-height="428" title="Ver donde queda este titulo en la sección">
                                     <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
                             </div>

@@ -1352,6 +1352,10 @@ Footer-Area
     margin: 10px 0px;
 }
 
+.description .dots-list p {
+    margin: 20px 0px;
+}
+
 .description .dots-list li:before {
     color: #ff885e;
     font-family: 'Font Awesome 5 Pro';

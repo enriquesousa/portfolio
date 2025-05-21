@@ -49,14 +49,14 @@
 
                                     <div class="col-sm-12 col-md-3 foto">
                                         <label for="image-upload-foto1" class="form-label" title="Subir imagen" style="cursor: pointer">
-                                            <img for="image-upload-foto1" id="showImage-foto1" src="{{ !empty($portfolioItem->foto1) ? url($portfolioItem->foto1) : url('images/no_image.jpg') }}" alt="foto1">
+                                            <img for="image-upload-foto1" id="showImage-foto1" src="{{ !empty($portfolioItem->foto1) ? url($portfolioItem->foto1) : url('images/no_image.jpg') }}" alt="foto1" style="width: 100%; height: auto;">
                                         </label>                                        
                                         <input type="file" id="image-upload-foto1" name="foto1" hidden=""> 
                                     </div>
 
                                     <div class="col-sm-12 col-md-3 foto">
                                         <label for="image-upload-foto2" class="form-label" title="Subir imagen" style="cursor: pointer">
-                                            <img for="image-upload-foto2" id="showImage-foto2" src="{{ !empty($portfolioItem->foto2) ? url($portfolioItem->foto2) : url('images/no_image.jpg') }}" alt="foto2">
+                                            <img for="image-upload-foto2" id="showImage-foto2" src="{{ !empty($portfolioItem->foto2) ? url($portfolioItem->foto2) : url('images/no_image.jpg') }}" alt="foto2" style="width: 100%; height: auto;">
                                         </label>                                        
                                         <input type="file" id="image-upload-foto2" name="foto2" hidden=""> 
                                     </div>
