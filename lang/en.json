@@ -14,9 +14,22 @@
     "Más confío en el trabajo que en la suerte": "More confidence in work than in luck",
     "Elige un trabajo que te guste y no tendrás que trabajar ni un día de tu vida": "Choose a job you like and you will never have to work a day of your life",
 
+
+    "Desarrollo Full Stack": "Full Stack Development",
+    "Desarrollamos aplicaciones Full Stack, esto incluye la creación y mantenimiento de la lógica del sistema para que la aplicación pueda funcionar de manera eficiente y segura. También trabajamos en el Frontend donde diseñamos interfaces para el usuario.": "We develop Full Stack applications, this includes creating and maintaining the system logic so that the application can function efficiently and securely. We also work on the Frontend where we design interfaces for the user.",
+    "Servicios Backend": "Backend Services",
+    "Gestionar bases de datos, Procesar Datos, Migración de Datos, Implementar APIs, Gestionar la autenticación y la autorización, Comunicación entre Frontend y Backend mediante modelo MVC, Implementar Lógica Empresarial, Integrar Servicios de Terceros.": "Manage databases, Process Data, Data Migration, Implement APIs, Manage authentication and authorization, Communication between Frontend and Backend using MVC model, Implement Business Logic, Integrate Third Party Services.",
+    "Servicios Frontend": "Frontend Services",
+    "Diseño de Pagina, Adición de texto, imágenes, botones, íconos, ventanas emergentes y chats, Verificación de que todos los botones funcionan, Adaptación para distintas pantallas (Diseño Responsivo), Configuración de la compatibilidad entre navegadores.": "Page Design, Adding text, images, buttons, icons, popups and chats, Checking that all buttons work, Adaptation for different screens (Responsive Design), Setting up browser compatibility.",
+    "Tecnologías Usadas": "Technologies Used",
+    "Backend: PHP,JavaScript (Node.js), npm, Java, Laravel Framework, Modelo MVC, Eloquent ORM, Hash, Migrar Base de Datos, Artisan, Composer, Git. Frontend: HTML5, CSS3, JavaScript, Jquery, Ajax, Blade": "Backend: PHP, JavaScript (Node.js), npm, Java, Laravel Framework, MVC Model, Eloquent ORM, Hash, Migrate Database, Artisan, Composer, Git. Frontend: HTML5, CSS3, JavaScript, Jquery, Ajax, Blade",
+
+    
+
     "Héroe": "Hero",
     "Servicios": "Services",
     "Acerca de mi": "About me",
+    "Acerca de Mi": "About me",
     "Secciones": "Sections",
     "Control": "Control",
     "Panel": "Dashboard",
@@ -190,6 +203,7 @@
     "Experiencia": "Experience",
     "Sección Experiencia": "Experience Section",
     "Descripción": "Description",
+    "Descripción Ingles": "Description in English",
     "Subir Archivo PDF": "Upload PDF File",
     "Seleccione PDF": "Select PDF",
     "Eliminar Archivo": "Delete File",
@@ -243,7 +257,7 @@
     "Ir a Panel de Control": "Go to Control Panel",
     "Para cambiar el idioma, vaya a Panel de Control": "To change the language, go to Control Panel",
     "Sección Inicio": "Hero Section",
-    "Nosotros": "About Us",
+    "Nosotros": "About me",
     "Testimonios": "Testimonials",
     "Contacto": "Contact",
     "Mensaje enviado correctamente!": "Message sent successfully!",

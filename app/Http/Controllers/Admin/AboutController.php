@@ -64,6 +64,7 @@ class AboutController extends Controller
         $request->validate([
             'title' => ['required', 'string', 'max:200'],
             'description' => ['required', 'string', 'max:7000'],
+            'description_en' => ['nullable', 'string', 'max:7000'],
             'image' => ['max:1024', 'image'],
             // 'resume' => ['mimes:pdf,csv,doc,docx', 'max:2000'],
         ]);
@@ -94,6 +95,7 @@ class AboutController extends Controller
         About::updateOrCreate(['id' => $id], [
             'title' => $request->title,
             'description' => $request->description,
+            'description_en' => $request->description_en,
             'image' => (!empty($imagePath) ? $imagePath : $about->image),
             // 'resume' => $resumePath
         ]);

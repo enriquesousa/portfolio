@@ -37,6 +37,7 @@
                         </div>
 
                         <div class="card-body">
+                            <!-- DataTable: BlogDataTable -->
                             {{ $dataTable->table() }}
                         </div>
 

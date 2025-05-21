@@ -10,10 +10,17 @@
             <div class="col-lg-6">
                 <div class="about-text">
 
-                    <h3 class="title wow fadeInUp" data-wow-delay="0.3s">{{ $about->title }}</h3>
+                    <h3 class="title wow fadeInUp" data-wow-delay="0.3s">{{ __($about->title) }}</h3>
 
                     <div class="desc wow fadeInUp" data-wow-delay="0.4s">
-                        <p>{!! $about->description !!}</p>
+
+                        {{-- If locale is english, show the description, if not, show the description in Spanish --}}
+                        @if (app()->getLocale() == 'en')
+                            <p>{!! $about->description_en !!}</p>
+                        @else
+                            <p>{!! $about->description !!}</p>
+                        @endif
+                        
                     </div>
 
                     @if( $about->resume)

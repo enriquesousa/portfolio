@@ -214,7 +214,7 @@
 					"label": "summernote text"
 				},
 				{
-					"line": 119,
+					"line": 127,
 					"column": 12,
 					"label": "image upload preview plugin push js"
 				}
@@ -224,7 +224,7 @@
 			"path": "app/Http/Controllers/Admin/AboutController.php",
 			"bookmarks": [
 				{
-					"line": 115,
+					"line": 117,
 					"column": 42,
 					"label": "descargar archivo controller"
 				}
@@ -254,7 +254,12 @@
 			"path": "resources/views/frontend/layouts/sections/about.blade.php",
 			"bookmarks": [
 				{
-					"line": 19,
+					"line": 17,
+					"column": 24,
+					"label": "si locale esta en ingles"
+				},
+				{
+					"line": 26,
 					"column": 26,
 					"label": "descargar archivo blade"
 				}
