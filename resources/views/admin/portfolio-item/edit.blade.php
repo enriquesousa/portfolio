@@ -93,6 +93,14 @@
                                         <textarea name="description" class="summernote" style="height: 100px; width: 100%">{!! $portfolioItem->description !!}</textarea>
                                     </div>
                                 </div>
+
+                                {{-- Descripción Inglés --}}
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Descripción Inglés') }}</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <textarea name="description_en" class="summernote" style="height: 100px; width: 100%">{!! $portfolioItem->description_en !!}</textarea>
+                                    </div>
+                                </div>
                                     
                                 {{-- Cliente --}}
                                 <div class="form-group row mb-4">

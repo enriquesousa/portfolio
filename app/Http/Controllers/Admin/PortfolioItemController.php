@@ -100,6 +100,7 @@ class PortfolioItemController extends Controller
             'foto2' => ['nullable', 'max:3000'],
             'title' => ['required', 'string', 'max:200'],
             'description' => ['required'],
+            'description_en' => ['nullable'],
             'category_id' => ['required', 'numeric'],
             'client' => ['nullable','max:200'],
             'website' => ['url']
@@ -136,6 +137,7 @@ class PortfolioItemController extends Controller
 
             'title' => $request->title,
             'description' => $request->description,
+            'description_en' => $request->description_en,
             'category_id' => (int)$request->category_id,
             'client' => $request->client,
             'website' => $request->website

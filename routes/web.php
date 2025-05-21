@@ -81,18 +81,22 @@ require __DIR__.'/auth.php';
 
 
 // ******************************************************************************************************************
-// Users Frontend Web Routes
+// Users Frontend Web Routes uso el middleware localization para poder cambiar el idioma a las vistas
 // ******************************************************************************************************************
-Route::get('portfolio-details/{id}', [HomeController::class, 'showPortfolio'])->name('show.portfolio');
-Route::get('blog-details/{id}', [HomeController::class, 'showBlog'])->name('show.blog');
-Route::get('blog-details-show-image/{image}', [HomeController::class, 'showBlogImage'])->name('show.blog.image');
-Route::get('blogs', [HomeController::class, 'blogs'])->name('show.blogs');
-Route::post('contact', [HomeController::class, 'contact'])->name('contact.store');
+Route::group(['middleware' => ['localization'], ], function () {
+    
+    Route::get('portfolio-details/{id}', [HomeController::class, 'showPortfolio'])->name('show.portfolio');
+    Route::get('blog-details/{id}', [HomeController::class, 'showBlog'])->name('show.blog');
+    Route::get('blog-details-show-image/{image}', [HomeController::class, 'showBlogImage'])->name('show.blog.image');
+    Route::get('blogs', [HomeController::class, 'blogs'])->name('show.blogs');
+    Route::post('contact', [HomeController::class, 'contact'])->name('contact.store');
 
-Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy-policy.show');
-Route::get('terms-and-conditions', [HomeController::class, 'termsAndConditions'])->name('terms-and-conditions.show');
+    Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy-policy.show');
+    Route::get('terms-and-conditions', [HomeController::class, 'termsAndConditions'])->name('terms-and-conditions.show');
 
-Route::get('/resume/download', [AboutController::class, 'downloadResume'])->name('resume.download');
+    Route::get('/resume/download', [AboutController::class, 'downloadResume'])->name('resume.download');
+
+});
 
 
 // ******************************************************************************************************************

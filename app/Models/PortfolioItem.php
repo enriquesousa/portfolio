@@ -13,6 +13,7 @@ class PortfolioItem extends Model
         'title',
         'category_id',
         'description',
+        'description_en',
         'client',
         'website'
     ];

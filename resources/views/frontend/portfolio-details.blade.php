@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-sm-12">
 
-                <h2 class="head-title">{{ $portfolio->title }}</h2>
+                <h2 class="head-title">{{ __($portfolio->title) }}</h2>
 
                 <figure class="image-block">
                     <img src="{{ asset($portfolio->image) }}" alt="" class="imagen-fix">
@@ -60,7 +60,11 @@
                         <li><img src="{{ asset($portfolio->foto2) }}" alt="" class="img-fluid w-100"></li>
                     </ul>
 
-                    {!! $portfolio->description !!}
+                    @if (app()->getLocale() == 'en')
+                        <p>{!! $portfolio->description_en !!}</p>
+                    @else
+                        <p>{!! $portfolio->description !!}</p>
+                    @endif
 
                 </div>
 

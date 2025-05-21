@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->integer('category_id')->nullable();
             $table->text('description')->nullable();
+            $table->text('description_en')->nullable();
             $table->string('client')->nullable();
             $table->text('website')->nullable();
 

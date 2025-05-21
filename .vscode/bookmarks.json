@@ -469,17 +469,17 @@
 					"label": "select seleceted en edit"
 				},
 				{
-					"line": 140,
+					"line": 148,
 					"column": 16,
 					"label": "image preview en edit"
 				},
 				{
-					"line": 145,
+					"line": 153,
 					"column": 12,
 					"label": "image preview modo kazy"
 				},
 				{
-					"line": 155,
+					"line": 163,
 					"column": 12,
 					"label": "image upload con metodo kazy"
 				}
