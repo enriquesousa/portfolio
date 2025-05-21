@@ -269,8 +269,8 @@
                     </li>
 
                     <!-- Términos y Condiciones -->
-                    <li class="{{ setSidebarActive(['admin.footer-info.*']) }}">
-                        <a class="nav-link" href="{{ route('admin.footer-info.index') }}">
+                    <li class="{{ setSidebarActive(['admin.terms-and-conditions.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.terms-and-conditions.index') }}">
                             {{ __('Términos y Condiciones') }}
                         </a>
                     </li>

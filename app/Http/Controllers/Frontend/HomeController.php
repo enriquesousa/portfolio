@@ -20,6 +20,7 @@ use App\Models\PrivacyPolicy;
 use App\Models\Service;
 use App\Models\SkillItem;
 use App\Models\SkillSectionSetting;
+use App\Models\TermsCondition;
 use App\Models\TyperTitle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -126,6 +127,11 @@ class HomeController extends Controller
     public function privacyPolicy(){
         $privacyPolicy = PrivacyPolicy::first();
         return view('frontend.pages.privacy-policy', compact('privacyPolicy'));
+    }
+
+    public function termsAndConditions(){
+        $termsCondition = TermsCondition::first();
+        return view('frontend.pages.terms-and-conditions', compact('termsCondition'));
     }
 
 
