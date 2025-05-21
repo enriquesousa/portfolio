@@ -26,7 +26,7 @@
                             <h4>{{ $subtituloPagina }}</h4>
                             <div class="card-header-action">
                                 <!-- Botón Vista Modal -->
-                                <a href="javascript:void(0)" class="btn btn-warning" data-toggle="modal" data-target="#image-preview-modal" data-bs-title="{{ __('Vista Previa') }}" data-image="ImagePreview-Categorias-800x316.png" data-bs-width="480" data-bs-height="428" title="Ver donde queda este titulo en la sección">
+                                <a href="javascript:void(0)" class="btn btn-warning" data-toggle="modal" data-target="#image-preview-modal" data-bs-title="{{ __('Vista Previa') }}" data-image="categorias_opt_600.png" data-bs-width="480" data-bs-height="428" title="Ver donde queda este titulo en la sección">
                                     <i class="fas fa-eye"></i> {{ __('Vista Previa') }}
                                 </a>
                                 <!-- Botón Agregar -->

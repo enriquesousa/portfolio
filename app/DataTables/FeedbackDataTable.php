@@ -11,6 +11,7 @@ use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
+use Illuminate\Support\Str;
 
 class FeedbackDataTable extends DataTable
 {
@@ -43,7 +44,7 @@ class FeedbackDataTable extends DataTable
 
             // Descripción
             ->addColumn('description', function($query){
-                return $query->description;
+                return Str::limit(strip_tags($query->description), 50, '...');
             })
             
             // action

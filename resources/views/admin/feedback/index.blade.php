@@ -37,6 +37,7 @@
                         </div>
 
                         <div class="card-body">
+                            <!-- DataTable: FeedbackDataTable -->
                             {{ $dataTable->table() }}
                         </div>
 

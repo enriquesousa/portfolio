@@ -260,9 +260,14 @@
                 // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
                 // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
                 var modal = $(this);
-                modal.find('.modal-body img').attr('src', image);
+                // modal.find('.modal-body img').attr('src', image).height(600).width(500);;
+                modal.find('.modal-body img').attr('src', image).width('100%');
 
                 // queda pendiente el width y el height que no se como hacerlo dinámico
+                // modal.find('.modal-body img img').css({'width' : '600px' , 'height' : '500px'});
+                // modal.find('.modal-body img img').css({'width' : '100%' , 'height' : 'auto'});
+                // Ya lo encontré Usar: modal.find('.modal-body img').attr('src', image).width('100%');;
+
             })
 
         })

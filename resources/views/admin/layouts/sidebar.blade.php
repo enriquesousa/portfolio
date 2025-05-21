@@ -131,7 +131,7 @@
                 </a>
             </li>
 
-            {{-- Sección Comentarios de nuestros clientes - Comentarios Feedback --}}
+            {{-- Sección Comentarios Testimonios de nuestros clientes - Comentarios Feedback --}}
             <li class="nav-item dropdown {{ setSidebarActive(['admin.feedback.*', 'admin.feedback-section-setting.*']) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
                     <i class="bi bi-people-fill"></i>
@@ -142,7 +142,7 @@
                     {{-- Lista comentarios --}}
                     <li class="{{ setSidebarActive(['admin.feedback.*']) }}">
                         <a class="nav-link" href="{{ route('admin.feedback.index') }}">
-                            {{ __('Lista Comentarios') }}
+                            {{ __('Lista Testimonios') }}
                         </a>
                     </li>
 

@@ -127,6 +127,11 @@
 					"line": 256,
 					"column": 69,
 					"label": "image preview assets"
+				},
+				{
+					"line": 263,
+					"column": 79,
+					"label": "asignar el width del 100% en Image Preview"
 				}
 			]
 		},
