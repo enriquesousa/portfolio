@@ -68,10 +68,13 @@
 		<img src="{{ asset('frontend/assets/images/preloader.gif') }}" alt="">
 	</div>
 
-	@include('frontend.layouts.navbar')
+	{{-- Lo metí dentro de un div para poder usar el scrollspy --}}
+	{{-- @include('frontend.layouts.navbar') --}}
 
 	<div class="main_wrapper" data-bs-spy="scroll" data-bs-target="#main_menu_area" data-bs-root-margin="0px 0px -40%"
 		data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary" tabindex="0">
+
+		@include('frontend.layouts.navbar')
 
 		@yield('content')
 

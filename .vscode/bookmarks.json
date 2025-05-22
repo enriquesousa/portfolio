@@ -541,16 +541,6 @@
 			]
 		},
 		{
-			"path": "resources/views/frontend/layouts/sections/portfolio.blade.php",
-			"bookmarks": [
-				{
-					"line": 43,
-					"column": 55,
-					"label": "strip tags html de la description y string limit"
-				}
-			]
-		},
-		{
 			"path": "public/assets/css/custom.css",
 			"bookmarks": [
 				{
@@ -654,7 +644,12 @@
 					"label": "image fix"
 				},
 				{
-					"line": 354,
+					"line": 226,
+					"column": 36,
+					"label": "background color main menu front end"
+				},
+				{
+					"line": 359,
 					"column": 16,
 					"label": "hero background image opacity opacidad"
 				}
@@ -759,7 +754,7 @@
 					"label": "toastr para desplegar mensajes ajax en frontend"
 				},
 				{
-					"line": 90,
+					"line": 93,
 					"column": 4,
 					"label": "toastr para desplegar mensajes ajax en frontend"
 				}

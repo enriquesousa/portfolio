@@ -224,6 +224,11 @@ body {
     -o-transition: all linear .3s;
 }
 
+/* Para darle un color al background del main menu */
+.main_menu  {
+    background-color: #0e0d0d8f;
+}
+
 .main_menu .navbar-nav li:last-child a {
     margin-right: 0;
 }

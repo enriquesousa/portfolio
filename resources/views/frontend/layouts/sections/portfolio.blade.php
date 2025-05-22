@@ -41,7 +41,11 @@
                                     <a href="{{ route('show.portfolio', $item->id) }}">{{ __($item->title) }}</a>
                                 </h4>
                                 <div class="desc">
-                                    <p>{!! Str::limit( strip_tags(__($item->description)), 100, '...'  ) !!}</p>
+                                    @if (app()->getLocale() == 'en')
+                                        <p>{!! Str::limit( strip_tags(__($item->description_en)), 60, '...'  ) !!}</p>
+                                    @else
+                                        <p>{!! Str::limit( strip_tags(__($item->description)), 60, '...'  ) !!}</p>  
+                                    @endif
                                 </div>
                             </div>
                         </div>
