@@ -564,12 +564,12 @@
 			"path": "resources/views/admin/experience/index.blade.php",
 			"bookmarks": [
 				{
-					"line": 75,
+					"line": 83,
 					"column": 44,
 					"label": "inputmaskt format phone number telefono"
 				},
 				{
-					"line": 130,
+					"line": 138,
 					"column": 12,
 					"label": "inputmaskt format phone number telefono"
 				}

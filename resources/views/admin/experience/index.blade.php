@@ -63,6 +63,14 @@
                                     </div>
                                 </div>
 
+                                {{-- Descripción en Ingles --}}
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Descripción Ingles') }}</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <textarea name="description_en" class="summernote" style="height: 100px; width: 100%">{!! $experience->description_en !!}</textarea>
+                                    </div>
+                                </div>
+
                                 {{-- Teléfono --}}
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Teléfono') }}</label>

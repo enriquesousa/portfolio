@@ -13,9 +13,13 @@
             {{-- Contenido Derecho --}}
             <div class="col-lg-6">
                 <div class="experience-text">
-                    <h3 class="title wow fadeInUp" data-wow-delay="0.3s">{{ $experience->title }}</h3>
+                    <h3 class="title wow fadeInUp" data-wow-delay="0.3s">{{ __($experience->title) }}</h3>
                     <div class="desc wow fadeInUp" data-wow-delay="0.4s">
-                        <p>{!! $experience->description !!}</p>
+                        @if (app()->getLocale() == 'en')
+                            <p>{!! $experience->description_en !!}</p>
+                        @else
+                            <p>{!! $experience->description !!}</p>
+                        @endif
                     </div>
                     <div class="row">
                         <div class="col-sm-6">

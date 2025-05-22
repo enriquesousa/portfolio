@@ -10,9 +10,9 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="section-title">
-                            <h3 class="title">{{ $skill->title }}</h3>
+                            <h3 class="title">{{ __($skill->title) }}</h3>
                             <div class="desc">
-                                <p>{{ $skill->sub_title }}</p>
+                                <p>{{ __($skill->sub_title) }}</p>
                             </div>
                         </div>
                     </div>

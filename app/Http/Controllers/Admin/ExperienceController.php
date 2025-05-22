@@ -60,6 +60,7 @@ class ExperienceController extends Controller
         $request->validate([
             'title' => 'required|string|max:200',
             'description' => 'required|string|max:5000',
+            'description_en' => 'nullable|string|max:5000',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'phone' => 'nullable|string|max:20',
             'email' => 'nullable|string|email|max:255',
@@ -71,6 +72,7 @@ class ExperienceController extends Controller
         Experience::updateOrCreate(['id' => $id], [
             'title' => $request->title,
             'description' => $request->description,
+            'description_en' => $request->description_en,
             'phone' => $request->phone,
             'email' => $request->email,
             'image' => (!empty($imagePath) ? $imagePath : $experience->image),
