@@ -57,10 +57,12 @@ class PrivacyPolicyController extends Controller
         // dd($request->all());
         $request->validate([
             'content' => 'required',
+            'content_en' => 'nullable',
         ]);
 
         $item = PrivacyPolicy::firstOrNew();
         $item->content = $request->content;
+        $item->content_en = $request->content_en;
         $item->save();
 
         flash()->success(__('Actualizado correctamente!'));

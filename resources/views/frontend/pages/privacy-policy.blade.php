@@ -27,7 +27,11 @@
             <div class="col-sm-12">
 
                 <div class="description">
-                    {!! @$privacyPolicy->content !!}
+                    @if (app()->getLocale() == 'en')
+                        {!! @$privacyPolicy->content_en !!}
+                    @else
+                        {!! @$privacyPolicy->content !!}
+                    @endif
                 </div>
 
             </div>

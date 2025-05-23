@@ -43,6 +43,14 @@
                                         <textarea name="content" class="summernote" style="height: 100px; width: 100%">{!! @$privacyPolicy->content !!}</textarea>
                                     </div>
                                 </div>
+
+                                {{-- Descripción Contenido en inglés --}}
+                                <div class="form-group row mb-4">
+                                    <div class="col-sm-12">
+                                        <label for="content">{{ __('Contenido Inglés') }}</label>
+                                        <textarea name="content_en" class="summernote" style="height: 100px; width: 100%">{!! @$privacyPolicy->content_en !!}</textarea>
+                                    </div>
+                                </div>
                                     
 
                                 {{-- Botón Actualizar --}}
