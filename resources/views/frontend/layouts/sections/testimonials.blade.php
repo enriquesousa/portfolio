@@ -5,9 +5,9 @@
 
             <div class="col-lg-6 offset-lg-3 text-center">
                 <div class="section-title">
-                    <h3 class="title">{{ $feedbackTitleTestimonial->title }}</h3>
+                    <h3 class="title">{{ __($feedbackTitleTestimonial->title) }}</h3>
                     <div class="desc">
-                        <p>{{ $feedbackTitleTestimonial->sub_title }}</p>
+                        <p>{{ __($feedbackTitleTestimonial->sub_title) }}</p>
                     </div>
                 </div>
             </div>
