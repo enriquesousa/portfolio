@@ -54,7 +54,7 @@
 
                         <div class="col-sm-12">
                             <div class="form-box">
-                                <button class="button-primary mouse-dir" type="submit" id="submit_button">{{ __('Enviar') }} <span class="dir-part"></span></button>
+                                <button class="button-primary mouse-dir" type="submit" id="submit_button">{{ __('Enviar Mensaje') }} <span class="dir-part"></span></button>
                             </div>
                         </div>
 

@@ -141,7 +141,10 @@
     "Gestor Bienes Raíces": "Manage Real Estate",
     "Punto de Venta": "Point of Sale",
     "Gestor Inventarios": "Inventory Manager",
+
     "Blog": "Blog",
+    "Aquí encontraras mi Blog donde te comparto snippets de código relacionado con  Laravel, PHP, JS, y Desarrollo Web en General.": "Here you will find my Blog where I share code snippets related to Laravel, PHP, JS, and Web Development in General.",
+
     "Gestor de Restaurantes": "Restaurants Manager",
     "Gestor de Veterinarias": "Veterinary Clinics Manager",
     "Gestor de Escuelas": "Schools Manager",
@@ -264,12 +267,18 @@
     "Testimonios": "Testimonials",
     "A continuación verás algunos de los comentarios que hacen nuestros clientes acerca de nuestros servicios.": "See some of the comments made by our clients about our services.",
 
-    "Contacto": "Contact",
+    
     "Mensaje enviado correctamente!": "Message sent successfully!",
     "Configurar Contacto": "Configure Contact",
     "Configurar Titulo y Subtítulos de la sección Contacto": "Configure Title and Sub-Titles of the Contact Section",
+
+    "Contacto": "Contact",
     "Trabajemos Juntos": "Let's Work Together",
     "Contactados para mayor información y servicios": "Contact us for more information and services",
+    "Asunto": "Subject",
+    "Mensaje": "Message",
+    "Enviar Mensaje": "Send Message",
+
     "Pie de pagina": "Footer",
     "Redes Sociales": "Social Networks",
     "Todas las Redes Sociales": "All Social Networks",
