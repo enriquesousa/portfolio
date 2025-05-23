@@ -279,6 +279,11 @@
     "Mensaje": "Message",
     "Enviar Mensaje": "Send Message",
 
+    "Inicio": "Home",
+    "Políticas de Privacidad": "Privacy Policies",
+    "Términos y Condiciones": "Terms and Conditions",
+    "Abrir en nuevo tab": "Open in new tab",
+
     "Pie de pagina": "Footer",
     "Redes Sociales": "Social Networks",
     "Todas las Redes Sociales": "All Social Networks",
@@ -347,7 +352,7 @@
     "Actualizar Política de Privacidad": "Update Privacy Policy",
     "Detalles Política de Privacidad": "Privacy Policy Details",
     "Páginas": "Pages",
-    "Términos y Condiciones": "Terms and Conditions",
+    
     "Actualizar Términos y Condiciones": "Update Terms and Conditions",
     "Detalles Términos y Condiciones": "Terms and Conditions Details",
     "Contenido": "Content",

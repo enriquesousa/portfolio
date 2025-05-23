@@ -839,6 +839,16 @@
 					"label": "en admin master manejo data de ventana modal con el id #image-preview-modal"
 				}
 			]
+		},
+		{
+			"path": "resources/views/frontend/portfolio-details.blade.php",
+			"bookmarks": [
+				{
+					"line": 44,
+					"column": 78,
+					"label": "abrir link en nuevo tab target=\"_blank\" usar blank"
+				}
+			]
 		}
 	]
 }

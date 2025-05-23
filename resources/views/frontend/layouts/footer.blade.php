@@ -32,7 +32,7 @@
                 <h3 class="widget-title">{{ __('Links Útiles') }}</h3>
                 <ul class="nav-menu">
                     @foreach ($footerUsefulLinks as $item)
-                        <li><a href="{{ $item->url }}">{{ $item->name }}</a></li>
+                        <li><a href="{{ $item->url }}">{{ __($item->name) }}</a></li>
                     @endforeach
                 </ul>
             </div>
@@ -52,7 +52,7 @@
                 <h3 class="widget-title">{{ __('Links de Ayuda') }}</h3>
                 <ul class="nav-menu">
                     @foreach ($footerHelpLinks as $item) 
-                        <li><a href="{{ $item->url }}">{{ $item->name }}</a></li>
+                        <li><a href="{{ $item->url }}" target="_blank" title="{{ __('Abrir en nuevo tab') }}">{{ __($item->name) }}</a></li>
                     @endforeach
                 </ul>
             </div>
