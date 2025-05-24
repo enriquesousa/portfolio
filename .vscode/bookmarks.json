@@ -154,7 +154,7 @@
 					"label": "perfil profile dropdown menu"
 				},
 				{
-					"line": 72,
+					"line": 77,
 					"column": 16,
 					"label": "Cerrar sesion logout"
 				}
@@ -269,12 +269,12 @@
 			"path": "routes/web.php",
 			"bookmarks": [
 				{
-					"line": 37,
+					"line": 38,
 					"column": 0,
 					"label": "traduccion asignar localization middleware a home route"
 				},
 				{
-					"line": 51,
+					"line": 52,
 					"column": 0,
 					"label": "traduccion route setLanguage"
 				}
@@ -294,7 +294,7 @@
 			"path": "bootstrap/app.php",
 			"bookmarks": [
 				{
-					"line": 16,
+					"line": 18,
 					"column": 12,
 					"label": "traduccion registrar middleware localization"
 				}

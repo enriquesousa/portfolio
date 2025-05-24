@@ -11,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('general_settings', function (Blueprint $table) {
+        Schema::create('time_zones', function (Blueprint $table) {
             $table->id();
 
-            $table->text('logo')->nullable();
-            $table->text('favicon')->nullable();
-            $table->text('footer_logo')->nullable();
-
-            $table->string('locale_general_user')->default('es');
-            $table->string('time_zone')->default('America/Tijuana');
+            $table->string('name');
 
             $table->timestamps();
         });
@@ -30,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('general_settings');
+        Schema::dropIfExists('time_zones');
     }
 };

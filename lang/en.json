@@ -49,6 +49,7 @@
 
     "Seleccionar Idioma": "Select Language",
     "Actualizar Idioma": "Update Language",
+    "Idioma": "Language",
     "Perfil": "Profile",
     "Actividades": "Activities",
     "Actividad": "Activity",
@@ -383,9 +384,19 @@
 
     "Actualizar configuraciones generales": "Update general settings",
     "Lista de actividades en el sistema": "List of activities in the system",
-    "Lista de actividades en el sistema, solo con contenido.": "List of activities in the system, only with content."
+    "Lista de actividades en el sistema, solo con contenido.": "List of activities in the system, only with content.",
+
+    "Zona de Horario": "Timezone",
+    "Zonas Horarias": "Timezones",
+    "Todas las Zonas Horarias": "All Timezones",
+    "Agregar Zona Horaria": "Add Timezone",
+    "Zona horaria creada correctamente!": "Timezone created successfully!",
+    "Nombre Zona Horaria": "Timezone Name",
+    "Editar Zona Horaria": "Edit Timezone"
 
  
+
+
     
 
 

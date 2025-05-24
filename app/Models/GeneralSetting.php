@@ -11,5 +11,6 @@ class GeneralSetting extends Model
         'favicon',
         'footer_logo',
         'locale_general_user',
+        'time_zone',
     ];
 }

@@ -281,6 +281,14 @@
 
             <li class="menu-header">{{ __('Configuración') }}</li>
 
+            <!-- Configurar Time Zones -->
+            <li class="nav-item {{ setSidebarActive(['admin.time-zone.*']) }}">
+                <a class="nav-link" href="{{ route('admin.time-zone.index') }}">
+                    <i class="bi bi-clock"></i>
+                    <span>{{ __('Zonas Horarias') }}</span>
+                </a>
+            </li>
+
             <!-- Configuración General -->
             <li class="nav-item {{ setSidebarActive(['admin.settings.*','admin.general-setting.*', 'admin.seo-setting.*']) }}">
                 <a class="nav-link" href="{{ route('admin.settings.index') }}">

@@ -27,6 +27,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SkillItemController;
 use App\Http\Controllers\Admin\SkillSectionSettingController;
 use App\Http\Controllers\Admin\TermsConditionController;
+use App\Http\Controllers\Admin\TimeZoneController;
 use App\Http\Controllers\Admin\TyperTitleController;
 use App\Http\Controllers\Admin\VistaPreviaController;
 use App\Http\Controllers\Frontend\HomeController;
@@ -54,7 +55,7 @@ Route::get('/locale/{locale}', [LocalizationController::class, 'setLanguage'])->
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified', 'localization'])->name('dashboard');
 
 // Route::middleware('auth')->group(function () {
-Route::group(['middleware' => ['auth', 'localization'], ], function () {
+Route::group(['middleware' => ['auth', 'localization', 'site_time_zone'], ], function () {
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -104,7 +105,7 @@ Route::group(['middleware' => ['localization'], ], function () {
 // ******************************************************************************************************************
 // Admin Routes: prefix admin para prefijo del nombre de la ruta url y as admin. para prefijo de nombre de las rutas.
 // ******************************************************************************************************************
-Route::group(['middleware' => ['auth', 'localization'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::group(['middleware' => ['auth', 'localization', 'site_time_zone'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
 
 
     // **********
@@ -203,5 +204,8 @@ Route::group(['middleware' => ['auth', 'localization'], 'prefix' => 'admin', 'as
 
     // Terms and Conditions Routes
     Route::resource('terms-and-conditions', TermsConditionController::class);
+
+    // Time Zone Routes
+    Route::resource('time-zone', TimeZoneController::class);
 
 });

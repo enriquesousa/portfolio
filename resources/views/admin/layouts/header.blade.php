@@ -62,6 +62,11 @@
                     <i class="bi bi-pencil-square"></i>&nbsp;{{ __('Registra Actividad') }}
                 </a>
 
+                {{-- Configuraciones --}}
+                <a href="{{ route('admin.settings.index') }}" class="dropdown-item has-icon">
+                    <i class="bi bi-gear"></i>&nbsp;{{ __('Configuraciones') }}
+                </a>
+
                 {{-- Linea divisoria --}}
                 <div class="dropdown-divider"></div>
 

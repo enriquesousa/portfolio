@@ -8,8 +8,9 @@
             </div>
             <h1>{{ __('Perfil') }}</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">{{ __('Panel') }}</a></div>
+                <div class="breadcrumb-item active"><a href="{{ route('dashboard') }}">{{ __('Panel') }}</a></div>
                 <div class="breadcrumb-item">{{ __('Perfil') }}</div>
+                <div class="breadcrumb-item">{{ __('Idioma') }}</div>
             </div>
         </div>
 
