@@ -7,8 +7,8 @@
                 <a href="{{ route('admin.settings.index') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             @php
-                $tituloPagina = __('Configuración General');
-                $subtituloPagina = __('Actualizar Configuración General');
+                $tituloPagina = __('Configuraciones');
+                $subtituloPagina = __('Actualizar Configuración Logos');
             @endphp
             <h1>{{ $tituloPagina }}</h1>
         </div>

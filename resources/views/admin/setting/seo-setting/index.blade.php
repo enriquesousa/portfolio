@@ -7,7 +7,7 @@
                 <a href="{{ route('admin.settings.index') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             @php
-                $tituloPagina = __('Configurar SEO');
+                $tituloPagina = __('Configuraciones');
                 $subtituloPagina = __('Configurar SEO (Search Engine Optimization)');
                 $cardHeader = __('Configurar SEO');
             @endphp

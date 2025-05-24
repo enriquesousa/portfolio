@@ -71,7 +71,7 @@
 
                             <li><a href="#footer-area">{{ __('Pie de pagina') }}</a></li><br>
 
-                            @if(!Auth::check())
+                            {{-- @if(!Auth::check())
                                 <li>
                                     <a href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i>&nbsp;{{ __('Admin') }}</a>
                                 </li>
@@ -79,7 +79,7 @@
                                 <li>
                                     <a href="{{ route('dashboard') }}"><i class="fas fa-tachometer-alt"></i>&nbsp;{{ __('Dashboard') }}</a>
                                 </li>
-                            @endif
+                            @endif --}}
 
                         </ul>
                     </li>

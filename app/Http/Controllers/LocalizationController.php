@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GeneralSetting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Session;
 
 class LocalizationController extends Controller
@@ -19,6 +21,14 @@ class LocalizationController extends Controller
         if( $locale == 'en' ) {
             $locale = 'en';
         }
+
+        // Guardar locale en custom config
+        // No me funciona para el set, lo voy hacer mejor grabando a la db
+        // Config::set('custom.locale', $locale);
+        //  config()->set('custom.lenguaje', $locale);
+        $generalSettings = GeneralSetting::first();
+        $generalSettings->locale_general_user = $locale;
+        $generalSettings->save();
 
         // dd($locale);
 
@@ -44,6 +54,9 @@ class LocalizationController extends Controller
         Session::put('locale', $locale);
         app()->setLocale($locale);
         session(['lenguaje' => $locale]); // set session variable
+
+
+        
 
         // app()->setLocale(Session::get('locale'));
 

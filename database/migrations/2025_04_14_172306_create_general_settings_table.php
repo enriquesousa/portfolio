@@ -18,6 +18,8 @@ return new class extends Migration
             $table->text('favicon')->nullable();
             $table->text('footer_logo')->nullable();
 
+            $table->string('locale_general_user')->default('es');
+
             $table->timestamps();
         });
     }

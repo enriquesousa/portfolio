@@ -24,13 +24,14 @@
                     <div class="card card-large-icons">
                         <div class="card-icon bg-primary text-white">
                             <a class="icon-link text-white" href="{{ route('admin.general-setting.index') }}">
-                                <i class="fas fa-cog"></i>
+                                {{-- <i class="fas fa-cog"></i> --}}
+                                <i class="far fa-images"></i>
                             </a>
                         </div>
                         <div class="card-body">
-                            <h4>{{ __('General') }}</h4>
-                            <p style="line-height: 1.2;">{{ __('Configuraciones generales como, logo, favicon, titulo del sitio, Descripción, etc...') }}</p>
-                            <a href="{{ route('admin.general-setting.index') }}" class="card-cta">{{ __('Cambiar Configuración') }} <i class="fas fa-chevron-right"></i></a>
+                            <h4>{{ __('Config. Logos') }}</h4>
+                            <p style="line-height: 1.2;">{{ __('Configurar logo, logo footer y favicon') }}</p>
+                            <a href="{{ route('admin.general-setting.index') }}" class="card-cta">{{ __('Configurar') }} <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>

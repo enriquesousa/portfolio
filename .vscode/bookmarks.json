@@ -322,6 +322,11 @@
 					"line": 8,
 					"column": 8,
 					"label": "logo navbar"
+				},
+				{
+					"line": 73,
+					"column": 47,
+					"label": "check si admin esta login"
 				}
 			]
 		},
@@ -847,6 +852,16 @@
 					"line": 44,
 					"column": 78,
 					"label": "abrir link en nuevo tab target=\"_blank\" usar blank"
+				}
+			]
+		},
+		{
+			"path": "resources/views/errors/404.blade.php",
+			"bookmarks": [
+				{
+					"line": 39,
+					"column": 24,
+					"label": "traducir pagina de error"
 				}
 			]
 		}

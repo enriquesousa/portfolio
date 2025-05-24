@@ -10,5 +10,6 @@ class GeneralSetting extends Model
         'logo',
         'favicon',
         'footer_logo',
+        'locale_general_user',
     ];
 }

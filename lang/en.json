@@ -308,8 +308,9 @@
     "Agregar Link de Ayuda": "Add Helpful Link",
     "Editar Link de Ayuda": "Edit Helpful Link",
     "Impulsa al máximo el potencial de tu empresa.": "Boost the potential of your company.",
+
     "Configuraciones": "Settings",
-    "Generales": "General",
+    "General": "General",
     "Configuración General": "General Configuration",
     "Actualizar Configuración General": "Update General Configuration",
     "Configuraciones generales como, titulo del sitio, descripción del sitio, dirección y otros.": "General configurations such as, site title, site description, address and others.",
@@ -317,6 +318,12 @@
     "Cambiar Configuración": "Change Settings",
     "Logo Pie de Pagina": "Footer Logo",
     "Configuración actualizada correctamente.": "Settings updated successfully.",
+    "Config. Logos": "Config. Logos",
+    "Configurar logo, logo footer y favicon": "Configure logo, logo footer and favicon",
+    "Configurar": "Configure",
+    "Configuración Logos": "Logos Configuration",
+    "Actualizar Configuración Logos": "Update Logos Configuration",
+
     "Configuraciones de optimización de motores de búsqueda, como meta-etiquetas y redes sociales.": "Search engine optimization settings, such as meta tags and social networks.",
     "Configuraciones de optimización de motores de búsqueda, como meta-etiquetas etc.": "Search engine optimization settings, such as meta tags etc.",
     "Configurar SEO": "Configure SEO",
@@ -326,6 +333,7 @@
     "Descripción SEO": "SEO Description",
     "Palabras Claves SEO": "SEO Keywords",
     "Palabras Claves Separadas por Comas": "Keywords Separated by Commas",
+
     "Total de Blogs": "Total Blogs",
     "Total de Habilidades": "Total Skills",
     "Total de Portafolios": "Total Portfolios",
@@ -357,8 +365,13 @@
     "Detalles Términos y Condiciones": "Terms and Conditions Details",
     "Contenido": "Content",
     "Liga": "Link",
-    "Liga a la documentación del sistema": "Link to the system documentation"
+    "Liga a la documentación del sistema": "Link to the system documentation",
 
+    "404 - Pagina No Encontrada": "404 - Page Not Found",
+    "Es posible que la página que estás buscando haya sido eliminada, haya cambiado de nombre o no esté disponible temporalmente.": "The page you are looking for may have been removed, changed or is temporarily unavailable.",
+    "Ir a la página de inicio": "Go to the homepage"
+
+    
 
 
 }
