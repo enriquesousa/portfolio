@@ -334,7 +334,7 @@
 			"path": "app/Http/Controllers/Admin/ProfileController.php",
 			"bookmarks": [
 				{
-					"line": 118,
+					"line": 125,
 					"column": 39,
 					"label": "get user "
 				}
@@ -808,6 +808,11 @@
 		{
 			"path": "resources/views/admin/actividades/index.blade.php",
 			"bookmarks": [
+				{
+					"line": 7,
+					"column": 28,
+					"label": "redirigir a pagina anterior"
+				},
 				{
 					"line": 60,
 					"column": 0,

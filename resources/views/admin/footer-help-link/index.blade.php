@@ -5,7 +5,7 @@
 
         <div class="section-header">
             <div class="section-header-back">
-                <a href="{{ route('dashboard') }}" class="btn btn-icon">
+                <a href="{{ redirect()->back()->getTargetUrl() }}" title="{{ __('Página Anterior') }}" class="btn btn-icon">
                     <i class="fas fa-arrow-left"></i>
                 </a>
             </div>

@@ -19,7 +19,7 @@
 
             <div class="row">
 
-                {{-- Settings --}}
+                {{-- Settings Logos --}}
                 <div class="col-lg-6">
                     <div class="card card-large-icons">
                         <div class="card-icon bg-primary text-white">
@@ -52,6 +52,38 @@
                     </div>
                 </div>
 
+                {{-- Settings Contacto Footer Contact - Dirección, Teléfono, Correo, Sitio Web--}}
+                <div class="col-lg-6">
+                    <div class="card card-large-icons">
+                        <div class="card-icon bg-primary text-white">
+                            <a class="icon-link text-white" href="{{ route('admin.footer-contact-info.index') }}">
+                                <i class="far fa-address-card"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h4>{{ __('Información de Contacto') }}</h4>
+                            <p style="line-height: 1.2;">{{ __('Configurar Dirección, Teléfono, Correo, y Website') }}</p>
+                            <a href="{{ route('admin.footer-contact-info.index') }}" class="card-cta">{{ __('Configurar') }} <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Settings Profile Language Edit - Cambiar el Lenguaje de tu Perfil--}}
+                <div class="col-lg-6">
+                    <div class="card card-large-icons">
+                        <div class="card-icon bg-primary text-white">
+                            <a class="icon-link text-white" href="{{ route('profile.language.edit') }}">
+                                <i class="fas fa-language"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h4>{{ __('Lenguaje de Perfil') }}</h4>
+                            <p style="line-height: 1.2;">{{ __('Cambiar el idioma de tu perfil.') }}</p>
+                            <a href="{{ route('profile.language.edit') }}" class="card-cta">{{ __('Configurar') }} <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
                 {{-- Activities --}}
                 <div class="col-lg-6">
                     <div class="card card-large-icons">
@@ -62,7 +94,7 @@
                         </div>
                         <div class="card-body">
                             <h4>{{ __('Actividades') }}</h4>
-                            <p style="line-height: 1.2;">{{ __('Lista de actividades en el sistema, filtra descripción = null.') }}</p>
+                            <p style="line-height: 1.2;">{{ __('Lista de actividades en el sistema, solo con contenido.') }}</p>
                             <a href="{{ route('profile.actividades.index') }}" class="card-cta">{{ __('Lista de Actividades') }} <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>

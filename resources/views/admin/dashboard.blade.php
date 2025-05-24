@@ -105,20 +105,20 @@
             <div class="col-lg-6">
                 <div class="card card-large-icons">
                     <div class="card-icon bg-primary text-white">
-                        <a class="icon-link text-white" href="{{ route('admin.general-setting.index') }}">
+                        <a class="icon-link text-white" href="{{ route('admin.settings.index') }}">
                             <i class="fas fa-cog"></i>
                         </a>
                     </div>
                     <div class="card-body">
-                        <h4>{{ __('General') }}</h4>
-                        <p style="line-height: 1.2;">{{ __('Configuraciones generales como, logo, favicon, titulo del sitio, Descripción, etc...') }}</p>
-                        <a href="{{ route('admin.general-setting.index') }}" class="card-cta">{{ __('Cambiar Configuración') }} <i class="fas fa-chevron-right"></i></a>
+                        <h4>{{ __('Configurar') }}</h4>
+                        <p style="line-height: 1.2;">{{ __('Actualizar configuraciones generales') }}</p>
+                        <a href="{{ route('admin.settings.index') }}" class="card-cta">{{ __('Configuraciones') }} <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
 
             {{-- SEO Settings --}}
-            <div class="col-lg-6">
+            {{-- <div class="col-lg-6">
                 <div class="card card-large-icons">
                     <div class="card-icon bg-primary text-white">
                         <a class="icon-link text-white" href="{{ route('admin.seo-setting.index') }}">
@@ -131,7 +131,7 @@
                         <a href="{{ route('admin.seo-setting.index') }}" class="card-cta">{{ __('Cambiar Configuración') }} <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             {{-- Activities --}}
             <div class="col-lg-6">
@@ -143,7 +143,7 @@
                     </div>
                     <div class="card-body">
                         <h4>{{ __('Actividades') }}</h4>
-                        <p style="line-height: 1.2;">{{ __('Lista de actividades en el sistema, filtra descripción = null.') }}</p>
+                        <p style="line-height: 1.2;">{{ __('Lista de actividades en el sistema') }}</p>
                         <a href="{{ route('profile.actividades.index') }}" class="card-cta">{{ __('Lista de Actividades') }} <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
             
 
             {{-- All Activities --}}
-            <div class="col-lg-6">
+            {{-- <div class="col-lg-6">
                 <div class="card card-large-icons">
                     <div class="card-icon bg-primary text-white">
                         <a class="icon-link text-white" href="{{ route('profile.actividadesAll.index') }}">
@@ -164,7 +164,7 @@
                         <a href="{{ route('profile.actividadesAll.index') }}" class="card-cta" title="{{ __('Incluye todas las actividades con description null') }}">{{ __('Lista todas las Actividades') }} <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
 

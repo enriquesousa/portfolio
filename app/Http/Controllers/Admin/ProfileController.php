@@ -32,6 +32,13 @@ class ProfileController extends Controller
         ]);
     }
 
+    public function languageEdit(Request $request): View
+    {
+        return view('admin.profile.language', [
+            'user' => $request->user(),
+        ]);
+    }
+
     /**
      * Update the user's profile information.
      */
@@ -126,7 +133,7 @@ class ProfileController extends Controller
 
         $message = __('Language updated successfully');    
         flash()->success($message);
-        return redirect()->route('profile.edit');
+        return redirect()->back();
     }
 
     public function actividades(AdminLogTimesDataTable $dataTable)

@@ -296,8 +296,11 @@
     "Hecho por": "Made by",
     "Descripción Información": "Description Information",
     "Descripción Info": "Description Information",
+
     "Información de Contacto": "Contact Information",
     "Información de Contacto en pie de pagina": "Contact Information in Footer",
+    "Configurar Dirección, Teléfono, Correo, y Website": "Configure Address, Phone, Email, and Website",
+
     "Dirección": "Address",
     "Links Útiles": "Useful Links",
     "Todos los Links Útiles": "All Useful Links",
@@ -369,8 +372,20 @@
 
     "404 - Pagina No Encontrada": "404 - Page Not Found",
     "Es posible que la página que estás buscando haya sido eliminada, haya cambiado de nombre o no esté disponible temporalmente.": "The page you are looking for may have been removed, changed or is temporarily unavailable.",
-    "Ir a la página de inicio": "Go to the homepage"
+    "Ir a la página de inicio": "Go to the homepage",
 
+    "Página Anterior": "Previous Page",
+    "Página Siguiente": "Next Page",
+
+    "Cambia el lenguaje de tu perfil.": "Change the language of your profile.",
+    "Lenguaje de Perfil": "Profile Language",
+    "Cambiar el idioma de tu perfil.": "Change the language of your profile.",
+
+    "Actualizar configuraciones generales": "Update general settings",
+    "Lista de actividades en el sistema": "List of activities in the system",
+    "Lista de actividades en el sistema, solo con contenido.": "List of activities in the system, only with content."
+
+ 
     
 
 

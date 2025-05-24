@@ -4,7 +4,7 @@
 
         <div class="section-header">
             <div class="section-header-back">
-                <a href="{{ route('dashboard') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+                <a href="{{ redirect()->back()->getTargetUrl() }}" title="{{ __('Página Anterior') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             @php
                 $tituloPagina = __('Información pie de pagina');

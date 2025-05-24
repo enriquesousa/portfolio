@@ -59,6 +59,8 @@ Route::group(['middleware' => ['auth', 'localization'], ], function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::patch('/profile/avatar/update', [ProfileController::class, 'updateAvatar'])->name('profile.avatar.update');
+
+    Route::get('/profile/language/edit', [ProfileController::class, 'languageEdit'])->name('profile.language.edit');
     Route::patch('/profile/language/update', [ProfileController::class, 'updateLanguage'])->name('profile.language.update');
 
     Route::get('/profile/actividades', [ProfileController::class, 'actividades'])->name('profile.actividades.index');
