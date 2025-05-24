@@ -43,6 +43,14 @@
                                         <textarea name="content" class="summernote" style="height: 100px; width: 100%">{!! @$termsCondition->content !!}</textarea>
                                     </div>
                                 </div>
+
+                                {{-- Descripción Contenido en Inglés --}}
+                                <div class="form-group row mb-4">
+                                    <div class="col-sm-12">
+                                        <label for="content">{{ __('Contenido en Inglés') }}</label>
+                                        <textarea name="content_en" class="summernote" style="height: 100px; width: 100%">{!! @$termsCondition->content_en !!}</textarea>
+                                    </div>
+                                </div>
                                     
 
                                 {{-- Botón Actualizar --}}

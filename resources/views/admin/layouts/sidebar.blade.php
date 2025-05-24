@@ -254,7 +254,7 @@
             </li>
 
             {{-- Paginas --}}
-            <li class="nav-item dropdown {{ setSidebarActive(['admin.privacy-policy.*']) }}">
+            <li class="nav-item dropdown {{ setSidebarActive(['admin.privacy-policy.*', 'admin.terms-and-conditions.*']) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
                     <i class="fas fa-file-alt"></i>
                     <span>{{ __('Páginas') }}</span>

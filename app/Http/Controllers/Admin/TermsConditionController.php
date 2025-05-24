@@ -58,10 +58,12 @@ class TermsConditionController extends Controller
 
         $request->validate([
             'content' => 'required',
+            'content_en' => 'nullable',
         ]);
 
         $item = TermsCondition::firstOrNew();
         $item->content = $request->content;
+        $item->content_en = $request->content_en;
         $item->save();
 
         flash()->success(__('Actualizado correctamente!'));

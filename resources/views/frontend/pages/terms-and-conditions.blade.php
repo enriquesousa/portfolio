@@ -27,7 +27,11 @@
             <div class="col-sm-12">
 
                 <div class="description">
-                    {!! @$termsCondition->content !!}
+                    @if (app()->getLocale() == 'en')
+                        {!! @$termsCondition->content_en !!}
+                    @else
+                        {!! @$termsCondition->content !!}
+                    @endif
                 </div>
 
             </div>
