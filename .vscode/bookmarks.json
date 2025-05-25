@@ -84,52 +84,52 @@
 					"label": "fontawesime icons"
 				},
 				{
-					"line": 37,
+					"line": 35,
 					"column": 4,
 					"label": "bootstrap icons"
 				},
 				{
-					"line": 102,
+					"line": 108,
 					"column": 4,
 					"label": "inputmaskt format phone number telefono"
 				},
 				{
-					"line": 111,
+					"line": 117,
 					"column": 44,
 					"label": "summernote plugin para editar notas"
 				},
 				{
-					"line": 117,
+					"line": 123,
 					"column": 29,
 					"label": "image upload preview plugin"
 				},
 				{
-					"line": 161,
+					"line": 183,
 					"column": 42,
 					"label": "eliminar un registro clase delete-item"
 				},
 				{
-					"line": 168,
+					"line": 190,
 					"column": 20,
 					"label": "traduccion en sweet alert 2"
 				},
 				{
-					"line": 183,
+					"line": 205,
 					"column": 60,
 					"label": "csrf token mandar en ajax"
 				},
 				{
-					"line": 211,
+					"line": 233,
 					"column": 1,
 					"label": ""
 				},
 				{
-					"line": 256,
+					"line": 278,
 					"column": 69,
 					"label": "image preview assets"
 				},
 				{
-					"line": 263,
+					"line": 285,
 					"column": 79,
 					"label": "asignar el width del 100% en Image Preview"
 				}

@@ -28,8 +28,6 @@
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/daterangepicker.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/select2.css') }}">
 
-    {{-- Plugin Toastr CSS para JavaScript Para mostrar mensajes de error en los formularios de las vistas --}}
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     {{-- Plugin Notyf CSS para JavaScript lo usamos en Ajax --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
@@ -54,6 +52,12 @@
 
     <!-- Mi Custom CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+
+    {{-- toastr.min.css lo movi para estar despues de mi custom css porque me estaba afectando al icono del toastr  --}}
+    {{-- Plugin Toastr CSS para JavaScript Para mostrar mensajes de error en los formularios de las vistas --}}
+    {{-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/toastr.min.css') }}">
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> --}}
 
 </head>
 
@@ -81,7 +85,9 @@
     </div>
 
     <!-- General JS Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
@@ -139,19 +145,35 @@
     <script src="{{ asset('assets/js/page/forms-advanced-forms.js') }}"></script>
 
     <!-- Para mostrar mensajes de error en los formularios de las vistas -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> --}}
+    {{-- <script src="{{ asset('assets/js/toastr.min.js') }}"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
     <!-- Sweet Alert 2 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>    
 
+
     <!-- Mostrar validation errors dynamically with toastr js -->
     <script>
+        toastr.options.progressBar = true;
         @if (!empty($errors->all()))
-            @foreach ($errors->all() as $error)
-                toastr.error("{{$error}}",)
-            @endforeach
+           @foreach ($errors->all() as $error)
+               toastr.error("{{$error}}", "Error");
+           @endforeach
         @endif
     </script>
+
+    <!-- toastr, para mostrar alertas en forma dinámica -->
+    {{-- <script>
+        toastr.options.progressBar = true;
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                // toastr.error("{{ $error }}");
+                toastr.error("{{ $error }}", "{{ __('Error') }}");
+            @endforeach
+        @endif
+    </script> --}}
+
 
     <!-- Para Botón Delete Sweet Alert 2 -->
     <script>
