@@ -28,11 +28,18 @@
                         <div class="card-header">
                             <h4>{{ $subTituloPagina }}</h4>
                             <div class="card-header-action">
+                                <!-- Botón Asignar Zona Horaria -->
+                                <a href="{{ route('profile.timezone.select') }}" class="btn btn-success">
+                                    <i class="fas fa-globe"></i> {{ __('Asignar Zona Horaria') }}
+                                </a>
                                 <!-- Botón Agregar -->
                                 <a href="{{ route('admin.time-zone.create') }}" class="btn btn-primary">
                                     <i class="fas fa-plus"></i> {{ __('Agregar') }}
                                 </a>
                             </div>
+                        </div>
+                        <div class="card-subheader">
+                            <p>{{ __('Aquí puedes ver todas las zonas horarias disponibles. Para agregar una nueva zona horaria, haz clic en el botón Agregar. Para asignar una zona horaria al sitio, haz clic en el botón Asignar Zona Horaria.') }}</p>
                         </div>
 
                         <div class="card-body">

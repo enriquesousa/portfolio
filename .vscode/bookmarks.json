@@ -334,7 +334,7 @@
 			"path": "app/Http/Controllers/Admin/ProfileController.php",
 			"bookmarks": [
 				{
-					"line": 125,
+					"line": 127,
 					"column": 39,
 					"label": "get user "
 				}

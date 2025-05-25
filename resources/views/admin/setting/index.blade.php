@@ -84,6 +84,22 @@
                     </div>
                 </div>
 
+                {{-- Cambiar Zona Horaria--}}
+                <div class="col-lg-6">
+                    <div class="card card-large-icons">
+                        <div class="card-icon bg-primary text-white">
+                            <a class="icon-link text-white" href="{{ route('profile.timezone.select') }}">
+                                <i class="fas fa-clock"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h4>{{ __('Zona Horaria') }}</h4>
+                            <p style="line-height: 1.2;">{{ __('Cambiar zona horaria del sitio.') }}</p>
+                            <a href="{{ route('profile.timezone.select') }}" class="card-cta">{{ __('Configurar') }} <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
                 {{-- Activities --}}
                 <div class="col-lg-6">
                     <div class="card card-large-icons">

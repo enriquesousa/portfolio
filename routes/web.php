@@ -64,6 +64,9 @@ Route::group(['middleware' => ['auth', 'localization', 'site_time_zone'], ], fun
     Route::get('/profile/language/edit', [ProfileController::class, 'languageEdit'])->name('profile.language.edit');
     Route::patch('/profile/language/update', [ProfileController::class, 'updateLanguage'])->name('profile.language.update');
 
+    Route::get('/profile/timezone/select', [ProfileController::class, 'timezoneSelect'])->name('profile.timezone.select');
+    Route::patch('/profile/timezone/update', [ProfileController::class, 'timezoneUpdate'])->name('profile.timezone.update');
+
     Route::get('/profile/actividades', [ProfileController::class, 'actividades'])->name('profile.actividades.index');
     Route::get('/profile/actividadesAll', [ProfileController::class, 'actividadesAll'])->name('profile.actividadesAll.index');
 

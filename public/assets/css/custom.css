@@ -35,3 +35,14 @@
     margin-top: 15px;
 }
 
+/* Estilo para card-subtitulo */
+.card-subheader p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #bfa05c;
+    margin-bottom: 5px;
+    line-height: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

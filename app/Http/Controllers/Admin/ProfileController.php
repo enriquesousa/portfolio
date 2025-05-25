@@ -6,7 +6,9 @@ use App\DataTables\AdminLogTimesDataTable;
 use App\DataTables\AdminLogTimesDataTableAll;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\GeneralSetting;
 use App\Models\LogTime;
+use App\Models\TimeZone;
 use App\Models\User;
 use App\Traits\FileUpload;
 use Illuminate\Contracts\View\View;
@@ -132,6 +134,29 @@ class ProfileController extends Controller
         session(['lenguaje' => $locale]); // set session variable
 
         $message = __('Language updated successfully');    
+        flash()->success($message);
+        return redirect()->back();
+    }
+
+    public function timezoneSelect(): View
+    {
+        $timezones = TimeZone::all();
+        return view('admin.timezone.set_time_zone', compact('timezones'));
+    }
+    
+    public function timezoneUpdate(Request $request): RedirectResponse
+    {
+        // dd($request->all());
+
+        $request->validate([
+            'time_zone' => ['required', 'string'],
+        ]);
+
+        $generalSetting = GeneralSetting::first();
+        $generalSetting->time_zone = $request->time_zone;
+        $generalSetting->save();
+
+        $message = __('Zona horaria actualizada correctamente!');    
         flash()->success($message);
         return redirect()->back();
     }
