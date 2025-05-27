@@ -89,6 +89,11 @@
 					"label": "bootstrap icons"
 				},
 				{
+					"line": 55,
+					"column": 15,
+					"label": "el css para el toastr tienw que estar despues de mi custom css"
+				},
+				{
 					"line": 108,
 					"column": 4,
 					"label": "inputmaskt format phone number telefono"

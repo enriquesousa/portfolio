@@ -81,6 +81,8 @@ Route::group(['middleware' => ['auth', 'localization', 'site_time_zone'], ], fun
 
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    Route::get('/admin/info/version', [ProfileController::class, 'infoVersion'])->name('profile.admin.info.version');
+
 });
 
 require __DIR__.'/auth.php';
@@ -210,5 +212,6 @@ Route::group(['middleware' => ['auth', 'localization', 'site_time_zone'], 'prefi
 
     // Time Zone Routes
     Route::resource('time-zone', TimeZoneController::class);
+    
 
 });

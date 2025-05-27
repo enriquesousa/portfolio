@@ -245,4 +245,9 @@ class ProfileController extends Controller
         return redirect()->route('profile.actividades.index');
     }
     
+    public function infoVersion(): View
+    {
+        return view('admin.info.index');
+    }
+
 }

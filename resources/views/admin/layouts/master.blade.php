@@ -146,8 +146,8 @@
 
     <!-- Para mostrar mensajes de error en los formularios de las vistas -->
     {{-- <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> --}}
-    {{-- <script src="{{ asset('assets/js/toastr.min.js') }}"></script> --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="{{ asset('assets/js/toastr.min.js') }}"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> --}}
 
     <!-- Sweet Alert 2 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>    

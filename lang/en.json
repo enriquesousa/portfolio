@@ -399,7 +399,12 @@
     "Actualmente la zona horaria es:": "Currently the timezone is:",
     "Zona horaria actualizada correctamente!": "Timezone updated successfully!",
     "Asignar Zona Horaria": "Assign Timezone",
-    "Aquí puedes ver todas las zonas horarias disponibles. Para agregar una nueva zona horaria, haz clic en el botón Agregar. Para asignar una zona horaria al sitio, haz clic en el botón Asignar Zona Horaria.": "Here you can see all available time zones. To add a new timezone, click the Add button. To assign a timezone to the site, click the Assign Timezone button."
+    "Aquí puedes ver todas las zonas horarias disponibles. Para agregar una nueva zona horaria, haz clic en el botón Agregar. Para asignar una zona horaria al sitio, haz clic en el botón Asignar Zona Horaria.": "Here you can see all available time zones. To add a new timezone, click the Add button. To assign a timezone to the site, click the Assign Timezone button.",
+
+    "Información": "Information",
+    "Version de PHP, Versión de MySQL y Versión de Laravel etc...": "PHP version, MySQL version and Laravel version etc...",
+    "Información del sistema (Versión, Dependencias, etc.)": "System information (Version, Dependencies, etc.)",
+    "Agregar Información de la Aplicación": "Add Application Information"
 
  
 

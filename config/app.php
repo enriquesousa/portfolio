@@ -19,6 +19,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Version
+    |--------------------------------------------------------------------------
+    |
+    | This value is the version of your application. This value is used when
+    | the framework needs to place the application's version in a notification
+    | or any other location as required by the application or its packages.
+    */
+
+    'version' => env('APP_VERSION', '1.0.0'),
+    'latest_changes' => env('LATEST_CHANGES', '1.0.0'),
+    'relevant_packages' => env('RELEVANT_PACKAGES', '1.0.0'),
+    
+    /*
+    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |

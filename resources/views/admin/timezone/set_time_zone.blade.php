@@ -39,7 +39,10 @@
                                 $generalSetting = \App\Models\GeneralSetting::first();
                                 $zonaHoraria = $generalSetting->time_zone;
                             @endphp
-                            <p class="card-subtitle">{{ __('Cambiar zona horaria del sitio.') }}  {{ __('Actualmente la zona horaria es: ') }} <span class="fw-bold text-warning">{{ $zonaHoraria }}</span></p>
+                            <p class="card-subtitle">
+                                {{ __('Cambiar zona horaria del sitio.') }}  {{ __('Actualmente la zona horaria es: ') }} <span class="fw-bold text-success">{{ $zonaHoraria }}</span> {{ __('Para agregar una nueva zona horaria, haz clic en el siguiente enlace: ') }}
+                                <a href="{{ route('admin.time-zone.index') }}">{{ __('Agregar Zona Horaria') }}</a>
+                            </p>
 
                             <form action="{{ route('profile.timezone.update') }}" method="POST">
                                 @csrf

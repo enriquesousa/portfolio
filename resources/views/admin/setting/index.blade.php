@@ -132,6 +132,25 @@
                     </div>
                 </div>
 
+                {{-- Information - PHP Version --}}
+                <div class="col-lg-6">
+                    <div class="card card-large-icons">
+                        <div class="card-icon bg-primary text-white">
+                            <a class="icon-link text-white" href="{{ route('profile.admin.info.version') }}">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h4>{{ __('Información') }}</h4>
+                            <p style="line-height: 1.2;">{{ __('Version de PHP, Versión de MySQL y Versión de Laravel etc...') }}</p>
+                            <a href="{{ route('profile.admin.info.version') }}" class="card-cta">{{ __('Información') }} <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
                 {{-- Email Settings --}}
                 {{-- <div class="col-lg-6">
                     <div class="card card-large-icons">
@@ -141,20 +160,6 @@
                         <div class="card-body">
                             <h4>Email</h4>
                             <p>Email SMTP settings, notifications and others related to email.</p>
-                            <a href="features-setting-detail.html" class="card-cta">Change Setting <i class="fas fa-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div> --}}
-
-                {{-- PHP Version and timezone --}}
-                {{-- <div class="col-lg-6">
-                    <div class="card card-large-icons">
-                        <div class="card-icon bg-primary text-white">
-                            <i class="fas fa-power-off"></i>
-                        </div>
-                        <div class="card-body">
-                            <h4>System</h4>
-                            <p>PHP version settings, time zones and other environments.</p>
                             <a href="features-setting-detail.html" class="card-cta">Change Setting <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
