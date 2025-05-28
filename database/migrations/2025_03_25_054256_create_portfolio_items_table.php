@@ -24,6 +24,7 @@ return new class extends Migration
             $table->text('description_en')->nullable();
             $table->string('client')->nullable();
             $table->text('website')->nullable();
+            $table->text('local_website')->nullable();
 
             $table->timestamps();
         });

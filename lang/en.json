@@ -110,6 +110,7 @@
     "Titulo": "Title",
     "Cliente": "Client",
     "Sitio Web": "Website",
+    "Sitio Web Local": "Local Website",
     "Seleccionar": "Select",
     "Sección actualizada correctamente.": "Section updated successfully.",
     "ID, Título, o Categoría": "ID, Title, or Category",
@@ -370,6 +371,7 @@
     "Contenido": "Content",
     "Liga": "Link",
     "Liga a la documentación del sistema": "Link to the system documentation",
+    "Liga a Web Dev Local": "Link to Web Dev Local",
 
     "404 - Pagina No Encontrada": "404 - Page Not Found",
     "Es posible que la página que estás buscando haya sido eliminada, haya cambiado de nombre o no esté disponible temporalmente.": "The page you are looking for may have been removed, changed or is temporarily unavailable.",

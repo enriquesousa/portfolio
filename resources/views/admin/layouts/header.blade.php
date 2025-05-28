@@ -67,6 +67,11 @@
                     <i class="bi bi-gear"></i>&nbsp;{{ __('Configuraciones') }}
                 </a>
 
+                {{-- Version --}}
+                <a href="{{ route('profile.admin.info.version') }}" class="dropdown-item has-icon">
+                    <i class="bi bi-info-circle"></i>&nbsp;{{ __('Versión') }}
+                </a>
+
                 {{-- Linea divisoria --}}
                 <div class="dropdown-divider"></div>
 

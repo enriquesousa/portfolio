@@ -48,6 +48,7 @@
                                 <i class="fas fa-check-circle"></i> Laravel Breeze v2.3 <br>
                                 <i class="fas fa-check-circle"></i> Bootstrap v4.3.1 <br>
                                 <i class="fas fa-check-circle"></i> CDN CLODUFLARE JQuery v3.6.0 <br>
+                                <i class="fas fa-check-circle"></i> Bootstrap Icons v1.11.3 <br>
                             </p>
 
                             <h2 class="section-title">{{ __('Frontend') }}</h2>

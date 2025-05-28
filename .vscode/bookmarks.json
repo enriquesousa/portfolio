@@ -159,7 +159,7 @@
 					"label": "perfil profile dropdown menu"
 				},
 				{
-					"line": 77,
+					"line": 82,
 					"column": 16,
 					"label": "Cerrar sesion logout"
 				}
@@ -479,17 +479,17 @@
 					"label": "select seleceted en edit"
 				},
 				{
-					"line": 148,
+					"line": 155,
 					"column": 16,
 					"label": "image preview en edit"
 				},
 				{
-					"line": 153,
+					"line": 160,
 					"column": 12,
 					"label": "image preview modo kazy"
 				},
 				{
-					"line": 163,
+					"line": 170,
 					"column": 12,
 					"label": "image upload con metodo kazy"
 				}

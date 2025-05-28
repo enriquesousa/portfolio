@@ -15,7 +15,8 @@ class PortfolioItem extends Model
         'description',
         'description_en',
         'client',
-        'website'
+        'website',
+        'local_website'
     ];
 
     // Relación con la tabla categories

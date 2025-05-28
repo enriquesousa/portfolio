@@ -42,7 +42,7 @@
                     </div>
                     <div class="single-info">
                         <h4 class="title">{{ __('Sitio Web') }}</h4>
-                        <p><a href="{{ $portfolio->website }}" target="_blank" title="{{ __('Liga a la documentación del sistema') }}">{{ __('Liga') }}</a></p>
+                        <p><a href="{{ $portfolio->website }}" target="_blank" title="{{ __('Liga a la documentación del sistema') }}">{{ __('Liga') }}</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{ $portfolio->local_website }}" target="_blank" title="{{ __('Liga a Web Dev Local') }}">{{ __('Local Web') }}</a></p>
                     </div>
                     <div class="single-info">
                         <h4 class="title">{{ __('Categoría') }}</h4>

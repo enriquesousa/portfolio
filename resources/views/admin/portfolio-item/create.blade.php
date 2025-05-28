@@ -88,6 +88,14 @@
                                     </div>
                                 </div>
 
+                                {{-- local_website --}}
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ __('Sitio Web Local') }}</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <input type="text" name="local_website" class="form-control" value="{{ old('local_website') }}">
+                                    </div>
+                                </div>
+
                                 {{-- Botón Actualizar --}}
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>

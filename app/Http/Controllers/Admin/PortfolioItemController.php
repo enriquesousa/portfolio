@@ -46,7 +46,8 @@ class PortfolioItemController extends Controller
             'description' => ['required'],
             'category_id' => ['required', 'numeric'],
             'client' => ['nullable','max:200'],
-            'website' => ['url']
+            'website' => ['url'],
+            'local_website' => ['nullable', 'url']
         ]); 
 
         // $imagePath = handleUpload('image'); // otra manera de hacerlo
@@ -60,6 +61,7 @@ class PortfolioItemController extends Controller
         $portfolioItem->category_id = (int)$request->category_id;
         $portfolioItem->client = $request->client;
         $portfolioItem->website = $request->website;
+        $portfolioItem->local_website = $request->local_website;
         $portfolioItem->save();
 
         flash()->success( __('Sección actualizada correctamente.') );
@@ -103,7 +105,8 @@ class PortfolioItemController extends Controller
             'description_en' => ['nullable'],
             'category_id' => ['required', 'numeric'],
             'client' => ['nullable','max:200'],
-            'website' => ['url']
+            'website' => ['url'],
+            'local_website' => ['nullable', 'url']
         ]);
 
         if ($request->hasFile('image')) {
@@ -140,7 +143,8 @@ class PortfolioItemController extends Controller
             'description_en' => $request->description_en,
             'category_id' => (int)$request->category_id,
             'client' => $request->client,
-            'website' => $request->website
+            'website' => $request->website,
+            'local_website' => $request->local_website
         ]);
 
         flash()->success( __('Actualizado correctamente!') );
