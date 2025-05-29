@@ -126,6 +126,7 @@ class HomeController extends Controller
 
     public function privacyPolicy(){
         $privacyPolicy = PrivacyPolicy::first();
+        // dd($privacyPolicy);
         return view('frontend.pages.privacy-policy', compact('privacyPolicy'));
     }
 

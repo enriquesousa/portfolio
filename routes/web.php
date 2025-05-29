@@ -99,8 +99,8 @@ Route::group(['middleware' => ['localization'], ], function () {
     Route::get('blogs', [HomeController::class, 'blogs'])->name('show.blogs');
     Route::post('contact', [HomeController::class, 'contact'])->name('contact.store');
 
-    Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy-policy.show');
-    Route::get('terms-and-conditions', [HomeController::class, 'termsAndConditions'])->name('terms-and-conditions.show');
+    Route::get('privacy-policy-user', [HomeController::class, 'privacyPolicy'])->name('privacy-policy.show');
+    Route::get('terms-and-conditions-user', [HomeController::class, 'termsAndConditions'])->name('terms-and-conditions.show');
 
     Route::get('/resume/download', [AboutController::class, 'downloadResume'])->name('resume.download');
 
