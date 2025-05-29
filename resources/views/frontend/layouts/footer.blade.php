@@ -21,7 +21,9 @@
                     <p>{!! __($footerInfo->info) !!}</p>
                     <ul class="d-flex flex-wrap">
                         @foreach ($footerIcons as $item)
-                            <li><a href="{{ $item->url }}"><i class="{{ $item->icon }}"></i></a></li>
+                            @if($item->status == 1)
+                                <li><a href="{{ $item->url }}" target="_blank"><i class="{{ $item->icon }}"></i></a></li>
+                            @endif
                         @endforeach
                     </ul>
                 </div>
