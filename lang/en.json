@@ -406,7 +406,9 @@
     "Información": "Information",
     "Version de PHP, Versión de MySQL y Versión de Laravel etc...": "PHP version, MySQL version and Laravel version etc...",
     "Información del sistema (Versión, Dependencias, etc.)": "System information (Version, Dependencies, etc.)",
-    "Agregar Información de la Aplicación": "Add Application Information"
+    "Agregar Información de la Aplicación": "Add Application Information",
+
+    "Correo de Laravel": "Laravel Email"
 
  
 

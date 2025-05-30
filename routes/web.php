@@ -97,6 +97,8 @@ Route::group(['middleware' => ['localization'], ], function () {
     Route::get('blog-details/{id}', [HomeController::class, 'showBlog'])->name('show.blog');
     Route::get('blog-details-show-image/{image}', [HomeController::class, 'showBlogImage'])->name('show.blog.image');
     Route::get('blogs', [HomeController::class, 'blogs'])->name('show.blogs');
+
+    // Para enviar correo electrónico de contacto
     Route::post('contact', [HomeController::class, 'contact'])->name('contact.store');
 
     Route::get('privacy-policy-user', [HomeController::class, 'privacyPolicy'])->name('privacy-policy.show');

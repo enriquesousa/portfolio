@@ -13,14 +13,26 @@ class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $mailData;
+    public $name;
+    public $email;
+    public $mailSubject; //no podemos usar $subject porque es una palabra reservada
+    public $content;
+
+    // public $mailData;
+
 
     /**
      * Create a new message instance.
      */
-    public function __construct($mailData)
+    public function __construct($name, $email, $mailSubject, $content)
     {
-        $this->mailData = $mailData;
+        //dd($name, $email, $mailSubject, $message); // ver los resultados en la consola network
+
+        // $this->mailData = $mailData;
+        $this->name = $name;
+        $this->email = $email;
+        $this->mailSubject = $mailSubject;
+        $this->content = $content;
     }
 
     /**
@@ -29,9 +41,12 @@ class ContactMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: $this->mailData['subject'],
+            // subject: $this->mailData['subject'],
+            // to: env('MAIL_FROM_ADDRESS'),
+            // from: $this->mailData['email'],
+            subject: $this->mailSubject,
             to: env('MAIL_FROM_ADDRESS'),
-            from: $this->mailData['email'],
+            from: $this->email
         );
     }
 

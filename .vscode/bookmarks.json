@@ -642,6 +642,11 @@
 					"line": 43,
 					"column": 8,
 					"label": "tomar los ultimos 5 blogs"
+				},
+				{
+					"line": 126,
+					"column": 53,
+					"label": "enviar correo de contacto"
 				}
 			]
 		},

@@ -119,7 +119,12 @@ class HomeController extends Controller
             'message' => ['required', 'string', 'max:2000'],
         ]);
         
-        Mail::send(new ContactMail($request->all()));
+        Mail::send(new ContactMail(
+            $request->name,
+            $request->email,
+            $request->subject,
+            $request->message
+        ));
      
         return response(['status' => 'success', 'message' => __('Mensaje enviado correctamente!')]);
     }
