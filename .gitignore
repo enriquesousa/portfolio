@@ -26,3 +26,4 @@ resources/views/Templates/*
 resources/views/profile/*
 resources/views/layouts/*
 
+.env_server
