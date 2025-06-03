@@ -408,7 +408,16 @@
     "Información del sistema (Versión, Dependencias, etc.)": "System information (Version, Dependencies, etc.)",
     "Agregar Información de la Aplicación": "Add Application Information",
 
-    "Correo de Laravel": "Laravel Email"
+    "Correo de Laravel": "Laravel Email",
+
+    "Abrir página de Documentación": "Open Documentation Page",
+    "Ir a liga de Telegram": "Go to Telegram Link",
+    "Ir a Página de Linkedin": "Go to Linkedin Page",
+    "Ir a página principal de TJWeb": "Go to the main page of TJWeb",
+    "Ir a liga de Discord": "Go to Discord Link",
+    "Ir a liga de X": "Go to X Link",
+    "Ir a página de FaceBook": "Go to Facebook Page",
+    "Ir a página de GitHub": "Go to GitHub Page"
 
  
 

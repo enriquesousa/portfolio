@@ -16,6 +16,7 @@ return new class extends Migration
 
             $table->string('icon');
             $table->text('url');
+            $table->text('tooltip')->nullable();
             $table->string('name');
             $table->boolean('status')->default(1);
 

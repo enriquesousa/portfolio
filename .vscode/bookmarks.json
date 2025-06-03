@@ -792,6 +792,11 @@
 					"line": 18,
 					"column": 24,
 					"label": "logo footer"
+				},
+				{
+					"line": 24,
+					"column": 111,
+					"label": "traducir en title title=\"{{ __($item->tooltip) }}\""
 				}
 			]
 		},

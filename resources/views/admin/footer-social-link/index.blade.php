@@ -38,6 +38,7 @@
 
                         <div class="card-body">
                             
+                            {{-- Nombre de la dataTable: FooterSocialLinkDataTable --}}
                             {{ $dataTable->table() }}
 
                         </div>

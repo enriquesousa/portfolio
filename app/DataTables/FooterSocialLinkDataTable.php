@@ -33,6 +33,16 @@ class FooterSocialLinkDataTable extends DataTable
                 return '<i style="font-size: 40px" class="'.$query->icon.'"></i>';
             })
 
+            // Url
+            ->addColumn('url', function($query){
+                return '<a href="'.$query->url.'" target="_blank">'.$query->url.'</a>';
+            })
+
+            // Tooltip
+            ->addColumn('tooltip', function($query){
+                return $query->tooltip;
+            })
+
             // Name
             ->addColumn('name', function($query){
                 return $query->name;
@@ -54,7 +64,7 @@ class FooterSocialLinkDataTable extends DataTable
                 return $edit . $delete;
             })
 
-            ->rawColumns(['id', 'icon', 'status', 'name', 'action'])
+            ->rawColumns(['id', 'icon','url', 'tooltip', 'status', 'name', 'action'])
             ->setRowId('id');
     }
 
@@ -124,6 +134,7 @@ class FooterSocialLinkDataTable extends DataTable
             Column::make('icon')->title(__('Icon'))->addClass('text-center'),
             Column::make('name')->title(__('Nombre')),
             Column::make('url')->title(__('Url')),
+            Column::make('tooltip')->title(__('Tooltip')),
             Column::make('status')->title(__('Estado'))->addClass('text-center'),
 
             Column::computed('action')

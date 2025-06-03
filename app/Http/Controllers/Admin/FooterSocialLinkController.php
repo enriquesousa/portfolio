@@ -36,6 +36,7 @@ class FooterSocialLinkController extends Controller
         $request->validate([
             'icon' => 'required',
             'url' => ['required', 'url'],
+            'tooltip' => ['nullable', 'string', 'max:255'],
             'name' => ['required', 'string', 'max:100'],
             'status' => ['required', 'boolean'],
         ]);
@@ -43,6 +44,7 @@ class FooterSocialLinkController extends Controller
         $footerSocialLink = new FooterSocialLink();
         $footerSocialLink->icon = $request->icon;
         $footerSocialLink->url = $request->url;
+        $footerSocialLink->tooltip = $request->tooltip;
         $footerSocialLink->name = $request->name;
         $footerSocialLink->status = $request->status;
         $footerSocialLink->save();
@@ -78,6 +80,7 @@ class FooterSocialLinkController extends Controller
         $request->validate([
             'icon' => 'required',
             'url' => ['required', 'url'],
+            'tooltip' => ['nullable', 'string', 'max:255'],
             'name' => ['required', 'string', 'max:100'],
             'status' => ['required', 'boolean'],
         ]);
@@ -85,6 +88,7 @@ class FooterSocialLinkController extends Controller
         $footerSocialLink = FooterSocialLink::findOrFail($id);
         $footerSocialLink->icon = $request->icon;
         $footerSocialLink->url = $request->url;
+        $footerSocialLink->tooltip = $request->tooltip;
         $footerSocialLink->name = $request->name;
         $footerSocialLink->status = $request->status;
         $footerSocialLink->save();
