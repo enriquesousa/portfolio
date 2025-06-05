@@ -55,7 +55,7 @@
 
                             <li><a href="#services-page">{{ __('Servicios') }}</a></li><br>
 
-                            <li><a href="#about-page">{{ __('Nosotros') }}</a></li><br>
+                            <li><a href="#about-page">{{ __('Acerca de mi') }}</a></li><br>
 
                             <li><a href="#portfolio-page">{{ __('Portafolio') }}</a></li><br>
 
