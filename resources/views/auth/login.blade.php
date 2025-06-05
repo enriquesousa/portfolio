@@ -78,6 +78,8 @@
 
                                         <input id="password" type="password" class="form-control" name="password"
                                             tabindex="2" required>
+                                        <input type='checkbox' id='check' />
+                                        <label for='check'>Mostrar contraseña</label>
                                         @if( $errors->has('password'))
                                             <code>{{ $errors->first('password') }}</code>
                                         @endif
@@ -161,3 +163,17 @@
 </body>
 
 </html>
+
+<script>
+    // Mostrar/ocultar contraseña
+    const check = document.getElementById('check');
+    const password = document.getElementById('password');
+
+    check.addEventListener('change', function() {
+        if (this.checked) {
+            password.setAttribute('type', 'text');
+        } else {
+            password.setAttribute('type', 'password');
+        }
+    });
+</script>

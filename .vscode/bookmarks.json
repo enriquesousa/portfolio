@@ -874,6 +874,21 @@
 					"label": "traducir pagina de error"
 				}
 			]
+		},
+		{
+			"path": "resources/views/auth/login.blade.php",
+			"bookmarks": [
+				{
+					"line": 80,
+					"column": 76,
+					"label": "mostrar contraseña password"
+				},
+				{
+					"line": 167,
+					"column": 34,
+					"label": "Mostrar/ocultar contraseña JS"
+				}
+			]
 		}
 	]
 }
