@@ -636,8 +636,10 @@ tr:first-child > td > .fc-day-grid-event {
 
 /* 1.14 Image Preview */
 .image-preview, #callback-preview {
-  width: 250px;
-  height: 250px;
+  /* width: 250px;
+  height: 250px; */
+  width: 540px;
+  height: 330px;
   border: 2px dashed #ddd;
   border-radius: 3px;
   position: relative;

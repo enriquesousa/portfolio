@@ -551,16 +551,6 @@
 			]
 		},
 		{
-			"path": "public/assets/css/custom.css",
-			"bookmarks": [
-				{
-					"line": 11,
-					"column": 0,
-					"label": "image upload con metodo kazy css"
-				}
-			]
-		},
-		{
 			"path": "resources/views/frontend/layouts/sections/skills.blade.php",
 			"bookmarks": [
 				{

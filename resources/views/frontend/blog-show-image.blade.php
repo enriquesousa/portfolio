@@ -35,7 +35,7 @@
                 <!-- Contenido del blog -->
                 <div class="description">
                     <!-- Show image -->
-                    <img class="imagen-fix" src="{{ asset('storage/blog/'.$blogImage) }}" alt="blogImage">
+                    <img class="imagen-fix" src="{{ asset('images/blog/'.$blogImage) }}" alt="blogImage">
                 </div>
 
             </div>

@@ -92,23 +92,31 @@
                                 {{-- Imágenes foto1 y foto2 para desplegar al final del blog --}}
                                 <div class="form-group row mb-4 fotos">
 
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
-                                    <p class="col-sm-12 col-md-7">{{ __('Imágenes colocar al final del blog') }}, {{ __('Tamaño recomendado: ancho de 800px, el tamaño de la imagen no debe superar los 100KB') }}</p>
-                                    
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: ancho de 800px, el tamaño de la imagen no debe superar los 100KB">{{ __('Fotos') }}</label>
 
-                                    <div class="col-sm-12 col-md-3 foto">
+                                    {{-- <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label> --}}
+
+                                    <p class="col-sm-12 col-md-7">{{ __('Imágenes colocar al final del blog') }}, {{ __('Tamaño recomendado: ancho de 800px, el tamaño de la imagen no debe superar los 100KB') }}</p>
+                                    
+
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: ancho de 800px, el tamaño de la imagen no debe superar los 100KB">{{ __('Foto1') }}</label>
+                                    {{-- foto1 --}}
+                                    <div class="col-sm-12 col-md-7 foto">
                                         <label for="image-upload-foto1" class="form-label" title="Subir imagen" style="cursor: pointer">
                                             <img for="image-upload-foto1" id="showImage-foto1" src="{{ !empty($blog->foto1) ? url($blog->foto1) : url('images/no_image.jpg') }}" alt="foto1">
                                         </label>                                        
                                         <input type="file" id="image-upload-foto1" name="foto1" hidden=""> 
                                     </div>
 
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" title="Tamaño recomendado: ancho de 800px, el tamaño de la imagen no debe superar los 100KB">{{ __('Foto2') }}</label>
+                                    {{-- foto2 --}}
                                     <div class="col-sm-12 col-md-3 foto">
+                                        
                                         <label for="image-upload-foto2" class="form-label" title="Subir imagen" style="cursor: pointer">
                                             <img for="image-upload-foto2" id="showImage-foto2" src="{{ !empty($blog->foto2) ? url($blog->foto2) : url('images/no_image.jpg') }}" alt="foto2">
                                         </label>                                        
                                         <input type="file" id="image-upload-foto2" name="foto2" hidden=""> 
+
                                     </div>
 
                                 </div>
@@ -141,9 +149,12 @@
             // Mi JS para el manejo de la imagen en la forma
             $('#image-preview').css({
                 'background-image': 'url("{{ asset($blog->image) }}")',
-                'background-size': 'cover',
+                // 'background-size': 'cover',
+                'background-size': 'contain',
+                'background-repeat': 'no-repeat',
                 'background-position': 'center center'
             })
+            
 
             // Mi JS para el manejo de la imagen en la forma (Modo Directo Kazy)
             $('#image-upload-foto1').change(function(e) {
