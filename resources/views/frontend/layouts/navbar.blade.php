@@ -23,6 +23,13 @@
                     <a class="nav-link active" aria-current="page" href="{{ Route::currentRouteName() == 'home' ? '#home-page' : url('/') }}" title="{{ __('Home') }}" style="font-size: 25px;"><iconify-icon icon="fluent-color:home-16"></iconify-icon></a>
                 </li>
 
+                {{-- if user is login display dashboard link--}}
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ route('dashboard') }}" title="{{ __('Panel') }}" style="font-size: 22px; color: #e4805c;"><iconify-icon icon="fa-solid:user-cog"></iconify-icon></a>
+                    </li>
+                @endauth
+
                 @if(Route::currentRouteName() == 'home')
 
                     {{-- Idioma --}}

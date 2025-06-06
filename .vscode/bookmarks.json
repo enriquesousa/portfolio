@@ -324,7 +324,7 @@
 					"label": "logo navbar"
 				},
 				{
-					"line": 73,
+					"line": 80,
 					"column": 47,
 					"label": "check si admin esta login"
 				}
