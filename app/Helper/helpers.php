@@ -46,6 +46,7 @@ if (!function_exists('grabarLoginTime')) {
 
         LogTime::create([
             'user_id' => $user->id,
+            // 'description' => 'Inicio de sesión',
             'login_time' => now()
         ]);
 
@@ -76,7 +77,17 @@ if (!function_exists('grabarLogoutTime')) {
             ]);
         }else {
             $logTime->logout_time = now();
+
+            if(empty($description)) {
+                $description = 'Cierre de sesión';
+            }elseif ($description == 'No registrar actividad') {
+                $description = '';
+            }
+            else {
+                $description = $description;
+            }
             $logTime->description = $description;
+
             $logTime->save();    
         }
 

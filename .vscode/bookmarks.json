@@ -239,17 +239,12 @@
 			"path": "app/Helper/helpers.php",
 			"bookmarks": [
 				{
-					"line": 43,
-					"column": 8,
-					"label": "encontrar al user que esta login"
-				},
-				{
-					"line": 138,
+					"line": 149,
 					"column": 64,
 					"label": "array de colores"
 				},
 				{
-					"line": 173,
+					"line": 184,
 					"column": 29,
 					"label": "Convertir markdown en html"
 				}

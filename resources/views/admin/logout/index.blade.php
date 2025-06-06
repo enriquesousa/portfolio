@@ -59,8 +59,17 @@
                                 </div>
 
                                 <div class="col-lg d-none d-lg-block">
-                                    <img src="{{ asset('images/computer-fix2.png') }}" height="300"
-                                        class="d-block mx-auto" alt="">
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="description" value="{{ __('No registrar actividad') }}">
+
+                                        {{-- Image --}}
+                                        <img src="{{ asset('images/computer-fix2.png') }}" height="300" class="d-block mx-auto" alt="">
+
+                                        <div class="form-footer text-center mt-3">
+                                            <button type="submit" class="btn btn-secondary">{{ __('Salir Sin Registrar actividad') }}</button>
+                                        </div>
+                                    </form>
                                 </div>
 
                             </div>
