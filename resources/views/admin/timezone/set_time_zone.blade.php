@@ -40,7 +40,7 @@
                                 $zonaHoraria = $generalSetting->time_zone;
                             @endphp
                             <p class="card-subtitle">
-                                {{ __('Cambiar zona horaria del sitio.') }}  {{ __('Actualmente la zona horaria es: ') }} <span class="fw-bold text-success">{{ $zonaHoraria }}</span> {{ __('Para agregar una nueva zona horaria, haz clic en el siguiente enlace: ') }}
+                                {{ __('Cambiar zona horaria del sitio.') }}  {{ __('Actualmente la zona horaria es:') }}&nbsp; <span class="fw-bold text-success">{{ $zonaHoraria }}</span> {{ __('Para agregar una nueva zona horaria, haz clic en el siguiente enlace:') }}&nbsp;
                                 <a href="{{ route('admin.time-zone.index') }}">{{ __('Agregar Zona Horaria') }}</a>
                             </p>
 
